@@ -18,6 +18,7 @@
 		A46839EC272E75E3005BA79E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EB272E75E3005BA79E /* UIButton.swift */; };
 		A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EE272E7E63005BA79E /* UIViewController.swift */; };
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
+		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		A46839EB272E75E3005BA79E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A46839EE272E7E63005BA79E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A46839F3272E8308005BA79E /* WalkThrough.storyboard */,
+				A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */,
 			);
 			path = WalkThrough;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
+				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,

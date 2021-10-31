@@ -5,37 +5,76 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walk Through View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThroughViewController" id="Y6W-OH-hqX" customClass="WalkThroughViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="워크스루1" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-D5-bhp">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y42-zi-z4a">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Tk-q1-1K7">
+                                    <size key="itemSize" width="368" height="582"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WalkthroughCell" id="erc-2k-rhC" customClass="WalkthroughCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="368" height="582"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a11-wi-nH4">
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="582"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G8D-RL-Af6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="368" height="582"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="G8D-RL-Af6" secondAttribute="bottom" id="Yfd-dl-wVg"/>
+                                                <constraint firstItem="G8D-RL-Af6" firstAttribute="top" secondItem="a11-wi-nH4" secondAttribute="top" id="cfp-AH-5HQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="G8D-RL-Af6" secondAttribute="trailing" id="ut9-iE-IQ8"/>
+                                                <constraint firstItem="G8D-RL-Af6" firstAttribute="leading" secondItem="a11-wi-nH4" secondAttribute="leading" id="xxY-S4-YtX"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="368" height="582"/>
+                                        <connections>
+                                            <outlet property="walkthroughImg" destination="G8D-RL-Af6" id="dfZ-vz-Pyi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C3l-D5-bhp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Kt8-hf-cLd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="C3l-D5-bhp" secondAttribute="bottom" id="RJy-1a-cg0"/>
-                            <constraint firstItem="C3l-D5-bhp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YS9-3U-pfd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="C3l-D5-bhp" secondAttribute="trailing" id="e9E-qB-fug"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="y42-zi-z4a" secondAttribute="trailing" id="33f-yB-yMf"/>
+                            <constraint firstItem="y42-zi-z4a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="JD3-ph-Mhk"/>
+                            <constraint firstItem="y42-zi-z4a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YEd-BU-2W7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="y42-zi-z4a" secondAttribute="bottom" id="lWq-iI-Edy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionview" destination="y42-zi-z4a" id="H2G-bY-RuO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="워크스루1" width="428" height="926"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
