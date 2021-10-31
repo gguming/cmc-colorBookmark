@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "워크스루3 – 1.png",
+      "filename" : "워크스루1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "워크스루3 – 1-1.png",
+      "filename" : "워크스루1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "워크스루3 – 1-2.png",
+      "filename" : "워크스루1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
