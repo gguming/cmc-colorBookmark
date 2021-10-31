@@ -19,6 +19,7 @@
 		A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EE272E7E63005BA79E /* UIViewController.swift */; };
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
+		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
+		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 		A46839ED272E7626005BA79E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E9E4A925272ED4550037A815 /* Login.storyboard */,
 			);
-			path = Login;
+			name = Login;
 			sourceTree = "<group>";
 		};
 		A46839F2272E82D2005BA79E /* WalkThrough */ = {
@@ -216,6 +219,7 @@
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
+				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45AE890272D094D009ABED6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
