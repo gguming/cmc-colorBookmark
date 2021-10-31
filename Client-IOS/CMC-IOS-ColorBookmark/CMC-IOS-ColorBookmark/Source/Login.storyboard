@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,15 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="색갈피 시작하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1r-rk-O3r">
+                                <rect key="frame" x="156.5" y="116" width="101" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-NO-YD9">
+                                <rect key="frame" x="187" y="159.5" width="40" height="52"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="4TY-eJ-46p">
+                                <rect key="frame" x="346" y="104" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4TY-eJ-46p" secondAttribute="height" id="ari-WW-2mo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일을 입력해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBP-4B-qdt">
+                                <rect key="frame" x="100.5" y="223.5" width="213" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 또는 회원가입에 필요해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emm-Wn-oLA">
+                                <rect key="frame" x="104" y="260.5" width="206.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6F-CA-fYc">
+                                <rect key="frame" x="24" y="304" width="366" height="49.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일을 입력해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQc-Fm-KLZ">
+                                <rect key="frame" x="128.5" y="365.5" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZQc-Fm-KLZ" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1ya-Qr-7yi"/>
+                            <constraint firstItem="Emm-Wn-oLA" firstAttribute="top" secondItem="oBP-4B-qdt" secondAttribute="bottom" constant="8" id="481-9z-ZED"/>
+                            <constraint firstItem="uAg-NO-YD9" firstAttribute="top" secondItem="c1r-rk-O3r" secondAttribute="bottom" constant="24" id="5Aw-6L-FLE"/>
+                            <constraint firstItem="4TY-eJ-46p" firstAttribute="centerY" secondItem="c1r-rk-O3r" secondAttribute="centerY" id="7WN-GU-6cD"/>
+                            <constraint firstItem="d6F-CA-fYc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Baf-dm-mBg"/>
+                            <constraint firstItem="Emm-Wn-oLA" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="D7p-P1-DQn"/>
+                            <constraint firstItem="ZQc-Fm-KLZ" firstAttribute="top" secondItem="d6F-CA-fYc" secondAttribute="bottom" constant="12" id="DmI-5c-kWv"/>
+                            <constraint firstItem="4TY-eJ-46p" firstAttribute="height" secondItem="c1r-rk-O3r" secondAttribute="height" multiplier="2.25641" id="G8K-e9-fYM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="d6F-CA-fYc" secondAttribute="trailing" constant="24" id="GBQ-9b-rVn"/>
+                            <constraint firstItem="oBP-4B-qdt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="IUq-tU-3NT"/>
+                            <constraint firstItem="uAg-NO-YD9" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="XHt-X5-OS8"/>
+                            <constraint firstAttribute="height" secondItem="oBP-4B-qdt" secondAttribute="height" multiplier="30.8966" id="a9I-TT-zxl"/>
+                            <constraint firstItem="d6F-CA-fYc" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="bg2-9C-lVT"/>
+                            <constraint firstItem="oBP-4B-qdt" firstAttribute="top" secondItem="uAg-NO-YD9" secondAttribute="bottom" constant="12" id="btX-pL-e9w"/>
+                            <constraint firstItem="d6F-CA-fYc" firstAttribute="top" secondItem="Emm-Wn-oLA" secondAttribute="bottom" constant="24" id="jnN-fG-tnD"/>
+                            <constraint firstItem="d6F-CA-fYc" firstAttribute="height" secondItem="oBP-4B-qdt" secondAttribute="height" multiplier="1.7" id="kx1-UD-VC5"/>
+                            <constraint firstItem="c1r-rk-O3r" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="72" id="mnI-Zw-HIE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4TY-eJ-46p" secondAttribute="trailing" constant="24" id="p2l-Nx-ZS8"/>
+                            <constraint firstItem="c1r-rk-O3r" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="xgX-W7-GWV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="102"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loginIcon" width="40" height="52"/>
+        <image name="login_cancel" width="44" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
