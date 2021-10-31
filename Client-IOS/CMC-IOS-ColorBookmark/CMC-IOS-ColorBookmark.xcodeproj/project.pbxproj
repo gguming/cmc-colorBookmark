@@ -86,8 +86,8 @@
 		A45AE887272D094D009ABED6 /* CMC-IOS-ColorBookmark */ = {
 			isa = PBXGroup;
 			children = (
-				A46839E4272E74B6005BA79E /* Configuration */,
 				A46839E3272E746D005BA79E /* Source */,
+				A46839E4272E74B6005BA79E /* Configuration */,
 				A45AE888272D094D009ABED6 /* AppDelegate.swift */,
 				A45AE88A272D094D009ABED6 /* SceneDelegate.swift */,
 				A45AE891272D094F009ABED6 /* Assets.xcassets */,
