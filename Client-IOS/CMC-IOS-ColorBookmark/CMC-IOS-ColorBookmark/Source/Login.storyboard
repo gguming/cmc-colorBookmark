@@ -85,6 +85,106 @@
             </objects>
             <point key="canvasLocation" x="132" y="102"/>
         </scene>
+        <!--Member Login View Controller-->
+        <scene sceneID="fkS-Np-4Nk">
+            <objects>
+                <viewController id="nzW-az-z5J" customClass="MemberLoginViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d4c-qs-uyp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05q-LF-1rz">
+                                <rect key="frame" x="186" y="116" width="42" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="v78-xj-CLS">
+                                <rect key="frame" x="187" y="159.5" width="40" height="52"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="GCB-pZ-a08">
+                                <rect key="frame" x="346" y="104" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GCB-pZ-a08" secondAttribute="height" id="D02-B6-KEl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 회원이시네요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9g-Id-MDJ">
+                                <rect key="frame" x="117.5" y="223.5" width="179" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다시 보니 더 반갑네요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXg-vy-fVg">
+                                <rect key="frame" x="136" y="260.5" width="142" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cy4-xJ-2Of">
+                                <rect key="frame" x="24" y="304" width="366" height="49.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rip-64-SLc">
+                                <rect key="frame" x="129" y="425.5" width="156" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="rOy-E3-uO1"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14901960784313725" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호를 잊으셨나요?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyt-T5-Itt">
+                                <rect key="frame" x="132" y="448.5" width="156" height="45"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="들어가기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sa-wh-bXK">
+                                <rect key="frame" x="189" y="461" width="55.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aBz-Qu-eve"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="05q-LF-1rz" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="26Q-Zb-qTS"/>
+                            <constraint firstItem="rip-64-SLc" firstAttribute="top" secondItem="Cy4-xJ-2Of" secondAttribute="bottom" constant="72" id="2Ar-ip-l2L"/>
+                            <constraint firstItem="Cy4-xJ-2Of" firstAttribute="top" secondItem="TXg-vy-fVg" secondAttribute="bottom" constant="24" id="4Fy-L6-J2S"/>
+                            <constraint firstItem="v78-xj-CLS" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="5M6-iM-4xD"/>
+                            <constraint firstItem="GCB-pZ-a08" firstAttribute="centerY" secondItem="05q-LF-1rz" secondAttribute="centerY" id="6qM-Jx-FKd"/>
+                            <constraint firstItem="cyt-T5-Itt" firstAttribute="leading" secondItem="rip-64-SLc" secondAttribute="leading" constant="3" id="DSL-OH-mf2"/>
+                            <constraint firstItem="Cy4-xJ-2Of" firstAttribute="leading" secondItem="aBz-Qu-eve" secondAttribute="leading" constant="24" id="Dru-Xg-5g5"/>
+                            <constraint firstItem="v78-xj-CLS" firstAttribute="top" secondItem="05q-LF-1rz" secondAttribute="bottom" constant="24" id="EPw-xu-jR7"/>
+                            <constraint firstItem="rip-64-SLc" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="LfG-hJ-eR9"/>
+                            <constraint firstItem="f9g-Id-MDJ" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="NE6-Ny-yvW"/>
+                            <constraint firstItem="Cy4-xJ-2Of" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="NFa-Q3-dfr"/>
+                            <constraint firstItem="TXg-vy-fVg" firstAttribute="top" secondItem="f9g-Id-MDJ" secondAttribute="bottom" constant="8" id="RHf-Pu-dSd"/>
+                            <constraint firstItem="cyt-T5-Itt" firstAttribute="top" secondItem="rip-64-SLc" secondAttribute="bottom" constant="8" id="Tay-Y1-n4c"/>
+                            <constraint firstItem="f9g-Id-MDJ" firstAttribute="top" secondItem="v78-xj-CLS" secondAttribute="bottom" constant="12" id="X8f-mg-WC0"/>
+                            <constraint firstItem="cyt-T5-Itt" firstAttribute="trailing" secondItem="rip-64-SLc" secondAttribute="trailing" constant="3" id="d7s-Os-ijf"/>
+                            <constraint firstItem="Cy4-xJ-2Of" firstAttribute="height" secondItem="f9g-Id-MDJ" secondAttribute="height" multiplier="1.7" id="izl-6l-IfB"/>
+                            <constraint firstItem="GCB-pZ-a08" firstAttribute="height" secondItem="05q-LF-1rz" secondAttribute="height" multiplier="2.25641" id="kPB-sZ-gEc"/>
+                            <constraint firstItem="aBz-Qu-eve" firstAttribute="trailing" secondItem="GCB-pZ-a08" secondAttribute="trailing" constant="24" id="kvB-cB-pM8"/>
+                            <constraint firstItem="7sa-wh-bXK" firstAttribute="leading" secondItem="cyt-T5-Itt" secondAttribute="trailing" constant="-99" id="nSy-uo-k5n"/>
+                            <constraint firstItem="cyt-T5-Itt" firstAttribute="height" secondItem="rip-64-SLc" secondAttribute="height" multiplier="3" id="nYD-u3-43m"/>
+                            <constraint firstItem="7sa-wh-bXK" firstAttribute="centerY" secondItem="cyt-T5-Itt" secondAttribute="centerY" id="oqU-s7-DrC"/>
+                            <constraint firstItem="aBz-Qu-eve" firstAttribute="trailing" secondItem="Cy4-xJ-2Of" secondAttribute="trailing" constant="24" id="pBQ-28-F9X"/>
+                            <constraint firstItem="05q-LF-1rz" firstAttribute="top" secondItem="aBz-Qu-eve" secondAttribute="top" constant="72" id="qE0-4P-FI7"/>
+                            <constraint firstAttribute="height" secondItem="f9g-Id-MDJ" secondAttribute="height" multiplier="30.8966" id="sKo-Gr-jHv"/>
+                            <constraint firstItem="TXg-vy-fVg" firstAttribute="centerX" secondItem="aBz-Qu-eve" secondAttribute="centerX" id="ya3-tW-bx6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="findPasswordButton" destination="rip-64-SLc" id="JzC-vt-22K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yx5-UT-QqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="102"/>
+        </scene>
     </scenes>
     <resources>
         <image name="loginIcon" width="40" height="52"/>
