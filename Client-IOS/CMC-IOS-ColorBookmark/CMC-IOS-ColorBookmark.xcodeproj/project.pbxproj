@@ -13,9 +13,11 @@
 		A45AE890272D094D009ABED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE88E272D094D009ABED6 /* Main.storyboard */; };
 		A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45AE891272D094F009ABED6 /* Assets.xcassets */; };
 		A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */; };
+		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMC_IOS_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE885272D094D009ABED6 /* CMC-IOS-ColorBookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMC-IOS-ColorBookmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		A45AE891272D094F009ABED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45AE894272D094F009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A45AE896272D094F009ABED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
+		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34684E889BF5A4A91061FBE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */,
+				E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3BE47386F2F3AF6B449BE5EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
 				A45AE887272D094D009ABED6 /* CMC-IOS-ColorBookmark */,
 				A45AE886272D094D009ABED6 /* Products */,
+				34684E889BF5A4A91061FBE5 /* Pods */,
+				3BE47386F2F3AF6B449BE5EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A45AE899272D094F009ABED6 /* Build configuration list for PBXNativeTarget "CMC-IOS-ColorBookmark" */;
 			buildPhases = (
+				A20045F07F1969800514FF41 /* [CP] Check Pods Manifest.lock */,
 				A45AE881272D094D009ABED6 /* Sources */,
 				A45AE882272D094D009ABED6 /* Frameworks */,
 				A45AE883272D094D009ABED6 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A20045F07F1969800514FF41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CMC-IOS-ColorBookmark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A45AE881272D094D009ABED6 /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		A45AE89A272D094F009ABED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +364,7 @@
 		};
 		A45AE89B272D094F009ABED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

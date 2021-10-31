@@ -1,0 +1,6 @@
+framework module Pods_CMC_IOS_ColorBookmark {
+  umbrella header "Pods-CMC-IOS-ColorBookmark-umbrella.h"
+
+  export *
+  module * { export * }
+}
