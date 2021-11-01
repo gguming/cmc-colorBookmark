@@ -10,25 +10,29 @@ import UIKit
 class FindPasswordViewController: UIViewController {
 
     @IBOutlet weak var FindPasswordTextField: UITextField!
+    @IBAction func GoBackButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var SendLabel: UILabel!
+    @IBOutlet weak var UnderLineView: UIView!
     @IBOutlet weak var SendButton: UIButton!
+    let pinkColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
+    let changedTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     override func viewDidLoad() {
-        SendButton.layer.cornerRadius = 25
+        UnderLineView.isHidden = true
+        SendButton.isEnabled = false
+        SendButton.layer.cornerRadius = 22
         FindPasswordTextField.layer.cornerRadius = 5
-        
+        self.FindPasswordTextField.addTarget(self, action: #selector(self.UnderlineTextField(_:)), for: .editingChanged)
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func UnderlineTextField(_ sender: Any?) {
+        UnderLineView.isHidden = false
+        SendButton.isEnabled = true
+        SendButton.backgroundColor = pinkColor
+        SendLabel.textColor = changedTextColor
     }
-    */
 
 }

@@ -12,8 +12,8 @@ class WalkThroughViewController: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
   
     @IBAction func startBtnTapped(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "SigninNickNameViewController")
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginMainViewController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

@@ -124,9 +124,9 @@
 		A46839E3272E746D005BA79E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A46839F2272E82D2005BA79E /* WalkThrough */,
-				A45AE88C272D094D009ABED6 /* ViewController.swift */,
 				A45AE88E272D094D009ABED6 /* Main.storyboard */,
+				A45AE88C272D094D009ABED6 /* ViewController.swift */,
+				A46839F2272E82D2005BA79E /* WalkThrough */,
 				A46839ED272E7626005BA79E /* Login */,
 			);
 			path = Source;
@@ -164,13 +164,13 @@
 			isa = PBXGroup;
 			children = (
 				E9E4A925272ED4550037A815 /* Login.storyboard */,
-				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
 				E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */,
+				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
 				E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */,
-				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
-				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
 				E9E4A955273012940037A815 /* SigininPasswordViewController.swift */,
 				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
+				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
+				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
