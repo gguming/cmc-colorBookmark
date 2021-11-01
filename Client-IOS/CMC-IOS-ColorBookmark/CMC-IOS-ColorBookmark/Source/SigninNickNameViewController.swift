@@ -9,16 +9,19 @@ import UIKit
 
 class SigninNickNameViewController: UIViewController {
 
+    @IBOutlet weak var NickNameTextField: UITextField!
     @IBOutlet weak var AgreementLabel: UILabel!
     @IBOutlet weak var AgreementView: UIView!
     @IBOutlet weak var JoinButton: UIButton!
     
     override func viewDidLoad() {
+        
         configureLabel()
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(fixedLabelTapped(_:)))
           view.addGestureRecognizer(recognizer)
-        JoinButton.layer.cornerRadius = 5
-        AgreementView.layer.cornerRadius = 5
+        JoinButton.layer.cornerRadius = 25
+        AgreementView.layer.cornerRadius = 7
+        NickNameTextField.layer.cornerRadius = 5
         
         super.viewDidLoad()
     }

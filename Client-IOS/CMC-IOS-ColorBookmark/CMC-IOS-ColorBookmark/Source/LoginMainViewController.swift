@@ -9,7 +9,12 @@ import UIKit
 
 class LoginMainViewController: UIViewController {
 
+    @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var ContinueButton: UIButton!
     override func viewDidLoad() {
+        ContinueButton.layer.cornerRadius = 25
+        EmailTextField.layer.cornerRadius = 5
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

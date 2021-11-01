@@ -27,6 +27,8 @@
 		E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94D272FD42F0037A815 /* UILabel.swift */; };
 		E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */; };
 		E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */; };
+		E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A955273012940037A815 /* SigininPasswordViewController.swift */; };
+		E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A957273012C20037A815 /* FindPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		E9E4A94D272FD42F0037A815 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		E9E4A955273012940037A815 /* SigininPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigininPasswordViewController.swift; sourceTree = "<group>"; };
+		E9E4A957273012C20037A815 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 				E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */,
 				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
 				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
+				E9E4A955273012940037A815 /* SigininPasswordViewController.swift */,
+				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
+				E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
 			);
