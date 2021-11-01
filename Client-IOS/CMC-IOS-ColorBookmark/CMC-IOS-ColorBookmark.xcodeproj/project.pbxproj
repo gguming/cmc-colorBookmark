@@ -22,6 +22,11 @@
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
+		E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */; };
+		E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */; };
+		E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94D272FD42F0037A815 /* UILabel.swift */; };
+		E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */; };
+		E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoginViewController.swift; sourceTree = "<group>"; };
+		E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
+		E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNickNameViewController.swift; sourceTree = "<group>"; };
+		E9E4A94D272FD42F0037A815 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 				A46839E9272E759B005BA79E /* UIColor.swift */,
 				A46839EB272E75E3005BA79E /* UIButton.swift */,
 				A46839EE272E7E63005BA79E /* UIViewController.swift */,
+				E9E4A94D272FD42F0037A815 /* UILabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,6 +161,10 @@
 			children = (
 				E9E4A925272ED4550037A815 /* Login.storyboard */,
 				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
+				E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */,
+				E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */,
+				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
+				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -265,12 +280,17 @@
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
+				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
+				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
+				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
+				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
+				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
