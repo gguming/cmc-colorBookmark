@@ -10,7 +10,14 @@ import UIKit
 class WalkThroughViewController: UIViewController {
 
     @IBOutlet weak var startBtn: UIButton!
-    @IBOutlet weak var startBtnTapped: UIButton!
+  
+    @IBAction func startBtnTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginMainViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
     @IBOutlet weak var collectionview: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!

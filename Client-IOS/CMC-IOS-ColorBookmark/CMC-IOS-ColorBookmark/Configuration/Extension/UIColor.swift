@@ -24,3 +24,4 @@ extension UIColor {
     class var mainPink: UIColor { UIColor(hex: 0xFF1C92) }
 }
 
+
