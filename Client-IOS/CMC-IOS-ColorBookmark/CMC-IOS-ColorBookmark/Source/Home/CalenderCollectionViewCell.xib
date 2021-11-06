@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CalenderCollectionViewCell" reuseIdentifier="CalenderCollectionViewCell" id="wae-SH-HUb" customClass="CalenderCollectionViewCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="282"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="282"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-aM-1Ah">
+                        <rect key="frame" x="0.0" y="282" width="157" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aID-GL-9WN">
+                        <rect key="frame" x="31.5" y="178.5" width="94" height="93"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aID-GL-9WN" secondAttribute="height" id="teQ-L2-wjr"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="9lV-vj-qmM"/>
+            <constraints>
+                <constraint firstItem="9lV-vj-qmM" firstAttribute="trailing" secondItem="ucD-aM-1Ah" secondAttribute="trailing" id="Bjt-J3-iqN"/>
+                <constraint firstItem="aID-GL-9WN" firstAttribute="width" secondItem="wae-SH-HUb" secondAttribute="width" multiplier="0.6" id="Rt1-nQ-08C"/>
+                <constraint firstItem="aID-GL-9WN" firstAttribute="centerX" secondItem="9lV-vj-qmM" secondAttribute="centerX" id="THB-6y-r68"/>
+                <constraint firstItem="9lV-vj-qmM" firstAttribute="bottom" secondItem="ucD-aM-1Ah" secondAttribute="bottom" id="mJz-cZ-s6X"/>
+                <constraint firstItem="ucD-aM-1Ah" firstAttribute="top" secondItem="aID-GL-9WN" secondAttribute="bottom" constant="10" id="o70-OI-C0o"/>
+                <constraint firstItem="ucD-aM-1Ah" firstAttribute="leading" secondItem="9lV-vj-qmM" secondAttribute="leading" id="zVx-j5-lKJ"/>
+            </constraints>
+            <size key="customSize" width="157" height="282"/>
+            <connections>
+                <outlet property="CircleImage" destination="aID-GL-9WN" id="TfC-Na-q9S"/>
+                <outlet property="DateLabel" destination="ucD-aM-1Ah" id="H2x-0L-6Wx"/>
+            </connections>
+            <point key="canvasLocation" x="-105" y="169"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
