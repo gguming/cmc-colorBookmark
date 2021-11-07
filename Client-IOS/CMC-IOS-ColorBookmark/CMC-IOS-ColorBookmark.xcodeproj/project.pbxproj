@@ -208,15 +208,23 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
-		E9E4A9852734EDDA0037A815 /* Home */ = {
+		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
-				A461AD3D2736D5980067C6D1 /* EditColor */,
-				E9E4A9862734EE090037A815 /* Home.storyboard */,
-				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 				E9E4A98A2734EEA80037A815 /* CalenderViewController.swift */,
 				E9E4A98C273512340037A815 /* CalenderCollectionViewCell.swift */,
 				E9E4A98D273512340037A815 /* CalenderCollectionViewCell.xib */,
+			);
+			path = Calander;
+			sourceTree = "<group>";
+		};
+		E9E4A9852734EDDA0037A815 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4C3BEC92737A50F006A42E0 /* Calander */,
+				A461AD3D2736D5980067C6D1 /* EditColor */,
+				E9E4A9862734EE090037A815 /* Home.storyboard */,
+				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
