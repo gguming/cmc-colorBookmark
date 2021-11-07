@@ -1,4 +1,5 @@
 PODS:
+  - FloatingPanel (2.5.0)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/BottomSheet (124.2.0):
     - MaterialComponents/Elevation
@@ -30,15 +31,18 @@ PODS:
     - MaterialComponents/ShadowLayer
 
 DEPENDENCIES:
+  - FloatingPanel
   - MaterialComponents/BottomSheet
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - MaterialComponents
 
 SPEC CHECKSUMS:
+  FloatingPanel: ddb1c8cbbacd164cfee651c449febe867a28e2cb
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
 
-PODFILE CHECKSUM: c96dc6f78ba6f7661a8871ec2d3ae16acc2ba019
+PODFILE CHECKSUM: 0fb50a7b93b09eb2d42f2a8d1cc2962a6d63a619
 
 COCOAPODS: 1.11.2

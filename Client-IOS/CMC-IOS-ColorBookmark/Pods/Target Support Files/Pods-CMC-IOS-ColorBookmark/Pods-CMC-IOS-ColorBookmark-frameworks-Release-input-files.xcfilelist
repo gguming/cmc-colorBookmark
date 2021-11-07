@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework
 ${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework

@@ -13,6 +13,8 @@
 		A45AE890272D094D009ABED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE88E272D094D009ABED6 /* Main.storyboard */; };
 		A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45AE891272D094F009ABED6 /* Assets.xcassets */; };
 		A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */; };
+		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
+		A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */; };
 		A46839E8272E7574005BA79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E7272E7574005BA79E /* Constant.swift */; };
 		A46839EA272E759C005BA79E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E9272E759B005BA79E /* UIColor.swift */; };
 		A46839EC272E75E3005BA79E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EB272E75E3005BA79E /* UIButton.swift */; };
@@ -46,6 +48,8 @@
 		A45AE891272D094F009ABED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45AE894272D094F009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A45AE896272D094F009ABED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
+		A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A46839E7272E7574005BA79E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A46839E9272E759B005BA79E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A46839EB272E75E3005BA79E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 			path = "CMC-IOS-ColorBookmark";
 			sourceTree = "<group>";
 		};
+		A461AD3D2736D5980067C6D1 /* EditColor */ = {
+			isa = PBXGroup;
+			children = (
+				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
+				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
+			);
+			path = EditColor;
+			sourceTree = "<group>";
+		};
 		A46839E3272E746D005BA79E /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,14 +208,23 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
-		E9E4A9852734EDDA0037A815 /* Home */ = {
+		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
-				E9E4A9862734EE090037A815 /* Home.storyboard */,
-				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 				E9E4A98A2734EEA80037A815 /* CalenderViewController.swift */,
 				E9E4A98C273512340037A815 /* CalenderCollectionViewCell.swift */,
 				E9E4A98D273512340037A815 /* CalenderCollectionViewCell.xib */,
+			);
+			path = Calander;
+			sourceTree = "<group>";
+		};
+		E9E4A9852734EDDA0037A815 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4C3BEC92737A50F006A42E0 /* Calander */,
+				A461AD3D2736D5980067C6D1 /* EditColor */,
+				E9E4A9862734EE090037A815 /* Home.storyboard */,
+				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -335,6 +357,7 @@
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
+				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
@@ -345,6 +368,7 @@
 				E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
+				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

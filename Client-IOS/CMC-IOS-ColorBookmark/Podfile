@@ -7,4 +7,5 @@ target 'CMC-IOS-ColorBookmark' do
 
   # Pods for CMC-IOS-ColorBookmark
 pod 'MaterialComponents/BottomSheet'
+pod 'FloatingPanel'
 end
