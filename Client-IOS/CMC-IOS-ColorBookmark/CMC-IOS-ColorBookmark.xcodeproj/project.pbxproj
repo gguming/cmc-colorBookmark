@@ -135,13 +135,20 @@
 			path = "CMC-IOS-ColorBookmark";
 			sourceTree = "<group>";
 		};
-		A461AD3D2736D5980067C6D1 /* EditColor */ = {
+		A461AD3D2736D5980067C6D1 /* EditDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A47C4D51273BAE1E00CEB907 /* HeadCell */,
+				A47C4D53273BAE8800CEB907 /* ColorCell */,
+				A47C4D54273BAE9200CEB907 /* TextCell */,
+				A47C4D55273BAEA400CEB907 /* PhotoCell */,
+				A47C4D56273BAF1F00CEB907 /* AudioCell */,
+				A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */,
+				A47C4D52273BAE4D00CEB907 /* EditColorVC */,
 				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
 				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 			);
-			path = EditColor;
+			path = EditDiary;
 			sourceTree = "<group>";
 		};
 		A46839E3272E746D005BA79E /* Source */ = {
@@ -208,6 +215,55 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
+		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HeadCell;
+			sourceTree = "<group>";
+		};
+		A47C4D52273BAE4D00CEB907 /* EditColorVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditColorVC;
+			sourceTree = "<group>";
+		};
+		A47C4D53273BAE8800CEB907 /* ColorCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ColorCell;
+			sourceTree = "<group>";
+		};
+		A47C4D54273BAE9200CEB907 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		A47C4D55273BAEA400CEB907 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
+		A47C4D56273BAF1F00CEB907 /* AudioCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AudioCell;
+			sourceTree = "<group>";
+		};
+		A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddDiarayBtnCell;
+			sourceTree = "<group>";
+		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C3BEC92737A50F006A42E0 /* Calander */,
-				A461AD3D2736D5980067C6D1 /* EditColor */,
+				A461AD3D2736D5980067C6D1 /* EditDiary */,
 				E9E4A9862734EE090037A815 /* Home.storyboard */,
 				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 			);

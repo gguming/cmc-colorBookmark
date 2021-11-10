@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.frame.height * 0.6
         present(bottomSheet, animated: true, completion: nil)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
