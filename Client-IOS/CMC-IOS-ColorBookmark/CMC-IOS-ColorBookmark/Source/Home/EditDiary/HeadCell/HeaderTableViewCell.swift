@@ -26,12 +26,12 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
     func setUI() {
-        helloLabel.textColor = UIColor(red: 108, green: 108, blue: 108, alpha: 1.0)
-        infoLabel.textColor = .mainBlack
-        xBtn.tintColor = .mainBlack
+        
+        infoLabel.textColor = .black
+        xBtn.tintColor = .black
         xBtn.layer.cornerRadius = xBtn.bounds.height/2
-        xBtn.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
-        seperateLineView.backgroundColor = UIColor(red: 112, green: 112, blue: 112, alpha: 1)
+//        xBtn.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
+//        seperateLineView.backgroundColor = UIColor(red: 112, green: 112, blue: 112, alpha: 1)
     }
     
 }
