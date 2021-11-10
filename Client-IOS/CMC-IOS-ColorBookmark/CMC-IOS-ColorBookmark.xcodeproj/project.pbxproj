@@ -13,6 +13,8 @@
 		A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */; };
 		A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF3A1273BF91A008DF16A /* TextTableViewCell.swift */; };
 		A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A2273BF91A008DF16A /* TextTableViewCell.xib */; };
+		A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */; };
+		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		A43BF3A1273BF91A008DF16A /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		A43BF3A2273BF91A008DF16A /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* CMC-IOS-ColorBookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMC-IOS-ColorBookmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,13 @@
 				A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */,
 			);
 			path = ColorCollectionCell;
+			sourceTree = "<group>";
+		};
+		A43BF3A9273C0523008DF16A /* PhotoColllectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoColllectionCell;
 			sourceTree = "<group>";
 		};
 		A45AE87C272D094D009ABED6 = {
@@ -278,6 +289,9 @@
 		A47C4D55273BAEA400CEB907 /* PhotoCell */ = {
 			isa = PBXGroup;
 			children = (
+				A43BF3A9273C0523008DF16A /* PhotoColllectionCell */,
+				A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */,
+				A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */,
 			);
 			path = PhotoCell;
 			sourceTree = "<group>";
@@ -377,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
@@ -450,6 +465,7 @@
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
+				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,

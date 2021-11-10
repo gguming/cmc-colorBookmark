@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Constant {
+    
+    static var panelState = 0
+}

@@ -16,7 +16,10 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var seperateLineView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        DispatchQueue.main.async {
+            self.checkState()
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,6 +35,17 @@ class HeaderTableViewCell: UITableViewCell {
         editBtn.layer.cornerRadius = 15
 //        xBtn.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
 //        seperateLineView.backgroundColor = UIColor(red: 112, green: 112, blue: 112, alpha: 1)
+    }
+    
+    func checkState(){
+        if Constant.panelState == 0 {
+            editBtn.isHidden = false
+            xBtn.isHidden = true
+        } else {
+            
+            editBtn.isHidden = true
+            xBtn.isHidden = false
+        }
     }
     
 }

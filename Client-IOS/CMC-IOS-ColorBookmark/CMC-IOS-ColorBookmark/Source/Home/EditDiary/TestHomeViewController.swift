@@ -45,5 +45,13 @@ class TestHomeViewController: UIViewController {
 }
 
 extension TestHomeViewController: FloatingPanelControllerDelegate{
-
+    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
+        if fpc.state == .tip {
+            Constant.panelState = 0
+            print(Constant.panelState)
+        } else {
+            Constant.panelState = 1
+            print(Constant.panelState)
+        }
+    }
 }
