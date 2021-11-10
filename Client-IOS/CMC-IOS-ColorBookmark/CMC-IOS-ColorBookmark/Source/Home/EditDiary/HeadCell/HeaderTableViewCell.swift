@@ -29,7 +29,7 @@ class HeaderTableViewCell: UITableViewCell {
         
         infoLabel.textColor = .black
         xBtn.tintColor = .black
-        xBtn.layer.cornerRadius = xBtn.bounds.height/2
+        editBtn.layer.cornerRadius = 15
 //        xBtn.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
 //        seperateLineView.backgroundColor = UIColor(red: 112, green: 112, blue: 112, alpha: 1)
     }
