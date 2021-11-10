@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */; };
+		A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */; };
+		A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */; };
+		A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMC_IOS_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
+		A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* CMC-IOS-ColorBookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMC-IOS-ColorBookmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +113,15 @@
 				7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A43BF39C273BEA41008DF16A /* ColorCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */,
+				A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */,
+			);
+			path = ColorCollectionCell;
 			sourceTree = "<group>";
 		};
 		A45AE87C272D094D009ABED6 = {
@@ -238,6 +255,9 @@
 		A47C4D53273BAE8800CEB907 /* ColorCell */ = {
 			isa = PBXGroup;
 			children = (
+				A43BF39C273BEA41008DF16A /* ColorCollectionCell */,
+				A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */,
+				A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */,
 			);
 			path = ColorCell;
 			sourceTree = "<group>";
@@ -353,6 +373,8 @@
 			files = (
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
+				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
+				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
@@ -417,6 +439,7 @@
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
+				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
@@ -427,6 +450,7 @@
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */,
