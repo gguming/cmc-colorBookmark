@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
+		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
 		A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88A272D094D009ABED6 /* SceneDelegate.swift */; };
 		A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMC_IOS_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* CMC-IOS-ColorBookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMC-IOS-ColorBookmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
 			isa = PBXGroup;
 			children = (
+				A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */,
+				A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */,
 			);
 			path = HeadCell;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
+				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45AE890272D094D009ABED6 /* Main.storyboard in Resources */,
@@ -420,6 +427,7 @@
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,

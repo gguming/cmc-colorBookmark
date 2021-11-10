@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTableViewCell" rowHeight="76" id="KGk-i7-Jjw" customClass="HeaderTableViewCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 SH님!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1q-Ft-WPw">
+                        <rect key="frame" x="24" y="20" width="114" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wed-lS-Z1e">
+                        <rect key="frame" x="401" y="24" width="19" height="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="xmark" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 기분은 무슨색인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-OL-07y">
+                        <rect key="frame" x="24" y="44" width="227" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKH-hD-Gwe">
+                        <rect key="frame" x="363" y="38" width="61" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="FWd-0D-CQq"/>
+                            <constraint firstAttribute="height" constant="30" id="KZN-1H-1PR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="편집"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0W-qR-2TW">
+                        <rect key="frame" x="20" y="75" width="404" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fUd-H5-6g4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="v0W-qR-2TW" secondAttribute="trailing" constant="20" id="2mT-yF-nHU"/>
+                    <constraint firstAttribute="trailing" secondItem="qKH-hD-Gwe" secondAttribute="trailing" constant="20" id="8yY-ob-m3m"/>
+                    <constraint firstItem="qKH-hD-Gwe" firstAttribute="bottom" secondItem="XNn-OL-07y" secondAttribute="bottom" id="Bb8-aw-He1"/>
+                    <constraint firstItem="XNn-OL-07y" firstAttribute="leading" secondItem="T1q-Ft-WPw" secondAttribute="leading" id="ENF-pR-dF1"/>
+                    <constraint firstAttribute="trailing" secondItem="wed-lS-Z1e" secondAttribute="trailing" constant="24" id="FaT-pg-8mK"/>
+                    <constraint firstAttribute="bottom" secondItem="v0W-qR-2TW" secondAttribute="bottom" id="FeN-Cs-PQ6"/>
+                    <constraint firstItem="T1q-Ft-WPw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="PkZ-Df-AiJ"/>
+                    <constraint firstItem="wed-lS-Z1e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="RXc-rq-Aty"/>
+                    <constraint firstItem="wed-lS-Z1e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T1q-Ft-WPw" secondAttribute="trailing" id="XXl-5R-Xpq"/>
+                    <constraint firstItem="v0W-qR-2TW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cp6-sL-srr"/>
+                    <constraint firstItem="T1q-Ft-WPw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="l21-d4-OpI"/>
+                    <constraint firstItem="qKH-hD-Gwe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XNn-OL-07y" secondAttribute="trailing" id="wd6-Oc-CIs"/>
+                    <constraint firstItem="XNn-OL-07y" firstAttribute="top" secondItem="T1q-Ft-WPw" secondAttribute="bottom" constant="4" id="xTM-hO-DY2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="editBtn" destination="qKH-hD-Gwe" id="mGE-g8-Ax3"/>
+                <outlet property="helloLabel" destination="T1q-Ft-WPw" id="7XJ-CR-Otg"/>
+                <outlet property="infoLabel" destination="XNn-OL-07y" id="ZqD-DV-v7x"/>
+                <outlet property="seperateLineView" destination="v0W-qR-2TW" id="YFN-Aq-55R"/>
+                <outlet property="xBtn" destination="wed-lS-Z1e" id="Nvh-Fi-o3Y"/>
+            </connections>
+            <point key="canvasLocation" x="115.94202898550725" y="128.57142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
