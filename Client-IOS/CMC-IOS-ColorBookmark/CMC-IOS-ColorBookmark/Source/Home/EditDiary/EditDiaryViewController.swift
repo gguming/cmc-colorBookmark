@@ -14,6 +14,7 @@ class EditDiaryViewController: UIViewController {
 
         tableview.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
+        tableview.register(UINib(nibName: "TextTableViewCell", bundle: nil), forCellReuseIdentifier: "TextTableViewCell")
         
         tableview.dataSource = self
         tableview.delegate = self
@@ -42,6 +43,11 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         
             return cell
             
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextTableViewCell", for: indexPath) as? TextTableViewCell else {return UITableViewCell()}
+        
+            return cell
+            
         default:
             return UITableViewCell()
         }
@@ -50,7 +56,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,6 +68,8 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 169
        
+        case 2:
+            return 150
         default:
             return 0
         }
