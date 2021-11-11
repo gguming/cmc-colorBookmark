@@ -6,20 +6,25 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginMainViewController: UIViewController {
-
+    
+    lazy var dataManager: EmailCheckDataManager = EmailCheckDataManager()
+    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var UnderLineView: UIView!
     @IBOutlet weak var ContinueLabel: UILabel!
     @IBOutlet weak var ContinueButton: UIButton!
     
+    @IBAction func BackToLoginPageVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func ContinueButtonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "MemberLoginViewController")
-        let vc = storyboard.instantiateViewController(withIdentifier: "SigininPasswordViewController")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        let emailValue: String = EmailTextField.text!
+        let email: Parameters = ["email" : emailValue]
+        dataManager.EmailCheck(email, delegate: self)
     }
     
     let pinkColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
@@ -42,5 +47,19 @@ class LoginMainViewController: UIViewController {
         ContinueButton.backgroundColor = pinkColor
         ContinueLabel.textColor = changedTextColor
     }
+}
 
+extension LoginMainViewController {
+    func emailAlreadyExist() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MemberLoginViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    func availbleEmail() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SigininPasswordViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
 }

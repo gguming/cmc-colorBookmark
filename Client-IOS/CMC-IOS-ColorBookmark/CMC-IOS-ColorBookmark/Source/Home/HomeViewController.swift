@@ -10,6 +10,11 @@ import MaterialComponents.MaterialBottomSheet
 
 class HomeViewController: UIViewController {
 
+    @IBAction func ToSetting(_ sender: Any) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
     @IBAction func CalenderButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)

@@ -22,6 +22,11 @@
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
+		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
+		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
+		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
+		E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */; };
+		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
 		E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */; };
@@ -29,13 +34,16 @@
 		E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94D272FD42F0037A815 /* UILabel.swift */; };
 		E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */; };
 		E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */; };
-		E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A955273012940037A815 /* SigininPasswordViewController.swift */; };
+		E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A955273012940037A815 /* SigninPasswordViewController.swift */; };
 		E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A957273012C20037A815 /* FindPasswordViewController.swift */; };
 		E9E4A9872734EE090037A815 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A9862734EE090037A815 /* Home.storyboard */; };
 		E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A9882734EE9A0037A815 /* HomeViewController.swift */; };
 		E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A98A2734EEA80037A815 /* CalenderViewController.swift */; };
 		E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A98C273512340037A815 /* CalenderCollectionViewCell.swift */; };
 		E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A98D273512340037A815 /* CalenderCollectionViewCell.xib */; };
+		E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A992273A2EA90037A815 /* SigninDataManager.swift */; };
+		E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A996273A2EFD0037A815 /* SigninResponse.swift */; };
+		E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A998273A30D50037A815 /* SigninRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +65,12 @@
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
+		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
+		E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckResponse.swift; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
+		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoginViewController.swift; sourceTree = "<group>"; };
 		E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
@@ -65,13 +78,16 @@
 		E9E4A94D272FD42F0037A815 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
-		E9E4A955273012940037A815 /* SigininPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigininPasswordViewController.swift; sourceTree = "<group>"; };
+		E9E4A955273012940037A815 /* SigninPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A957273012C20037A815 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A9862734EE090037A815 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E9E4A9882734EE9A0037A815 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E9E4A98A2734EEA80037A815 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		E9E4A98C273512340037A815 /* CalenderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9E4A98D273512340037A815 /* CalenderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalenderCollectionViewCell.xib; sourceTree = "<group>"; };
+		E9E4A992273A2EA90037A815 /* SigninDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninDataManager.swift; sourceTree = "<group>"; };
+		E9E4A996273A2EFD0037A815 /* SigninResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninResponse.swift; sourceTree = "<group>"; };
+		E9E4A998273A30D50037A815 /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,11 +203,14 @@
 		A46839ED272E7626005BA79E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E9E4A991273A2E800037A815 /* Entity */,
+				E9E4A990273A2E730037A815 /* DataManager */,
 				E9E4A925272ED4550037A815 /* Login.storyboard */,
+				E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */,
 				E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */,
-				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
+				E9E4A955273012940037A815 /* SigninPasswordViewController.swift */,
 				E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */,
-				E9E4A955273012940037A815 /* SigininPasswordViewController.swift */,
+				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
 				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
 				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
 				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
@@ -218,15 +237,44 @@
 			path = Calander;
 			sourceTree = "<group>";
 		};
+		E9445B98273B8F8500B4EC82 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
+				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		E9E4A9852734EDDA0037A815 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9445B98273B8F8500B4EC82 /* Setting */,
 				A4C3BEC92737A50F006A42E0 /* Calander */,
 				A461AD3D2736D5980067C6D1 /* EditColor */,
 				E9E4A9862734EE090037A815 /* Home.storyboard */,
 				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E9E4A990273A2E730037A815 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E9E4A992273A2EA90037A815 /* SigninDataManager.swift */,
+				E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		E9E4A991273A2E800037A815 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9E4A996273A2EFD0037A815 /* SigninResponse.swift */,
+				E9E4A998273A30D50037A815 /* SigninRequest.swift */,
+				E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,24 +396,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
+				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
+				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
+				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
+				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
+				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
-				E9E4A956273012940037A815 /* SigininPasswordViewController.swift in Sources */,
+				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
+				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
 				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
