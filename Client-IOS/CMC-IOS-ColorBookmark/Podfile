@@ -8,4 +8,6 @@ target 'CMC-IOS-ColorBookmark' do
   # Pods for CMC-IOS-ColorBookmark
 pod 'MaterialComponents/BottomSheet'
 pod 'FloatingPanel'
+pod 'Alamofire', '~> 5.4'
+pod 'KakaoSDK'
 end
