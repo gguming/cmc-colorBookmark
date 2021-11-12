@@ -24,12 +24,21 @@
                             <constraint firstAttribute="height" constant="1" id="2UU-qy-jbz"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진과 동영상을 추가해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5y-Ew-WLo">
-                        <rect key="frame" x="28" y="10" width="489" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음성을 추가해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5y-Ew-WLo">
+                        <rect key="frame" x="28" y="10" width="489" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09q-bg-UZm">
+                        <rect key="frame" x="239" y="45" width="67" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="odZ-fI-syf"/>
+                            <constraint firstAttribute="width" constant="67" id="xjF-Ik-QU5"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="micImage"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hMn-uu-UJw" secondAttribute="trailing" constant="20" id="2Pv-Sv-cIY"/>
@@ -37,11 +46,16 @@
                     <constraint firstAttribute="bottom" secondItem="hMn-uu-UJw" secondAttribute="bottom" id="9Fx-hE-pWI"/>
                     <constraint firstItem="P5y-Ew-WLo" firstAttribute="top" secondItem="nUB-XF-4Y9" secondAttribute="top" constant="10" id="Af2-Gw-Jj0"/>
                     <constraint firstAttribute="trailing" secondItem="P5y-Ew-WLo" secondAttribute="trailing" constant="28" id="cEo-ay-U03"/>
+                    <constraint firstItem="09q-bg-UZm" firstAttribute="centerY" secondItem="nUB-XF-4Y9" secondAttribute="centerY" id="ens-El-Yup"/>
                     <constraint firstItem="P5y-Ew-WLo" firstAttribute="leading" secondItem="nUB-XF-4Y9" secondAttribute="leading" constant="28" id="paS-Yy-CFy"/>
+                    <constraint firstItem="09q-bg-UZm" firstAttribute="centerX" secondItem="nUB-XF-4Y9" secondAttribute="centerX" id="xsK-jM-Wc4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="NlY-kF-7u2"/>
             <point key="canvasLocation" x="271.73913043478262" y="220.64732142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="micImage" width="60" height="60"/>
+    </resources>
 </document>

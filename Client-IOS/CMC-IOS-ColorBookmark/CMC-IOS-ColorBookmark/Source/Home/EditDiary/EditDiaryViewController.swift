@@ -15,6 +15,10 @@ class EditDiaryViewController: UIViewController {
         tableview.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
         tableview.register(UINib(nibName: "TextTableViewCell", bundle: nil), forCellReuseIdentifier: "TextTableViewCell")
+        tableview.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
+        tableview.register(UINib(nibName: "AudioTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioTableViewCell")
+        tableview.register(UINib(nibName: "EditBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "EditBtnTableViewCell")
+       
         
         tableview.dataSource = self
         tableview.delegate = self
@@ -50,6 +54,21 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         
             return cell
             
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
+        
+            return cell
+            
+        case 4:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
+        
+            return cell
+            
+        case 5:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditBtnTableViewCell", for: indexPath) as? EditBtnTableViewCell else {return UITableViewCell()}
+        
+            return cell
+            
         default:
             return UITableViewCell()
         }
@@ -58,7 +77,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 6
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,6 +91,15 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
        
         case 2:
             return 150
+            
+        case 3:
+            return 150
+            
+        case 4:
+            return 130
+            
+        case 5:
+            return 100
         default:
             return 0
         }

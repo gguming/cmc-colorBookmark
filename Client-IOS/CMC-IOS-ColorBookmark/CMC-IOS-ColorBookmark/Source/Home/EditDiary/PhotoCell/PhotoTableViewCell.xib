@@ -30,13 +30,24 @@
                         <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgo-Rw-cLI">
+                        <rect key="frame" x="28" y="36.5" width="100" height="105.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="eZa-nL-6qe"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="imageSample"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Wgo-Rw-cLI" firstAttribute="leading" secondItem="MZa-ZF-306" secondAttribute="leading" id="1LW-UP-60Q"/>
                     <constraint firstItem="MZa-ZF-306" firstAttribute="leading" secondItem="WfH-uY-fEC" secondAttribute="leading" constant="28" id="5AG-xu-SKo"/>
                     <constraint firstAttribute="trailing" secondItem="hzc-f2-l9d" secondAttribute="trailing" constant="20" id="6YK-7G-OgL"/>
                     <constraint firstItem="hzc-f2-l9d" firstAttribute="leading" secondItem="WfH-uY-fEC" secondAttribute="leading" constant="20" id="8UQ-8z-oPf"/>
                     <constraint firstAttribute="bottom" secondItem="hzc-f2-l9d" secondAttribute="bottom" id="Ky0-Ne-BGQ"/>
                     <constraint firstItem="MZa-ZF-306" firstAttribute="top" secondItem="WfH-uY-fEC" secondAttribute="top" constant="10" id="Vmm-O2-Nsr"/>
+                    <constraint firstAttribute="bottom" secondItem="Wgo-Rw-cLI" secondAttribute="bottom" constant="15" id="YMU-9Y-OsQ"/>
+                    <constraint firstItem="Wgo-Rw-cLI" firstAttribute="top" secondItem="MZa-ZF-306" secondAttribute="bottom" constant="12" id="aDc-n4-Hos"/>
                     <constraint firstAttribute="trailing" secondItem="MZa-ZF-306" secondAttribute="trailing" constant="28" id="gam-We-1Zb"/>
                 </constraints>
             </tableViewCellContentView>
@@ -44,4 +55,7 @@
             <point key="canvasLocation" x="271.73913043478262" y="220.64732142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="imageSample" width="118" height="118"/>
+    </resources>
 </document>
