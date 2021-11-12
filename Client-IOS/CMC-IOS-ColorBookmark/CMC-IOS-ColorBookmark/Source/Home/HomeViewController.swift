@@ -10,8 +10,6 @@ import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
 class HomeViewController: UIViewController {
-    
-    var num = 1
 
     @IBAction func ToSetting(_ sender: Any) {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
@@ -28,7 +26,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if num == 1 {
+        if Constant.constantNum == 1 {
             let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController")
             

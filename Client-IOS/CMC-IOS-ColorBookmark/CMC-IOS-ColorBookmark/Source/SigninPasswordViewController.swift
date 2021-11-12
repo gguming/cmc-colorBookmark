@@ -10,6 +10,7 @@ import UIKit
 class SigninPasswordViewController: UIViewController {
 
     var passwordCheck: String? = nil
+    var emailValue: String = ""
     
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var PasswordUnderLineView: UIView!
@@ -23,8 +24,9 @@ class SigninPasswordViewController: UIViewController {
     @IBOutlet weak var ContinueLabel: UILabel!
     
     @IBAction func ContinueButtonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SigninNickNameViewController")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SigninNickNameViewController") as? SigninNickNameViewController else { return }
+        vc.passwordValue = PasswordTextField.text!
+        vc.emailValue = emailValue
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

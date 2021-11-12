@@ -51,14 +51,15 @@ class LoginMainViewController: UIViewController {
 
 extension LoginMainViewController {
     func emailAlreadyExist() {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MemberLoginViewController")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "MemberLoginViewController") as? MemberLoginViewController else { return }
+        vc.emailValue = EmailTextField.text!
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
     func availbleEmail() {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SigininPasswordViewController")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SigninPasswordViewController") as? SigninPasswordViewController else { return }
+        vc.emailValue = EmailTextField.text!
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

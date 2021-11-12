@@ -642,7 +642,7 @@
         <!--Signin Password View Controller-->
         <scene sceneID="6iE-uM-pRo">
             <objects>
-                <viewController storyboardIdentifier="SigininPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a46-HU-hwh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

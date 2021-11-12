@@ -8,7 +8,12 @@
 import UIKit
 
 class SigninNickNameViewController: UIViewController {
-
+    lazy var dataManager: SigninDataManager = SigninDataManager()
+    
+    var emailValue = ""
+    var passwordValue = ""
+    var nicknameValue = ""
+    
     @IBOutlet weak var NickNameTextField: UITextField!
     @IBOutlet weak var NickNameUnderLineView: UIView!
     @IBOutlet weak var AgreementLabel: UILabel!
@@ -20,7 +25,13 @@ class SigninNickNameViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func JoinButtonTapped(_ sender: Any) {
-        
+        nicknameValue = NickNameTextField.text!
+        print("tlwkr slkdfj")
+        print(emailValue)
+        print(passwordValue)
+        print(nicknameValue)
+        let signinInput = SigninRequest(email: emailValue, password: passwordValue, nickname: nicknameValue)
+        dataManager.postSignin(signinInput, delegate: self)
     }
     
     let changedBackgroundColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
@@ -101,4 +112,12 @@ class SigninNickNameViewController: UIViewController {
         return false
     }
 
+}
+
+extension SigninNickNameViewController {
+    func SigninSuccess() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        changeRootViewController(vc)
+    }
 }

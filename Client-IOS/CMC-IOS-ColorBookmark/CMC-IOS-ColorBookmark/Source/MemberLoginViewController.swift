@@ -8,7 +8,10 @@
 import UIKit
 
 class MemberLoginViewController: UIViewController {
-
+    lazy var dataManager: LoginDataManager = LoginDataManager()
+    var emailValue = ""
+    var passwordValue = ""
+    
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var UnderLineView: UIView!
     @IBOutlet weak var JoinButton: UIButton!
@@ -19,10 +22,11 @@ class MemberLoginViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func JoinButtonTapped(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "MemberLoginViewController")
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true)
+        passwordValue = PasswordTextField.text!
+        print(emailValue)
+        print(passwordValue)
+        let loginInput = LoginRequest(email: emailValue, password: passwordValue)
+        dataManager.postLogin(loginInput, delegate: self)
     }
     
     @IBAction func FindPasswordButtonTapped(_ sender: Any) {
@@ -61,5 +65,13 @@ class MemberLoginViewController: UIViewController {
         attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: textColor, range: NSRange(location: 0, length: text.count))
         attribute.addAttribute(NSMutableAttributedString.Key.underlineStyle, value: underLine, range: NSRange(location: 0, length: text.count))
         self.FindPasswordButton.setAttributedTitle(attribute, for: .normal)
+    }
+}
+
+extension MemberLoginViewController {
+    func loginSuccess() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        changeRootViewController(vc)
     }
 }

@@ -40,6 +40,9 @@
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
 		E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */; };
+		E9445BB2273E59BB00B4EC82 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */; };
+		E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */; };
+		E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
@@ -97,6 +100,9 @@
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
 		E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckResponse.swift; sourceTree = "<group>"; };
+		E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -377,6 +383,7 @@
 			children = (
 				E9E4A992273A2EA90037A815 /* SigninDataManager.swift */,
 				E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */,
+				E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -387,6 +394,8 @@
 				E9E4A996273A2EFD0037A815 /* SigninResponse.swift */,
 				E9E4A998273A30D50037A815 /* SigninRequest.swift */,
 				E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */,
+				E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */,
+				E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -523,6 +532,8 @@
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
+				E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */,
+				E9445BB2273E59BB00B4EC82 /* LoginRequest.swift in Sources */,
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
@@ -534,6 +545,7 @@
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
+				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
