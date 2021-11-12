@@ -205,8 +205,6 @@
 				A47C4D56273BAF1F00CEB907 /* AudioCell */,
 				A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */,
 				A47C4D52273BAE4D00CEB907 /* EditColorVC */,
-				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
-				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 			);
 			path = EditDiary;
 			sourceTree = "<group>";
@@ -290,6 +288,8 @@
 		A47C4D52273BAE4D00CEB907 /* EditColorVC */ = {
 			isa = PBXGroup;
 			children = (
+				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
+				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 			);
 			path = EditColorVC;
 			sourceTree = "<group>";
@@ -532,12 +532,9 @@
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
-
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
-
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
-        
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
@@ -547,12 +544,9 @@
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
-
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
-
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
-
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
