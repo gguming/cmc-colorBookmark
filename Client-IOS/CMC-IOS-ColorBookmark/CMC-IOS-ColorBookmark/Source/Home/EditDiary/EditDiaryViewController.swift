@@ -23,6 +23,8 @@ class EditDiaryViewController: UIViewController {
     
     
     
+    
+    
 
 }
 
@@ -36,11 +38,6 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as? HeaderTableViewCell else {return UITableViewCell()}
             cell.setUI()
-            if Constant.panelState == 0{
-                cell.reloadInputViews()
-            } else {
-                cell.reloadInputViews()
-            }
             return cell
         
         case 1:

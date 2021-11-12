@@ -23,6 +23,8 @@
 		A45AE890272D094D009ABED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE88E272D094D009ABED6 /* Main.storyboard */; };
 		A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45AE891272D094F009ABED6 /* Assets.xcassets */; };
 		A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */; };
+		A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */; };
+		A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */; };
 		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
 		A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */; };
 		A46839E8272E7574005BA79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E7272E7574005BA79E /* Constant.swift */; };
@@ -68,6 +70,8 @@
 		A45AE891272D094F009ABED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45AE894272D094F009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A45AE896272D094F009ABED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
 		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A46839E7272E7574005BA79E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 		A47C4D56273BAF1F00CEB907 /* AudioCell */ = {
 			isa = PBXGroup;
 			children = (
+				A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */,
+				A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */,
 			);
 			path = AudioCell;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
+				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,
 				A45AE890272D094D009ABED6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +470,7 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
