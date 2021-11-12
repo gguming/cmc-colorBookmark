@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "walkthrough4.png",
+      "filename" : "imageSample.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "walkthrough4-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "walkthrough4-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

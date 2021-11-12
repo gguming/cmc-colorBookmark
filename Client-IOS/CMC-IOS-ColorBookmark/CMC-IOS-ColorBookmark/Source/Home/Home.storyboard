@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ari-E9-mxg">
+
+
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,10 +14,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Terms Of Use View Controller-->
+        <!--Test Home View Controller-->
         <scene sceneID="IgE-0g-vPh">
             <objects>
-                <viewController storyboardIdentifier="TermsOfUseViewController" id="ari-E9-mxg" customClass="TermsOfUseViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestHomeViewController" id="ari-E9-mxg" customClass="TestHomeViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIk-XT-Okq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,9 +36,24 @@
                     <view key="view" contentMode="scaleToFill" id="DAS-ST-Rqq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-km-mic">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0RR-uL-dMd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0RR-uL-dMd" firstAttribute="bottom" secondItem="IDu-km-mic" secondAttribute="bottom" id="MeJ-xP-JAs"/>
+                            <constraint firstItem="IDu-km-mic" firstAttribute="leading" secondItem="0RR-uL-dMd" secondAttribute="leading" id="ZcZ-bZ-Reh"/>
+                            <constraint firstItem="IDu-km-mic" firstAttribute="top" secondItem="0RR-uL-dMd" secondAttribute="top" id="hpn-JC-6ek"/>
+                            <constraint firstItem="0RR-uL-dMd" firstAttribute="trailing" secondItem="IDu-km-mic" secondAttribute="trailing" id="pTn-mg-IVN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="IDu-km-mic" id="TgT-MR-UnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ah-I9-6bE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -45,5 +45,17 @@ class TestHomeViewController: UIViewController {
 }
 
 extension TestHomeViewController: FloatingPanelControllerDelegate{
-
+    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
+        if fpc.state == .tip {
+            Constant.panelState = 0
+            guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+            
+            print(Constant.panelState)
+        } else {
+            Constant.panelState = 1
+            guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+            contentVC.tableview?.reloadData()
+            print(Constant.panelState)
+        }
+    }
 }

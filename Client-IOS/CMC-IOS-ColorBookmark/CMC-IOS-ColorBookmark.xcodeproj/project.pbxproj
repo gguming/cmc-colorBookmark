@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */; };
+		A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */; };
+		A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */; };
+		A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */; };
+		A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF3A1273BF91A008DF16A /* TextTableViewCell.swift */; };
+		A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A2273BF91A008DF16A /* TextTableViewCell.xib */; };
+		A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */; };
+		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
+		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
+		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
 		A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88A272D094D009ABED6 /* SceneDelegate.swift */; };
 		A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* ViewController.swift */; };
 		A45AE890272D094D009ABED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE88E272D094D009ABED6 /* Main.storyboard */; };
 		A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45AE891272D094F009ABED6 /* Assets.xcassets */; };
 		A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */; };
+		A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */; };
+		A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */; };
+		A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */; };
+		A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */; };
 		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
 		A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */; };
 		A46839E8272E7574005BA79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E7272E7574005BA79E /* Constant.swift */; };
@@ -48,6 +62,16 @@
 
 /* Begin PBXFileReference section */
 		7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMC_IOS_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
+		A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		A43BF3A1273BF91A008DF16A /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		A43BF3A2273BF91A008DF16A /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* CMC-IOS-ColorBookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMC-IOS-ColorBookmark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +80,10 @@
 		A45AE891272D094F009ABED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45AE894272D094F009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A45AE896272D094F009ABED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
+		A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBtnTableViewCell.swift; sourceTree = "<group>"; };
+		A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditBtnTableViewCell.xib; sourceTree = "<group>"; };
 		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A46839E7272E7574005BA79E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -119,6 +147,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A43BF39C273BEA41008DF16A /* ColorCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */,
+				A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */,
+			);
+			path = ColorCollectionCell;
+			sourceTree = "<group>";
+		};
+		A43BF3A9273C0523008DF16A /* PhotoColllectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoColllectionCell;
+			sourceTree = "<group>";
+		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
@@ -151,13 +195,20 @@
 			path = "CMC-IOS-ColorBookmark";
 			sourceTree = "<group>";
 		};
-		A461AD3D2736D5980067C6D1 /* EditColor */ = {
+		A461AD3D2736D5980067C6D1 /* EditDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A47C4D51273BAE1E00CEB907 /* HeadCell */,
+				A47C4D53273BAE8800CEB907 /* ColorCell */,
+				A47C4D54273BAE9200CEB907 /* TextCell */,
+				A47C4D55273BAEA400CEB907 /* PhotoCell */,
+				A47C4D56273BAF1F00CEB907 /* AudioCell */,
+				A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */,
+				A47C4D52273BAE4D00CEB907 /* EditColorVC */,
 				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
 				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 			);
-			path = EditColor;
+			path = EditDiary;
 			sourceTree = "<group>";
 		};
 		A46839E3272E746D005BA79E /* Source */ = {
@@ -227,6 +278,69 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
+		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */,
+				A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */,
+			);
+			path = HeadCell;
+			sourceTree = "<group>";
+		};
+		A47C4D52273BAE4D00CEB907 /* EditColorVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditColorVC;
+			sourceTree = "<group>";
+		};
+		A47C4D53273BAE8800CEB907 /* ColorCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43BF39C273BEA41008DF16A /* ColorCollectionCell */,
+				A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */,
+				A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */,
+			);
+			path = ColorCell;
+			sourceTree = "<group>";
+		};
+		A47C4D54273BAE9200CEB907 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43BF3A1273BF91A008DF16A /* TextTableViewCell.swift */,
+				A43BF3A2273BF91A008DF16A /* TextTableViewCell.xib */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		A47C4D55273BAEA400CEB907 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				A43BF3A9273C0523008DF16A /* PhotoColllectionCell */,
+				A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */,
+				A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */,
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
+		A47C4D56273BAF1F00CEB907 /* AudioCell */ = {
+			isa = PBXGroup;
+			children = (
+				A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */,
+				A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */,
+			);
+			path = AudioCell;
+			sourceTree = "<group>";
+		};
+		A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */ = {
+			isa = PBXGroup;
+			children = (
+				A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */,
+				A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */,
+			);
+			path = AddDiarayBtnCell;
+			sourceTree = "<group>";
+		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +365,7 @@
 			children = (
 				E9445B98273B8F8500B4EC82 /* Setting */,
 				A4C3BEC92737A50F006A42E0 /* Calander */,
-				A461AD3D2736D5980067C6D1 /* EditColor */,
+				A461AD3D2736D5980067C6D1 /* EditDiary */,
 				E9E4A9862734EE090037A815 /* Home.storyboard */,
 				E9E4A9882734EE9A0037A815 /* HomeViewController.swift */,
 			);
@@ -337,12 +451,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
+				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
+				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
+				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
+				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
+				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
+				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,
 				A45AE890272D094D009ABED6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,12 +524,20 @@
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
+				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
+				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
+				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
+
+				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
+
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
+        
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
@@ -418,7 +547,12 @@
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+
+				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
+				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
+
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
+
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
@@ -579,7 +713,7 @@
 				INFOPLIST_FILE = "CMC-IOS-ColorBookmark/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -608,7 +742,7 @@
 				INFOPLIST_FILE = "CMC-IOS-ColorBookmark/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
