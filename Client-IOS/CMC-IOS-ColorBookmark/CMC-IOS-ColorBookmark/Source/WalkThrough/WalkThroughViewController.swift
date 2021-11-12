@@ -12,8 +12,8 @@ class WalkThroughViewController: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
   
     @IBAction func startBtnTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
         changeRootViewController(vc)
     }
     

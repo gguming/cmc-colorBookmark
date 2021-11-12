@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SigininPasswordViewController: UIViewController {
+class SigninPasswordViewController: UIViewController {
 
     var passwordCheck: String? = nil
     

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ari-E9-mxg">
+
+
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -70,6 +74,15 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="CalenderButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7Vc-F1-HRg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ts-i4-oOc">
+                                <rect key="frame" x="49" y="186" width="71" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Setting"/>
+                                <connections>
+                                    <action selector="ToSetting:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aXL-C7-AOp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,10 +198,88 @@
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="101.78571428571428"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="P7x-IA-SQp">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="JQl-Sx-YjI" customClass="SettingViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kK-aN-can">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-Zm-yiX">
+                                <rect key="frame" x="189.5" y="109" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconIonicIosArrowBack" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-RI-bD5">
+                                <rect key="frame" x="28" y="111" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sZh-RI-bD5" secondAttribute="height" id="Yff-iY-adE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="168" translatesAutoresizingMaskIntoConstraints="NO" id="o29-Ox-lzg">
+                                <rect key="frame" x="318" y="178" width="68" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o29-Ox-lzg" secondAttribute="height" multiplier="17:11" id="eb2-uV-Gfe"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-uv-FgT">
+                                <rect key="frame" x="28" y="222" width="358" height="2"/>
+                                <color key="backgroundColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Cwb-ff-0BJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQN-7y-TGQ">
+                                <rect key="frame" x="44" y="178" width="39" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXZ-yX-DlL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kKd-uv-FgT" firstAttribute="top" secondItem="o29-Ox-lzg" secondAttribute="bottom" id="706-Oc-b27"/>
+                            <constraint firstItem="dQN-7y-TGQ" firstAttribute="leading" secondItem="XXZ-yX-DlL" secondAttribute="leading" constant="44" id="Ep6-oD-6X1"/>
+                            <constraint firstItem="OZz-Zm-yiX" firstAttribute="centerX" secondItem="XXZ-yX-DlL" secondAttribute="centerX" id="JeI-oO-vex"/>
+                            <constraint firstItem="XXZ-yX-DlL" firstAttribute="trailing" secondItem="kKd-uv-FgT" secondAttribute="trailing" constant="28" id="WqF-l7-bju"/>
+                            <constraint firstItem="kKd-uv-FgT" firstAttribute="top" secondItem="dQN-7y-TGQ" secondAttribute="bottom" constant="10" id="aWk-N9-2Bx"/>
+                            <constraint firstItem="XXZ-yX-DlL" firstAttribute="trailing" secondItem="o29-Ox-lzg" secondAttribute="trailing" constant="28" id="buk-5Q-IGm"/>
+                            <constraint firstItem="o29-Ox-lzg" firstAttribute="top" secondItem="OZz-Zm-yiX" secondAttribute="bottom" constant="45" id="dc8-am-Ha2"/>
+                            <constraint firstItem="OZz-Zm-yiX" firstAttribute="top" secondItem="XXZ-yX-DlL" secondAttribute="top" constant="65" id="lBL-Rp-qz4"/>
+                            <constraint firstItem="kKd-uv-FgT" firstAttribute="leading" secondItem="XXZ-yX-DlL" secondAttribute="leading" constant="28" id="rIW-B9-K66"/>
+                            <constraint firstItem="sZh-RI-bD5" firstAttribute="leading" secondItem="XXZ-yX-DlL" secondAttribute="leading" constant="28" id="uHs-48-bFz"/>
+                            <constraint firstItem="sZh-RI-bD5" firstAttribute="centerY" secondItem="OZz-Zm-yiX" secondAttribute="centerY" id="xWk-gY-nuP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDU-fE-uJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="822"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="ahR-dQ-dPa">
+            <objects>
+                <viewController storyboardIdentifier="MyPageViewController" id="K9V-9w-hDu" customClass="MyPageViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CuT-eF-Vmx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YBh-JS-frZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYh-5k-fSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="822"/>
+        </scene>
     </scenes>
     <resources>
         <image name="126" width="44" height="44"/>
         <image name="127" width="44" height="44"/>
+        <image name="168" width="68" height="44"/>
+        <image name="iconIonicIosArrowBack" width="12" height="20"/>
         <image name="iconIonicIosClose" width="16" height="16"/>
         <image name="iconMaterialPanoramaHorizontal" width="24" height="22.5"/>
         <systemColor name="systemBackgroundColor">
