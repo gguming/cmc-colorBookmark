@@ -43,6 +43,8 @@
 		E9445BB2273E59BB00B4EC82 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */; };
 		E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */; };
 		E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */; };
+		E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */; };
+		E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
@@ -103,6 +105,8 @@
 		E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 			children = (
 				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
 				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
+				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
+				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
+				E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
@@ -532,6 +539,7 @@
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
+				E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */,
 				E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */,
 				E9445BB2273E59BB00B4EC82 /* LoginRequest.swift in Sources */,
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
