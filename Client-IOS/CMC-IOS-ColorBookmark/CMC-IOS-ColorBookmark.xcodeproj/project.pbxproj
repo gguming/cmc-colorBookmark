@@ -35,6 +35,8 @@
 		A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EE272E7E63005BA79E /* UIViewController.swift */; };
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
+		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
+		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
@@ -97,6 +99,8 @@
 		A46839EE272E7E63005BA79E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
+		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		A46839E3272E746D005BA79E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A4C69FC9273F71400091565C /* BookMark */,
 				E9E4A9852734EDDA0037A815 /* Home */,
 				A45AE88E272D094D009ABED6 /* Main.storyboard */,
 				A45AE88C272D094D009ABED6 /* ViewController.swift */,
@@ -361,6 +366,22 @@
 			path = Calander;
 			sourceTree = "<group>";
 		};
+		A4C69FC6273F71120091565C /* Editcolor */ = {
+			isa = PBXGroup;
+			children = (
+				A4C69FC7273F71290091565C /* EditColor.storyboard */,
+			);
+			path = Editcolor;
+			sourceTree = "<group>";
+		};
+		A4C69FC9273F71400091565C /* BookMark */ = {
+			isa = PBXGroup;
+			children = (
+				A4C69FCA273F71590091565C /* BookMark.storyboard */,
+			);
+			path = BookMark;
+			sourceTree = "<group>";
+		};
 		E9445B98273B8F8500B4EC82 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +396,7 @@
 		E9E4A9852734EDDA0037A815 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A4C69FC6273F71120091565C /* Editcolor */,
 				E9445B98273B8F8500B4EC82 /* Setting */,
 				A4C3BEC92737A50F006A42E0 /* Calander */,
 				A461AD3D2736D5980067C6D1 /* EditDiary */,
@@ -466,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
@@ -475,6 +498,7 @@
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
 				E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */,
+				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
