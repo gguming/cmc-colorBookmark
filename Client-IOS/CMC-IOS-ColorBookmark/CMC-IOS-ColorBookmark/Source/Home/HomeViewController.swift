@@ -10,12 +10,19 @@ import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
 class HomeViewController: UIViewController {
-
-    @IBAction func ToSetting(_ sender: Any) {
+    
+    @IBAction func BookmarkButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func SettingButtonTapped(_ sender: Any) {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var CalenderView: UIView!
+    @IBOutlet weak var CalenderButton: UIButton!
+    
     @IBAction func CalenderButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
@@ -23,8 +30,22 @@ class HomeViewController: UIViewController {
         present(bottomSheet, animated: true, completion: nil)
         
     }
+    
     override func viewDidLoad() {
+        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy . MM . dd  "
+        let currentDate = formatter.string(from: Date())
+        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
+        let calenderText = NSMutableAttributedString()
+        calenderText.append(NSAttributedString(string: currentDate, attributes: generalAttributes))
+        CalenderButton.setAttributedTitle(calenderText, for: .normal)
+        
+        CalenderView.layer.cornerRadius = 25
         super.viewDidLoad()
+
+       
         
         if Constant.constantNum == 1 {
             let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)

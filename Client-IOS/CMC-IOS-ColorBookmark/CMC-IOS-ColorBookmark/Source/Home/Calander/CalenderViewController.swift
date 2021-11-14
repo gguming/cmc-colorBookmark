@@ -109,7 +109,7 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
         
         let myBoundSize: CGFloat = UIScreen.main.bounds.size.width
         let cellSize : CGFloat = myBoundSize / 9 - 5
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             return CGSize(width: cellSize, height: cellSize)
         }
         
