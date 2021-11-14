@@ -11,4 +11,10 @@ struct LoginResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
+    var result: LoginResult
+}
+
+struct LoginResult: Decodable{
+    let userId: Int
+    let jwt: String
 }

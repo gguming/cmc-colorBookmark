@@ -84,7 +84,7 @@ class SigninNickNameViewController: UIViewController {
         let linkAttributes: [NSAttributedString.Key: Any] = [.underlineStyle: NSUnderlineStyle.single.rawValue, .foregroundColor: pinkColor, .font: boldFont]
         
         let mutableString = NSMutableAttributedString()
-        mutableString.append(NSAttributedString(string: generalText,attributes: generalAttributes))
+        mutableString.append(NSAttributedString(string: generalText, attributes: generalAttributes))
         mutableString.setAttributes(linkAttributes, range: (generalText as NSString).range(of: privacyPolicy))
         mutableString.setAttributes(linkAttributes, range: (generalText as NSString).range(of: termsOfUse))
         

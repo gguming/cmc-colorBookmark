@@ -9,6 +9,9 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBAction func BackToMainVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
