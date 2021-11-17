@@ -35,6 +35,9 @@
 		A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EE272E7E63005BA79E /* UIViewController.swift */; };
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
+		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
+		A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */; };
+		A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */; };
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
@@ -100,6 +103,9 @@
 		A46839EE272E7E63005BA79E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
+		A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +365,15 @@
 			path = AddDiarayBtnCell;
 			sourceTree = "<group>";
 		};
+		A4AEB9032744B55F00901C5B /* EditColorHeadCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */,
+				A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */,
+			);
+			path = EditColorHeadCell;
+			sourceTree = "<group>";
+		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,7 +387,9 @@
 		A4C69FC6273F71120091565C /* Editcolor */ = {
 			isa = PBXGroup;
 			children = (
+				A4AEB9032744B55F00901C5B /* EditColorHeadCell */,
 				A4C69FC7273F71290091565C /* EditColor.storyboard */,
+				A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */,
 			);
 			path = Editcolor;
 			sourceTree = "<group>";
@@ -497,6 +514,7 @@
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
+				A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */,
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
@@ -560,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */,
 				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
@@ -582,6 +601,7 @@
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
+				A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
