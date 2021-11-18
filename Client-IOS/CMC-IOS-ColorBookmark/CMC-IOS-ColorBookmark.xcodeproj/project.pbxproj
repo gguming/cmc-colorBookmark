@@ -40,6 +40,8 @@
 		A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */; };
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
+		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
+		A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */; };
 		D5B8FD85B3A3D97A71BBCE5E /* Pods_CMC_IOS_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46608B701BEE5C34D7057B /* Pods_CMC_IOS_ColorBookmark.framework */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
@@ -108,6 +110,8 @@
 		A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
+		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerViewController.xib; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +391,7 @@
 		A4C69FC6273F71120091565C /* Editcolor */ = {
 			isa = PBXGroup;
 			children = (
+				A4E1266D2745F004009BCF74 /* ColorPicker */,
 				A4AEB9032744B55F00901C5B /* EditColorHeadCell */,
 				A4C69FC7273F71290091565C /* EditColor.storyboard */,
 				A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */,
@@ -400,6 +405,15 @@
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
 			);
 			path = BookMark;
+			sourceTree = "<group>";
+		};
+		A4E1266D2745F004009BCF74 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */,
+				A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */,
+			);
+			path = ColorPicker;
 			sourceTree = "<group>";
 		};
 		E9445B98273B8F8500B4EC82 /* Setting */ = {
@@ -513,6 +527,7 @@
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
+				A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
 				A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */,
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
@@ -604,6 +619,7 @@
 				A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
+				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
