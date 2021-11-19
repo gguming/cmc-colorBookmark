@@ -55,7 +55,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
-        modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }
     
