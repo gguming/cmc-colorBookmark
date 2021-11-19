@@ -93,7 +93,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="iconIonicIosArrowBack"/>
                                         <connections>
-                                            <action selector="backBtnTapped:" destination="aEH-8B-dFG" eventType="touchUpInside" id="nJd-eO-kVs"/>
+                                            <action selector="backBtnTapped:" destination="aEH-8B-dFG" eventType="touchUpInside" id="CGV-g8-rsk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20201.11.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR6-9E-hd2">
@@ -116,30 +116,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-i6-lXP">
                                 <rect key="frame" x="28" y="154" width="358" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="Ggk-nz-3sd">
-                                    <rect key="frame" x="0.0" y="0.0" width="358" height="100"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 sh님이 색갈피는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pc-Gv-LZV">
-                                            <rect key="frame" x="111" y="21" width="136.5" height="19.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="슬픔의 색" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENd-Lc-108">
-                                            <rect key="frame" x="135" y="48.5" width="88.5" height="29"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ENd-Lc-108" firstAttribute="centerX" secondItem="Ggk-nz-3sd" secondAttribute="centerX" id="8qD-wj-SbN"/>
-                                        <constraint firstItem="7Pc-Gv-LZV" firstAttribute="top" secondItem="Ggk-nz-3sd" secondAttribute="top" constant="21" id="Abe-RD-sIL"/>
-                                        <constraint firstItem="7Pc-Gv-LZV" firstAttribute="centerX" secondItem="Ggk-nz-3sd" secondAttribute="centerX" id="Fd2-8s-E8Z"/>
-                                        <constraint firstItem="ENd-Lc-108" firstAttribute="top" secondItem="7Pc-Gv-LZV" secondAttribute="bottom" constant="8" id="nZQ-QH-5ja"/>
-                                    </constraints>
-                                </view>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z6b-1e-aEP"/>
@@ -156,7 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0em-kP-ZgZ"/>
                     <connections>
-                        <outlet property="monthView" destination="COt-Wb-Nqt" id="yDO-9P-rXu"/>
+                        <outlet property="dayView" destination="COt-Wb-Nqt" id="Uep-tw-vBE"/>
                         <outlet property="tableview" destination="cJx-i6-lXP" id="f4b-DU-gLF"/>
                     </connections>
                 </viewController>

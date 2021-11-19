@@ -41,6 +41,14 @@
 		A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475558227476D7C00593C70 /* StoryTableViewCell.swift */; };
 		A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475558327476D7C00593C70 /* StoryTableViewCell.xib */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
+		A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */; };
+		A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */; };
+		A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */; };
+		A49DB7322747764C00AF315F /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB7302747764C00AF315F /* RecordTableViewCell.xib */; };
+		A49DB735274776B600AF315F /* ButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB733274776B600AF315F /* ButtonsTableViewCell.swift */; };
+		A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */; };
+		A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */; };
+		A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */; };
 		A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */; };
@@ -117,6 +125,14 @@
 		A475558227476D7C00593C70 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		A475558327476D7C00593C70 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
+		A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
+		A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		A49DB7302747764C00AF315F /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		A49DB733274776B600AF315F /* ButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewCell.swift; sourceTree = "<group>"; };
+		A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsTableViewCell.xib; sourceTree = "<group>"; };
+		A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoTableViewCell.swift; sourceTree = "<group>"; };
+		A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -337,6 +353,7 @@
 		A475557D27476B3A00593C70 /* DetailCell */ = {
 			isa = PBXGroup;
 			children = (
+				A49DB73727477C9C00AF315F /* HeaderCell */,
 				A475557E27476B4800593C70 /* StoryCell */,
 				A475557F27476B6500593C70 /* ImageCell */,
 				A475558027476B7000593C70 /* RecordCell */,
@@ -357,6 +374,8 @@
 		A475557F27476B6500593C70 /* ImageCell */ = {
 			isa = PBXGroup;
 			children = (
+				A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */,
+				A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */,
 			);
 			path = ImageCell;
 			sourceTree = "<group>";
@@ -364,6 +383,8 @@
 		A475558027476B7000593C70 /* RecordCell */ = {
 			isa = PBXGroup;
 			children = (
+				A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */,
+				A49DB7302747764C00AF315F /* RecordTableViewCell.xib */,
 			);
 			path = RecordCell;
 			sourceTree = "<group>";
@@ -371,6 +392,8 @@
 		A475558127476B8000593C70 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
+				A49DB733274776B600AF315F /* ButtonsTableViewCell.swift */,
+				A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */,
 			);
 			path = ButtonCell;
 			sourceTree = "<group>";
@@ -438,6 +461,15 @@
 				A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */,
 			);
 			path = AddDiarayBtnCell;
+			sourceTree = "<group>";
+		};
+		A49DB73727477C9C00AF315F /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */,
+				A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */,
+			);
+			path = HeaderCell;
 			sourceTree = "<group>";
 		};
 		A4AEB9032744B55F00901C5B /* EditColorHeadCell */ = {
@@ -601,7 +633,9 @@
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
+				A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
+				A49DB7322747764C00AF315F /* RecordTableViewCell.xib in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
 				A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
@@ -612,7 +646,9 @@
 				E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */,
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
+				A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
+				A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,
@@ -685,9 +721,11 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
+				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
@@ -706,11 +744,13 @@
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
+				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
+				A49DB735274776B600AF315F /* ButtonsTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,

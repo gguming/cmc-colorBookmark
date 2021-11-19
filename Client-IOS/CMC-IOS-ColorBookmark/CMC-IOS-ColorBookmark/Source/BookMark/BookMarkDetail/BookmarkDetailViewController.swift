@@ -8,13 +8,26 @@
 import UIKit
 
 class BookmarkDetailViewController: UIViewController {
+    @IBOutlet weak var dayView: UIView!
+    
 
+    @IBAction func backBtnTapped(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableview.backgroundColor = .clear
         tableview.dataSource = self
         tableview.delegate = self
         
+        tableview.register(UINib(nibName: "HeaderInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderInfoTableViewCell")
+        tableview.register(UINib(nibName: "StoryTableViewCell", bundle: nil), forCellReuseIdentifier: "StoryTableViewCell")
+        tableview.register(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "ImagesTableViewCell")
+        tableview.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "RecordTableViewCell")
+        tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
+        
+        dayView.layer.cornerRadius = 8
 
        
     }
@@ -29,12 +42,70 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 10))
+        view.backgroundColor = .clear
+
+        return view
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderInfoTableViewCell", for: indexPath) as? HeaderInfoTableViewCell else {return UITableViewCell()}
+            cell.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
+            cell.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+            
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
+            cell.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+            
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
+            cell.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+            
+        case 4:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonsTableViewCell", for: indexPath) as? ButtonsTableViewCell else {return UITableViewCell()}
+            cell.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 100
+        case 1:
+            return 163
+        case 2:
+            return 144
+        case 3:
+            return 127
+        case 4:
+            return 40
+        default:
+            return 0
+        }
     }
     
     
