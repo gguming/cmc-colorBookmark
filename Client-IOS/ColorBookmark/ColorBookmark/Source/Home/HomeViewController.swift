@@ -10,7 +10,7 @@ import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
 class HomeViewController: UIViewController {
-    
+//    var delegate: ChangeStateDelegate?
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
         let SB = UIStoryboard(name: "BookMark", bundle: nil)
         guard let vc = SB.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
@@ -83,9 +83,36 @@ class HomeViewController: UIViewController {
         
         fpc.surfaceView.grabberHandle.isHidden = true
     }
+    
+    func changeHeaderUI(_ delegate: HeaderTableViewCell){
+        delegate.checkState()
+    }
 }
 
-
-extension HomeViewController: FloatingPanelControllerDelegate{
+extension HomeViewController: EditBtnDelegate{
+    func presentEditVC() {
+        <#code#>
+    }
+    
     
 }
+
+extension HomeViewController: FloatingPanelControllerDelegate{
+    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
+        if fpc.state == .tip {
+            Constant.panelState = 0
+//            delegate?.changeState()
+           
+            
+            print(Constant.panelState)
+        } else {
+            Constant.panelState = 1
+//            delegate?.changeState()
+            print(Constant.panelState)
+        }
+    }
+}
+
+//protocol ChangeStateDelegate{
+//    func changeState()
+//}
