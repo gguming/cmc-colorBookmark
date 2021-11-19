@@ -40,6 +40,10 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.estimatedRowHeight
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section != 4 && indexPath.section != 5 {
@@ -55,7 +59,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: mediumFont]
             let onOffAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
             let mutableString = NSMutableAttributedString()
-            cell.backgroundColor = UIColor.blue
             
             switch indexPath.section {
             case 0:

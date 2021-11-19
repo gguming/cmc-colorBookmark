@@ -72,6 +72,7 @@ extension MemberLoginViewController {
     func loginSuccess() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        print("성공성공성공")
         changeRootViewController(vc)
     }
 }

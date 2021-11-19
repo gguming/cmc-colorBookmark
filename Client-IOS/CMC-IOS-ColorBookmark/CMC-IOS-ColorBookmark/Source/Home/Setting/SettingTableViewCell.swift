@@ -44,7 +44,8 @@ class SettingTableViewCell: UITableViewCell {
         self.layer.cornerRadius = 12
         
         SettingSwitch.isOn = false
-        
+        TitleLabel.sizeToFit()
+        OnoffLabel.sizeToFit()
         TitleLabel.adjustsFontSizeToFitWidth = true
         TitleLabel.minimumScaleFactor = 0.5
        

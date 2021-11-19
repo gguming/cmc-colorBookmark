@@ -50,13 +50,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
        
-        
-        if Constant.constantNum == 1 {
-            let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController")
-            
-            changeRootViewController(vc)
-        }
+//        
+//        if Constant.constantNum == 1 {
+//            let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController")
+//            
+//            changeRootViewController(vc)
+//        }
         
         let fpc = FloatingPanelController()
         fpc.delegate = self

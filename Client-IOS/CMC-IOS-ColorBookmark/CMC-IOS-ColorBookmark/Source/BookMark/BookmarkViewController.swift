@@ -12,6 +12,7 @@ class BookmarkViewController: UIViewController {
     @IBOutlet weak var monthBtn: UIButton!
     
     @IBAction func backBtnTapped(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func monthBtnTapped(_ sender: Any) {
