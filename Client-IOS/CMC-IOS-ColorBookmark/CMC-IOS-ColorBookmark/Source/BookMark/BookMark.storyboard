@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,25 +9,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bookmark View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookmarkViewController" id="Y6W-OH-hqX" customClass="BookmarkViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-7n-rXI">
+                                <rect key="frame" x="28" y="100" width="358" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-bD-tof">
+                                        <rect key="frame" x="16" y="12" width="12" height="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="iconIonicIosArrowBack"/>
+                                        <connections>
+                                            <action selector="backBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Blt-hF-5wW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGF-FY-6FD">
+                                        <rect key="frame" x="159" y="11" width="40" height="22"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="iconArrowDropdown"/>
+                                        <connections>
+                                            <action selector="monthBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ttQ-Cr-33g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="oyd-bD-tof" firstAttribute="leading" secondItem="7TA-7n-rXI" secondAttribute="leading" constant="16" id="8ID-42-Qjd"/>
+                                    <constraint firstAttribute="bottom" secondItem="oyd-bD-tof" secondAttribute="bottom" constant="12" id="U8Q-1p-gdT"/>
+                                    <constraint firstItem="oyd-bD-tof" firstAttribute="top" secondItem="7TA-7n-rXI" secondAttribute="top" constant="12" id="Va0-hN-tZn"/>
+                                    <constraint firstItem="OGF-FY-6FD" firstAttribute="centerX" secondItem="7TA-7n-rXI" secondAttribute="centerX" id="XSR-bE-gXg"/>
+                                    <constraint firstAttribute="height" constant="44" id="fIE-Me-Ell"/>
+                                    <constraint firstItem="OGF-FY-6FD" firstAttribute="centerY" secondItem="7TA-7n-rXI" secondAttribute="centerY" id="nUu-Q1-R3n"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-Od-hpC">
+                                <rect key="frame" x="28" y="154" width="358" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NCx-Od-hpC" secondAttribute="trailing" constant="28" id="LtC-Mt-7IL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NCx-Od-hpC" secondAttribute="bottom" id="WQP-6v-eId"/>
+                            <constraint firstItem="NCx-Od-hpC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="YuI-tb-aUI"/>
+                            <constraint firstItem="NCx-Od-hpC" firstAttribute="top" secondItem="7TA-7n-rXI" secondAttribute="bottom" constant="10" id="a3g-ou-K8L"/>
+                            <constraint firstItem="7TA-7n-rXI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="apc-87-WlA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7TA-7n-rXI" secondAttribute="trailing" constant="28" id="pOW-zv-hWv"/>
+                            <constraint firstItem="7TA-7n-rXI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="56" id="paM-GT-Niv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PRg-yC-kBe"/>
+                    <connections>
+                        <outlet property="monthBtn" destination="OGF-FY-6FD" id="vT0-wR-b0i"/>
+                        <outlet property="monthView" destination="7TA-7n-rXI" id="oag-6f-H0L"/>
+                        <outlet property="tableview" destination="NCx-Od-hpC" id="5l7-D5-jc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="38"/>
+            <point key="canvasLocation" x="915.94202898550736" y="37.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="iconArrowDropdown" width="16" height="8"/>
+        <image name="iconIonicIosArrowBack" width="12" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

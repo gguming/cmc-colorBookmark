@@ -34,6 +34,9 @@
 		A46839EC272E75E3005BA79E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EB272E75E3005BA79E /* UIButton.swift */; };
 		A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839EE272E7E63005BA79E /* UIViewController.swift */; };
 		A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46839F3272E8308005BA79E /* WalkThrough.storyboard */; };
+		A47555742747480200593C70 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47555732747480200593C70 /* BookmarkViewController.swift */; };
+		A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475557627474F7300593C70 /* BookmarkTableViewCell.swift */; };
+		A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475557727474F7300593C70 /* BookmarkTableViewCell.xib */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */; };
@@ -104,6 +107,9 @@
 		A46839EB272E75E3005BA79E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A46839EE272E7E63005BA79E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A46839F3272E8308005BA79E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		A47555732747480200593C70 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		A475557627474F7300593C70 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		A475557727474F7300593C70 /* BookmarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkTableViewCell.xib; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -304,6 +310,15 @@
 			path = WalkThrough;
 			sourceTree = "<group>";
 		};
+		A475557527474F5400593C70 /* BookMarkCell */ = {
+			isa = PBXGroup;
+			children = (
+				A475557627474F7300593C70 /* BookmarkTableViewCell.swift */,
+				A475557727474F7300593C70 /* BookmarkTableViewCell.xib */,
+			);
+			path = BookMarkCell;
+			sourceTree = "<group>";
+		};
 		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,7 +417,9 @@
 		A4C69FC9273F71400091565C /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
+				A475557527474F5400593C70 /* BookMarkCell */,
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
+				A47555732747480200593C70 /* BookmarkViewController.swift */,
 			);
 			path = BookMark;
 			sourceTree = "<group>";
@@ -525,6 +542,7 @@
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
+				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
 				A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */,
@@ -600,6 +618,7 @@
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
+				A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */,
 				E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */,
 				E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */,
 				E9445BB2273E59BB00B4EC82 /* LoginRequest.swift in Sources */,
@@ -627,6 +646,7 @@
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
+				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
