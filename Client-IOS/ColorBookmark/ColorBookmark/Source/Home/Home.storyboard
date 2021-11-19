@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Test Home View Controller-->
         <scene sceneID="IgE-0g-vPh">
             <objects>
-                <viewController storyboardIdentifier="TestHomeViewController" id="ari-E9-mxg" customClass="TestHomeViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestHomeViewController" id="ari-E9-mxg" customClass="TestHomeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIk-XT-Okq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,12 +28,12 @@
         <!--Edit Diary View Controller-->
         <scene sceneID="XlA-ok-OeY">
             <objects>
-                <viewController storyboardIdentifier="EditDiaryViewController" id="kE6-Oh-X2c" customClass="EditDiaryViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditDiaryViewController" id="kE6-Oh-X2c" customClass="EditDiaryViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAS-ST-Rqq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-km-mic">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-km-mic">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -58,7 +58,7 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
         <!--Calender View Controller-->
         <scene sceneID="RRr-7g-mxL">
             <objects>
-                <viewController storyboardIdentifier="CalenderViewController" id="kaX-20-mLo" customClass="CalenderViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalenderViewController" id="kaX-20-mLo" customClass="CalenderViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9B-Il-2Rn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
         <!--Setting View Controller-->
         <scene sceneID="P7x-IA-SQp">
             <objects>
-                <viewController storyboardIdentifier="SettingViewController" id="JQl-Sx-YjI" customClass="SettingViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" id="JQl-Sx-YjI" customClass="SettingViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kK-aN-can">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +345,7 @@
                                 <rect key="frame" x="28" y="251" width="358" height="561"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondSettingTableViewCell" id="buy-G7-oZJ" customClass="SecondSettingTableViewCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondSettingTableViewCell" id="buy-G7-oZJ" customClass="SecondSettingTableViewCell" customModule="ColorBookmark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="358" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="buy-G7-oZJ" id="r96-Ha-moa">
@@ -411,7 +411,7 @@
         <!--My Page View Controller-->
         <scene sceneID="ahR-dQ-dPa">
             <objects>
-                <viewController storyboardIdentifier="MyPageViewController" id="K9V-9w-hDu" customClass="MyPageViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" id="K9V-9w-hDu" customClass="MyPageViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CuT-eF-Vmx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -462,7 +462,7 @@
                                 <rect key="frame" x="28" y="272" width="358" height="590"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MypageTableViewCell" id="5uy-Ft-ziW" customClass="MypageTableViewCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MypageTableViewCell" id="5uy-Ft-ziW" customClass="MypageTableViewCell" customModule="ColorBookmark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="358" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5uy-Ft-ziW" id="W9k-DJ-qXj">
