@@ -13,3 +13,8 @@ class JwtInfo {
     private init() { }
 }
 
+class CalendarInfo {
+    static let shared = CalendarInfo()
+    var calenderDate = [String]()
+    private init() { }
+}

@@ -11,9 +11,9 @@ class CalenderCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var CircleImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
 }

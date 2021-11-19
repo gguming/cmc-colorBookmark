@@ -34,7 +34,7 @@ class SigninDataManager {
                         case 1008: print("탈퇴 유저 복귀 성공")
                         case 3001: print("이미 존재하는 회원")
                         case 4000: print("회원가입 실패")
-                        default: print("@@@@")
+                        default: break
                         }
                     }
 
