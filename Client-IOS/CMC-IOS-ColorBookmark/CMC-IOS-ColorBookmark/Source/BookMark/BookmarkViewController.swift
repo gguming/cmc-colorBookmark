@@ -19,8 +19,19 @@ class BookmarkViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableview.dataSource = self
+        tableview.delegate = self
+        tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
+        setUI()
+        
+        
 
         
+    }
+    private func setUI() {
+        monthView.layer.cornerRadius = 8
+        monthBtn.titleLabel?.textAlignment = .left
+        tableview.backgroundColor = .clear
     }
  
 
@@ -33,7 +44,13 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     

@@ -17,7 +17,7 @@ class BookmarkTableViewCell: UITableViewCell {
     @IBOutlet weak var colorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.layer.cornerRadius = 8
+        
         
     }
 
@@ -28,7 +28,8 @@ class BookmarkTableViewCell: UITableViewCell {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12.0, left: 0, bottom: 12, right: 0))
+        let margins = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        contentView.frame = contentView.frame.inset(by: margins)
     }
     
     func setupLayout() {
