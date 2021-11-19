@@ -51,6 +51,8 @@ extension UIColor {
     class var mainPink: UIColor { UIColor(hex: 0xFF1C92) }
     
     class var mainBlack: UIColor{ UIColor(red: 49, green: 49, blue: 49, alpha: 1)}
+    class var mainGray: UIColor{ UIColor(red: 108, green: 108, blue: 108, alpha: 1)}
+    
 }
 
 
