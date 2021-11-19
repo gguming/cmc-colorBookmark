@@ -37,6 +37,9 @@
 		A47555742747480200593C70 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47555732747480200593C70 /* BookmarkViewController.swift */; };
 		A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475557627474F7300593C70 /* BookmarkTableViewCell.swift */; };
 		A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475557727474F7300593C70 /* BookmarkTableViewCell.xib */; };
+		A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475557B2747655300593C70 /* BookmarkDetailViewController.swift */; };
+		A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475558227476D7C00593C70 /* StoryTableViewCell.swift */; };
+		A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475558327476D7C00593C70 /* StoryTableViewCell.xib */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */; };
@@ -110,6 +113,9 @@
 		A47555732747480200593C70 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		A475557627474F7300593C70 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		A475557727474F7300593C70 /* BookmarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkTableViewCell.xib; sourceTree = "<group>"; };
+		A475557B2747655300593C70 /* BookmarkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailViewController.swift; sourceTree = "<group>"; };
+		A475558227476D7C00593C70 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		A475558327476D7C00593C70 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -319,6 +325,56 @@
 			path = BookMarkCell;
 			sourceTree = "<group>";
 		};
+		A475557A2747653000593C70 /* BookMarkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A475557D27476B3A00593C70 /* DetailCell */,
+				A475557B2747655300593C70 /* BookmarkDetailViewController.swift */,
+			);
+			path = BookMarkDetail;
+			sourceTree = "<group>";
+		};
+		A475557D27476B3A00593C70 /* DetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				A475557E27476B4800593C70 /* StoryCell */,
+				A475557F27476B6500593C70 /* ImageCell */,
+				A475558027476B7000593C70 /* RecordCell */,
+				A475558127476B8000593C70 /* ButtonCell */,
+			);
+			path = DetailCell;
+			sourceTree = "<group>";
+		};
+		A475557E27476B4800593C70 /* StoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				A475558227476D7C00593C70 /* StoryTableViewCell.swift */,
+				A475558327476D7C00593C70 /* StoryTableViewCell.xib */,
+			);
+			path = StoryCell;
+			sourceTree = "<group>";
+		};
+		A475557F27476B6500593C70 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		A475558027476B7000593C70 /* RecordCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RecordCell;
+			sourceTree = "<group>";
+		};
+		A475558127476B8000593C70 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
 		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +473,7 @@
 		A4C69FC9273F71400091565C /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
+				A475557A2747653000593C70 /* BookMarkDetail */,
 				A475557527474F5400593C70 /* BookMarkCell */,
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
 				A47555732747480200593C70 /* BookmarkViewController.swift */,
@@ -540,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
+				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
@@ -634,6 +692,7 @@
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
+				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
 				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
 				A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
@@ -641,6 +700,7 @@
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
+				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
