@@ -11,7 +11,7 @@ struct LoginResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: LoginResult
+    var result: LoginResult?
 }
 
 struct LoginResult: Decodable{

@@ -67,6 +67,10 @@
 		E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */; };
 		E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */; };
 		E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BBD2741035F00B4EC82 /* Singleton.swift */; };
+		E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BBF2742A67500B4EC82 /* CalenderDataManager.swift */; };
+		E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC32742A70400B4EC82 /* CalenderResponse.swift */; };
+		E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC72745559700B4EC82 /* CalenderRequest.swift */; };
+		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
@@ -151,6 +155,10 @@
 		E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		E9445BBD2741035F00B4EC82 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		E9445BBF2742A67500B4EC82 /* CalenderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDataManager.swift; sourceTree = "<group>"; };
+		E9445BC32742A70400B4EC82 /* CalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderResponse.swift; sourceTree = "<group>"; };
+		E9445BC72745559700B4EC82 /* CalenderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderRequest.swift; sourceTree = "<group>"; };
+		E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTableViewCell.swift; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -484,6 +492,8 @@
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
+				E9445BC22742A6E700B4EC82 /* Entity */,
+				E9445BC12742A69300B4EC82 /* DataManager */,
 				E9E4A98A2734EEA80037A815 /* CalenderViewController.swift */,
 				E9E4A98C273512340037A815 /* CalenderCollectionViewCell.swift */,
 				E9E4A98D273512340037A815 /* CalenderCollectionViewCell.xib */,
@@ -529,8 +539,26 @@
 				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
+				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		E9445BC12742A69300B4EC82 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E9445BBF2742A67500B4EC82 /* CalenderDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E9445BC22742A6E700B4EC82 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9445BC32742A70400B4EC82 /* CalenderResponse.swift */,
+				E9445BC72745559700B4EC82 /* CalenderRequest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		E9E4A9852734EDDA0037A815 /* Home */ = {
@@ -721,13 +749,19 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+
+				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
+				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
+
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
+
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
+				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
@@ -738,7 +772,11 @@
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
+
+				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
+
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
+
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,

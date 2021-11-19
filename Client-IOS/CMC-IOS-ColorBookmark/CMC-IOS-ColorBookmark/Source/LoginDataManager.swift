@@ -21,8 +21,8 @@ class LoginDataManager {
                     if response.isSuccess {
                         print("로그인 성공")
                         print("jwt 토큰값")
-                        print(response.result.jwt)
-                        JwtInfo.shared.jwtValue = response.result.jwt
+                        print(response.result!.jwt)
+                        JwtInfo.shared.jwtValue = response.result?.jwt
                         delegate.loginSuccess()
                     }
                     
@@ -39,7 +39,7 @@ class LoginDataManager {
                         case 3006: print("탈퇴한 계정입니다.")
                         case 3023: print("이미 로그인된 상태입니다.")
                         case 4000: print("로그인 실패")
-                        default: print("???")
+                        default: break
                         }
                     }
 
