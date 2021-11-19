@@ -749,12 +749,9 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
-
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
-
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
-
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
@@ -772,11 +769,8 @@
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
-
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
-
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
-
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
@@ -949,7 +943,7 @@
 				INFOPLIST_FILE = "CMC-IOS-ColorBookmark/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = BookMark;
+				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -978,7 +972,7 @@
 				INFOPLIST_FILE = "CMC-IOS-ColorBookmark/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = BookMark;
+				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -12,6 +12,10 @@ import FloatingPanel
 class HomeViewController: UIViewController {
     
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
+        let SB = UIStoryboard(name: "BookMark", bundle: nil)
+        guard let vc = SB.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
     
     @IBAction func SettingButtonTapped(_ sender: Any) {

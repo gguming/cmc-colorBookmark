@@ -14,7 +14,7 @@ class WalkThroughViewController: UIViewController {
     @IBAction func startBtnTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
-        Constant.constantNum = 2
+        Constant.checkFirst = 1
         changeRootViewController(vc)
     }
     
@@ -24,7 +24,7 @@ class WalkThroughViewController: UIViewController {
     var walkthroughList = [UIImage(named: "walkthrough1.png"), UIImage(named: "walkthrough2.png"), UIImage(named: "walkthrough3.png"), UIImage(named: "walkthrough4.png")]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        checkFirst()
         collectionview.dataSource = self
         collectionview.delegate = self
         startBtn.backgroundColor = UIColor.mainPink
@@ -35,6 +35,15 @@ class WalkThroughViewController: UIViewController {
         pageControl.currentPageIndicatorTintColor = .mainPink
         collectionview.isPagingEnabled = true
         // Do any additional setup after loading the view.
+    }
+    
+    func checkFirst() {
+        if Constant.checkFirst == 1{
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
+            
+            changeRootViewController(vc)
+        }
     }
    
 
