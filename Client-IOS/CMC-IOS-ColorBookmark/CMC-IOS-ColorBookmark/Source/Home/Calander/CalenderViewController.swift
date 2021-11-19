@@ -177,6 +177,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
 //                cell.CircleImage.tintColor = circleColor
 //            }
             
+            cell.CircleImage.isHidden = false
             cell.DateLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
             cell.DateLabel.textAlignment = .center
             cell.DateLabel.text = days[indexPath.row]
