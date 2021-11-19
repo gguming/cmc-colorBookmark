@@ -14,6 +14,9 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var xBtn: UIButton!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var seperateLineView: UIView!
+    @IBAction func editBtnTapped(_ sender: Any) {
+        
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.async {

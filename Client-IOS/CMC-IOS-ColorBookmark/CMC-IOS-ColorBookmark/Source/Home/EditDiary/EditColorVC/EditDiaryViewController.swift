@@ -11,7 +11,8 @@ class EditDiaryViewController: UIViewController {
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // 셀 등록
         tableview.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
         tableview.register(UINib(nibName: "TextTableViewCell", bundle: nil), forCellReuseIdentifier: "TextTableViewCell")
@@ -24,14 +25,10 @@ class EditDiaryViewController: UIViewController {
         tableview.delegate = self
         
     }
-    
-    
-    
-    
-    
 
 }
 
+// MARK: UITableViewDelegate,UITableViewDataSource
 extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
