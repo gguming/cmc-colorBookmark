@@ -22,6 +22,7 @@ class WalkThroughViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     var walkthroughList = [UIImage(named: "walkthrough1.png"), UIImage(named: "walkthrough2.png"), UIImage(named: "walkthrough3.png"), UIImage(named: "walkthrough4.png")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkFirst()

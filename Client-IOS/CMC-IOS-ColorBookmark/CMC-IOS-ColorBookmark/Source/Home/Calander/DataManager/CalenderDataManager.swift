@@ -25,7 +25,6 @@ class CalenderDataManager {
                     // 성공했을 때
                     if response.isSuccess {
                         print("캘린더 연결 성공")
-                        print(response.result[0].date)
                         
                         calenderDate.removeAll()
                         CalendarInfo.shared.calenderDate.removeAll()
@@ -35,14 +34,18 @@ class CalenderDataManager {
                         
                         calenderColor.removeAll()
                         CalendarInfo.shared.calenderColor.removeAll()
+                        print("데이터 매니져 값")
+                        for i in 0...response.result.count-1 {
+                            print(response.result[i].color)
+                        }
+                        print(response.result)
                         for index in 0..<response.result.count {
                             if response.result[index].color != nil {
                                 CalendarInfo.shared.calenderColor.append(response.result[index].color!)
                             }
                             else {
-                                CalendarInfo.shared.calenderColor.append("nil")
+                                CalendarInfo.shared.calenderColor.append("Aaa")
                             }
-                           
                         }
                         print(CalendarInfo.shared.calenderColor)
                        
@@ -56,7 +59,7 @@ class CalenderDataManager {
                         case 2000: print("유저인덱스 번호 누락 > jwt 에러")
                         case 4000: print("실패")
     
-                        default: print("???")
+                        default: print("데이터베이스 에러")
                         }
                     }
 

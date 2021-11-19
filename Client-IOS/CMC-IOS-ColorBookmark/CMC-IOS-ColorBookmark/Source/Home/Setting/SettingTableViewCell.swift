@@ -30,8 +30,8 @@ class SettingTableViewCell: UITableViewCell {
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = false
         }
-
     }
+    
     @IBOutlet weak var OnoffLabel: UILabel!
     @IBOutlet weak var SettingSwitch: UISwitch!
     @IBOutlet weak var TitleLabel: UILabel!
@@ -53,8 +53,6 @@ class SettingTableViewCell: UITableViewCell {
         let onOffString = NSMutableAttributedString()
         onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
         OnoffLabel.attributedText = onOffString
-
-   
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

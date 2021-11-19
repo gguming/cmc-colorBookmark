@@ -20,3 +20,6 @@ struct CalendarResult: Decodable {
     let color: String?
     let colorName: String?
 }
+
+
+

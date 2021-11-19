@@ -71,6 +71,7 @@
 		E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC32742A70400B4EC82 /* CalenderResponse.swift */; };
 		E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC72745559700B4EC82 /* CalenderRequest.swift */; };
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
+		E9445BCC2747B58C00B4EC82 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
@@ -159,6 +160,8 @@
 		E9445BC32742A70400B4EC82 /* CalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderResponse.swift; sourceTree = "<group>"; };
 		E9445BC72745559700B4EC82 /* CalenderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderRequest.swift; sourceTree = "<group>"; };
 		E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTableViewCell.swift; sourceTree = "<group>"; };
+		E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
+		E9445BCD2747BE0C00B4EC82 /* CMC-IOS-ColorBookmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CMC-IOS-ColorBookmark.entitlements"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 		A45AE887272D094D009ABED6 /* CMC-IOS-ColorBookmark */ = {
 			isa = PBXGroup;
 			children = (
+				E9445BCD2747BE0C00B4EC82 /* CMC-IOS-ColorBookmark.entitlements */,
 				A46839E3272E746D005BA79E /* Source */,
 				A46839E4272E74B6005BA79E /* Configuration */,
 				A45AE888272D094D009ABED6 /* AppDelegate.swift */,
@@ -540,6 +544,7 @@
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
 				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
+				E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+				E9445BCC2747B58C00B4EC82 /* SecondSettingTableViewCell.swift in Sources */,
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
@@ -936,6 +942,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;
@@ -965,6 +972,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;

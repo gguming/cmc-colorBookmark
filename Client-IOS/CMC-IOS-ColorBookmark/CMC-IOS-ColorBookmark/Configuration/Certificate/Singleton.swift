@@ -19,3 +19,8 @@ class CalendarInfo {
     var calenderColor = [String]()
     private init() { }
 }
+
+class SettingInfo {
+    static let shared = SettingInfo()
+    var settingOnOff: Array<Bool> = [false, false, false, false, false, false]
+}

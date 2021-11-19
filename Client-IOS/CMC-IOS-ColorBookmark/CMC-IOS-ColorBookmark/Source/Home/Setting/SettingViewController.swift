@@ -18,7 +18,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBOutlet weak var SettingTableview: UITableView!
-    
     @IBAction func BackToMainVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -48,23 +47,11 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if indexPath.section != 4 && indexPath.section != 5 {
             let cell = SettingTableview.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
-            
-            let onOff = "OFF"
-            let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
-            let grayColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
-            
-            let mediumFont = UIFont.systemFont(ofSize: 16, weight: .regular)
-            let boldFont = UIFont.systemFont(ofSize: 16, weight: .bold)
-            
-            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: mediumFont]
-            let onOffAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
-            let mutableString = NSMutableAttributedString()
-            
+           
             switch indexPath.section {
             case 0:
                 cell.TitleLabel.text = settingTitle[indexPath.section]
                 cell.ContentLabel.text = "20:00 PM"
-                
                 
             case 1:
                 cell.TitleLabel.text = settingTitle[indexPath.section]
@@ -83,7 +70,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
         }
         
-        let cell = UITableViewCell()
+        let cell = SettingTableview.dequeueReusableCell(withIdentifier: "SecondSettingTableViewCell", for: indexPath) as! SecondSettingTableViewCell
+        
+        switch indexPath.section {
+        case 4: cell.SecondSettingTitleLabel.text = "백업과 복원"
+        case 5: cell.SecondSettingTitleLabel.text = "색갈피는?"
+        default: break
+        }
         return cell
     }
     
