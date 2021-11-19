@@ -11,6 +11,7 @@ import Alamofire
 let headers: HTTPHeaders = ["X-ACCESS-TOKEN": JwtInfo.shared.jwtValue!]
 
 var calenderDate = [String]()
+var calenderColor = [String]()
 
 class CalenderDataManager {
     func getCalenderMonth(_ parameters: Parameters, delegate: CalenderViewController) {
@@ -25,11 +26,25 @@ class CalenderDataManager {
                     if response.isSuccess {
                         print("캘린더 연결 성공")
                         print(response.result[0].date)
+                        
                         calenderDate.removeAll()
                         CalendarInfo.shared.calenderDate.removeAll()
                         for index in 0..<response.result.count {
                             CalendarInfo.shared.calenderDate.append(response.result[index].date)
                         }
+                        
+                        calenderColor.removeAll()
+                        CalendarInfo.shared.calenderColor.removeAll()
+                        for index in 0..<response.result.count {
+                            if response.result[index].color != nil {
+                                CalendarInfo.shared.calenderColor.append(response.result[index].color!)
+                            }
+                            else {
+                                CalendarInfo.shared.calenderColor.append("nil")
+                            }
+                           
+                        }
+                        print(CalendarInfo.shared.calenderColor)
                        
                     }
                     

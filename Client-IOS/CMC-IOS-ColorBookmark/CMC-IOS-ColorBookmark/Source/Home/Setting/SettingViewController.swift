@@ -29,24 +29,20 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         SettingTableview.delegate = self
         SettingTableview.dataSource = self
-        SettingTableview.backgroundColor = UIColor.clear
-
+        SettingTableview.separatorStyle = .none
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 6
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 4
-        }
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0 {
+        if indexPath.section != 4 && indexPath.section != 5 {
             let cell = SettingTableview.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
             
             let onOff = "OFF"
@@ -59,32 +55,36 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: mediumFont]
             let onOffAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
             let mutableString = NSMutableAttributedString()
-
-            switch indexPath.row {
+            cell.backgroundColor = UIColor.blue
+            
+            switch indexPath.section {
             case 0:
-                cell.TitleLabel.text = settingTitle[indexPath.row]
+                cell.TitleLabel.text = settingTitle[indexPath.section]
                 cell.ContentLabel.text = "20:00 PM"
                 
+                
             case 1:
-                cell.TitleLabel.text = settingTitle[indexPath.row]
+                cell.TitleLabel.text = settingTitle[indexPath.section]
                 cell.ContentLabel.text = "분실한 비밀번호는 찾을 수 없어요!"
                 
             case 2:
-                cell.TitleLabel.text = settingTitle[indexPath.row]
+                cell.TitleLabel.text = settingTitle[indexPath.section]
                 cell.ContentLabel.text = "감정 기록 화면에서 감정 아래에 이름이 표시돼요!"
                 
             case 3:
-                cell.TitleLabel.text = settingTitle[indexPath.row]
+                cell.TitleLabel.text = settingTitle[indexPath.section]
                 cell.ContentLabel.text = "배경음악을 끌 수 있어요!"
             default:
                 break
             }
             return cell
         }
+        
         let cell = UITableViewCell()
-        cell.backgroundColor = UIColor.mainPink
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
 }

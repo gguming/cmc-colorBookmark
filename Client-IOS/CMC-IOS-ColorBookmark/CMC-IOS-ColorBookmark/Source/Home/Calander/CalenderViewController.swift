@@ -93,19 +93,22 @@ class CalenderViewController: UIViewController {
         }
     
     private func calculation() {
-            let firstDayOfMonth = cal.date(from: components)
-            let firstWeekday = cal.component(.weekday, from: firstDayOfMonth!)
-            daysCountInMonth = cal.range(of: .day, in: .month, for: firstDayOfMonth!)!.count
-            weekdayAdding = 2 - firstWeekday
-            CalenderLabel.text = dateFormatter.string(from: firstDayOfMonth!)
-            self.days.removeAll()
-            for day in weekdayAdding...daysCountInMonth {
-                if day < 1 {
-                    self.days.append("")
-                } else {
-                    self.days.append(String(day))
-                }
+        let firstDayOfMonth = cal.date(from: components)
+        print("실험")
+        print(dateFormatter.string(from: firstDayOfMonth!) + ".1")
+        let firstWeekday = cal.component(.weekday, from: firstDayOfMonth!)
+        daysCountInMonth = cal.range(of: .day, in: .month, for: firstDayOfMonth!)!.count
+        weekdayAdding = 2 - firstWeekday
+        CalenderLabel.text = dateFormatter.string(from: firstDayOfMonth!)
+        
+        self.days.removeAll()
+        for day in weekdayAdding...daysCountInMonth {
+            if day < 1 {
+                self.days.append("")
+            } else {
+                self.days.append(String(day))
             }
+        }
         
         let currentDate = dateFormatter.string(from: firstDayOfMonth!)
         let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
@@ -160,16 +163,24 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                case 0:
             cell.CircleImage.isHidden = true
             cell.DateLabel.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
-//            cell.DateLabel.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             cell.DateLabel.textAlignment = .center
             cell.DateLabel.text = weeks[indexPath.row]
             
                default:
-            cell.CircleImage.isHidden = false
+//            if CalendarInfo.shared.calenderColor[indexPath.row] == "nil" {
+//                cell.CircleImage.isHidden = true
+//            }
+//            else {
+//                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
+//                cell.CircleImage.isHidden = false
+//                cell.CircleImage.tintColor = circleColor
+//            }
+            
             cell.DateLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
             cell.DateLabel.textAlignment = .center
             cell.DateLabel.text = days[indexPath.row]
+            
             if cell.DateLabel.text == "" {
                 cell.CircleImage.isHidden = true
             }

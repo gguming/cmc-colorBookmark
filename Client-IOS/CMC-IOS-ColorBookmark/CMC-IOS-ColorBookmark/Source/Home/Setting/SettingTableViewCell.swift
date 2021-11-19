@@ -41,6 +41,8 @@ class SettingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         Cellview.layer.cornerRadius = 12
+        self.layer.cornerRadius = 12
+        
         SettingSwitch.isOn = false
         
         TitleLabel.adjustsFontSizeToFitWidth = true

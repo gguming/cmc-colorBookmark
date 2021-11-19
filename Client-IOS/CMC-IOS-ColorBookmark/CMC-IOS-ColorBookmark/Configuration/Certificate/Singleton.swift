@@ -16,5 +16,6 @@ class JwtInfo {
 class CalendarInfo {
     static let shared = CalendarInfo()
     var calenderDate = [String]()
+    var calenderColor = [String]()
     private init() { }
 }
