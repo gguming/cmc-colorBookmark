@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E923E32FD4376788B4B74A9 /* Pods_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */; };
+		A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */; };
 		A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */; };
 		A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */; };
 		A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */; };
@@ -56,7 +57,6 @@
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
-		A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -94,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerMainViewController.swift; sourceTree = "<group>"; };
 		A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		A43BF39D273BEA65008DF16A /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -144,7 +145,6 @@
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
-		A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerViewController.xib; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		C768A5674B77CC77F011BA7D /* Pods-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E4CD5A84ADAEB01484C878A3 /* Pods-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
@@ -535,7 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */,
-				A4E1266F2745F03A009BCF74 /* ColorPickerViewController.xib */,
+				A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -674,7 +674,6 @@
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A49DB7322747764C00AF315F /* RecordTableViewCell.xib in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
-				A4E126712745F03A009BCF74 /* ColorPickerViewController.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
 				A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */,
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
@@ -789,6 +788,7 @@
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
@@ -954,7 +954,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -984,7 +984,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WalkThrough;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

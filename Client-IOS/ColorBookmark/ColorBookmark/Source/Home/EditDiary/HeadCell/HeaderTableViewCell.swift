@@ -8,20 +8,21 @@
 import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
-
+    var delegate: EditBtnDelegate?
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var xBtn: UIButton!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var seperateLineView: UIView!
     @IBAction func editBtnTapped(_ sender: Any) {
+//        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+//        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+//        vc.modalPresentationStyle = .overCurrentContext
         
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        DispatchQueue.main.async {
-            self.checkState()
-        }
+        
         
     }
 
@@ -52,3 +53,15 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
 }
+
+protocol EditBtnDelegate {
+    func presentEditVC()
+}
+
+//extension HeaderTableViewCell: ChangeStateDelegate{
+//    func changeState() {
+//        self.checkState()
+//    }
+//    
+//    
+//}

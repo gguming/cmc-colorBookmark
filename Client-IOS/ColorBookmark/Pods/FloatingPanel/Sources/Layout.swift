@@ -27,14 +27,14 @@ open class FloatingPanelBottomLayout: NSObject, FloatingPanelLayout {
         super.init()
     }
     open var initialState: FloatingPanelState {
-        return .half
+        return .tip
     }
 
     open var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring]  {
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 18.0, edge: .top, referenceGuide: .safeArea),
-            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
-            .tip: FloatingPanelLayoutAnchor(absoluteInset: 69.0, edge: .bottom, referenceGuide: .safeArea),
+//            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
+            .tip: FloatingPanelLayoutAnchor(absoluteInset: 215, edge: .bottom, referenceGuide: .safeArea),
         ]
     }
 
@@ -50,7 +50,7 @@ open class FloatingPanelBottomLayout: NSObject, FloatingPanelLayout {
     }
 
     open func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
-        return state == .full ? 0.3 : 0.0
+        return state == .full ? 0.0 : 0.0
     }
 }
 
