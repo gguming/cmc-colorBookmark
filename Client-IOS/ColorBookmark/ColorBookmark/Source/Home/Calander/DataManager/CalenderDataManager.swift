@@ -26,6 +26,13 @@ class CalenderDataManager {
                     if response.isSuccess {
                         print("캘린더 연결 성공")
                         
+                        //MARK: check
+                        
+                        
+                        
+                        delegate.getCalenderSuccess(data: response.result)
+                        
+                        
                         calenderDate.removeAll()
                         CalendarInfo.shared.calenderDate.removeAll()
                         for index in 0..<response.result.count {

@@ -9,6 +9,7 @@ import UIKit
 
 class SettingTableViewCell: UITableViewCell {
 
+    var cellNumber: Int? = nil
     var onOff = "OFF"
     var switchOnBoolean = false
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
@@ -17,18 +18,30 @@ class SettingTableViewCell: UITableViewCell {
     
     @IBAction func SettingSwitchTapped(_ sender: Any) {
         if SettingSwitch.isOn {
+            onOff = "ON"
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = true
+            SettingInfo.shared.settingOnOff[cellNumber!] = true
+           // vc?.SettingTableview.reloadData()
+            
+//            cellNumber
+//            onOffValue
+            print(SettingInfo.shared.settingOnOff)
         }
         else {
+            onOff = "OFF"
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = false
+            print(cellNumber)
+            SettingInfo.shared.settingOnOff[cellNumber!] = false
+            print(SettingInfo.shared.settingOnOff)
+//            vc?.SettingTableview.reloadData()
         }
     }
     
@@ -53,6 +66,11 @@ class SettingTableViewCell: UITableViewCell {
         let onOffString = NSMutableAttributedString()
         onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
         OnoffLabel.attributedText = onOffString
+        
+//        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController
+//        
+//        cellNumber = vc!.currentCellNumber
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

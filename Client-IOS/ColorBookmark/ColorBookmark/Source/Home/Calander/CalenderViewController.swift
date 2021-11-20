@@ -10,6 +10,7 @@ import MaterialComponents.MaterialBottomSheet
 import Alamofire
 
 class CalenderViewController: UIViewController {
+    var calendarData = [CalendarResult]()
     
     lazy var dataManager: CalenderDataManager = CalenderDataManager()
     var constantMonth = 0
@@ -160,6 +161,8 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = CalenderCollectionview.dequeueReusableCell(withReuseIdentifier: "CalenderCollectionViewCell", for: indexPath) as! CalenderCollectionViewCell
         
+        cell.backgroundColor = .blue
+        
         switch indexPath.section {
                case 0:
             cell.CircleImage.isHidden = true
@@ -169,6 +172,17 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             cell.DateLabel.text = weeks[indexPath.row]
             
                default:
+            //MARK: check
+            if calendarData[indexPath.row].color == nil {
+                cell.CircleImage.isHidden = true
+            }
+            
+            else {
+                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
+                cell.CircleImage.isHidden = false
+                cell.CircleImage.tintColor = circleColor
+            }
+            
 //            if CalendarInfo.shared.calenderColor[indexPath.row] == "nil" {
 //                cell.CircleImage.isHidden = true
 //            }
@@ -242,14 +256,9 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension CalenderViewController {
-    func getCalenderSuccess() {
+    func getCalenderSuccess(data: [CalendarResult]) {
+        calendarData = data
         
+       // CalenderCollectionview.reloadData()
     }
 }
-
-
-/*
- let colorString: String = ""
- let color: UIColor = UIColor.white
- let colorName: String = ""
- */

@@ -22,5 +22,5 @@ class CalendarInfo {
 
 class SettingInfo {
     static let shared = SettingInfo()
-    var settingOnOff: Array<Bool> = [false, false, false, false, false, false]
+    var settingOnOff: Array<Bool> = [false, false, false]
 }

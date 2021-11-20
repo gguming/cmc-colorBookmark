@@ -57,6 +57,8 @@
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
+		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
+		E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -148,6 +150,8 @@
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		C768A5674B77CC77F011BA7D /* Pods-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E4CD5A84ADAEB01484C878A3 /* Pods-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
+		E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
+		E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginResponse.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -589,6 +593,7 @@
 				E9E4A992273A2EA90037A815 /* SigninDataManager.swift */,
 				E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */,
 				E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */,
+				E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				E9445B9F273C72B500B4EC82 /* EmailCheckResponse.swift */,
 				E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */,
 				E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */,
+				E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -745,6 +751,7 @@
 				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
+				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
@@ -770,6 +777,7 @@
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
+				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
 				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
 				A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */,
@@ -949,12 +957,12 @@
 				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY7J8GW45P;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -979,12 +987,12 @@
 				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY7J8GW45P;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
