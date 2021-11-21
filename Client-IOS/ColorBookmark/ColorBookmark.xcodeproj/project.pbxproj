@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E923E32FD4376788B4B74A9 /* Pods_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */; };
+		A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4127BA0274AB62900D854EB /* GoogleService-Info.plist */; };
 		A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */; };
 		A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */; };
 		A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */; };
@@ -98,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4127BA0274AB62900D854EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerMainViewController.swift; sourceTree = "<group>"; };
 		A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				A45AE88A272D094D009ABED6 /* SceneDelegate.swift */,
 				A45AE891272D094F009ABED6 /* Assets.xcassets */,
 				A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */,
+				A4127BA0274AB62900D854EB /* GoogleService-Info.plist */,
 				A45AE896272D094F009ABED6 /* Info.plist */,
 			);
 			path = ColorBookmark;
@@ -687,6 +690,7 @@
 			files = (
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
+				A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
@@ -986,7 +990,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.CMC-IOS-ColorBookmark";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.ColorBookmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1016,7 +1020,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.CMC-IOS-ColorBookmark";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.ColorBookmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
