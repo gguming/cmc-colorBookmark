@@ -11,9 +11,10 @@ import KakaoSDKUser
 import KakaoSDKCommon
 
 class LoginPageViewController: UIViewController {
+    lazy var dataManager: KakaoLoginDataManager = KakaoLoginDataManager()
     
     @IBAction func KakaoLogin(_ sender: Any) {
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+        UserApi.shared.loginWithKakaoAccount { [self](oauthToken, error) in
            if let error = error {
              print(error)
            }
@@ -21,9 +22,12 @@ class LoginPageViewController: UIViewController {
                print("loginWithKakaoAccount() success.")
                _ = oauthToken
                let accessToken = oauthToken?.accessToken
-               JwtInfo.shared.jwtValue = accessToken
-               print("카카오 토큰 값 ")
-               print(JwtInfo.shared.jwtValue)
+//               JwtInfo.shared.jwtValue = accessToken
+//               print("카카오 토큰 값 ")
+//               print(JwtInfo.shared.jwtValue)
+               let kakaoLoginInput = KakaoLoginRequest(accessToken: accessToken!)
+               dataManager.getKakaoLoginJwt(kakaoLoginInput, delegate: self)
+               
                let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.modalPresentationStyle = .fullScreen

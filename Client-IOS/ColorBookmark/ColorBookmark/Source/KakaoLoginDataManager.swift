@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 
 class KakaoLoginDataManager {
-    func getKakaoLoginJwt(_ parameters: LoginRequest, delegate: LoginPageViewController) {
-        AF.request( "\(Constant.SERVER_BASE_URL)/app/login", method: .get, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+    func getKakaoLoginJwt(_ parameters: KakaoLoginRequest, delegate: LoginPageViewController) {
+        AF.request( "\(Constant.SERVER_BASE_URL)/users/kakao-login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: KakaoLoginResponse.self) { response in
      
@@ -19,9 +19,10 @@ class KakaoLoginDataManager {
                     
                     // 성공했을 때
                     if response.isSuccess {
-                        print("로그인 성공")
+                        print("카카오 로그인 성공")
                         print("kako jwt 토큰값")
-//                        JwtInfo.shared.jwtValue = response.result?.result.
+                        JwtInfo.shared.jwtValue = response.result?.jwt
+                        print(JwtInfo.shared.jwtValue!)
                     }
                     
                     // 실패했을 때

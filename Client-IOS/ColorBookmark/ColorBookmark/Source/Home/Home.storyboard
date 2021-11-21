@@ -408,6 +408,33 @@
             </objects>
             <point key="canvasLocation" x="540.57971014492762" y="821.65178571428567"/>
         </scene>
+        <!--Password Setting View Controller-->
+        <scene sceneID="xRC-JJ-k6N">
+            <objects>
+                <viewController storyboardIdentifier="PasswordSettingViewController" id="Y4H-QB-r50" customClass="PasswordSettingViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OEs-lC-i3U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="암호설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-1b-H0k">
+                                <rect key="frame" x="165.5" y="207" width="83.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DW8-F6-wdO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VL9-1b-H0k" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="DI6-Fq-bAZ"/>
+                            <constraint firstItem="VL9-1b-H0k" firstAttribute="top" secondItem="OEs-lC-i3U" secondAttribute="top" constant="207" id="fSm-mh-WXf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcd-xW-VVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="1592"/>
+        </scene>
         <!--My Page View Controller-->
         <scene sceneID="ahR-dQ-dPa">
             <objects>

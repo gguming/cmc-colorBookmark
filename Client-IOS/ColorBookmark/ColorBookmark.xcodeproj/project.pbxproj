@@ -59,6 +59,8 @@
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
 		E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */; };
+		E9336CB627493ACA00686AF1 /* PasswordSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */; };
+		E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -152,6 +154,8 @@
 		E4CD5A84ADAEB01484C878A3 /* Pods-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
 		E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginResponse.swift; sourceTree = "<group>"; };
+		E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingViewController.swift; sourceTree = "<group>"; };
+		E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginRequest.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -544,15 +548,23 @@
 			path = ColorPicker;
 			sourceTree = "<group>";
 		};
+		E9336CB427493A3700686AF1 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
+				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
 		E9445B98273B8F8500B4EC82 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
-				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
-				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
 				E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */,
+				E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -577,6 +589,7 @@
 		E9E4A9852734EDDA0037A815 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9336CB427493A3700686AF1 /* Mypage */,
 				A4C69FC6273F71120091565C /* Editcolor */,
 				E9445B98273B8F8500B4EC82 /* Setting */,
 				A4C3BEC92737A50F006A42E0 /* Calander */,
@@ -607,6 +620,7 @@
 				E9445BB1273E59BB00B4EC82 /* LoginRequest.swift */,
 				E9445BB3273E59CC00B4EC82 /* LoginResponse.swift */,
 				E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */,
+				E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -768,11 +782,13 @@
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
+				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
+				E9336CB627493ACA00686AF1 /* PasswordSettingViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,

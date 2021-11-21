@@ -144,6 +144,7 @@ class CalenderViewController: UIViewController {
 
 extension CalenderViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -173,16 +174,19 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
                default:
             //MARK: check
-            if calendarData[indexPath.row].color == nil {
-                cell.CircleImage.isHidden = true
-            }
             
-            else {
-                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
-                cell.CircleImage.isHidden = false
-                cell.CircleImage.tintColor = circleColor
-            }
+//            if calendarData[indexPath.row+1].color == nil {
+//                cell.CircleImage.isHidden = true
+//            }
+//
+//            else {
+//                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
+//                cell.CircleImage.isHidden = false
+//                cell.CircleImage.tintColor = circleColor
+//            }
             
+            //print(indexPath.row)
+          //  print(calendarData[])
 //            if CalendarInfo.shared.calenderColor[indexPath.row] == "nil" {
 //                cell.CircleImage.isHidden = true
 //            }
@@ -258,7 +262,11 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
 extension CalenderViewController {
     func getCalenderSuccess(data: [CalendarResult]) {
         calendarData = data
-        
-       // CalenderCollectionview.reloadData()
+        print("데이터 개수 ")
+        print(calendarData.count)
+        print(calendarData[0])
+        print(calendarData[17].color)
+        print(calendarData[18].color)
+        CalenderCollectionview.reloadData()
     }
 }
