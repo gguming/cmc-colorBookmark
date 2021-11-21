@@ -25,11 +25,8 @@ class SettingTableViewCell: UITableViewCell {
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = true
             SettingInfo.shared.settingOnOff[cellNumber!] = true
-           // vc?.SettingTableview.reloadData()
-            
-//            cellNumber
-//            onOffValue
             print(SettingInfo.shared.settingOnOff)
+            settingAction(cellNum: cellNumber!)
         }
         else {
             onOff = "OFF"
@@ -41,7 +38,7 @@ class SettingTableViewCell: UITableViewCell {
             print(cellNumber)
             SettingInfo.shared.settingOnOff[cellNumber!] = false
             print(SettingInfo.shared.settingOnOff)
-//            vc?.SettingTableview.reloadData()
+
         }
     }
     
@@ -67,10 +64,6 @@ class SettingTableViewCell: UITableViewCell {
         onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
         OnoffLabel.attributedText = onOffString
         
-//        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController
-//        
-//        cellNumber = vc!.currentCellNumber
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -79,4 +72,20 @@ class SettingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension SettingTableViewCell {
+    func settingAction(cellNum: Int) {
+        switch cellNum {
+        case 0:
+            print("알림 ON")
+        case 1:
+            print("암호 ON")
+            
+        case 2:
+            print("배경음악 ON")
+        default:
+            break
+        }
+    }
 }

@@ -16,11 +16,5 @@ struct KakaoLoginResponse: Decodable {
 
 struct KakaoLoginResult: Decodable {
     var message: String
-    var result: KakaoresultValue
-}
-
-// MARK: - ResultResult
-struct KakaoresultValue: Decodable {
-    var name: String
-    var email: String
+    var jwt: String
 }

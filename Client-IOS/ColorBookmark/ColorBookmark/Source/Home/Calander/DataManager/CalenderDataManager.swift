@@ -14,6 +14,7 @@ var calenderDate = [String]()
 var calenderColor = [String]()
 
 class CalenderDataManager {
+    
     func getCalenderMonth(_ parameters: Parameters, delegate: CalenderViewController) {
         AF.request( "\(Constant.SERVER_BASE_URL)/app/diarys/month", method: .get, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers)
             .validate()
@@ -27,34 +28,31 @@ class CalenderDataManager {
                         print("캘린더 연결 성공")
                         
                         //MARK: check
-                        
-                        
-                        
+                         
                         delegate.getCalenderSuccess(data: response.result)
-                        
-                        
-                        calenderDate.removeAll()
-                        CalendarInfo.shared.calenderDate.removeAll()
-                        for index in 0..<response.result.count {
-                            CalendarInfo.shared.calenderDate.append(response.result[index].date)
-                        }
-                        
-                        calenderColor.removeAll()
-                        CalendarInfo.shared.calenderColor.removeAll()
-                        print("데이터 매니져 값")
-                        for i in 0...response.result.count-1 {
-                            print(response.result[i].color)
-                        }
-                        print(response.result)
-                        for index in 0..<response.result.count {
-                            if response.result[index].color != nil {
-                                CalendarInfo.shared.calenderColor.append(response.result[index].color!)
-                            }
-                            else {
-                                CalendarInfo.shared.calenderColor.append("Aaa")
-                            }
-                        }
-                        print(CalendarInfo.shared.calenderColor)
+                                                
+//                        calenderDate.removeAll()
+//                        CalendarInfo.shared.calenderDate.removeAll()
+//                        for index in 0..<response.result.count {
+//                            CalendarInfo.shared.calenderDate.append(response.result[index].date)
+//                        }
+//
+//                        calenderColor.removeAll()
+//                        CalendarInfo.shared.calenderColor.removeAll()
+//                        print("데이터 매니져 값")
+//                        for i in 0...response.result.count-1 {
+//                            print(response.result[i].color)
+//                        }
+//                        print(response.result)
+//                        for index in 0..<response.result.count {
+//                            if response.result[index].color != nil {
+//                                CalendarInfo.shared.calenderColor.append(response.result[index].color!)
+//                            }
+//                            else {
+//                                CalendarInfo.shared.calenderColor.append("Aaa")
+//                            }
+//                        }
+//                        print(CalendarInfo.shared.calenderColor)
                        
                     }
                     
