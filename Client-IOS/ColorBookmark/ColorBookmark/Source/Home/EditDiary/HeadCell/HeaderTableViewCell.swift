@@ -15,14 +15,14 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var seperateLineView: UIView!
     @IBAction func editBtnTapped(_ sender: Any) {
-//        let sb = UIStoryboard(name: "EditColor", bundle: nil)
-//        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-//        vc.modalPresentationStyle = .overCurrentContext
+        print(22)
+        delegate?.presentEditVC()
         
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        checkState()
         
     }
 

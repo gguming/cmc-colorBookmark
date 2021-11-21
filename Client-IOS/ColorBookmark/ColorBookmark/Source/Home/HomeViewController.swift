@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
         
         CalenderView.layer.cornerRadius = 25
         super.viewDidLoad()
-
+        
        
 //        
 //        if Constant.constantNum == 1 {
@@ -84,11 +84,12 @@ class HomeViewController: UIViewController {
         fpc.surfaceView.grabberHandle.isHidden = true
     }
     
-    func changeHeaderUI(_ delegate: HeaderTableViewCell){
-        delegate.checkState()
-    }
+//    func changeHeaderUI(_ delegate: HeaderTableViewCell){
+//        delegate.checkState()
+//    }
 }
 
+<<<<<<< Updated upstream
 //extension HomeViewController: EditBtnDelegate{
 //    func presentEditVC() {
 //        <#code#>
@@ -96,6 +97,20 @@ class HomeViewController: UIViewController {
 //    
 //    
 //}
+=======
+extension HomeViewController: EditBtnDelegate{
+    func presentEditVC() {
+        print(1)
+        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+}
+>>>>>>> Stashed changes
 
 extension HomeViewController: FloatingPanelControllerDelegate{
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
