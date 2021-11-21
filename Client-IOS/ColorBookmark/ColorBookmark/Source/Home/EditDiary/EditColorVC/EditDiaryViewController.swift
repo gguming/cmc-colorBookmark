@@ -51,7 +51,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as? HeaderTableViewCell else {return UITableViewCell()}
-            cell.checkState()
+
             cell.setUI()
             cell.delegate = self
             return cell
