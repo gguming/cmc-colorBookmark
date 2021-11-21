@@ -89,13 +89,13 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: EditBtnDelegate{
-    func presentEditVC() {
-        <#code#>
-    }
-    
-    
-}
+//extension HomeViewController: EditBtnDelegate{
+//    func presentEditVC() {
+//        <#code#>
+//    }
+//    
+//    
+//}
 
 extension HomeViewController: FloatingPanelControllerDelegate{
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {

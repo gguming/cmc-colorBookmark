@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVy-kr-ov3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Login Page View Controller-->
         <scene sceneID="1gr-4V-tgH">
             <objects>
-                <viewController storyboardIdentifier="LoginPageViewController" id="fVy-kr-ov3" customClass="LoginPageViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPageViewController" id="fVy-kr-ov3" customClass="LoginPageViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mS-d4-Scr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
         <!--Login Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginMainViewController" id="Y6W-OH-hqX" customClass="LoginMainViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginMainViewController" id="Y6W-OH-hqX" customClass="LoginMainViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
         <!--Member Login View Controller-->
         <scene sceneID="fkS-Np-4Nk">
             <objects>
-                <viewController storyboardIdentifier="MemberLoginViewController" id="nzW-az-z5J" customClass="MemberLoginViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemberLoginViewController" id="nzW-az-z5J" customClass="MemberLoginViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d4c-qs-uyp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +360,7 @@
         <!--Signin Nick Name View Controller-->
         <scene sceneID="8rC-mj-du0">
             <objects>
-                <viewController storyboardIdentifier="SigninNickNameViewController" id="e6U-Z4-5jN" customClass="SigninNickNameViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninNickNameViewController" id="e6U-Z4-5jN" customClass="SigninNickNameViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZb-tL-PjM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,7 +499,7 @@
         <!--Privacy Policy View Controller-->
         <scene sceneID="XMJ-i2-9gv">
             <objects>
-                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="U5j-LH-ndQ" customClass="PrivacyPolicyViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="U5j-LH-ndQ" customClass="PrivacyPolicyViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axp-XC-5En">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -514,7 +514,7 @@
         <!--Terms Of Use View Controller-->
         <scene sceneID="IE7-D4-Ncb">
             <objects>
-                <viewController storyboardIdentifier="TermsOfUseViewController" id="gHc-ig-OiO" customClass="TermsOfUseViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsOfUseViewController" id="gHc-ig-OiO" customClass="TermsOfUseViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fka-th-PsK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,7 +529,7 @@
         <!--Find Password View Controller-->
         <scene sceneID="4wA-bq-FJA">
             <objects>
-                <viewController storyboardIdentifier="FindPasswordViewController" id="Cox-iz-VUp" customClass="FindPasswordViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindPasswordViewController" id="Cox-iz-VUp" customClass="FindPasswordViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Dd-Zf-hDa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -642,7 +642,7 @@
         <!--Signin Password View Controller-->
         <scene sceneID="6iE-uM-pRo">
             <objects>
-                <viewController storyboardIdentifier="SigninPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a46-HU-hwh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
