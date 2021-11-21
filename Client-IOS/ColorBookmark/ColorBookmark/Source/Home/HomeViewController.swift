@@ -23,10 +23,6 @@ class HomeViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var CalenderView: UIView!
-    @IBOutlet weak var CalenderButton: UIButton!
-    
     @IBAction func CalenderButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
@@ -35,21 +31,24 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var CalenderView: UIView!
+    @IBOutlet weak var CalenderButton: UIButton!
+    
+    // Color section
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var collectionview: UICollectionView!
+    
+    @IBAction func editBtnTapped(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
-        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy . MM . dd  "
-        let currentDate = formatter.string(from: Date())
-        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
-        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
-        let calenderText = NSMutableAttributedString()
-        calenderText.append(NSAttributedString(string: currentDate, attributes: generalAttributes))
-        CalenderButton.setAttributedTitle(calenderText, for: .normal)
-        
-        CalenderView.layer.cornerRadius = 25
         super.viewDidLoad()
-
-       
+        calendarSetUI()
+        colorviewSetUI()
+        collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
+        collectionview.dataSource = self
+        collectionview.delegate = self
 //        
 //        if Constant.constantNum == 1 {
 //            let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
@@ -58,11 +57,11 @@ class HomeViewController: UIViewController {
 //            changeRootViewController(vc)
 //        }
         
-        let fpc = FloatingPanelController()
-        fpc.delegate = self
-        fpc.surfaceView.layer.cornerRadius = 10
-        
-        let appearance = SurfaceAppearance()
+//        let fpc = FloatingPanelController()
+//        fpc.delegate = self
+//        fpc.surfaceView.layer.cornerRadius = 10
+//
+//        let appearance = SurfaceAppearance()
 
         // Define shadows
 //        let shadow = SurfaceAppearance.Shadow()
@@ -74,20 +73,45 @@ class HomeViewController: UIViewController {
 
         // Define corner radius and background color
       
-        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
-        
-        fpc.set(contentViewController: contentVC)
-        fpc.addPanel(toParent: self)
-        appearance.cornerRadius = 20.0
-        fpc.surfaceView.appearance = appearance
-        
-        fpc.surfaceView.grabberHandle.isHidden = true
+//        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+//
+//        fpc.set(contentViewController: contentVC)
+//        fpc.addPanel(toParent: self)
+//        appearance.cornerRadius = 20.0
+//        fpc.surfaceView.appearance = appearance
+//
+//        fpc.surfaceView.grabberHandle.isHidden = true
     }
     
-    func changeHeaderUI(_ delegate: HeaderTableViewCell){
-        delegate.checkState()
+//    func changeHeaderUI(_ delegate: HeaderTableViewCell){
+//        delegate.checkState()
+//    }
+    
+    private func calendarSetUI(){
+        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy . MM . dd  "
+        let currentDate = formatter.string(from: Date())
+        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
+        let calenderText = NSMutableAttributedString()
+        calenderText.append(NSAttributedString(string: currentDate, attributes: generalAttributes))
+        CalenderButton.setAttributedTitle(calenderText, for: .normal)
+        
+        CalenderView.layer.cornerRadius = 25
+    }
+    
+    private func colorviewSetUI() {
+        colorView.clipsToBounds = true
+        colorView.layer.cornerRadius = 20
+        colorView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
+        editBtn.clipsToBounds = true
+        editBtn.layer.cornerRadius = 15
+        
+        
     }
 }
+
 
 //extension HomeViewController: EditBtnDelegate{
 //    func presentEditVC() {
@@ -96,6 +120,43 @@ class HomeViewController: UIViewController {
 //    
 //    
 //}
+
+extension HomeViewController: EditBtnDelegate{
+    func presentEditVC() {
+        print(1)
+        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+}
+// collectionview setting
+
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
+        cell.setUI()
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 104.0, height: 148.0)
+    }
+    
+    
+    
+    
+    
+}
+
 
 extension HomeViewController: FloatingPanelControllerDelegate{
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {

@@ -7,7 +7,9 @@
 
 import UIKit
 
-class EditDiaryViewController: UIViewController {
+class EditDiaryViewController: UIViewController  {
+   
+    
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,17 @@ class EditDiaryViewController: UIViewController {
 
 }
 
+extension EditDiaryViewController: EditBtnDelegate{
+    func presentEditVC() {
+        print(1)
+        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    }
+}
+
 // MARK: UITableViewDelegate,UITableViewDataSource
 extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +51,9 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as? HeaderTableViewCell else {return UITableViewCell()}
+
             cell.setUI()
+            cell.delegate = self
             return cell
         
         case 1:

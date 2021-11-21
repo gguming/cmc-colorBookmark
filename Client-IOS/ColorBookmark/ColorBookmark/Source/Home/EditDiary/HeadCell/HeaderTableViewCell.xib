@@ -38,21 +38,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKH-hD-Gwe">
-                        <rect key="frame" x="363" y="38" width="61" height="30"/>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="61" id="FWd-0D-CQq"/>
-                            <constraint firstAttribute="height" constant="30" id="KZN-1H-1PR"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="편집"/>
-                        <connections>
-                            <action selector="editBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NTE-Qf-Qdp"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0W-qR-2TW">
                         <rect key="frame" x="20" y="75" width="404" height="1"/>
                         <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,8 +49,6 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="v0W-qR-2TW" secondAttribute="trailing" constant="20" id="2mT-yF-nHU"/>
-                    <constraint firstAttribute="trailing" secondItem="qKH-hD-Gwe" secondAttribute="trailing" constant="20" id="8yY-ob-m3m"/>
-                    <constraint firstItem="qKH-hD-Gwe" firstAttribute="bottom" secondItem="XNn-OL-07y" secondAttribute="bottom" id="Bb8-aw-He1"/>
                     <constraint firstItem="XNn-OL-07y" firstAttribute="leading" secondItem="T1q-Ft-WPw" secondAttribute="leading" id="ENF-pR-dF1"/>
                     <constraint firstAttribute="trailing" secondItem="wed-lS-Z1e" secondAttribute="trailing" constant="24" id="FaT-pg-8mK"/>
                     <constraint firstAttribute="bottom" secondItem="v0W-qR-2TW" secondAttribute="bottom" id="FeN-Cs-PQ6"/>
@@ -74,13 +57,11 @@
                     <constraint firstItem="wed-lS-Z1e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T1q-Ft-WPw" secondAttribute="trailing" id="XXl-5R-Xpq"/>
                     <constraint firstItem="v0W-qR-2TW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cp6-sL-srr"/>
                     <constraint firstItem="T1q-Ft-WPw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="l21-d4-OpI"/>
-                    <constraint firstItem="qKH-hD-Gwe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XNn-OL-07y" secondAttribute="trailing" id="wd6-Oc-CIs"/>
                     <constraint firstItem="XNn-OL-07y" firstAttribute="top" secondItem="T1q-Ft-WPw" secondAttribute="bottom" constant="4" id="xTM-hO-DY2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="editBtn" destination="qKH-hD-Gwe" id="mGE-g8-Ax3"/>
                 <outlet property="helloLabel" destination="T1q-Ft-WPw" id="7XJ-CR-Otg"/>
                 <outlet property="infoLabel" destination="XNn-OL-07y" id="ZqD-DV-v7x"/>
                 <outlet property="seperateLineView" destination="v0W-qR-2TW" id="YFN-Aq-55R"/>
