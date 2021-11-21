@@ -6,8 +6,11 @@ target 'ColorBookmark' do
   use_frameworks!
 
   # Pods for ColorBookmark
-pod 'MaterialComponents/BottomSheet'
-pod 'FloatingPanel'
-pod 'Alamofire', '~> 5.4'
-pod 'KakaoSDK'
+  pod 'MaterialComponents/BottomSheet'
+  pod 'FloatingPanel'
+  pod 'Alamofire', '~> 5.4'
+  pod 'KakaoSDK'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Kingfisher'
 end
