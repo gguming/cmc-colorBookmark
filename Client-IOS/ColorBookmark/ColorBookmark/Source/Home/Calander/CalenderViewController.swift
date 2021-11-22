@@ -10,7 +10,7 @@ import MaterialComponents.MaterialBottomSheet
 import Alamofire
 
 class CalenderViewController: UIViewController {
-    var calendarData = [CalendarResult]()
+    var calendarData: [CalendarResult]?
     
     lazy var dataManager: CalenderDataManager = CalenderDataManager()
     var constantMonth = 0
@@ -164,8 +164,11 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
         
         cell.backgroundColor = .blue
         
+//        print("cellcellcell")
+//        print(calendarData?[17].color)
+        
         switch indexPath.section {
-               case 0:
+        case 0:
             cell.CircleImage.isHidden = true
             cell.DateLabel.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -174,18 +177,24 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
                default:
             //MARK: check
+            if indexPath.item != 30 {
+                if calendarData?[indexPath.item].color == nil {
+                    cell.CircleImage.isHidden = true
+                }
+                else {
+                    let circleColor = UIColor(hex: calendarData?[indexPath.item].color ?? "#000000")
+                    print(indexPath.item)
+                    print(circleColor)
+                    cell.CircleImage.isHidden = false
+//                    cell.CircleImage.tintColor = .brown
+                    cell.CircleImage.tintColor = circleColor
+                }
+            }
+
             
-//            if calendarData[indexPath.row+1].color == nil {
-//                cell.CircleImage.isHidden = true
-//            }
-//
-//            else {
-//                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
-//                cell.CircleImage.isHidden = false
-//                cell.CircleImage.tintColor = circleColor
-//            }
+//            print(calendarData?.)
+
             
-            //print(indexPath.row)
           //  print(calendarData[])
 //            if CalendarInfo.shared.calenderColor[indexPath.row] == "nil" {
 //                cell.CircleImage.isHidden = true
@@ -263,10 +272,10 @@ extension CalenderViewController {
     func getCalenderSuccess(data: [CalendarResult]) {
         calendarData = data
         print("데이터 개수 ")
-        print(calendarData.count)
-        print(calendarData[0])
-        print(calendarData[17].color)
-        print(calendarData[18].color)
+        print(calendarData?.count)
+//        print(calendarData[0])
+        print(calendarData?[17].color)
+//        print(calendarData[18].color)
         CalenderCollectionview.reloadData()
     }
 }
