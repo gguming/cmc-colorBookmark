@@ -60,8 +60,9 @@
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
 		E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */; };
-		E9336CB627493ACA00686AF1 /* PasswordSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */; };
 		E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */; };
+		E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */; };
+		E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -156,8 +157,9 @@
 		E4CD5A84ADAEB01484C878A3 /* Pods-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
 		E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginResponse.swift; sourceTree = "<group>"; };
-		E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingViewController.swift; sourceTree = "<group>"; };
 		E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginRequest.swift; sourceTree = "<group>"; };
+		E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeViewController.swift; sourceTree = "<group>"; };
+		E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -567,7 +569,8 @@
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
 				E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */,
-				E9336CB527493ACA00686AF1 /* PasswordSettingViewController.swift */,
+				E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */,
+				E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -792,10 +795,10 @@
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
-				E9336CB627493ACA00686AF1 /* PasswordSettingViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
+				E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
@@ -820,6 +823,7 @@
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
+				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
 				A49DB735274776B600AF315F /* ButtonsTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
@@ -982,7 +986,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1012,7 +1016,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

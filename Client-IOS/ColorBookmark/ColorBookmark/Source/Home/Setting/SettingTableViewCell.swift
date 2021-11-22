@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol PresentVCDelegate: AnyObject {
+    
+    func presentMiniCodeVC()
+}
+
 class SettingTableViewCell: UITableViewCell {
 
+    weak var cellDelegate: PresentVCDelegate?
+    
     var cellNumber: Int? = nil
     var onOff = "OFF"
     var switchOnBoolean = false
@@ -81,6 +88,9 @@ extension SettingTableViewCell {
             print("알림 ON")
         case 1:
             print("암호 ON")
+            cellDelegate?.presentMiniCodeVC()
+            
+           
             
         case 2:
             print("배경음악 ON")

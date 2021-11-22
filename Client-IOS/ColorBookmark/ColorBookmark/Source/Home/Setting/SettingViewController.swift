@@ -96,6 +96,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             default:
                 break
             }
+            
+            cell.cellDelegate = self
+            
             return cell
         }
         
@@ -113,4 +116,16 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
+}
+
+extension SettingViewController: PresentVCDelegate {
+    func presentMiniCodeVC() {
+        print("dkdkkdkdkdkdkdkd")
+        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = homeStoryboard.instantiateViewController(withIdentifier: "MiniCodeViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
 }
