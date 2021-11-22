@@ -28,8 +28,7 @@ class BookmarkTableViewCell: UITableViewCell {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        let margins = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        contentView.frame = contentView.frame.inset(by: margins)
+       
     }
     
     func setupLayout() {

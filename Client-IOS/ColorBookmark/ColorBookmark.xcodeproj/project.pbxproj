@@ -53,10 +53,10 @@
 		A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */; };
 		A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
-		A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */; };
-		A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */; };
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
+		A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */; };
+		A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
 		E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */; };
@@ -147,10 +147,10 @@
 		A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
-		A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorCollectionViewCell.swift; sourceTree = "<group>"; };
-		A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
+		A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorBtnCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		C768A5674B77CC77F011BA7D /* Pods-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
@@ -501,13 +501,13 @@
 			path = HeaderCell;
 			sourceTree = "<group>";
 		};
-		A4AEB9032744B55F00901C5B /* EditColorHeadCell */ = {
+		A4AEB9032744B55F00901C5B /* EditColorBtnCell */ = {
 			isa = PBXGroup;
 			children = (
-				A4AEB90C2744B7A300901C5B /* EditColorCollectionViewCell.swift */,
-				A4AEB90D2744B7A300901C5B /* EditColorCollectionViewCell.xib */,
+				A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */,
+				A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */,
 			);
-			path = EditColorHeadCell;
+			path = EditColorBtnCell;
 			sourceTree = "<group>";
 		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
@@ -526,7 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E1266D2745F004009BCF74 /* ColorPicker */,
-				A4AEB9032744B55F00901C5B /* EditColorHeadCell */,
+				A4AEB9032744B55F00901C5B /* EditColorBtnCell */,
 				A4C69FC7273F71290091565C /* EditColor.storyboard */,
 				A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */,
 			);
@@ -695,6 +695,7 @@
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
+				A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
 				A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */,
@@ -702,7 +703,6 @@
 				A49DB7322747764C00AF315F /* RecordTableViewCell.xib in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
-				A4AEB90F2744B7A300901C5B /* EditColorCollectionViewCell.xib in Resources */,
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
@@ -773,6 +773,7 @@
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
+				A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
 				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
@@ -803,7 +804,6 @@
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
 				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
-				A4AEB90E2744B7A300901C5B /* EditColorCollectionViewCell.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,

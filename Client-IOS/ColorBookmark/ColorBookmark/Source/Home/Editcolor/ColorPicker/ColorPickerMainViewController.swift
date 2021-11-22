@@ -8,7 +8,15 @@
 import UIKit
 
 class ColorPickerMainViewController: UIViewController {
-
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    @IBAction func saveBtnTapped(_ sender: Any) {
+    }
+    @IBAction func cancelBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
