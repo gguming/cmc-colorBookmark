@@ -179,13 +179,26 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             //MARK: check
             if indexPath.item != 30 {
                 if calendarData?[indexPath.item].color == nil {
-                    cell.CircleImage.isHidden = true
+                    if cell.CircleImage.isHidden == false {
+                        print(indexPath.item)
+                        cell.CircleImage.isHidden = true
+                    }
+                    if cell.CircleImage.isHidden == true {
+                        print(indexPath.item, "QQQ")
+
+                    }
+              
+//                    cell.CircleImage.is
+//                    cell.CircleImage.tintColor = .clear
                 }
                 else {
-                    let circleColor = UIColor(hex: calendarData?[indexPath.item].color ?? "#000000")
+                    
+//                    let circleColor = UIColor(hex: calendarData?[indexPath.item].color! ?? "#000000")
+                    let circleColor = UIColor(hex: "#ffe700ff")
                     print(indexPath.item)
+                    print(calendarData?[indexPath.item].color)
                     print(circleColor)
-                    cell.CircleImage.isHidden = false
+                    cell.CircleImage.isHidden = true
 //                    cell.CircleImage.tintColor = .brown
                     cell.CircleImage.tintColor = circleColor
                 }
