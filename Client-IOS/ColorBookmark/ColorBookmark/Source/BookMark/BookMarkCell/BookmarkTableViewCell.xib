@@ -11,13 +11,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="BookmarkTableViewCell" customModule="CMC_IOS_ColorBookmark" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="BookmarkTableViewCell" customModule="ColorBookmark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOb-Vg-vW7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30일 토요일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a1-mU-gRz">
                         <rect key="frame" x="24" y="12" width="50.5" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -62,11 +66,16 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="FKt-hy-1JB" firstAttribute="leading" secondItem="Sh3-3E-Eoa" secondAttribute="trailing" constant="10" id="0Ab-Ml-YF1"/>
+                    <constraint firstItem="ceW-k6-1LW" firstAttribute="bottom" secondItem="VOb-Vg-vW7" secondAttribute="bottom" id="16b-W0-dt9"/>
+                    <constraint firstAttribute="bottom" secondItem="VOb-Vg-vW7" secondAttribute="bottom" constant="20" id="1Pn-sB-Yf7"/>
+                    <constraint firstItem="VOb-Vg-vW7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GG8-L0-Mt0"/>
+                    <constraint firstAttribute="trailing" secondItem="VOb-Vg-vW7" secondAttribute="trailing" id="M9D-0b-hhX"/>
                     <constraint firstItem="Sh3-3E-Eoa" firstAttribute="leading" secondItem="9GO-FY-Ebj" secondAttribute="trailing" constant="10" id="SvD-5D-Je5"/>
                     <constraint firstItem="ZJY-Ga-v0f" firstAttribute="leading" secondItem="4a1-mU-gRz" secondAttribute="leading" id="Vti-ME-lnY"/>
-                    <constraint firstAttribute="bottom" secondItem="ceW-k6-1LW" secondAttribute="bottom" id="XE4-KX-3Y4"/>
+                    <constraint firstItem="VOb-Vg-vW7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ahx-4P-wxL"/>
                     <constraint firstItem="Sh3-3E-Eoa" firstAttribute="top" secondItem="9GO-FY-Ebj" secondAttribute="top" id="eOh-gS-H99"/>
                     <constraint firstItem="ceW-k6-1LW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ez4-Jw-19f"/>
                     <constraint firstItem="FKt-hy-1JB" firstAttribute="top" secondItem="Sh3-3E-Eoa" secondAttribute="top" id="iF2-CW-tqE"/>
@@ -87,11 +96,14 @@
                 <outlet property="secondItem" destination="Sh3-3E-Eoa" id="DKf-xi-N72"/>
                 <outlet property="thirdItem" destination="FKt-hy-1JB" id="Mth-Pg-2xt"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="mic" catalog="system" width="108" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
