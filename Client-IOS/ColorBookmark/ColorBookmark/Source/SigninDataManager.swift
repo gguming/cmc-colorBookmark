@@ -19,6 +19,7 @@ class SigninDataManager {
                     // 성공했을 때
                     if response.isSuccess {
                         print("회원가입 성공")
+                       // JwtInfo.shared.jwtValue = response.
                         delegate.SigninSuccess()
                     }
                     
