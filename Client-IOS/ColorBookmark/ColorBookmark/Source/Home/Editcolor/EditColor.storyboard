@@ -36,12 +36,18 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="취소"/>
+                                        <connections>
+                                            <action selector="cancelBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x6k-jr-RAR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOM-Hd-4de">
                                         <rect key="frame" x="167" y="0.0" width="167" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="저장"/>
+                                        <connections>
+                                            <action selector="saveBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WMY-za-Eq2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +57,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dAG-5c-jyf" firstAttribute="top" secondItem="ONi-XY-aL9" secondAttribute="bottom" id="Gi7-OA-Em3"/>
                             <constraint firstItem="dAG-5c-jyf" firstAttribute="leading" secondItem="ONi-XY-aL9" secondAttribute="leading" id="KeK-sQ-xSD"/>
@@ -61,6 +67,10 @@
                             <constraint firstItem="ONi-XY-aL9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="wrA-rf-aNh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="F1z-Ka-ryz" id="UtF-4I-hC9"/>
+                        <outlet property="saveBtn" destination="xOM-Hd-4de" id="Nu3-IX-o56"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,7 +123,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="fV6-1z-MrG"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7t-du-KV1">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i7t-du-KV1">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -180,7 +190,7 @@
             <objects>
                 <viewController storyboardIdentifier="ColorPickerViewController" id="xlj-vM-0iL" customClass="ColorPickerViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="obt-kl-Xc9">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="467"/>
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="467.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Jkd-CG-BwG"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

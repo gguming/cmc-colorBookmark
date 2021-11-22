@@ -39,7 +39,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
     
+    // Action for color
     @IBAction func editBtnTapped(_ sender: Any) {
+        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
