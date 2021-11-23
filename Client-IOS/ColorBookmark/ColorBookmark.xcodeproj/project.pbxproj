@@ -65,6 +65,7 @@
 		E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */; };
 		E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */; };
 		E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */; };
+		E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -164,6 +165,7 @@
 		E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginRequest.swift; sourceTree = "<group>"; };
 		E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAfterSigininDataManager.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -619,6 +621,7 @@
 				E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */,
 				E9445BB5273E59DF00B4EC82 /* LoginDataManager.swift */,
 				E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */,
+				E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -824,6 +827,7 @@
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
+				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
