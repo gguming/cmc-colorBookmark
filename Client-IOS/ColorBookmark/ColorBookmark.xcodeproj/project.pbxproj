@@ -66,6 +66,8 @@
 		E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */; };
 		E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */; };
 		E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */; };
+		E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */; };
+		E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -166,6 +168,8 @@
 		E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAfterSigininDataManager.swift; sourceTree = "<group>"; };
+		E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCheckViewController.swift; sourceTree = "<group>"; };
+		E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCheckCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -587,6 +591,8 @@
 				E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */,
 				E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */,
 				E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */,
+				E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */,
+				E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
+				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
@@ -841,6 +848,7 @@
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
+				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,

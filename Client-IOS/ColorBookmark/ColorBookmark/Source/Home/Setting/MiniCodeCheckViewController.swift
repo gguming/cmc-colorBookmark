@@ -1,16 +1,18 @@
 //
-//  MiniCodeViewController.swift
+//  MiniCodeCheckViewController.swift
 //  ColorBookmark
 //
-//  Created by 김지훈 on 2021/11/22.
+//  Created by 김지훈 on 2021/11/23.
 //
 
 import UIKit
 
-class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
-    var MiniCodeValue: Array<String> = []
+    var MiniCodeCheckValue: Array<String> = []
+    var MiniCode: Array<String> = []
+     
     
     @IBOutlet weak var minicode_1: UIImageView!
     
@@ -21,23 +23,22 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var minicode_4: UIImageView!
     
     
-    @IBOutlet weak var MiniCodeCollectionviewHeight: NSLayoutConstraint!
-    @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
+    @IBOutlet weak var MiniCodeCheckCollectionviewHeight: NSLayoutConstraint!
+    @IBOutlet weak var MiniCodeCheckCollectionview: UICollectionView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        MiniCodeCollectionview.delegate = self
-        MiniCodeCollectionview.dataSource = self
+        MiniCodeCheckCollectionview.delegate = self
+        MiniCodeCheckCollectionview.dataSource = self
         
-        let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
-        MiniCodeCollectionviewHeight.constant = height
+        let height = MiniCodeCheckCollectionview.collectionViewLayout.collectionViewContentSize.height
+        MiniCodeCheckCollectionviewHeight.constant = height
         self.view.setNeedsLayout()
- 
+        
     }
     
     func minicode() {
-        switch MiniCodeValue.count {
+        switch MiniCodeCheckValue.count {
             
         case 0:
             minicode_1.image = UIImage(named: "101")
@@ -68,8 +69,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
             minicode_2.image = UIImage(named: "99")
             minicode_3.image = UIImage(named: "99")
             minicode_4.image = UIImage(named: "99")
-            passwordEnd()
-            
+            passwordCheckEnd()
         default:
             break
         }
@@ -85,7 +85,8 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = MiniCodeCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCollectionViewCell", for: indexPath) as! MiniCodeCollectionViewCell
+        let cell = MiniCodeCheckCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCheckCollectionViewCell", for: indexPath) as! MiniCodeCheckCollectionViewCell
+        
         cell.layer.cornerRadius = 7
         cell.backgroundColor = .white
         
@@ -120,28 +121,28 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = MiniCodeCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCollectionViewCell", for: indexPath) as! MiniCodeCollectionViewCell
-        print("CHECK")
+        let cell = MiniCodeCheckCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCheckCollectionViewCell", for: indexPath) as! MiniCodeCheckCollectionViewCell
+        
         switch indexPath.section {
         case 0:
-            MiniCodeValue.append(String(1 + indexPath.item))
-            print(MiniCodeValue)
+            MiniCodeCheckValue.append(String(1 + indexPath.item))
+            print(MiniCodeCheckValue)
         case 1:
-            MiniCodeValue.append(String(4 + indexPath.item))
-            print(MiniCodeValue)
+            MiniCodeCheckValue.append(String(4 + indexPath.item))
+            print(MiniCodeCheckValue)
         case 2:
-            MiniCodeValue.append(String(7 + indexPath.item))
-            print(MiniCodeValue)
+            MiniCodeCheckValue.append(String(7 + indexPath.item))
+            print(MiniCodeCheckValue)
         default:
             if indexPath.item == 1 {
-                MiniCodeValue.append(String(0))
-                print(MiniCodeValue)
+                MiniCodeCheckValue.append(String(0))
+                print(MiniCodeCheckValue)
             }
             if indexPath.item == 2 {
-                if MiniCodeValue.isEmpty == false {
-                    MiniCodeValue.removeLast()
+                if MiniCodeCheckValue.isEmpty == false {
+                    MiniCodeCheckValue.removeLast()
                 }
-                print(MiniCodeValue)
+                print(MiniCodeCheckValue)
             }
         }
         
@@ -158,18 +159,23 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 4
+        let cellWidth = MiniCodeCheckCollectionview.frame.size.width / 3 - 4
         let cellHeight = cellWidth * 1/2
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
 }
 
-extension MiniCodeViewController {
-    func passwordEnd() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MiniCodeCheckViewController") as? MiniCodeCheckViewController
-        vc?.MiniCode = MiniCodeValue
-        vc!.modalPresentationStyle = .fullScreen
-        present(vc!, animated: true, completion: nil)
+extension MiniCodeCheckViewController {
+    func passwordCheckEnd() {
+        if MiniCodeCheckValue == MiniCode {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+            changeRootViewController(vc)
+        }
+       
     }
 }
+
+
+
