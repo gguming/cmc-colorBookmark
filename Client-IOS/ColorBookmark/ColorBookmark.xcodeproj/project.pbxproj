@@ -93,6 +93,8 @@
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
 		E9445BCC2747B58C00B4EC82 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
+		E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */; };
+		E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
 		E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */; };
 		E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */; };
@@ -206,6 +208,8 @@
 		E9445BCD2747BE0C00B4EC82 /* CMC-IOS-ColorBookmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CMC-IOS-ColorBookmark.entitlements"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoginViewController.swift; sourceTree = "<group>"; };
 		E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
@@ -616,6 +620,8 @@
 			children = (
 				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
 				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
+				E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */,
+				E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
 				A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */,
+				E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
@@ -855,6 +862,7 @@
 				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
+				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
 				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
 				A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
@@ -1082,7 +1090,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1112,7 +1120,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
