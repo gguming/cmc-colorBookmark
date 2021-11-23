@@ -15,6 +15,10 @@ class HeaderTableViewCell: UITableViewCell {
    
     @IBOutlet weak var seperateLineView: UIView!
     
+    @IBAction func dismissBtnTapped(_ sender: Any) {
+        delegate?.dismissEditDiary()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -35,7 +39,7 @@ class HeaderTableViewCell: UITableViewCell {
 }
 
 protocol EditBtnDelegate {
-    func presentEditVC()
+    func dismissEditDiary()
 }
 
 //extension HeaderTableViewCell: ChangeStateDelegate{

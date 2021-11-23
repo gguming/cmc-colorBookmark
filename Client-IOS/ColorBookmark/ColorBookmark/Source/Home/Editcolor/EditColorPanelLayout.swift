@@ -13,10 +13,10 @@ class EditColorPanelLayout: FloatingPanelLayout{
     }
     
     var initialState: FloatingPanelState{
-        return .full
+        return .tip
     }
     
-    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [.full: FloatingPanelLayoutAnchor(absoluteInset: 100, edge: .top, referenceGuide: .superview)]
+    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [.tip: FloatingPanelLayoutAnchor(absoluteInset: 240, edge: .bottom, referenceGuide: .safeArea)]
     
     
 }

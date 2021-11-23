@@ -16,7 +16,7 @@ class EditDiaryPanelLayout: FloatingPanelLayout{
         return .full
     }
     
-    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [.full: FloatingPanelLayoutAnchor(absoluteInset: 100, edge: .top, referenceGuide: .superview)]
+    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [.full: FloatingPanelLayoutAnchor(absoluteInset: 100, edge: .top, referenceGuide: .safeArea)]
     
     
     

@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     // Action for color
     @IBAction func editBtnTapped(_ sender: Any) {
         
-        editDiaryVC()
+        editColorVC()
     }
     
     override func viewDidLoad() {
@@ -121,26 +121,7 @@ class HomeViewController: UIViewController {
 }
 
 
-//extension HomeViewController: EditBtnDelegate{
-//    func presentEditVC() {
-//        <#code#>
-//    }
-//    
-//    
-//}
 
-extension HomeViewController: EditBtnDelegate{
-    func presentEditVC() {
-        print(1)
-        let sb = UIStoryboard(name: "EditColor", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.modalTransitionStyle = .crossDissolve
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    
-}
 // collectionview setting
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -153,6 +134,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.setUI()
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        editDiaryVC()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

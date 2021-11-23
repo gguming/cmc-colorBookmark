@@ -31,14 +31,11 @@ class EditDiaryViewController: UIViewController  {
 }
 
 extension EditDiaryViewController: EditBtnDelegate{
-    func presentEditVC() {
-        print(1)
-        let sb = UIStoryboard(name: "EditColor", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.modalTransitionStyle = .crossDissolve
-        self.present(vc, animated: true, completion: nil)
+    func dismissEditDiary() {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+   
 }
 
 // MARK: UITableViewDelegate,UITableViewDataSource
