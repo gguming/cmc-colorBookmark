@@ -41,9 +41,8 @@ class HomeViewController: UIViewController {
     
     // Action for color
     @IBAction func editBtnTapped(_ sender: Any) {
-        let sb = UIStoryboard(name: "EditColor", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        self.present(vc, animated: true, completion: nil)
+        
+        editDiaryVC()
     }
     
     override func viewDidLoad() {
@@ -53,43 +52,48 @@ class HomeViewController: UIViewController {
         collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
         collectionview.dataSource = self
         collectionview.delegate = self
-//        
-//        if Constant.constantNum == 1 {
-//            let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController")
-//            
-//            changeRootViewController(vc)
-//        }
-        
-//        let fpc = FloatingPanelController()
-//        fpc.delegate = self
-//        fpc.surfaceView.layer.cornerRadius = 10
-//
-//        let appearance = SurfaceAppearance()
 
-        // Define shadows
-//        let shadow = SurfaceAppearance.Shadow()
-//        shadow.color = UIColor.black
-//        shadow.offset = CGSize(width: 0, height: 16)
-//        shadow.radius = 16
-//        shadow.spread = 8
-//        appearance.shadows = [shadow]
-
-        // Define corner radius and background color
-      
-//        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
-//
-//        fpc.set(contentViewController: contentVC)
-//        fpc.addPanel(toParent: self)
-//        appearance.cornerRadius = 20.0
-//        fpc.surfaceView.appearance = appearance
-//
-//        fpc.surfaceView.grabberHandle.isHidden = true
     }
     
-//    func changeHeaderUI(_ delegate: HeaderTableViewCell){
-//        delegate.checkState()
-//    }
+    private func editDiaryVC(){
+//        let fpc = FloatingPanelController()
+        let fpc = FloatingPanelController()
+        fpc.surfaceView.layer.cornerRadius = 10
+        
+        let appearance = SurfaceAppearance()
+        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+        fpc.set(contentViewController: contentVC)
+        fpc.addPanel(toParent: self)
+        appearance.cornerRadius = 20.0
+        fpc.surfaceView.appearance = appearance
+        fpc.layout = EditDiaryPanelLayout()
+        fpc.invalidateLayout()
+        
+        fpc.surfaceView.grabberHandle.isHidden = true
+
+    }
+    
+    private func editColorVC(){
+        let fpc = FloatingPanelController()
+        fpc.delegate = self
+        fpc.surfaceView.layer.cornerRadius = 10
+        
+        let appearance = SurfaceAppearance()
+        let sb = UIStoryboard(name: "EditColor", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        fpc.set(contentViewController: vc)
+        fpc.addPanel(toParent: self)
+        appearance.cornerRadius = 20.0
+        fpc.surfaceView.appearance = appearance
+        fpc.layout = EditColorPanelLayout()
+        fpc.invalidateLayout()
+        fpc.panGestureRecognizer.isEnabled = false
+        
+        
+        fpc.surfaceView.grabberHandle.isHidden = true
+
+    }
+
     
     private func calendarSetUI(){
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
