@@ -445,6 +445,7 @@
 		A47C4D52273BAE4D00CEB907 /* EditColorVC */ = {
 			isa = PBXGroup;
 			children = (
+				A4D874B1274C822700079B7F /* DataManger */,
 				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
 				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 				A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */,
@@ -550,6 +551,13 @@
 				A47555732747480200593C70 /* BookmarkViewController.swift */,
 			);
 			path = BookMark;
+			sourceTree = "<group>";
+		};
+		A4D874B1274C822700079B7F /* DataManger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManger;
 			sourceTree = "<group>";
 		};
 		A4E1266D2745F004009BCF74 /* ColorPicker */ = {
