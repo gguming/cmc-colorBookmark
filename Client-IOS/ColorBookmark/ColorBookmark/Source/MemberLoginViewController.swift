@@ -21,6 +21,7 @@ class MemberLoginViewController: UIViewController {
     @IBAction func GoBackButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func JoinButtonTapped(_ sender: Any) {
         passwordValue = PasswordTextField.text!
         print(emailValue)
@@ -70,6 +71,7 @@ class MemberLoginViewController: UIViewController {
 
 extension MemberLoginViewController {
     func loginSuccess() {
+       // UserDefaults.standard.set("hohyeon", forKey: "nickname")
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         print("성공성공성공")

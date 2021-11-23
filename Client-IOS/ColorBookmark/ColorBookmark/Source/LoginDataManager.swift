@@ -21,6 +21,7 @@ class LoginDataManager {
                     if response.isSuccess {
                         print("로그인 성공")
                         print("jwt 토큰값")
+                       
                         print(response.result!.jwt)
                         JwtInfo.shared.jwtValue = response.result?.jwt
                         delegate.loginSuccess()
