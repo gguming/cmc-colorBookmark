@@ -8,7 +8,9 @@
 import UIKit
 
 class SigninNickNameViewController: UIViewController {
-    lazy var dataManager: SigninDataManager = SigninDataManager()
+    lazy var signinDataManager: SigninDataManager = SigninDataManager()
+    lazy var loginDataManager: LoginAfterSigninDataManager = LoginAfterSigninDataManager()
+    
     
     var emailValue = ""
     var passwordValue = ""
@@ -31,7 +33,7 @@ class SigninNickNameViewController: UIViewController {
         print(passwordValue)
         print(nicknameValue)
         let signinInput = SigninRequest(email: emailValue, password: passwordValue, nickname: nicknameValue)
-        dataManager.postSignin(signinInput, delegate: self)
+        signinDataManager.postSignin(signinInput, delegate: self)
     }
     
     let changedBackgroundColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
@@ -116,6 +118,13 @@ class SigninNickNameViewController: UIViewController {
 
 extension SigninNickNameViewController {
     func SigninSuccess() {
+//        let signinInput = SigninRequest(email: emailValue, password: passwordValue, nickname: nicknameValue)
+//        signinDataManager.postSignin(signinInput, delegate: self)
+        let loginInput = LoginRequest(email: emailValue, password: passwordValue)
+        loginDataManager.postLoginAfterSignin(loginInput, delegate: self)
+    }
+    
+    func LoginSuccess() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         changeRootViewController(vc)
