@@ -8,7 +8,8 @@
 import UIKit
 
 class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    @IBOutlet weak var LogoutContainerView: UIView!
+    
     let myPageTitle = ["닉네임 수정", "비밀변호 변경", "개인정보처리방침", "서비스이용약관", "로그아웃", "회원 탈퇴"]
     
     @IBAction func BackToSettingVCTapped(_ sender: Any) {
@@ -23,6 +24,14 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         MypageTableview.delegate = self
         MypageTableview.dataSource = self
         MypageTableview.separatorStyle = .none
+        
+        LogoutContainerView.isHidden = true
+        
+        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+        addChild(logoutView)
+        logoutView.view.layer.cornerRadius = 20
+        logoutView.view.frame = LogoutContainerView.bounds
+        LogoutContainerView.addSubview(logoutView.view)
   
     }
 
@@ -47,6 +56,32 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
-
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+        
+        if indexPath.section == 4 {
+            print("????")
+            logoutView.view.isHidden = false
+            
+            //MARK: check
+           // self.view.alpha = CGFloat(0.4)
+        }
+        else {
+            print("!!!!")
+            logoutView.view.isHidden = true
+        }
+    }
+}
+
+
+extension MyPageViewController {
+    func logoutAgree() {
+        print("123123123")
+    }
+    
+    func logoutDisagree() {
+        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+        logoutView.view.isHidden = true
+    }
 }
