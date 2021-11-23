@@ -31,6 +31,9 @@
                         <state key="normal" image="xmark" catalog="system">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
                         </state>
+                        <connections>
+                            <action selector="dismissBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XQt-C7-pT1"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 기분은 무슨색인가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-OL-07y">
                         <rect key="frame" x="24" y="44" width="227" height="24"/>
