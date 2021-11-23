@@ -10,7 +10,7 @@ import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
 class HomeViewController: UIViewController {
-//    var delegate: ChangeStateDelegate?
+
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
         let SB = UIStoryboard(name: "BookMark", bundle: nil)
         guard let vc = SB.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
@@ -39,6 +39,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
     
+    // color data
+    
+    lazy var colorDataManager: GetColorListDataManager = GetColorListDataManager()
+    var colors: [Colors]?
+    
+    
     // Action for color
     @IBAction func editBtnTapped(_ sender: Any) {
         
@@ -52,6 +58,7 @@ class HomeViewController: UIViewController {
         collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
         collectionview.dataSource = self
         collectionview.delegate = self
+        colorDataManager.getColors(delegate: self)
 
     }
     
@@ -118,6 +125,28 @@ class HomeViewController: UIViewController {
         
         
     }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 }
 
 
@@ -126,13 +155,15 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return colors?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
         cell.setUI()
-        
+        cell.colorView.backgroundColor = hexStringToUIColor(hex: "#\(colors?[indexPath.item].color ?? "000000")")
+        print("#\(colors?[indexPath.item].color ?? "000000")")
+        cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -146,6 +177,23 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
     
+    
+}
+// api 호출
+
+extension HomeViewController {
+    func didSuccessGetColors(_ result: ColorResponse) {
+        print("------>\(result)")
+        colors = result.result
+        collectionview.reloadData()
+       
+        
+    }
+    
+    func failedToGetColors(message: String) {
+        print("------>>>>\(message)")
+        
+    }
     
 }
 
