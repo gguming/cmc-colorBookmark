@@ -577,6 +577,10 @@
                                     <constraint firstItem="Pxt-Ln-8qj" firstAttribute="width" secondItem="Pxt-Ln-8qj" secondAttribute="height" id="NIp-ps-S6L"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconClose" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-Zc-CoZ">
+                                <rect key="frame" x="142" y="78" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DW8-F6-wdO"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -709,6 +713,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="AccountLabel" destination="5FJ-EB-c4H" id="KDP-WX-4pL"/>
                         <outlet property="MypageTableview" destination="jfE-o7-7dl" id="7Ho-hV-ztV"/>
                     </connections>
                 </viewController>
@@ -836,6 +841,7 @@
         <image name="168" width="68" height="44"/>
         <image name="iconArrowDropdown" width="16" height="8"/>
         <image name="iconBookmark" width="44" height="44"/>
+        <image name="iconClose" width="44" height="44"/>
         <image name="iconIonicIosClose" width="16" height="16"/>
         <image name="iconMaterialPanoramaHorizontal" width="24" height="22.5"/>
         <image name="iconMenu" width="44" height="44"/>

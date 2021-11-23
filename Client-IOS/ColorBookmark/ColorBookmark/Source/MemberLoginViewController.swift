@@ -71,7 +71,7 @@ class MemberLoginViewController: UIViewController {
 
 extension MemberLoginViewController {
     func loginSuccess() {
-       // UserDefaults.standard.set("hohyeon", forKey: "nickname")
+        UserDefaults.standard.set(emailValue, forKey: "email")
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         print("성공성공성공")

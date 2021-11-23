@@ -15,9 +15,11 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var AccountLabel: UILabel!
     @IBOutlet weak var MypageTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        AccountLabel.text = UserDefaults.standard.string(forKey: "email")!
         MypageTableview.delegate = self
         MypageTableview.dataSource = self
         MypageTableview.separatorStyle = .none

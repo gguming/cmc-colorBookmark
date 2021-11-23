@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Foundation
+import AudioToolbox
 
 class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    lazy var dataManager: MiniCodeDataManager = MiniCodeDataManager()
+    
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeCheckValue: Array<String> = []
     var MiniCode: Array<String> = []
@@ -27,6 +31,8 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var MiniCodeCheckCollectionview: UICollectionView!
     
     override func viewDidLoad() {
+        print("aaa")
+        print(MiniCode)
         super.viewDidLoad()
         MiniCodeCheckCollectionview.delegate = self
         MiniCodeCheckCollectionview.dataSource = self
@@ -168,12 +174,30 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
 
 extension MiniCodeCheckViewController {
     func passwordCheckEnd() {
-        if MiniCodeCheckValue == MiniCode {
-            let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-            changeRootViewController(vc)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            if MiniCodeCheckValue == MiniCode {
+                let stringMiniCode = MiniCode.joined(separator: "")
+                MiniCodeInfo.shared.miniCodeValue = stringMiniCode
+                print(MiniCodeInfo.shared.miniCodeValue)
+                let miniCodeInput = MiniCodeRequest(miniCode: stringMiniCode)
+                dataManager.createMiniCode(miniCodeInput, delegate: self)
+            }
+            else {
+               AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                MiniCodeCheckValue.removeAll()
+                minicode_1.image = UIImage(named: "101")
+                minicode_2.image = UIImage(named: "101")
+                minicode_3.image = UIImage(named: "101")
+                minicode_4.image = UIImage(named: "101")
+            }
         }
-       
+    }
+    
+    func createMiniCodeSuccess() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        changeRootViewController(vc)
+  
     }
 }
 
