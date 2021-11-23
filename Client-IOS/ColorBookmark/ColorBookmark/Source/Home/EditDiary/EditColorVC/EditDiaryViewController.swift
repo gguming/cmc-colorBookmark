@@ -9,7 +9,7 @@ import UIKit
 
 class EditDiaryViewController: UIViewController  {
    
-    
+    var colors: [Colors]?
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ColorTableViewCell", for: indexPath) as? ColorTableViewCell else {return UITableViewCell()}
-        
+            cell.colors = self.colors
             return cell
             
         case 2:
