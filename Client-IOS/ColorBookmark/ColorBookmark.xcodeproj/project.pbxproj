@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E923E32FD4376788B4B74A9 /* Pods_ColorBookmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */; };
 		A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4127BA0274AB62900D854EB /* GoogleService-Info.plist */; };
+		A4333EAC274CBA15002EEB8C /* ColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4333EAB274CBA15002EEB8C /* ColorResponse.swift */; };
+		A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4333EAD274CC409002EEB8C /* GetColorListDataManager.swift */; };
 		A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */; };
 		A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */; };
 		A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */; };
@@ -106,6 +108,8 @@
 /* Begin PBXFileReference section */
 		1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorBookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4127BA0274AB62900D854EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4333EAB274CBA15002EEB8C /* ColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResponse.swift; sourceTree = "<group>"; };
+		A4333EAD274CC409002EEB8C /* GetColorListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetColorListDataManager.swift; sourceTree = "<group>"; };
 		A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerMainViewController.swift; sourceTree = "<group>"; };
 		A43BF398273BEA27008DF16A /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		A43BF399273BEA27008DF16A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
@@ -236,6 +240,21 @@
 				1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4333EAA274CB9F9002EEB8C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4333EAB274CBA15002EEB8C /* ColorResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookMarkHeadCell;
 			sourceTree = "<group>";
 		};
 		A43BF39C273BEA41008DF16A /* ColorCollectionCell */ = {
@@ -449,7 +468,7 @@
 		A47C4D52273BAE4D00CEB907 /* EditColorVC */ = {
 			isa = PBXGroup;
 			children = (
-				A4D874B1274C822700079B7F /* DataManger */,
+				A4D874B1274C822700079B7F /* ColorData */,
 				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
 				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 				A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */,
@@ -550,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				A475557A2747653000593C70 /* BookMarkDetail */,
+				A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */,
 				A475557527474F5400593C70 /* BookMarkCell */,
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
 				A47555732747480200593C70 /* BookmarkViewController.swift */,
@@ -557,11 +577,13 @@
 			path = BookMark;
 			sourceTree = "<group>";
 		};
-		A4D874B1274C822700079B7F /* DataManger */ = {
+		A4D874B1274C822700079B7F /* ColorData */ = {
 			isa = PBXGroup;
 			children = (
+				A4333EAA274CB9F9002EEB8C /* Entity */,
+				A4333EAD274CC409002EEB8C /* GetColorListDataManager.swift */,
 			);
-			path = DataManger;
+			path = ColorData;
 			sourceTree = "<group>";
 		};
 		A4E1266D2745F004009BCF74 /* ColorPicker */ = {
@@ -822,6 +844,7 @@
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
+				A4333EAC274CBA15002EEB8C /* ColorResponse.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */,
 				E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */,
@@ -844,6 +867,7 @@
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
+				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
@@ -1009,7 +1033,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1039,7 +1063,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CMC-IOS-ColorBookmark/CMC-IOS-ColorBookmark.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

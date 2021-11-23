@@ -75,7 +75,7 @@ class HomeViewController: UIViewController {
     
     private func editColorVC(){
         let fpc = FloatingPanelController()
-        fpc.delegate = self
+        
         fpc.surfaceView.layer.cornerRadius = 10
         
         let appearance = SurfaceAppearance()
@@ -150,22 +150,3 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 }
 
 
-extension HomeViewController: FloatingPanelControllerDelegate{
-    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
-        if fpc.state == .tip {
-            Constant.panelState = 0
-//            delegate?.changeState()
-           
-            
-            print(Constant.panelState)
-        } else {
-            Constant.panelState = 1
-//            delegate?.changeState()
-            print(Constant.panelState)
-        }
-    }
-}
-
-//protocol ChangeStateDelegate{
-//    func changeState()
-//}

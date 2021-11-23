@@ -45,7 +45,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
-        cell.layer.cornerRadius = 8
+        cell.backView.layer.cornerRadius = 8
         cell.clipsToBounds = true
         return cell
     }

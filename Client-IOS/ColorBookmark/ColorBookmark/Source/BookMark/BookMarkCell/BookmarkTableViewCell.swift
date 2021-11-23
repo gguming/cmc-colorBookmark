@@ -15,6 +15,9 @@ class BookmarkTableViewCell: UITableViewCell {
     @IBOutlet weak var secondItem: UIImageView!
     @IBOutlet weak var thirdItem: UIImageView!
     @IBOutlet weak var colorView: UIView!
+    
+    @IBOutlet weak var backView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
