@@ -17,7 +17,7 @@ extension UIColor {
                 let start = hex.index(hex.startIndex, offsetBy: 1)
                 let hexColor = String(hex[start...])
 
-                if hexColor.count == 6 {
+                if hexColor.count == 8 {
                     let scanner = Scanner(string: hexColor)
                     var hexNumber: UInt64 = 0
 
@@ -46,6 +46,8 @@ extension UIColor {
             alpha: CGFloat(alpha)
         )
     }
+    
+    
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
     // ex. label.textColor = .mainPink
     class var mainPink: UIColor { UIColor(hex: 0xFF1C92) }

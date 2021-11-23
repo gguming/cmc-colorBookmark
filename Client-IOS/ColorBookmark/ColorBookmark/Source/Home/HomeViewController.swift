@@ -69,6 +69,7 @@ class HomeViewController: UIViewController {
         
         let appearance = SurfaceAppearance()
         guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+        contentVC.colors = self.colors
         fpc.set(contentViewController: contentVC)
         fpc.addPanel(toParent: self)
         appearance.cornerRadius = 20.0
@@ -88,6 +89,7 @@ class HomeViewController: UIViewController {
         let appearance = SurfaceAppearance()
         let sb = UIStoryboard(name: "EditColor", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.colors = self.colors
         fpc.set(contentViewController: vc)
         fpc.addPanel(toParent: self)
         appearance.cornerRadius = 20.0
@@ -162,7 +164,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
         cell.setUI()
         cell.colorView.backgroundColor = hexStringToUIColor(hex: "#\(colors?[indexPath.item].color ?? "000000")")
-        print("#\(colors?[indexPath.item].color ?? "000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }
