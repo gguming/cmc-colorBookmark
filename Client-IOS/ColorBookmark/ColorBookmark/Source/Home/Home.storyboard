@@ -577,20 +577,35 @@
                                     <constraint firstItem="Pxt-Ln-8qj" firstAttribute="width" secondItem="Pxt-Ln-8qj" secondAttribute="height" id="NIp-ps-S6L"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconClose" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-Zc-CoZ">
-                                <rect key="frame" x="142" y="78" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconClose" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-Zc-CoZ">
+                                <rect key="frame" x="342" y="97" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tDB-Zc-CoZ" secondAttribute="height" id="dT4-bl-GBL"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmH-84-38s">
+                                <rect key="frame" x="342" y="97" width="44" height="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="BackToSettingVC:" destination="Y4H-QB-r50" eventType="touchUpInside" id="C91-RI-182"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DW8-F6-wdO"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tDB-Zc-CoZ" firstAttribute="top" secondItem="DW8-F6-wdO" secondAttribute="top" constant="53" id="026-aE-UHb"/>
                             <constraint firstItem="DW8-F6-wdO" firstAttribute="bottom" secondItem="gUt-Ml-Lsv" secondAttribute="bottom" constant="104" id="1Uu-Vs-HP5"/>
                             <constraint firstItem="VL9-1b-H0k" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="DI6-Fq-bAZ"/>
                             <constraint firstItem="gUt-Ml-Lsv" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="JJO-g3-YPL"/>
                             <constraint firstItem="yx7-cV-Le1" firstAttribute="top" secondItem="VL9-1b-H0k" secondAttribute="bottom" constant="20" id="ZdM-gc-36K"/>
+                            <constraint firstItem="JmH-84-38s" firstAttribute="bottom" secondItem="tDB-Zc-CoZ" secondAttribute="bottom" id="ZqE-Ba-tQI"/>
+                            <constraint firstItem="JmH-84-38s" firstAttribute="trailing" secondItem="tDB-Zc-CoZ" secondAttribute="trailing" id="aH1-PA-zl9"/>
+                            <constraint firstItem="JmH-84-38s" firstAttribute="leading" secondItem="tDB-Zc-CoZ" secondAttribute="leading" id="bFQ-p0-VyW"/>
+                            <constraint firstItem="JmH-84-38s" firstAttribute="top" secondItem="tDB-Zc-CoZ" secondAttribute="top" id="cth-vB-Nv6"/>
                             <constraint firstItem="yx7-cV-Le1" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="cxH-1C-ocz"/>
                             <constraint firstItem="VL9-1b-H0k" firstAttribute="top" secondItem="OEs-lC-i3U" secondAttribute="top" constant="207" id="fSm-mh-WXf"/>
+                            <constraint firstItem="DW8-F6-wdO" firstAttribute="trailing" secondItem="tDB-Zc-CoZ" secondAttribute="trailing" constant="28" id="kVO-3N-4RU"/>
                             <constraint firstItem="DW8-F6-wdO" firstAttribute="trailing" secondItem="gUt-Ml-Lsv" secondAttribute="trailing" constant="32" id="mCO-D2-v74"/>
                         </constraints>
                     </view>
@@ -807,17 +822,34 @@
                                     <constraint firstItem="HkV-Qh-87T" firstAttribute="width" secondItem="HkV-Qh-87T" secondAttribute="height" id="Lb3-I4-HQ4"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconClose" translatesAutoresizingMaskIntoConstraints="NO" id="Fzl-Bp-f14">
+                                <rect key="frame" x="342" y="97" width="44" height="44"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-AI-Dkd">
+                                <rect key="frame" x="342" y="97" width="44" height="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="BackToSettingVC:" destination="rmK-4F-gvB" eventType="touchUpInside" id="hDt-9w-3Zy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CJ5-6D-FkQ"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Fzl-Bp-f14" firstAttribute="width" secondItem="Fzl-Bp-f14" secondAttribute="height" id="9Ep-5D-UeQ"/>
                             <constraint firstItem="iaL-KZ-pBQ" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="DBX-ld-AIC"/>
                             <constraint firstItem="a0K-c0-Axr" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="N7u-hQ-iUJ"/>
                             <constraint firstItem="E91-js-zxg" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="NcY-8E-S2t"/>
                             <constraint firstItem="CJ5-6D-FkQ" firstAttribute="bottom" secondItem="a0K-c0-Axr" secondAttribute="bottom" constant="104" id="PAa-df-GN0"/>
+                            <constraint firstItem="s3e-AI-Dkd" firstAttribute="top" secondItem="Fzl-Bp-f14" secondAttribute="top" id="ZgQ-di-ua9"/>
+                            <constraint firstItem="CJ5-6D-FkQ" firstAttribute="trailing" secondItem="Fzl-Bp-f14" secondAttribute="trailing" constant="28" id="Zhr-an-LGu"/>
+                            <constraint firstItem="s3e-AI-Dkd" firstAttribute="leading" secondItem="Fzl-Bp-f14" secondAttribute="leading" id="cDz-JC-c1d"/>
                             <constraint firstItem="E91-js-zxg" firstAttribute="top" secondItem="o0y-Jz-rgt" secondAttribute="top" constant="207" id="fv0-Dk-lHK"/>
+                            <constraint firstItem="s3e-AI-Dkd" firstAttribute="trailing" secondItem="Fzl-Bp-f14" secondAttribute="trailing" id="o0f-Kp-sEi"/>
+                            <constraint firstItem="Fzl-Bp-f14" firstAttribute="top" secondItem="CJ5-6D-FkQ" secondAttribute="top" constant="53" id="oPY-RH-E5T"/>
                             <constraint firstItem="iaL-KZ-pBQ" firstAttribute="top" secondItem="E91-js-zxg" secondAttribute="bottom" constant="20" id="qeh-zF-6si"/>
                             <constraint firstItem="CJ5-6D-FkQ" firstAttribute="trailing" secondItem="a0K-c0-Axr" secondAttribute="trailing" constant="32" id="t1o-gr-eMW"/>
+                            <constraint firstItem="s3e-AI-Dkd" firstAttribute="bottom" secondItem="Fzl-Bp-f14" secondAttribute="bottom" id="wjh-cJ-M0F"/>
                         </constraints>
                     </view>
                     <connections>

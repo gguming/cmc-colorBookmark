@@ -26,6 +26,9 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     
     @IBOutlet weak var minicode_4: UIImageView!
     
+    @IBAction func BackToSettingVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var MiniCodeCheckCollectionviewHeight: NSLayoutConstraint!
     @IBOutlet weak var MiniCodeCheckCollectionview: UICollectionView!
