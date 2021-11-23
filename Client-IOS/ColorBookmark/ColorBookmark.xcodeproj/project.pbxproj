@@ -246,6 +246,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookMarkHeadCell;
+			sourceTree = "<group>";
+		};
 		A43BF39C273BEA41008DF16A /* ColorCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				A475557A2747653000593C70 /* BookMarkDetail */,
+				A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */,
 				A475557527474F5400593C70 /* BookMarkCell */,
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
 				A47555732747480200593C70 /* BookmarkViewController.swift */,

@@ -5,7 +5,7 @@
 //  Created by SUN on 2021/11/23.
 //
 
-import Algorithms
+import Alamofire
 
 class GetColorListDataManager{
 //    func getFeeds(cnt: Int, delegate: HomeViewController) {
