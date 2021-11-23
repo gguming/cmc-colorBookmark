@@ -15,7 +15,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MiniCodeCollectionviewHeight: NSLayoutConstraint!
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
-    
+   
     @IBOutlet weak var minicode_1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,13 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         MiniCodeCollectionviewHeight.constant = height
         self.view.setNeedsLayout()
         
-        minicode_1.layer.cornerRadius = 50
-        minicode()
+        minicode_1.layer.cornerRadius = view.layer.bounds.width / 2
+//        minicode_1.clipsToBounds = true
+//        minicode_1.layer.borderColor = UIColor.black.cgColor
+//        minicode_1.layer.borderWidth = 1
+//
+//
+//        minicode()
  
     }
     
@@ -56,16 +61,16 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         switch indexPath.section {
         case 0:
-            cell.NumberLabel.text = String( 1 + indexPath.row)
+            cell.NumberLabel.text = String( 1 + indexPath.item)
         case 1:
-            cell.NumberLabel.text = String( 4 + indexPath.row)
+            cell.NumberLabel.text = String( 4 + indexPath.item)
         case 2:
-            cell.NumberLabel.text = String( 7 + indexPath.row)
+            cell.NumberLabel.text = String( 7 + indexPath.item)
         case 3:
-            if indexPath.row == 0 {
+            if indexPath.item == 0 {
                 cell.isHidden = true
             }
-            if indexPath.row == 1 {
+            if indexPath.item == 1 {
                 cell.NumberLabel.text = "0"
             }
             else {
@@ -89,20 +94,20 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         switch indexPath.section {
         case 0:
-            MiniCodeValue.append(String(1 + indexPath.row))
+            MiniCodeValue.append(String(1 + indexPath.item))
             print(MiniCodeValue)
         case 1:
-            MiniCodeValue.append(String(4 + indexPath.row))
+            MiniCodeValue.append(String(4 + indexPath.item))
             print(MiniCodeValue)
         case 2:
-            MiniCodeValue.append(String(7 + indexPath.row))
+            MiniCodeValue.append(String(7 + indexPath.item))
             print(MiniCodeValue)
         default:
-            if indexPath.row == 1 {
+            if indexPath.item == 1 {
                 MiniCodeValue.append(String(0))
                 print(MiniCodeValue)
             }
-            if indexPath.row == 2 {
+            if indexPath.item == 2 {
                 if MiniCodeValue.isEmpty == false {
                     MiniCodeValue.removeLast()
                 }
@@ -113,16 +118,17 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 6
+        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 4
         let cellHeight = cellWidth * 1/2
         return CGSize(width: cellWidth, height: cellHeight)
     }
+
 }
