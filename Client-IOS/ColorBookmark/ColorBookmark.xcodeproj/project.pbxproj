@@ -30,6 +30,8 @@
 		A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */; };
 		A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */; };
 		A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */; };
+		A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */; };
+		A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */; };
 		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
 		A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */; };
 		A46839E8272E7574005BA79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E7272E7574005BA79E /* Constant.swift */; };
@@ -124,6 +126,8 @@
 		A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
 		A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBtnTableViewCell.swift; sourceTree = "<group>"; };
 		A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditBtnTableViewCell.xib; sourceTree = "<group>"; };
+		A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorPanelLayout.swift; sourceTree = "<group>"; };
+		A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryPanelLayout.swift; sourceTree = "<group>"; };
 		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A46839E7272E7574005BA79E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 				A47C4D56273BAF1F00CEB907 /* AudioCell */,
 				A47C4D57273BAF4700CEB907 /* AddDiarayBtnCell */,
 				A47C4D52273BAE4D00CEB907 /* EditColorVC */,
+				A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */,
 			);
 			path = EditDiary;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				A4AEB9032744B55F00901C5B /* EditColorBtnCell */,
 				A4C69FC7273F71290091565C /* EditColor.storyboard */,
 				A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */,
+				A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */,
 			);
 			path = Editcolor;
 			sourceTree = "<group>";
@@ -799,6 +805,7 @@
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
+				A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */,
 				E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
@@ -808,6 +815,7 @@
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
+				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
