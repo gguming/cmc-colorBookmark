@@ -13,7 +13,7 @@ protocol PresentVCDelegate: AnyObject {
 }
 
 class SettingTableViewCell: UITableViewCell {
-
+    lazy var dataManager: SettingDataManager = SettingDataManager()
     weak var cellDelegate: PresentVCDelegate?
     
     var cellNumber: Int? = nil
@@ -86,14 +86,18 @@ extension SettingTableViewCell {
         switch cellNum {
         case 0:
             print("알림 ON")
+            let settingInput = SettingRequest(alarmStatus: "Y")
+            dataManager.getSettingValue(settingInput, delegate: self)
         case 1:
             print("암호 ON")
+            let settingInput = SettingRequest(miniCodeStatus: "Y")
+            dataManager.getSettingValue(settingInput, delegate: self)
             cellDelegate?.presentMiniCodeVC()
-            
-           
-            
+       
         case 2:
             print("배경음악 ON")
+            let settingInput = SettingRequest(BGMStatus: "Y")
+            dataManager.getSettingValue(settingInput, delegate: self)
         default:
             break
         }

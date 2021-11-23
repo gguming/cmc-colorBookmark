@@ -15,6 +15,7 @@ struct LoginResponse: Decodable {
 }
 
 struct LoginResult: Decodable{
-    let userId: Int
-    let jwt: String
+    var userId: Int
+    var jwt: String
+    var nickname: String
 }

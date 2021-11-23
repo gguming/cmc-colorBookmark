@@ -70,6 +70,13 @@
 		E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */; };
 		E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */; };
 		E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */; };
+		E9336CC4274CFF9800686AF1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9336CC3274CFF9800686AF1 /* AudioToolbox.framework */; };
+		E9336CC8274D003900686AF1 /* MiniCodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CC7274D003900686AF1 /* MiniCodeDataManager.swift */; };
+		E9336CCA274D004700686AF1 /* MiniCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CC9274D004700686AF1 /* MiniCodeResponse.swift */; };
+		E9336CCC274D005100686AF1 /* MiniCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CCB274D005100686AF1 /* MiniCodeRequest.swift */; };
+		E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CCD274D142E00686AF1 /* SettingDataManager.swift */; };
+		E9336CD0274D143700686AF1 /* SettingResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CCF274D143700686AF1 /* SettingResonse.swift */; };
+		E9336CD2274D144000686AF1 /* SettingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CD1274D144000686AF1 /* SettingRequest.swift */; };
 		E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B99273B8FE400B4EC82 /* SettingViewController.swift */; };
 		E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */; };
 		E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */; };
@@ -174,6 +181,13 @@
 		E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAfterSigininDataManager.swift; sourceTree = "<group>"; };
 		E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCheckViewController.swift; sourceTree = "<group>"; };
 		E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeCheckCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9336CC3274CFF9800686AF1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E9336CC7274D003900686AF1 /* MiniCodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeDataManager.swift; sourceTree = "<group>"; };
+		E9336CC9274D004700686AF1 /* MiniCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeResponse.swift; sourceTree = "<group>"; };
+		E9336CCB274D005100686AF1 /* MiniCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCodeRequest.swift; sourceTree = "<group>"; };
+		E9336CCD274D142E00686AF1 /* SettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataManager.swift; sourceTree = "<group>"; };
+		E9336CCF274D143700686AF1 /* SettingResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingResonse.swift; sourceTree = "<group>"; };
+		E9336CD1274D144000686AF1 /* SettingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRequest.swift; sourceTree = "<group>"; };
 		E9445B99273B8FE400B4EC82 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E9445B9D273C6FB700B4EC82 /* EmailCheckDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckDataManager.swift; sourceTree = "<group>"; };
@@ -217,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E923E32FD4376788B4B74A9 /* Pods_ColorBookmark.framework in Frameworks */,
+				E9336CC4274CFF9800686AF1 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +252,7 @@
 		3BE47386F2F3AF6B449BE5EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9336CC3274CFF9800686AF1 /* AudioToolbox.framework */,
 				1E4303F59E4DF5637F710FDD /* Pods_ColorBookmark.framework */,
 			);
 			name = Frameworks;
@@ -598,15 +614,37 @@
 		E9336CB427493A3700686AF1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
-				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
 				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
+				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
 			);
 			path = Mypage;
+			sourceTree = "<group>";
+		};
+		E9336CC5274D001800686AF1 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E9336CC7274D003900686AF1 /* MiniCodeDataManager.swift */,
+				E9336CCD274D142E00686AF1 /* SettingDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E9336CC6274D002900686AF1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9336CC9274D004700686AF1 /* MiniCodeResponse.swift */,
+				E9336CCB274D005100686AF1 /* MiniCodeRequest.swift */,
+				E9336CCF274D143700686AF1 /* SettingResonse.swift */,
+				E9336CD1274D144000686AF1 /* SettingRequest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		E9445B98273B8F8500B4EC82 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				E9336CC6274D002900686AF1 /* Entity */,
+				E9336CC5274D001800686AF1 /* DataManager */,
 				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
@@ -839,10 +877,12 @@
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
+				E9336CD2274D144000686AF1 /* SettingRequest.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
+				E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A4333EAC274CBA15002EEB8C /* ColorResponse.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
@@ -865,8 +905,10 @@
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
+				E9336CD0274D143700686AF1 /* SettingResonse.swift in Sources */,
 				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
+				E9336CC8274D003900686AF1 /* MiniCodeDataManager.swift in Sources */,
 				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
@@ -876,8 +918,10 @@
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
+				E9336CCA274D004700686AF1 /* MiniCodeResponse.swift in Sources */,
 				A49DB735274776B600AF315F /* ButtonsTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
+				E9336CCC274D005100686AF1 /* MiniCodeRequest.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
@@ -1038,7 +1082,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1068,7 +1112,7 @@
 				INFOPLIST_FILE = ColorBookmark/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

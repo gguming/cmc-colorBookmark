@@ -24,7 +24,10 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MiniCodeCollectionviewHeight: NSLayoutConstraint!
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
-
+    @IBAction func BackToSettingVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MiniCodeCollectionview.delegate = self

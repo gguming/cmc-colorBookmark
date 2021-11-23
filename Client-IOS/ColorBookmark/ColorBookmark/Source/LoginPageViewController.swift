@@ -22,9 +22,6 @@ class LoginPageViewController: UIViewController {
                print("loginWithKakaoAccount() success.")
                _ = oauthToken
                let accessToken = oauthToken?.accessToken
-//               JwtInfo.shared.jwtValue = accessToken
-//               print("카카오 토큰 값 ")
-//               print(JwtInfo.shared.jwtValue)
                let kakaoLoginInput = KakaoLoginRequest(accessToken: accessToken!)
                dataManager.getKakaoLoginJwt(kakaoLoginInput, delegate: self)
                

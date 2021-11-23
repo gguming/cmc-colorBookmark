@@ -24,3 +24,9 @@ class SettingInfo {
     static let shared = SettingInfo()
     var settingOnOff: Array<Bool> = [false, false, false]
 }
+
+class MiniCodeInfo {
+    static let shared = MiniCodeInfo()
+    var miniCodeValue: String?
+    private init() { }
+}
