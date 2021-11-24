@@ -156,6 +156,11 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - PryntTrimmerView (4.0.2)
+  - SteviaLayout (4.7.3)
+  - YPImagePicker (5.0.0):
+    - PryntTrimmerView (= 4.0.2)
+    - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
@@ -165,6 +170,7 @@ DEPENDENCIES:
   - KakaoSDK
   - Kingfisher
   - MaterialComponents/BottomSheet
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
@@ -193,6 +199,9 @@ SPEC REPOS:
     - MaterialComponents
     - nanopb
     - PromisesObjC
+    - PryntTrimmerView
+    - SteviaLayout
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -220,7 +229,10 @@ SPEC CHECKSUMS:
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  YPImagePicker: 1463a19a36244e209dcb03c30e63559c5afa9602
 
-PODFILE CHECKSUM: a22dc22fd80a0eaf6eaac6468530938c05e2ba6e
+PODFILE CHECKSUM: dc125c6a419d75245faac4967b9fe9ef56df412f
 
 COCOAPODS: 1.11.2

@@ -34,8 +34,5 @@ class LogoutViewController: UIViewController {
         YesButton.backgroundColor = yesColor
         NoButton.backgroundColor = noColor
 
-        // Do any additional setup after loading the view.
     }
-    
-
 }
