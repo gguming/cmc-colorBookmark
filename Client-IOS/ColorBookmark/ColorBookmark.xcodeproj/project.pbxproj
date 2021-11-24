@@ -282,13 +282,6 @@
 			path = ColorCollectionCell;
 			sourceTree = "<group>";
 		};
-		A43BF3A9273C0523008DF16A /* PhotoColllectionCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PhotoColllectionCell;
-			sourceTree = "<group>";
-		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
@@ -514,7 +507,6 @@
 		A47C4D55273BAEA400CEB907 /* PhotoCell */ = {
 			isa = PBXGroup;
 			children = (
-				A43BF3A9273C0523008DF16A /* PhotoColllectionCell */,
 				A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */,
 				A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */,
 			);
