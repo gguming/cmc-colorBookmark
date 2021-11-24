@@ -8,7 +8,10 @@
 import UIKit
 
 class PhotoTableViewCell: UITableViewCell {
-
+    @IBAction func addPhotoTapped(_ sender: Any) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

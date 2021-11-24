@@ -9,5 +9,15 @@ import Foundation
 
 
 struct ColorResponse: Decodable {
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+    var result: [Colors]?
     
+}
+
+
+struct Colors: Decodable {
+    var color: String?
+    var colorName: String?
 }

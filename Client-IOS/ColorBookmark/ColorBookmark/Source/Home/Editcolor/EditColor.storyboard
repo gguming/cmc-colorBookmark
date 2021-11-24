@@ -177,8 +177,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionview" destination="a0l-Mm-Z8z" id="4fM-FU-mOD"/>
-                        <outlet property="confirmBtn" destination="Eeq-Bs-VzX" id="qo0-ho-xUT"/>
-                        <outlet property="resetBtn" destination="Eeq-Bs-VzX" id="Uh8-zG-MY5"/>
+                        <outlet property="confirmBtn" destination="9mY-AI-n8i" id="LXg-6r-zA9"/>
+                        <outlet property="resetBtn" destination="Eeq-Bs-VzX" id="20U-M3-M8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eb2-pS-Mpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

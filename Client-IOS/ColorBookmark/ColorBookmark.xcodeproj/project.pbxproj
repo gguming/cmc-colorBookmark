@@ -57,6 +57,12 @@
 		A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */; };
 		A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
+		A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */; };
+		A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */; };
+		A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF467274DC0B600187878 /* PhotoHaveTableViewCell.swift */; };
+		A4BAF46A274DC0B600187878 /* PhotoHaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF468274DC0B600187878 /* PhotoHaveTableViewCell.xib */; };
+		A4BAF46D274DDDF500187878 /* PhotoBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF46B274DDDF500187878 /* PhotoBtnCollectionViewCell.swift */; };
+		A4BAF46E274DDDF500187878 /* PhotoBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF46C274DDDF500187878 /* PhotoBtnCollectionViewCell.xib */; };
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */; };
@@ -167,6 +173,12 @@
 		A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
+		A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4BAF467274DC0B600187878 /* PhotoHaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHaveTableViewCell.swift; sourceTree = "<group>"; };
+		A4BAF468274DC0B600187878 /* PhotoHaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoHaveTableViewCell.xib; sourceTree = "<group>"; };
+		A4BAF46B274DDDF500187878 /* PhotoBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBtnCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4BAF46C274DDDF500187878 /* PhotoBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorBtnCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -284,13 +296,6 @@
 				A43BF39E273BEA65008DF16A /* ColorCollectionViewCell.xib */,
 			);
 			path = ColorCollectionCell;
-			sourceTree = "<group>";
-		};
-		A43BF3A9273C0523008DF16A /* PhotoColllectionCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PhotoColllectionCell;
 			sourceTree = "<group>";
 		};
 		A45AE87C272D094D009ABED6 = {
@@ -518,9 +523,11 @@
 		A47C4D55273BAEA400CEB907 /* PhotoCell */ = {
 			isa = PBXGroup;
 			children = (
-				A43BF3A9273C0523008DF16A /* PhotoColllectionCell */,
+				A4BAF462274DC06800187878 /* PhotoCollectionCell */,
 				A43BF3A5273C01DD008DF16A /* PhotoTableViewCell.swift */,
 				A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */,
+				A4BAF467274DC0B600187878 /* PhotoHaveTableViewCell.swift */,
+				A4BAF468274DC0B600187878 /* PhotoHaveTableViewCell.xib */,
 			);
 			path = PhotoCell;
 			sourceTree = "<group>";
@@ -559,6 +566,17 @@
 				A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */,
 			);
 			path = EditColorBtnCell;
+			sourceTree = "<group>";
+		};
+		A4BAF462274DC06800187878 /* PhotoCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */,
+				A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */,
+				A4BAF46B274DDDF500187878 /* PhotoBtnCollectionViewCell.swift */,
+				A4BAF46C274DDDF500187878 /* PhotoBtnCollectionViewCell.xib */,
+			);
+			path = PhotoCollectionCell;
 			sourceTree = "<group>";
 		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
@@ -780,6 +798,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BAF46E274DDDF500187878 /* PhotoBtnCollectionViewCell.xib in Resources */,
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */,
@@ -791,6 +810,7 @@
 				A46839F4272E8308005BA79E /* WalkThrough.storyboard in Resources */,
 				A49DB7322747764C00AF315F /* RecordTableViewCell.xib in Resources */,
 				A43BF3A0273BEA65008DF16A /* ColorCollectionViewCell.xib in Resources */,
+				A4BAF46A274DC0B600187878 /* PhotoHaveTableViewCell.xib in Resources */,
 				A43BF3A4273BF91A008DF16A /* TextTableViewCell.xib in Resources */,
 				A43BF39B273BEA27008DF16A /* ColorTableViewCell.xib in Resources */,
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
@@ -802,6 +822,7 @@
 				E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */,
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */,
+				A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,
@@ -881,6 +902,7 @@
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
+				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
@@ -912,6 +934,7 @@
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
+				A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9336CD0274D143700686AF1 /* SettingResonse.swift in Sources */,
 				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,
@@ -920,6 +943,7 @@
 				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
+				A4BAF46D274DDDF500187878 /* PhotoBtnCollectionViewCell.swift in Sources */,
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
