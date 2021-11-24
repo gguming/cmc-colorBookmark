@@ -8,7 +8,7 @@
 import UIKit
 
 class EditDiaryViewController: UIViewController  {
-   
+    var pickedImg: [UIImage] = []
     var colors: [Colors]?
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
@@ -19,6 +19,7 @@ class EditDiaryViewController: UIViewController  {
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
         tableview.register(UINib(nibName: "TextTableViewCell", bundle: nil), forCellReuseIdentifier: "TextTableViewCell")
         tableview.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
+        tableview.register(UINib(nibName: "PhotoHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoHaveTableViewCell")
         tableview.register(UINib(nibName: "AudioTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioTableViewCell")
         tableview.register(UINib(nibName: "EditBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "EditBtnTableViewCell")
        
@@ -64,9 +65,17 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
         case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
+            if pickedImg.isEmpty {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
         
-            return cell
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoHaveTableViewCell", for: indexPath) as? PhotoHaveTableViewCell else {return UITableViewCell()}
+                cell.photos = pickedImg
+        
+                return cell
+            }
+            
             
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
@@ -114,4 +123,67 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
     }
+}
+
+
+extension EditDiaryViewController {
+//    private func addPost() {
+//
+//        var config = YPImagePickerConfiguration()
+//        config.library.mediaType = .photo
+//        config.showsPhotoFilters = false
+//        config.shouldSaveNewPicturesToAlbum = false
+//        config.startOnScreen = .library
+//        config.screens = [.photo, .library]
+//        config.showsCrop = .none
+//        config.wordings.libraryTitle = "사진첩"
+//        config.wordings.cameraTitle = "카메라"
+//        config.hidesStatusBar = false
+//        config.hidesBottomBar = false
+//        config.maxCameraZoomFactor = 2.0
+//        config.library.maxNumberOfItems = 4
+//        config.gallery.hidesRemoveButton = false
+//        config.library.skipSelectionsGallery = false
+//        config.library.defaultMultipleSelection = false
+//
+//        // imagePicker 설정 code
+//
+//        let picker = YPImagePicker(configuration: config)
+//        picker.navigationBar.backgroundColor = .white
+//        picker.didFinishPicking { [unowned picker] items, cancelled in
+//            self.pickedIMG = []
+//
+//            if cancelled {
+//                picker.dismiss(animated: true, completion: nil)
+//                return
+//            }
+////             여러 이미지를 넣어주기 위해 하나씩 넣어주는 반복문
+//            for item in items {
+//                switch item {
+//                // 이미지만 받기때문에 photo case만 처리
+//                case .photo(let p):
+//                    // 이미지를 해당하는 이미지 배열에 넣어주는 code
+//                    self.pickedIMG.append(p.image)
+//            // original image selected by the user, unfiltered
+//                    print(p.image)
+//                default:
+//                    print("")
+//                }
+//            }
+//            guard let postDetailVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else {return}
+//            postDetailVC.pickedIMG = self.pickedIMG
+//            self.navigationController?.pushViewController(postDetailVC, animated: true)
+//
+//            picker.dismiss(animated: true) {
+//            }
+//        }
+//        // picker뷰 present
+//        present(picker, animated: true, completion: nil)
+//    }
+}
+
+// delegate
+
+extension EditDiaryViewController {
+    
 }
