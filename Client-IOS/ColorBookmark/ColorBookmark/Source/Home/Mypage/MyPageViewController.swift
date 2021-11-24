@@ -62,14 +62,14 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if indexPath.section == 4 {
             print("????")
-            logoutView.view.isHidden = false
+            LogoutContainerView.isHidden = false
             
             //MARK: check
            // self.view.alpha = CGFloat(0.4)
         }
         else {
             print("!!!!")
-            logoutView.view.isHidden = true
+            LogoutContainerView.isHidden = true
         }
     }
 }
@@ -82,6 +82,6 @@ extension MyPageViewController {
     
     func logoutDisagree() {
         guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
-        logoutView.view.isHidden = true
+//        LogoutContainerView.isHidden = true
     }
 }
