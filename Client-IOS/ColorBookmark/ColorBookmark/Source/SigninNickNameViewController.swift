@@ -28,7 +28,6 @@ class SigninNickNameViewController: UIViewController {
     }
     @IBAction func JoinButtonTapped(_ sender: Any) {
         nicknameValue = NickNameTextField.text!
-        print("tlwkr slkdfj")
         print(emailValue)
         print(passwordValue)
         print(nicknameValue)
@@ -51,6 +50,7 @@ class SigninNickNameViewController: UIViewController {
         NickNameTextField.layer.cornerRadius = 5
         NickNameUnderLineView.isHidden = true
         self.NickNameTextField.addTarget(self, action: #selector(self.UnderlineNickNameTextField(_:)), for: .editingChanged)
+        
         super.viewDidLoad()
     }
     
@@ -118,8 +118,6 @@ class SigninNickNameViewController: UIViewController {
 
 extension SigninNickNameViewController {
     func SigninSuccess() {
-//        let signinInput = SigninRequest(email: emailValue, password: passwordValue, nickname: nicknameValue)
-//        signinDataManager.postSignin(signinInput, delegate: self)
         let loginInput = LoginRequest(email: emailValue, password: passwordValue)
         loginDataManager.postLoginAfterSignin(loginInput, delegate: self)
     }

@@ -8,7 +8,7 @@
 import UIKit
 
 class ChangePasswordViewController: UIViewController {
-
+    lazy var dataManager: ChangePasswordDataManager = ChangePasswordDataManager()
     var passwordCheck: String? = nil
     
     @IBOutlet weak var PasswordChangeTextField: UITextField!
@@ -27,6 +27,10 @@ class ChangePasswordViewController: UIViewController {
     }
     
     @IBAction func ChangePasswordButtonTapped(_ sender: Any) {
+        let password_1 = PasswordChangeTextField.text
+        let password_2 = PasswordChangeCheckTextField.text
+        let changePasswordInput = ChangePasswordRequest(password1: password_1!, password2: password_2!)
+        dataManager.changePassword(changePasswordInput, delegate: self)
     }
     
     let changedBackgroundColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
@@ -99,4 +103,10 @@ class ChangePasswordViewController: UIViewController {
     }
     
     
+}
+
+extension ChangePasswordViewController {
+    func changePasswordSuccess() {
+        dismiss(animated: true, completion: nil)
+    }
 }
