@@ -30,6 +30,7 @@ class SigninPasswordViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
     @IBAction func GoBackButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -42,7 +43,7 @@ class SigninPasswordViewController: UIViewController {
     override func viewDidLoad() {
         ContinueButton.layer.cornerRadius = 22
         PasswordTextField.layer.cornerRadius = 5
-        PasswordTextField.layer.cornerRadius = 5
+        PasswordCheckTextField.layer.cornerRadius = 5
         
         PasswordUnderLineView.isHidden = true
         PasswordGuideLabel.isHidden = true

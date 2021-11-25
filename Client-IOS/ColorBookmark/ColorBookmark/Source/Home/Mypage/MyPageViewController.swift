@@ -61,17 +61,29 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+//        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
         
-        if indexPath.section == 4 {
+        switch indexPath.section {
+        case 1:
+            let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+            let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
+        case 4:
             print("????")
             LogoutContainerView.isHidden = false
-            
             //MARK: check
            // self.view.alpha = CGFloat(0.4)
+        default:
+            break
         }
-        else {
-            print("!!!!")
+       
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if indexPath.section == 4 {
+            print("^^")
             LogoutContainerView.isHidden = true
         }
     }
