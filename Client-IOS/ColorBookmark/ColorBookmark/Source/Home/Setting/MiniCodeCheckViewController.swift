@@ -19,11 +19,8 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
      
     
     @IBOutlet weak var minicode_1: UIImageView!
-    
     @IBOutlet weak var minicode_2: UIImageView!
-    
     @IBOutlet weak var minicode_3: UIImageView!
-    
     @IBOutlet weak var minicode_4: UIImageView!
     
     @IBAction func BackToSettingVC(_ sender: Any) {
@@ -34,11 +31,14 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var MiniCodeCheckCollectionview: UICollectionView!
     
     override func viewDidLoad() {
-        print("aaa")
+        
         print(MiniCode)
         super.viewDidLoad()
         MiniCodeCheckCollectionview.delegate = self
         MiniCodeCheckCollectionview.dataSource = self
+        
+        let leadingValue = view.frame.width * 0.075
+        MiniCodeCheckCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
         
         let height = MiniCodeCheckCollectionview.collectionViewLayout.collectionViewContentSize.height
         MiniCodeCheckCollectionviewHeight.constant = height
@@ -168,8 +168,8 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCheckCollectionview.frame.size.width / 3 - 4
-        let cellHeight = cellWidth * 1/2
+        let cellWidth = MiniCodeCheckCollectionview.frame.size.width / 3 - 6
+        let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
 

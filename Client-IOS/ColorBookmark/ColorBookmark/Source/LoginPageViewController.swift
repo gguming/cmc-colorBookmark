@@ -44,6 +44,9 @@ class LoginPageViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var iconImage: UIImageView!
+    
     @IBOutlet weak var PageLabel: UILabel!
     @IBOutlet weak var kakaoButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
@@ -51,9 +54,12 @@ class LoginPageViewController: UIViewController {
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
     
     override func viewDidLoad() {
-        kakaoButton.layer.cornerRadius = 23
-        appleButton.layer.cornerRadius = 23
-        emailButton.layer.cornerRadius = 23
+
+        let topHeight = view.frame.height * 1/4
+        iconImage.topAnchor.constraint(equalTo: view.topAnchor, constant: topHeight).isActive = true
+        kakaoButton.layer.cornerRadius = 20
+        appleButton.layer.cornerRadius = 20
+        emailButton.layer.cornerRadius = 20
         appleButton.layer.borderWidth = 1
         appleButton.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
         
