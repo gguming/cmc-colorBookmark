@@ -9,21 +9,94 @@ import UIKit
 
 class ChangePasswordViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var passwordCheck: String? = nil
+    
+    @IBOutlet weak var PasswordChangeTextField: UITextField!
+    @IBOutlet weak var PasswordChangeUnderLineView: UIView!
+    @IBOutlet weak var PasswordChangeGuideLabel: UILabel!
+    
+    @IBOutlet weak var PasswordChangeCheckTextField: UITextField!
+    @IBOutlet weak var PasswordChangeCheckUnderLineView: UIView!
+    @IBOutlet weak var PasswordChangeCheckGuideLabel: UILabel!
+       
+    @IBOutlet weak var ChangePasswordButton: UIButton!
+    @IBOutlet weak var ChangePasswordLabel: UILabel!
 
-        // Do any additional setup after loading the view.
+    @IBAction func BackToMypageVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func ChangePasswordButtonTapped(_ sender: Any) {
     }
-    */
+    
+    let changedBackgroundColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
+    let changedTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    let unabledTextColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
+    let unabledBackgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
+    
+    override func viewDidLoad() {
+        ChangePasswordButton.layer.cornerRadius = 22
+        PasswordChangeTextField.layer.cornerRadius = 5
+        PasswordChangeCheckTextField.layer.cornerRadius = 5
+        
+        PasswordChangeUnderLineView.isHidden = true
+        PasswordChangeGuideLabel.isHidden = true
+        PasswordChangeCheckUnderLineView.isHidden = true
+        PasswordChangeCheckGuideLabel.isHidden = true
+        ChangePasswordButton.isEnabled = false
+        PasswordChangeCheckTextField.isEnabled = false
+        self.PasswordChangeTextField.addTarget(self, action: #selector(self.UnderlinePasswordTextField(_:)), for: .editingChanged)
+        self.PasswordChangeCheckTextField.addTarget(self, action: #selector(self.UnderlinePasswordCheckTextField(_:)), for: .editingChanged)
+        
+        PasswordEditing()
+        super.viewDidLoad()
+ 
+    }
+    
+    func PasswordEditing() {
+        if PasswordChangeTextField.isEditing{
+            PasswordChangeTextField.isSecureTextEntry = true
+        }
+        
+        if PasswordChangeCheckTextField.isEditing{
+            PasswordChangeCheckTextField.isSecureTextEntry = true
+        }
+       
+    }
 
+    @objc func UnderlinePasswordTextField(_ sender: Any?) {
+        PasswordChangeUnderLineView.isHidden = false
+        PasswordChangeTextField.isSecureTextEntry = true
+        if PossiblePassword(password: PasswordChangeTextField.text) {
+            PasswordChangeGuideLabel.isHidden = false
+            PasswordChangeCheckTextField.isEnabled = true
+        }
+        passwordCheck = PasswordChangeTextField.text
+    }
+    
+    @objc func UnderlinePasswordCheckTextField(_ sender: Any?) {
+        PasswordChangeCheckUnderLineView.isHidden = false
+        PasswordChangeCheckTextField.isSecureTextEntry = true
+        if passwordCheck == PasswordChangeCheckTextField.text {
+            PasswordChangeCheckGuideLabel.isHidden = true
+            ChangePasswordButton.isEnabled = true
+            ChangePasswordButton.backgroundColor = changedBackgroundColor
+            ChangePasswordLabel.textColor = changedTextColor
+        }
+        else {
+            PasswordChangeCheckGuideLabel.isHidden = false
+            ChangePasswordButton.isEnabled = false
+            ChangePasswordButton.backgroundColor = unabledBackgroundColor
+            ChangePasswordLabel.textColor = unabledTextColor
+        }
+    }
+    
+    func PossiblePassword(password: String?) -> Bool {
+        if Int(password?.count ?? 0) > 5 {
+            return true
+        }
+        return false
+    }
+    
+    
 }

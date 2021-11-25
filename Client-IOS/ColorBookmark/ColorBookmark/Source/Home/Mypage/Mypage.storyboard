@@ -9,21 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="132" y="74"/>
-        </scene>
         <!--Change Password View Controller-->
         <scene sceneID="g7r-n4-FkE">
             <objects>
@@ -55,8 +40,11 @@
                                 <rect key="frame" x="140.5" y="395.5" width="133.5" height="48.5"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="ChangePasswordButtonTapped:" destination="Z32-Ef-6fY" eventType="touchUpInside" id="3Ba-SR-luu"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계속하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P42-MV-E0r">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="변경하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P42-MV-E0r">
                                 <rect key="frame" x="179.5" y="410.5" width="55.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,6 +78,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXD-fx-rFH">
                                 <rect key="frame" x="24" y="106" width="44" height="44"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="BackToMypageVC:" destination="Z32-Ef-6fY" eventType="touchUpInside" id="I6H-mC-yB1"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcN-ya-QLy">
                                 <rect key="frame" x="24" y="243.5" width="366" height="3"/>
@@ -148,10 +139,20 @@
                             <constraint firstItem="M1i-AE-n6D" firstAttribute="top" secondItem="BQc-Ha-3Pk" secondAttribute="bottom" constant="24" id="yIG-S3-V5b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ChangePasswordButton" destination="LA8-Uf-aSA" id="hrX-H5-rgh"/>
+                        <outlet property="ChangePasswordLabel" destination="P42-MV-E0r" id="Dkg-YB-fEc"/>
+                        <outlet property="PasswordChangeCheckGuideLabel" destination="QGA-qD-S6f" id="RPX-7o-B30"/>
+                        <outlet property="PasswordChangeCheckTextField" destination="M1i-AE-n6D" id="xhE-Hd-b4d"/>
+                        <outlet property="PasswordChangeCheckUnderLineView" destination="WcX-4a-Y1d" id="5wo-YA-d3R"/>
+                        <outlet property="PasswordChangeGuideLabel" destination="BQc-Ha-3Pk" id="54g-3u-mt1"/>
+                        <outlet property="PasswordChangeTextField" destination="inC-kZ-wuW" id="Yfo-gZ-xjs"/>
+                        <outlet property="PasswordChangeUnderLineView" destination="VcN-ya-QLy" id="Kda-iM-w50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPF-OO-GIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="878"/>
+            <point key="canvasLocation" x="275" y="237"/>
         </scene>
     </scenes>
     <resources>
