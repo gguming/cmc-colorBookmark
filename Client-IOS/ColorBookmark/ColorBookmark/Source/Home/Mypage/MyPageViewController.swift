@@ -25,6 +25,9 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         MypageTableview.dataSource = self
         MypageTableview.separatorStyle = .none
         
+        let bottomValue = view.frame.height * 0.35
+        MypageTableview.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomValue).isActive = true
+        
         LogoutContainerView.isHidden = true
         
         guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }

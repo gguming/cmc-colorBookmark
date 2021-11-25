@@ -33,6 +33,9 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         MiniCodeCollectionview.delegate = self
         MiniCodeCollectionview.dataSource = self
         
+        let leadingValue = view.frame.width * 0.075
+        MiniCodeCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
+        
         let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
         MiniCodeCollectionviewHeight.constant = height
         self.view.setNeedsLayout()
@@ -161,8 +164,8 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 4
-        let cellHeight = cellWidth * 1/2
+        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 6
+        let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
 

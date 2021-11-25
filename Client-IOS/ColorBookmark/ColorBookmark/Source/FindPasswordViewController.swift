@@ -8,11 +8,22 @@
 import UIKit
 
 class FindPasswordViewController: UIViewController {
-
+    lazy var dataManager: FindPasswordDataManager = FindPasswordDataManager()
+    var emailValue = ""
+    
     @IBOutlet weak var FindPasswordTextField: UITextField!
+    
     @IBAction func GoBackButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func SendButtonTapped(_ sender: Any) {
+        emailValue = FindPasswordTextField.text!
+        print(emailValue)
+        let passwordInput = FindPasswordRequest(email: emailValue)
+        dataManager.postPassword(passwordInput, delegate: self)
+    }
+    
     @IBOutlet weak var SendLabel: UILabel!
     @IBOutlet weak var UnderLineView: UIView!
     @IBOutlet weak var SendButton: UIButton!
@@ -35,4 +46,8 @@ class FindPasswordViewController: UIViewController {
         SendLabel.textColor = changedTextColor
     }
 
+    
+    func SendPasswordSuccess() {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -120,7 +120,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 extension SettingViewController: PresentVCDelegate {
     func presentMiniCodeVC() {
-        print("dkdkkdkdkdkdkdkd")
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = homeStoryboard.instantiateViewController(withIdentifier: "MiniCodeViewController")
         vc.modalPresentationStyle = .fullScreen
