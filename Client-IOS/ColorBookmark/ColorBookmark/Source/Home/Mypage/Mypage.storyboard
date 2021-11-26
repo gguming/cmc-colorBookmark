@@ -154,6 +154,94 @@
             </objects>
             <point key="canvasLocation" x="275" y="237"/>
         </scene>
+        <!--Change Nickname View Controller-->
+        <scene sceneID="4dd-vI-Lhg">
+            <objects>
+                <viewController storyboardIdentifier="ChangeNicknameViewController" id="56V-XS-ePV" customClass="ChangeNicknameViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J0O-Ri-Rel">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임 수정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEh-Lj-MtU">
+                                <rect key="frame" x="161.5" y="109" width="91" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_back" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-qr-24h">
+                                <rect key="frame" x="24" y="99" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9k6-qr-24h" secondAttribute="height" multiplier="1:1" id="Q6j-Ln-kF9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제게 새로운 닉네임을 알려주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYl-NI-FJZ">
+                                <rect key="frame" x="76" y="233" width="262" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-6M-V2Q">
+                                <rect key="frame" x="24" y="277" width="366" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiR-n4-0mH">
+                                <rect key="frame" x="124.5" y="374" width="165" height="48.5"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="ChangeNicknameButtonTapped:" destination="56V-XS-ePV" eventType="touchUpInside" id="ueD-ZT-sQy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임 바꾸기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18c-yY-OKB">
+                                <rect key="frame" x="163.5" y="389" width="87" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w64-yR-uJ4">
+                                <rect key="frame" x="24" y="99" width="44" height="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="BackToMypageVC:" destination="56V-XS-ePV" eventType="touchUpInside" id="pI4-L5-ZjH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cgb-xd-smf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JiR-n4-0mH" firstAttribute="bottom" secondItem="18c-yY-OKB" secondAttribute="bottom" constant="14" id="2M8-xp-nF9"/>
+                            <constraint firstItem="MEh-Lj-MtU" firstAttribute="centerX" secondItem="cgb-xd-smf" secondAttribute="centerX" id="2Yn-bv-Bg8"/>
+                            <constraint firstItem="18c-yY-OKB" firstAttribute="centerX" secondItem="cgb-xd-smf" secondAttribute="centerX" id="3KJ-B3-UBZ"/>
+                            <constraint firstItem="w64-yR-uJ4" firstAttribute="leading" secondItem="9k6-qr-24h" secondAttribute="leading" id="8fM-r1-ZLO"/>
+                            <constraint firstItem="sYl-NI-FJZ" firstAttribute="top" secondItem="MEh-Lj-MtU" secondAttribute="bottom" constant="100" id="FM4-TH-7fd"/>
+                            <constraint firstItem="9k6-qr-24h" firstAttribute="centerY" secondItem="MEh-Lj-MtU" secondAttribute="centerY" id="KMb-iY-nPM"/>
+                            <constraint firstItem="x3L-6M-V2Q" firstAttribute="leading" secondItem="cgb-xd-smf" secondAttribute="leading" constant="24" id="OXB-2b-ye0"/>
+                            <constraint firstItem="MEh-Lj-MtU" firstAttribute="top" secondItem="cgb-xd-smf" secondAttribute="top" constant="65" id="Sqa-HQ-cge"/>
+                            <constraint firstItem="9k6-qr-24h" firstAttribute="leading" secondItem="cgb-xd-smf" secondAttribute="leading" constant="24" id="Uwu-LC-OQu"/>
+                            <constraint firstItem="w64-yR-uJ4" firstAttribute="top" secondItem="9k6-qr-24h" secondAttribute="top" id="VeF-6q-aMr"/>
+                            <constraint firstItem="w64-yR-uJ4" firstAttribute="trailing" secondItem="9k6-qr-24h" secondAttribute="trailing" id="X4G-zB-89F"/>
+                            <constraint firstItem="sYl-NI-FJZ" firstAttribute="centerX" secondItem="cgb-xd-smf" secondAttribute="centerX" id="Xpr-mJ-t6d"/>
+                            <constraint firstItem="18c-yY-OKB" firstAttribute="leading" secondItem="JiR-n4-0mH" secondAttribute="leading" constant="39" id="cFE-Rt-NsQ"/>
+                            <constraint firstItem="JiR-n4-0mH" firstAttribute="trailing" secondItem="18c-yY-OKB" secondAttribute="trailing" constant="39" id="gp9-NX-2WR"/>
+                            <constraint firstItem="x3L-6M-V2Q" firstAttribute="height" secondItem="sYl-NI-FJZ" secondAttribute="height" multiplier="2" id="kcC-E3-M36"/>
+                            <constraint firstItem="18c-yY-OKB" firstAttribute="top" secondItem="x3L-6M-V2Q" secondAttribute="bottom" constant="64" id="oe9-Q6-IEb"/>
+                            <constraint firstItem="w64-yR-uJ4" firstAttribute="bottom" secondItem="9k6-qr-24h" secondAttribute="bottom" id="sXc-w6-3MG"/>
+                            <constraint firstItem="18c-yY-OKB" firstAttribute="top" secondItem="JiR-n4-0mH" secondAttribute="top" constant="15" id="um4-Af-5rk"/>
+                            <constraint firstItem="x3L-6M-V2Q" firstAttribute="centerX" secondItem="cgb-xd-smf" secondAttribute="centerX" id="vLh-kE-aOu"/>
+                            <constraint firstItem="x3L-6M-V2Q" firstAttribute="top" secondItem="sYl-NI-FJZ" secondAttribute="bottom" constant="20" id="xfY-bk-7dD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ChangeNicknameButton" destination="JiR-n4-0mH" id="Mhm-Ef-Rne"/>
+                        <outlet property="ChangeNicknameLabel" destination="18c-yY-OKB" id="XnN-BZ-BF2"/>
+                        <outlet property="NicknameTextField" destination="x3L-6M-V2Q" id="xsG-fW-mmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7v-wq-KQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="236"/>
+        </scene>
     </scenes>
     <resources>
         <image name="login_back" width="44" height="44"/>

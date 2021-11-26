@@ -484,6 +484,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NicknameLabel" destination="dQN-7y-TGQ" id="HeT-2w-d3F"/>
                         <outlet property="SettingTableview" destination="Fz7-bB-7gw" id="4bU-1h-VWN"/>
                     </connections>
                 </viewController>

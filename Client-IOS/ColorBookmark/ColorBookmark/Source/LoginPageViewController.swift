@@ -26,11 +26,9 @@ class LoginPageViewController: UIViewController {
                print(accessToken)
                let kakaoLoginInput = KakaoLoginRequest(accessToken: accessToken!)
                dataManager.getKakaoLoginJwt(kakaoLoginInput, delegate: self)
-               
                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+               let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+               changeRootViewController(vc)
            }
         }
     }

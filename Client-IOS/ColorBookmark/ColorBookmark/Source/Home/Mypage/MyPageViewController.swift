@@ -64,6 +64,12 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
         
         switch indexPath.section {
+        case 0:
+            let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+            let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangeNicknameViewController")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
         case 1:
             let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
             let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
