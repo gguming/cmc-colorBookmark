@@ -189,6 +189,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
         
         switch indexPath.section {
         case 0:
+            cell.backgroundColor = .green
             cell.CircleImage.isHidden = true
             cell.DateLabel.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
