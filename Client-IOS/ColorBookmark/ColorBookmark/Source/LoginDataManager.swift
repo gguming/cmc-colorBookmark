@@ -25,6 +25,7 @@ class LoginDataManager {
                         print(response.result!.jwt)
                         Constant.jwt = response.result?.jwt
                         Constant.nickname = response.result?.nickname
+                        Constant.userId = response.result?.userId
                         delegate.loginSuccess()
                     }
                     

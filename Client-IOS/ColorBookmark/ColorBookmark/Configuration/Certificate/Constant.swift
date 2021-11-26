@@ -27,7 +27,6 @@ struct Constant {
     static var jwt: String?
    = UserDefaults.standard.string(forKey: "checkJwt")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let jwt = jwt else { return }
@@ -39,7 +38,6 @@ struct Constant {
     static var nickname: String?
    = UserDefaults.standard.string(forKey: "checkNickname")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let nickname = nickname else { return }
@@ -51,7 +49,6 @@ struct Constant {
     static var setting_0: String?
    = UserDefaults.standard.string(forKey: "checkSetting_0")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let setting_0 = setting_0 else { return }
@@ -63,7 +60,6 @@ struct Constant {
     static var setting_1: String?
    = UserDefaults.standard.string(forKey: "checkSetting_1")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let setting_1 = setting_1 else { return }
@@ -75,7 +71,6 @@ struct Constant {
     static var setting_2: String?
    = UserDefaults.standard.string(forKey: "checkSetting_2")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let setting_2 = setting_2 else { return }
@@ -87,7 +82,6 @@ struct Constant {
     static var miniCode: String?
    = UserDefaults.standard.string(forKey: "checkMiniCode")
     {
-       
         didSet {
            // UserDefault에 저장
            guard let miniCode = miniCode else { return }
@@ -96,6 +90,18 @@ struct Constant {
        }
     }
     
+//    UserDefaults.standard.set(yourInt, forKey: "intKey")
+    
+    static var userId: Int?
+   = UserDefaults.standard.integer(forKey: "checkUserId")
+    {
+        didSet {
+           // UserDefault에 저장
+           guard let userId = userId else { return }
+           print("userId: \(userId)")
+           UserDefaults.standard.set(userId, forKey: "checkUserId")
+       }
+    }
 
     static var settingArray = ["N", "N", "N"]
     static let SERVER_BASE_URL = "https://saekalpi.shop"

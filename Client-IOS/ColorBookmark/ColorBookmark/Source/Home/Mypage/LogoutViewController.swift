@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import KakaoSDKAuth
+import KakaoSDKUser
+import KakaoSDKCommon
 
 class LogoutViewController: UIViewController {
  
@@ -17,26 +20,34 @@ class LogoutViewController: UIViewController {
     
     @IBAction func YesButtonTapped(_ sender: Any) {
         print("yes")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as! MyPageViewController
-        vc.logoutAgree()
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+            }
+        }
+        
+        Constant.jwt = nil
+        Constant.nickname = nil
+        Constant.setting_0 = "N"
+        Constant.setting_1 = "N"
+        Constant.setting_2 = "N"
+        Constant.miniCode = nil
+        
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
+        changeRootViewController(vc)
     }
     
     @IBAction func NoButtonTapped(_ sender: Any) {
-        print("AAAAA")
-//        dismiss(animated: false, completion: nil)
-//        print("CCCCC")
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
-//        vc!.modalPresentationStyle = .fullScreen
-//        present(vc!, animated: false, completion: nil)
-//        print("BBBB")
         dismiss(animated: true, completion: nil)
-        
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
-//        vc!.logoutDisagree()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer.cornerRadius = 20
         YesButton.layer.cornerRadius = 10
         NoButton.layer.cornerRadius = 10
         

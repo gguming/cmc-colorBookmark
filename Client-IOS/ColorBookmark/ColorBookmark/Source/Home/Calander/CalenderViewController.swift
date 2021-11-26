@@ -14,6 +14,7 @@ class CalenderViewController: UIViewController {
     
     lazy var dataManager: CalenderDataManager = CalenderDataManager()
     var constantMonth = 0
+    var CalendarViewMonth = 0
     
     @IBAction func CancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -99,6 +100,9 @@ class CalenderViewController: UIViewController {
         print(dateFormatter.string(from: firstDayOfMonth!) + ".1")
         let firstWeekday = cal.component(.weekday, from: firstDayOfMonth!)
         daysCountInMonth = cal.range(of: .day, in: .month, for: firstDayOfMonth!)!.count
+        print("ZZZZZZ")
+        print(daysCountInMonth)
+        CalendarViewMonth = daysCountInMonth
         weekdayAdding = 2 - firstWeekday
         CalenderLabel.text = dateFormatter.string(from: firstDayOfMonth!)
         
@@ -127,6 +131,25 @@ class CalenderViewController: UIViewController {
           self.CalenderCollectionview.delegate = self
           self.CalenderCollectionview.dataSource = self
           self.CalenderCollectionview.register(UINib(nibName: "CalenderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CalenderCollectionViewCell")
+    }
+    
+    func getLastDayofMonth(currentMonth: Int) -> Int{
+        switch currentMonth {
+        case 1, 3, 5, 7, 8, 10, 12:
+            return 31
+        case 4, 6, 9, 11:
+            return 30
+        default:
+            if currentMonth % 400 == 0 {
+                return 29
+            }
+            else if currentMonth % 100 != 0 && currentMonth % 4 == 0{
+               return 29
+            }
+            else{
+                return 28
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -162,10 +185,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = CalenderCollectionview.dequeueReusableCell(withReuseIdentifier: "CalenderCollectionViewCell", for: indexPath) as! CalenderCollectionViewCell
         
-        cell.backgroundColor = .blue
-        
-//        print("cellcellcell")
-//        print(calendarData?[17].color)
+//        cell.backgroundColor = .blue
         
         switch indexPath.section {
         case 0:
@@ -177,19 +197,14 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
                default:
             //MARK: check
-            if indexPath.item != 30 {
+            print(CalendarViewMonth, "__")
+            if indexPath.item < CalendarViewMonth {
+                print(indexPath.item, "@")
                 if calendarData?[indexPath.item].color == nil {
-                    if cell.CircleImage.isHidden == false {
-                        print(indexPath.item)
-                        cell.CircleImage.isHidden = true
-                    }
-                    if cell.CircleImage.isHidden == true {
-                        print(indexPath.item, "QQQ")
-
-                    }
-              
-//                    cell.CircleImage.is
-//                    cell.CircleImage.tintColor = .clear
+//                    if cell.CircleImage.isHidden == false {
+//                        cell.CircleImage.isHidden = true
+//                    }
+                    cell.CircleImage.tintColor = .clear
                 }
                 else {
                     
@@ -198,9 +213,8 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     print(indexPath.item)
                     print(calendarData?[indexPath.item].color)
                     print(circleColor)
-                    cell.CircleImage.isHidden = true
-//                    cell.CircleImage.tintColor = .brown
-                    cell.CircleImage.tintColor = circleColor
+                    cell.CircleImage.tintColor = .brown
+//                    cell.CircleImage.tintColor = circleColor
                 }
             }
 
