@@ -21,8 +21,7 @@ class KakaoLoginDataManager {
                     if response.isSuccess {
                         print("카카오 로그인 성공")
                         print("kako jwt 토큰값")
-                        JwtInfo.shared.jwtValue = response.result?.jwt
-                        print(JwtInfo.shared.jwtValue!)
+                        Constant.jwt = response.result?.jwt
                     }
                     
                     // 실패했을 때
