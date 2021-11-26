@@ -56,6 +56,7 @@
 		A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */; };
 		A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */; };
 		A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */; };
+		A4A59D212750F1C90018A7F3 /* LogoutPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */; };
 		A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */; };
@@ -109,6 +110,8 @@
 		E9A236FB275085240043836A /* ChangeNicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236FA275085240043836A /* ChangeNicknameResponse.swift */; };
 		E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236FE2750853F0043836A /* ChangeNicknameRequest.swift */; };
 		E9A237012750876B0043836A /* ChangeNicknameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */; };
+		E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */; };
+		E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237042750CC790043836A /* ChangeSettingDataManager.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */; };
 		E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */; };
@@ -183,6 +186,7 @@
 		A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoTableViewCell.xib; sourceTree = "<group>"; };
+		A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopViewController.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 		E9A236FA275085240043836A /* ChangeNicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameResponse.swift; sourceTree = "<group>"; };
 		E9A236FE2750853F0043836A /* ChangeNicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameRequest.swift; sourceTree = "<group>"; };
 		E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameDataManager.swift; sourceTree = "<group>"; };
+		E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNicknameViewController.swift; sourceTree = "<group>"; };
+		E9A237042750CC790043836A /* ChangeSettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingDataManager.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
@@ -424,6 +430,7 @@
 				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
 				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
 				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
+				E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -666,6 +673,7 @@
 				E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */,
 				E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */,
 				E9A236F827507E950043836A /* ChangeNicknameViewController.swift */,
+				A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -675,6 +683,7 @@
 			children = (
 				E9336CC7274D003900686AF1 /* MiniCodeDataManager.swift */,
 				E9336CCD274D142E00686AF1 /* SettingDataManager.swift */,
+				E9A237042750CC790043836A /* ChangeSettingDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -968,11 +977,13 @@
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */,
+				E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */,
 				E9445BC02742A67600B4EC82 /* CalenderDataManager.swift in Sources */,
 				A4333EAC274CBA15002EEB8C /* ColorResponse.swift in Sources */,
 				A43BF3A7273C01DD008DF16A /* PhotoTableViewCell.swift in Sources */,
 				A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */,
 				E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */,
+				E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
@@ -982,6 +993,7 @@
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
 				E9A236ED274F27750043836A /* FindPasswordRequest.swift in Sources */,
+				A4A59D212750F1C90018A7F3 /* LogoutPopViewController.swift in Sources */,
 				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,

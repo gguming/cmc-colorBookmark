@@ -49,6 +49,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MypageTableview.dequeueReusableCell(withIdentifier: "MypageTableViewCell", for: indexPath) as! MypageTableViewCell
         cell.MypageLabel.text = myPageTitle[indexPath.section]
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -77,10 +78,12 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.present(vc, animated: true, completion: nil)
             
         case 4:
-            print("????")
-            LogoutContainerView.isHidden = false
-            //MARK: check
-           // self.view.alpha = CGFloat(0.4)
+            let HomeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = HomeStoryboard.instantiateViewController(withIdentifier: "LogoutPopViewController")
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.modalTransitionStyle = .crossDissolve
+            vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+            self.present(vc, animated: true, completion: nil)
         default:
             break
         }
@@ -89,7 +92,6 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if indexPath.section == 4 {
-            print("^^")
             LogoutContainerView.isHidden = true
         }
     }
@@ -102,7 +104,14 @@ extension MyPageViewController {
     }
     
     func logoutDisagree() {
-        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+//        guard let logoutView = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") else { return }
+        dismiss(animated: true, completion: nil)
+        
+//                let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
+//                vc!.modalPresentationStyle = .fullScreen
+//                present(vc!, animated: false, completion: nil)
+//        self.LogoutContainerView.isHidden = true
+ 
 //        LogoutContainerView.isHidden = true
     }
 }

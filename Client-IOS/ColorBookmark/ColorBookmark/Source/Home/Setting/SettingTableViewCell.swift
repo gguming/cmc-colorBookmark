@@ -22,8 +22,10 @@ class SettingTableViewCell: UITableViewCell {
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
     let grayColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
     let boldFont = UIFont.systemFont(ofSize: 16, weight: .bold)
+    let SettingValue = ["setting_1", "setting_2", "setting_3"]
     
     @IBAction func SettingSwitchTapped(_ sender: Any) {
+        
         if SettingSwitch.isOn {
             onOff = "ON"
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
@@ -31,7 +33,7 @@ class SettingTableViewCell: UITableViewCell {
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = true
-            SettingInfo.shared.settingOnOff[cellNumber!] = true
+            UserDefaults.standard.set("Y", forKey: SettingValue[cellNumber!])
             print(SettingInfo.shared.settingOnOff)
             settingAction(cellNum: cellNumber!)
         }
@@ -40,10 +42,10 @@ class SettingTableViewCell: UITableViewCell {
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+            UserDefaults.standard.set("N", forKey: SettingValue[cellNumber!])
             OnoffLabel.attributedText = onOffString
             switchOnBoolean = false
             print(cellNumber)
-            SettingInfo.shared.settingOnOff[cellNumber!] = false
             print(SettingInfo.shared.settingOnOff)
 
         }
@@ -60,16 +62,36 @@ class SettingTableViewCell: UITableViewCell {
         Cellview.layer.cornerRadius = 12
         self.layer.cornerRadius = 12
         
-        SettingSwitch.isOn = false
         TitleLabel.sizeToFit()
         OnoffLabel.sizeToFit()
         TitleLabel.adjustsFontSizeToFitWidth = true
         TitleLabel.minimumScaleFactor = 0.5
        
-        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
-        let onOffString = NSMutableAttributedString()
-        onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
-        OnoffLabel.attributedText = onOffString
+//        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+//        let onOffString = NSMutableAttributedString()
+//        onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+//        OnoffLabel.attributedText = onOffString
+        
+        if SettingSwitch.isOn {
+            print("켜져있음")
+            onOff = "ON"
+            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
+            let onOffString = NSMutableAttributedString()
+            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+            OnoffLabel.attributedText = onOffString
+            switchOnBoolean = true
+
+        }
+        else {
+            print("꺼져있음")
+            onOff = "OFF"
+            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+            let onOffString = NSMutableAttributedString()
+            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+            OnoffLabel.attributedText = onOffString
+            switchOnBoolean = false
+
+        }
         
     }
 

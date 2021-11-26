@@ -8,7 +8,8 @@
 import UIKit
 
 class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    lazy var dataManager: ChangeSettingDataManager = ChangeSettingDataManager()
+    
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeValue: Array<String> = []
     
@@ -25,6 +26,8 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
     @IBAction func BackToSettingVC(_ sender: Any) {
+        let settingInput = SettingRequest(alarmStatus: "Y")
+        dataManager.changeSettingValue(settingInput)
         dismiss(animated: true, completion: nil)
     }
     
@@ -33,12 +36,12 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         MiniCodeCollectionview.delegate = self
         MiniCodeCollectionview.dataSource = self
         
-        let leadingValue = view.frame.width * 0.075
-        MiniCodeCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
-        
-        let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
-        MiniCodeCollectionviewHeight.constant = height
-        self.view.setNeedsLayout()
+//        let leadingValue = view.frame.width * 0.075
+//        MiniCodeCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
+//
+//        let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
+//        MiniCodeCollectionviewHeight.constant = height
+//        self.view.setNeedsLayout()
  
     }
     
@@ -126,7 +129,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = MiniCodeCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCollectionViewCell", for: indexPath) as! MiniCodeCollectionViewCell
+        
         print("CHECK")
         switch indexPath.section {
         case 0:
@@ -160,11 +163,11 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 6
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.frame.size.width / 3 - 6
+        let cellWidth = MiniCodeCollectionview.bounds.width/3 - 6
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
