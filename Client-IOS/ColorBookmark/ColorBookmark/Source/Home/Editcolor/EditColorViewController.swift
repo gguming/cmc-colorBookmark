@@ -15,6 +15,8 @@ class EditColorViewController: UIViewController {
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
     
+    lazy var colorDataManager: GetColorListDataManager = GetColorListDataManager()
+    
     @IBAction func confirmBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -27,10 +29,10 @@ class EditColorViewController: UIViewController {
         super.viewDidLoad()
         collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
         collectionview.register(UINib(nibName: "EditColorBtnCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EditColorBtnCollectionViewCell")
-
+        
         collectionview.dataSource = self
         collectionview.delegate = self
-                setUI()
+        setUI()
     }
     
     private func setUI() {
@@ -60,6 +62,10 @@ class EditColorViewController: UIViewController {
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+    
+    func getColor() {
+        colorDataManager.getColorsinEditColor(delegate: self)
     }
     
 
@@ -104,6 +110,24 @@ extension EditColorViewController: ClickEditBtn {
         vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
     }
+    
+    
+}
+
+extension EditColorViewController {
+    func didSuccessGetColors(_ result: ColorResponse) {
+        print("------>\(result)")
+        colors = result.result
+        collectionview.reloadData()
+       
+        
+    }
+    
+    func failedToGetColors(message: String) {
+        print("------>>>>\(message)")
+        
+    }
+    
     
     
 }

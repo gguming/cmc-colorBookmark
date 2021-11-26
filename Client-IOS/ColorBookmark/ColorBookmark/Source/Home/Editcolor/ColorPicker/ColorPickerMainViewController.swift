@@ -11,6 +11,8 @@ class ColorPickerMainViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
     
+    lazy var postcolorDataManager: PostColorDataManager = PostColorDataManager()
+    
     @available(iOS 14.0, *)
     @IBAction func saveBtnTapped(_ sender: Any) {
         presentAlert()
@@ -30,12 +32,22 @@ class ColorPickerMainViewController: UIViewController {
         alert.addTextField(configurationHandler: nil)
         let ok = UIAlertAction(title: "저장", style: .default) { action in
             let colorName = alert.textFields?[0].text
+            let colorInfo = ColorPickerInfo.shared.color
             
             if colorName?.count == 0 {
                 self.presentBottomAlert(message: "감정 이름을 입력해 주세요!")
+                self.presentAlert()
             } else if colorName?.count ?? 6 > 5 {
                 self.presentBottomAlert(message: "5자 이하로 입력해 주세요!")
-            } else {
+                self.presentAlert()
+    
+            }else if colorInfo == nil {
+                self.presentBottomAlert(message: "컬러를 골라주세요")
+            }else {
+                
+                let request = PostColorRequest(color: colorInfo!, colorName: "\(colorName ?? "")")
+                print(request)
+                self.postcolorDataManager.postColor(request, delegate: self)
                 print(1)
             }
             
@@ -52,6 +64,24 @@ class ColorPickerMainViewController: UIViewController {
     
 
    
+}
+
+extension ColorPickerMainViewController{
+    func didSuccessPostColors(_ result: PostColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        self.dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        
+        
+    }
+    
+    func failedToPostColors(message: String) {
+        print("------>>>>\(message)")
+        self.dismiss(animated: true, completion: nil)
+        presentBottomAlert(message: message)
+        
+    }
 }
 
 

@@ -57,6 +57,9 @@
 		A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */; };
 		A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */; };
 		A4A59D212750F1C90018A7F3 /* LogoutPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */; };
+		A4A59D27275110ED0018A7F3 /* PostColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */; };
+		A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D29275112050018A7F3 /* PostColorResponse.swift */; };
+		A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */; };
 		A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */; };
@@ -187,6 +190,9 @@
 		A49DB73827477CB400AF315F /* HeaderInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB73927477CB400AF315F /* HeaderInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopViewController.swift; sourceTree = "<group>"; };
+		A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorRequest.swift; sourceTree = "<group>"; };
+		A4A59D29275112050018A7F3 /* PostColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorResponse.swift; sourceTree = "<group>"; };
+		A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorDataManager.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -588,6 +594,24 @@
 			path = HeaderCell;
 			sourceTree = "<group>";
 		};
+		A4A59D23275110AD0018A7F3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */,
+				A4A59D29275112050018A7F3 /* PostColorResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A4A59D2B2751125B0018A7F3 /* PostColor */ = {
+			isa = PBXGroup;
+			children = (
+				A4A59D23275110AD0018A7F3 /* Entity */,
+				A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */,
+			);
+			path = PostColor;
+			sourceTree = "<group>";
+		};
 		A4AEB9032744B55F00901C5B /* EditColorBtnCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +647,7 @@
 		A4C69FC6273F71120091565C /* Editcolor */ = {
 			isa = PBXGroup;
 			children = (
+				A4A59D2B2751125B0018A7F3 /* PostColor */,
 				A4E1266D2745F004009BCF74 /* ColorPicker */,
 				A4AEB9032744B55F00901C5B /* EditColorBtnCell */,
 				A4C69FC7273F71290091565C /* EditColor.storyboard */,
@@ -943,6 +968,7 @@
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
+				A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */,
 				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
 				A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
@@ -957,6 +983,7 @@
 				E9A236EF274F27820043836A /* FindPasswordResponse.swift in Sources */,
 				E9A236F7274F57D20043836A /* ChangePasswordDataManager.swift in Sources */,
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
+				A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
@@ -1008,6 +1035,7 @@
 				E9336CD0274D143700686AF1 /* SettingResonse.swift in Sources */,
 				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
+				A4A59D27275110ED0018A7F3 /* PostColorRequest.swift in Sources */,
 				E9336CC8274D003900686AF1 /* MiniCodeDataManager.swift in Sources */,
 				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
