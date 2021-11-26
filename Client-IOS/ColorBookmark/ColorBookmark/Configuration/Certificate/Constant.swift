@@ -22,9 +22,9 @@ struct Constant {
                UserDefaults.standard.setValue(num, forKey: "checkFirst")
            }
        }
-    
+    static var settingArray = ["N", "N", "N"]
     static let SERVER_BASE_URL = "https://saekalpi.shop"
-
+   
 }
 
 //MARK: UserDefaults
