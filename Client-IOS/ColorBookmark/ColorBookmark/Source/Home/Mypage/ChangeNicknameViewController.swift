@@ -65,7 +65,7 @@ class ChangeNicknameViewController: UIViewController {
 extension ChangeNicknameViewController {
     func changeNicknameSuccess() {
         let newNickname = NicknameTextField.text
-        UserDefaults.standard.set(newNickname, forKey: "Nickname")
+        Constant.nickname = newNickname
         dismiss(animated: true, completion: nil)
     }
 }

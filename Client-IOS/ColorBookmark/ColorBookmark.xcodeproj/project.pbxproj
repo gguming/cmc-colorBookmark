@@ -98,7 +98,6 @@
 		E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC32742A70400B4EC82 /* CalenderResponse.swift */; };
 		E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC72745559700B4EC82 /* CalenderRequest.swift */; };
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
-		E9445BCC2747B58C00B4EC82 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
 		E9A236EB274F270F0043836A /* FindPasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236EA274F270F0043836A /* FindPasswordDataManager.swift */; };
 		E9A236ED274F27750043836A /* FindPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236EC274F27750043836A /* FindPasswordRequest.swift */; };
@@ -112,6 +111,8 @@
 		E9A237012750876B0043836A /* ChangeNicknameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */; };
 		E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */; };
 		E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237042750CC790043836A /* ChangeSettingDataManager.swift */; };
+		E9A2370827512D5A0043836A /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2370627512D5A0043836A /* SecondSettingTableViewCell.swift */; };
+		E9A2370927512D5A0043836A /* SecondSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9A2370727512D5A0043836A /* SecondSettingTableViewCell.xib */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */; };
 		E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */; };
@@ -231,7 +232,6 @@
 		E9445BC32742A70400B4EC82 /* CalenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderResponse.swift; sourceTree = "<group>"; };
 		E9445BC72745559700B4EC82 /* CalenderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderRequest.swift; sourceTree = "<group>"; };
 		E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTableViewCell.swift; sourceTree = "<group>"; };
-		E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E9445BCD2747BE0C00B4EC82 /* CMC-IOS-ColorBookmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CMC-IOS-ColorBookmark.entitlements"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +247,8 @@
 		E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameDataManager.swift; sourceTree = "<group>"; };
 		E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNicknameViewController.swift; sourceTree = "<group>"; };
 		E9A237042750CC790043836A /* ChangeSettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingDataManager.swift; sourceTree = "<group>"; };
+		E9A2370627512D5A0043836A /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
+		E9A2370727512D5A0043836A /* SecondSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSettingTableViewCell.xib; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
@@ -707,11 +709,12 @@
 				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
-				E9445BCB2747B58C00B4EC82 /* SecondSettingTableViewCell.swift */,
 				E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */,
 				E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */,
 				E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */,
 				E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */,
+				E9A2370627512D5A0043836A /* SecondSettingTableViewCell.swift */,
+				E9A2370727512D5A0043836A /* SecondSettingTableViewCell.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A4127BA1274AB62900D854EB /* GoogleService-Info.plist in Resources */,
+				E9A2370927512D5A0043836A /* SecondSettingTableViewCell.xib in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
@@ -960,8 +964,8 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
-				E9445BCC2747B58C00B4EC82 /* SecondSettingTableViewCell.swift in Sources */,
 				E9A236F927507E950043836A /* ChangeNicknameViewController.swift in Sources */,
+				E9A2370827512D5A0043836A /* SecondSettingTableViewCell.swift in Sources */,
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-let headers: HTTPHeaders = ["X-ACCESS-TOKEN": JwtInfo.shared.jwtValue!]
+let headers: HTTPHeaders = ["X-ACCESS-TOKEN": Constant.jwt!]
 
 var calenderDate = [String]()
 var calenderColor = [String]()

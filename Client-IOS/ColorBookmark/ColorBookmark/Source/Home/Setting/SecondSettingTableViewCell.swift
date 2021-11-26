@@ -1,27 +1,26 @@
 //
 //  SecondSettingTableViewCell.swift
-//  CMC-IOS-ColorBookmark
+//  ColorBookmark
 //
-//  Created by 김지훈 on 2021/11/19.
+//  Created by 김지훈 on 2021/11/26.
 //
 
 import UIKit
 
 class SecondSettingTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var SecondSettingTitleLabel: UILabel!
+    @IBOutlet weak var SecondCellView: UIView!
+    @IBOutlet weak var SecondSettingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //self.translatesAutoresizingMaskIntoConstraints = false
+        SecondCellView.layer.cornerRadius = 12
         self.layer.cornerRadius = 12
-        
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }

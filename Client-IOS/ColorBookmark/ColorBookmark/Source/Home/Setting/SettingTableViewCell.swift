@@ -18,36 +18,28 @@ class SettingTableViewCell: UITableViewCell {
     
     var cellNumber: Int? = nil
     var onOff = "OFF"
-    var switchOnBoolean = false
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
     let grayColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
     let boldFont = UIFont.systemFont(ofSize: 16, weight: .bold)
-    let SettingValue = ["setting_1", "setting_2", "setting_3"]
     
     @IBAction func SettingSwitchTapped(_ sender: Any) {
-        
         if SettingSwitch.isOn {
             onOff = "ON"
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
-            switchOnBoolean = true
-            UserDefaults.standard.set("Y", forKey: SettingValue[cellNumber!])
-            print(SettingInfo.shared.settingOnOff)
+            saveYesInUserdefaults()
             settingAction(cellNum: cellNumber!)
         }
+        
         else {
             onOff = "OFF"
             let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
-            UserDefaults.standard.set("N", forKey: SettingValue[cellNumber!])
             OnoffLabel.attributedText = onOffString
-            switchOnBoolean = false
-            print(cellNumber)
-            print(SettingInfo.shared.settingOnOff)
-
+            saveNoInUserdefaults()
         }
     }
     
@@ -66,11 +58,6 @@ class SettingTableViewCell: UITableViewCell {
         OnoffLabel.sizeToFit()
         TitleLabel.adjustsFontSizeToFitWidth = true
         TitleLabel.minimumScaleFactor = 0.5
-       
-//        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
-//        let onOffString = NSMutableAttributedString()
-//        onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
-//        OnoffLabel.attributedText = onOffString
         
         if SettingSwitch.isOn {
             print("켜져있음")
@@ -79,9 +66,9 @@ class SettingTableViewCell: UITableViewCell {
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
-            switchOnBoolean = true
-
+            saveYesInUserdefaults()
         }
+        
         else {
             print("꺼져있음")
             onOff = "OFF"
@@ -89,16 +76,41 @@ class SettingTableViewCell: UITableViewCell {
             let onOffString = NSMutableAttributedString()
             onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
             OnoffLabel.attributedText = onOffString
-            switchOnBoolean = false
+            saveNoInUserdefaults()
 
         }
         
+    }
+    
+    func saveYesInUserdefaults() {
+        switch cellNumber {
+        case 0:
+            Constant.setting_0 = "Y"
+        case 1:
+            Constant.setting_1 = "Y"
+        case 2:
+            Constant.setting_2 = "Y"
+        default:
+            break
+        }
+    }
+    
+    func saveNoInUserdefaults() {
+        switch cellNumber {
+        case 0:
+            Constant.setting_0 = "N"
+        case 1:
+            Constant.setting_1 = "N"
+        case 2:
+            Constant.setting_2 = "N"
+        default:
+            break
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

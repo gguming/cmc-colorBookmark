@@ -50,9 +50,7 @@ class MemberLoginViewController: UIViewController {
         UnderLineFindPasswordButton()
         super.viewDidLoad()
         
-        if PasswordTextField.isEditing{
-            PasswordTextField.isSecureTextEntry = true
-        }
+        PasswordEditing()
     }
     
     @objc func UnderlineTextField(_ sender: Any?) {
@@ -71,6 +69,15 @@ class MemberLoginViewController: UIViewController {
         attribute.addAttribute(NSMutableAttributedString.Key.underlineStyle, value: underLine, range: NSRange(location: 0, length: text.count))
         self.FindPasswordButton.setAttributedTitle(attribute, for: .normal)
     }
+    
+    func PasswordEditing() {
+        print("하하")
+        if PasswordTextField.isEditing{
+            print("카캌")
+            PasswordTextField.isSecureTextEntry = true
+        }
+    }
+        
 }
 
 extension MemberLoginViewController {
@@ -78,7 +85,6 @@ extension MemberLoginViewController {
         UserDefaults.standard.set(emailValue, forKey: "email")
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        print("성공성공성공")
         changeRootViewController(vc)
     }
 }

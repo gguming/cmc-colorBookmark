@@ -10,11 +10,14 @@ import UIKit
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let settingTitle = ["알림", "암호", "배경음악"]
-    let SettingValue = ["setting_1", "setting_2", "setting_3"]
-//    var onOffValue = [false, false, false]
+    var onOff = "OFF"
+    let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
+    let grayColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+    let boldFont = UIFont.systemFont(ofSize: 16, weight: .bold)
     var currentCellNumber = [0,1,2]
     
     @IBOutlet weak var NicknameLabel: UILabel!
+    
     @IBAction func ToMypageButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
         vc!.modalPresentationStyle = .fullScreen
@@ -22,14 +25,16 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBOutlet weak var SettingTableview: UITableView!
+    
     @IBAction func BackToMainVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NicknameLabel.text = UserDefaults.standard.string(forKey: "Nickname")!
+        NicknameLabel.text = Constant.nickname
         SettingTableview.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
+        SettingTableview.register(UINib(nibName: "SecondSettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondSettingTableViewCell")
         
         SettingTableview.delegate = self
         SettingTableview.dataSource = self
@@ -60,12 +65,21 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.cellNumber = currentCellNumber[indexPath.section]
                 print("셀 넘버")
                 print("유저디폴트0")
-//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
-                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
+                if Constant.setting_0 == "Y" {
                     cell.SettingSwitch.isOn = true
+                    onOff = "ON"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
                 else {
                     cell.SettingSwitch.isOn = false
+                    onOff = "OFF"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
                 
             case 1:
@@ -76,12 +90,21 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(currentCellNumber)
                 
                 print("유저디폴트1")
-//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
-                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
+                if Constant.setting_1 == "Y" {
                     cell.SettingSwitch.isOn = true
+                    onOff = "ON"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
                 else {
                     cell.SettingSwitch.isOn = false
+                    onOff = "OFF"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
                 
             case 2:
@@ -92,12 +115,21 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(currentCellNumber)
                 
                 print("유저디폴트2")
-//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
-                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
+                if Constant.setting_2 == "Y" {
                     cell.SettingSwitch.isOn = true
+                    onOff = "ON"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
                 else {
                     cell.SettingSwitch.isOn = false
+                    onOff = "OFF"
+                    let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+                    let onOffString = NSMutableAttributedString()
+                    onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+                    cell.OnoffLabel.attributedText = onOffString
                 }
 
             default:
@@ -105,15 +137,14 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             
             cell.cellDelegate = self
-            
             return cell
         }
         
         let cell = SettingTableview.dequeueReusableCell(withIdentifier: "SecondSettingTableViewCell", for: indexPath) as! SecondSettingTableViewCell
         
         switch indexPath.section {
-        case 3: cell.SecondSettingTitleLabel.text = "백업과 복원"
-        case 4: cell.SecondSettingTitleLabel.text = "색갈피는?"
+        case 3: cell.SecondSettingLabel.text = "백업과 복원"
+        case 4: cell.SecondSettingLabel.text = "색갈피는?"
         default: break
         }
         

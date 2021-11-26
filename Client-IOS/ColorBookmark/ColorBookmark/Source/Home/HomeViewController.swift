@@ -52,8 +52,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        print("qweqweqwe")
-        //print(JwtInfo.shared.jwtValue!)
         super.viewDidLoad()
         calendarSetUI()
         colorviewSetUI()
