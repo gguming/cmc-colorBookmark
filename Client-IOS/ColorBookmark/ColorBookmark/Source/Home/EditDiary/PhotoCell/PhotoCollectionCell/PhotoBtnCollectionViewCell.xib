@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-jY-nEi">
-                        <rect key="frame" x="0.0" y="0.0" width="87" height="100"/>
+                        <rect key="frame" x="2" y="2" width="83" height="96"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="imageSample"/>
                         <connections>
@@ -29,10 +29,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="xo0-jY-nEi" secondAttribute="bottom" id="fXH-Fc-sPV"/>
-                <constraint firstItem="xo0-jY-nEi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fpe-OG-Rea"/>
-                <constraint firstAttribute="trailing" secondItem="xo0-jY-nEi" secondAttribute="trailing" id="gmw-eB-lmu"/>
-                <constraint firstItem="xo0-jY-nEi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oXE-3O-brF"/>
+                <constraint firstAttribute="bottom" secondItem="xo0-jY-nEi" secondAttribute="bottom" constant="2" id="fXH-Fc-sPV"/>
+                <constraint firstItem="xo0-jY-nEi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="fpe-OG-Rea"/>
+                <constraint firstAttribute="trailing" secondItem="xo0-jY-nEi" secondAttribute="trailing" constant="2" id="gmw-eB-lmu"/>
+                <constraint firstItem="xo0-jY-nEi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="oXE-3O-brF"/>
             </constraints>
             <size key="customSize" width="85" height="106"/>
             <point key="canvasLocation" x="181.8840579710145" y="135.9375"/>

@@ -27,6 +27,7 @@ class LoginDataManager {
                         UserDefaults.standard.set(response.result?.nickname, forKey: "Nickname")
                         print(UserDefaults.standard.string(forKey: "nickname"))
                         JwtInfo.shared.jwtValue = response.result?.jwt
+                        Constant.jwt = response.result?.jwt
                         delegate.loginSuccess()
                     }
                     

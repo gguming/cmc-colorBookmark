@@ -8,8 +8,9 @@
 import UIKit
 
 class PhotoTableViewCell: UITableViewCell {
+    var delegate: AddPhotoInEmptyDelegate?
     @IBAction func addPhotoTapped(_ sender: Any) {
-        
+        delegate?.addPhotoInEmpty()
     }
     
     override func awakeFromNib() {
@@ -23,4 +24,8 @@ class PhotoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+protocol AddPhotoInEmptyDelegate {
+    func addPhotoInEmpty()
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class EditDiaryViewController: UIViewController  {
     var pickedImg: [UIImage] = []
@@ -31,7 +32,15 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate{
+    func addPhoto() {
+        print(11)
+    }
+    
+    func addPhotoInEmpty() {
+        addPost()
+    }
+    
     func dismissEditDiary() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -67,10 +76,12 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         case 3:
             if pickedImg.isEmpty {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
+                cell.delegate = self
         
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoHaveTableViewCell", for: indexPath) as? PhotoHaveTableViewCell else {return UITableViewCell()}
+                cell.delegate = self
                 cell.photos = pickedImg
         
                 return cell
@@ -127,59 +138,57 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 extension EditDiaryViewController {
-//    private func addPost() {
-//
-//        var config = YPImagePickerConfiguration()
-//        config.library.mediaType = .photo
-//        config.showsPhotoFilters = false
-//        config.shouldSaveNewPicturesToAlbum = false
-//        config.startOnScreen = .library
-//        config.screens = [.photo, .library]
-//        config.showsCrop = .none
-//        config.wordings.libraryTitle = "사진첩"
-//        config.wordings.cameraTitle = "카메라"
-//        config.hidesStatusBar = false
-//        config.hidesBottomBar = false
-//        config.maxCameraZoomFactor = 2.0
-//        config.library.maxNumberOfItems = 4
-//        config.gallery.hidesRemoveButton = false
-//        config.library.skipSelectionsGallery = false
-//        config.library.defaultMultipleSelection = false
-//
-//        // imagePicker 설정 code
-//
-//        let picker = YPImagePicker(configuration: config)
-//        picker.navigationBar.backgroundColor = .white
-//        picker.didFinishPicking { [unowned picker] items, cancelled in
-//            self.pickedIMG = []
-//
-//            if cancelled {
-//                picker.dismiss(animated: true, completion: nil)
-//                return
-//            }
-////             여러 이미지를 넣어주기 위해 하나씩 넣어주는 반복문
-//            for item in items {
-//                switch item {
-//                // 이미지만 받기때문에 photo case만 처리
-//                case .photo(let p):
-//                    // 이미지를 해당하는 이미지 배열에 넣어주는 code
-//                    self.pickedIMG.append(p.image)
-//            // original image selected by the user, unfiltered
-//                    print(p.image)
-//                default:
-//                    print("")
-//                }
-//            }
-//            guard let postDetailVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "PostDetailViewController") as? PostDetailViewController else {return}
-//            postDetailVC.pickedIMG = self.pickedIMG
-//            self.navigationController?.pushViewController(postDetailVC, animated: true)
-//
-//            picker.dismiss(animated: true) {
-//            }
-//        }
-//        // picker뷰 present
-//        present(picker, animated: true, completion: nil)
-//    }
+    private func addPost() {
+
+        var config = YPImagePickerConfiguration()
+        config.library.mediaType = .photo
+        config.showsPhotoFilters = false
+        config.shouldSaveNewPicturesToAlbum = false
+        config.startOnScreen = .library
+        config.screens = [.photo, .library]
+        config.showsCrop = .none
+        config.wordings.libraryTitle = "사진첩"
+        config.wordings.cameraTitle = "카메라"
+        config.hidesStatusBar = false
+        config.hidesBottomBar = false
+        config.maxCameraZoomFactor = 2.0
+        config.library.maxNumberOfItems = 4
+        config.gallery.hidesRemoveButton = false
+        config.library.skipSelectionsGallery = false
+        config.library.defaultMultipleSelection = false
+
+        // imagePicker 설정 code
+
+        let picker = YPImagePicker(configuration: config)
+        picker.navigationBar.backgroundColor = .white
+        picker.didFinishPicking { [unowned picker] items, cancelled in
+            
+
+            if cancelled {
+                picker.dismiss(animated: true, completion: nil)
+                return
+            }
+//             여러 이미지를 넣어주기 위해 하나씩 넣어주는 반복문
+            for item in items {
+                switch item {
+                // 이미지만 받기때문에 photo case만 처리
+                case .photo(let p):
+                    // 이미지를 해당하는 이미지 배열에 넣어주는 code
+                    self.pickedImg.append(p.image)
+            // original image selected by the user, unfiltered
+                    print(p.image)
+                default:
+                    print("")
+                }
+            }
+
+            picker.dismiss(animated: true) {
+                self.tableview.reloadData()
+            }
+        }
+        // picker뷰 present
+        present(picker, animated: true, completion: nil)
+    }
 }
 
 // delegate

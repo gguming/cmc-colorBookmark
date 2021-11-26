@@ -8,8 +8,9 @@
 import UIKit
 
 class PhotoBtnCollectionViewCell: UICollectionViewCell {
-
+    
     @IBAction func addPhotoTapped(_ sender: Any) {
+        print(1111)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
