@@ -59,7 +59,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.ContentLabel.text = "20:00 PM"
                 cell.cellNumber = currentCellNumber[indexPath.section]
                 print("셀 넘버")
-                print("유저디폴트")
+                print("유저디폴트0")
                 print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
@@ -75,6 +75,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print("셀 넘버")
                 print(currentCellNumber)
                 
+                print("유저디폴트1")
+                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
@@ -89,6 +91,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print("셀 넘버")
                 print(currentCellNumber)
                 
+                print("유저디폴트2")
+                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
