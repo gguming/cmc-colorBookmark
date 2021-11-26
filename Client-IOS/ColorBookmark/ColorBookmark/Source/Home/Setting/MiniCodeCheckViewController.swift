@@ -38,13 +38,6 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
         MiniCodeCheckCollectionview.delegate = self
         MiniCodeCheckCollectionview.dataSource = self
         
-        let leadingValue = view.frame.width * 0.075
-        MiniCodeCheckCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
-        
-        let height = MiniCodeCheckCollectionview.collectionViewLayout.collectionViewContentSize.height
-        MiniCodeCheckCollectionviewHeight.constant = height
-        self.view.setNeedsLayout()
-        
     }
     
     func minicode() {
@@ -131,7 +124,6 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = MiniCodeCheckCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCheckCollectionViewCell", for: indexPath) as! MiniCodeCheckCollectionViewCell
         
         switch indexPath.section {
         case 0:
@@ -165,11 +157,11 @@ class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 6
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCheckCollectionview.frame.size.width / 3 - 6
+        let cellWidth = MiniCodeCheckCollectionview.bounds.width/3 - 6
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }

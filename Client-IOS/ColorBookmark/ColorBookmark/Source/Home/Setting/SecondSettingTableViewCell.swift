@@ -9,10 +9,12 @@ import UIKit
 
 class SecondSettingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var SecondCellview: UIView!
     @IBOutlet weak var SecondSettingLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        SecondCellview.layer.cornerRadius = 12
+        self.layer.cornerRadius = 12
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
