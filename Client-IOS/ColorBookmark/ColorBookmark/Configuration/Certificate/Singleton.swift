@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class JwtInfo {
     static let shared = JwtInfo()
@@ -29,4 +30,12 @@ class MiniCodeInfo {
     static let shared = MiniCodeInfo()
     var miniCodeValue: String?
     private init() { }
+}
+
+class ColorPickerInfo {
+    static let shared = ColorPickerInfo()
+    var color: String?
+    var colorName: String?
+    
+    private init() {}
 }

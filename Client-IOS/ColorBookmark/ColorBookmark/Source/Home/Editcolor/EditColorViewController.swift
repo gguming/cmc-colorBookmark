@@ -98,8 +98,10 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
 extension EditColorViewController: ClickEditBtn {
     func presentColorPicker() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ColorPickerMainViewController") as? ColorPickerMainViewController else {return}
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
+        vc.view.alpha = 0.3
+        vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
     }
     
