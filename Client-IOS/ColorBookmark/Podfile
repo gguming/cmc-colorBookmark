@@ -13,5 +13,6 @@ target 'ColorBookmark' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Kingfisher'
- 
+  pod 'SnapKit'
+  pod 'YPImagePicker'
 end

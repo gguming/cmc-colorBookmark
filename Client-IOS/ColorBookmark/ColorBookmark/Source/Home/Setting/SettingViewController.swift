@@ -13,6 +13,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 //    var onOffValue = [false, false, false]
     var currentCellNumber = [0,1,2]
     
+    @IBOutlet weak var NicknameLabel: UILabel!
     @IBAction func ToMypageButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
         vc!.modalPresentationStyle = .fullScreen
@@ -26,6 +27,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NicknameLabel.text = UserDefaults.standard.string(forKey: "Nickname")!
         SettingTableview.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
         
         SettingTableview.delegate = self

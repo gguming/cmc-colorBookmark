@@ -22,6 +22,10 @@ struct Constant {
                UserDefaults.standard.setValue(num, forKey: "checkFirst")
            }
        }
+    
     static let SERVER_BASE_URL = "https://saekalpi.shop"
 
 }
+
+//MARK: UserDefaults
+//Nickname
