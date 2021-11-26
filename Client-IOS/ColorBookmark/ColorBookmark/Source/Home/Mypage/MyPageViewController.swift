@@ -78,10 +78,12 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.present(vc, animated: true, completion: nil)
             
         case 4:
-            print("????")
-            LogoutContainerView.isHidden = false
-            //MARK: check
-           // self.view.alpha = CGFloat(0.4)
+            let HomeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = HomeStoryboard.instantiateViewController(withIdentifier: "LogoutPopViewController")
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.modalTransitionStyle = .crossDissolve
+            vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+            self.present(vc, animated: true, completion: nil)
         default:
             break
         }

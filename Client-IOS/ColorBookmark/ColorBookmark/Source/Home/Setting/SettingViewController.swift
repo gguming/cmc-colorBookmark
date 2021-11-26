@@ -60,7 +60,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.cellNumber = currentCellNumber[indexPath.section]
                 print("셀 넘버")
                 print("유저디폴트0")
-                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
+//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
@@ -76,7 +76,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(currentCellNumber)
                 
                 print("유저디폴트1")
-                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
+//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
@@ -92,7 +92,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(currentCellNumber)
                 
                 print("유저디폴트2")
-                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
+//                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
                 if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
