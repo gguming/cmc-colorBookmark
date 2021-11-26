@@ -71,7 +71,7 @@ extension ColorPickerMainViewController{
         print("------>\(result)")
         presentBottomAlert(message: result.message ?? "")
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        self.dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        self.dismiss(animated: true, completion: nil)
         
         
     }

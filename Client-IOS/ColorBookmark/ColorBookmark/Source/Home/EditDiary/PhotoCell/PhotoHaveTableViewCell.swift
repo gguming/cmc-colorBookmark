@@ -8,7 +8,7 @@
 import UIKit
 
 class PhotoHaveTableViewCell: UITableViewCell {
-    
+    var delegate: AddPhotoDelegate?
     var photos: [UIImage]?
 
     @IBOutlet weak var photoCollectionview: UICollectionView!
@@ -16,6 +16,7 @@ class PhotoHaveTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         photoCollectionview.register(UINib(nibName: "PhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCollectionViewCell")
+        photoCollectionview.register(UINib(nibName: "PhotoBtnCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotoBtnCollectionViewCell")
         photoCollectionview.dataSource = self
         photoCollectionview.delegate = self
     }
@@ -34,9 +35,19 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell else {return UICollectionViewCell()}
         
-        return cell
+        switch indexPath.item {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoBtnCollectionViewCell", for: indexPath) as? PhotoBtnCollectionViewCell else {return UICollectionViewCell()}
+            
+            return cell
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell else {return UICollectionViewCell()}
+            cell.img.image = photos?[indexPath.item-1]
+            
+            return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -44,4 +55,8 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     
+}
+
+protocol AddPhotoDelegate {
+    func addPhoto()
 }
