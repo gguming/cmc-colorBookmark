@@ -24,10 +24,11 @@ class LoginPageViewController: UIViewController {
                let accessToken = oauthToken?.accessToken
                print("에세스 토큰")
                print(accessToken)
+               
                let kakaoLoginInput = KakaoLoginRequest(accessToken: accessToken!)
                dataManager.getKakaoLoginJwt(kakaoLoginInput, delegate: self)
-               let storyboard = UIStoryboard(name: "Home", bundle: nil)
-               let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+               let storyboard = UIStoryboard(name: "Login", bundle: nil)
+               let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
                changeRootViewController(vc)
            }
         }

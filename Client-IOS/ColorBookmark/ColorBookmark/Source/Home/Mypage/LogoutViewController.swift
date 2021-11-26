@@ -20,10 +20,19 @@ class LogoutViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as! MyPageViewController
         vc.logoutAgree()
     }
+    
     @IBAction func NoButtonTapped(_ sender: Any) {
-        print("no")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as! MyPageViewController
-        vc.logoutDisagree()
+        print("AAAAA")
+//        dismiss(animated: false, completion: nil)
+//        print("CCCCC")
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
+//        vc!.modalPresentationStyle = .fullScreen
+//        present(vc!, animated: false, completion: nil)
+//        print("BBBB")
+        dismiss(animated: true, completion: nil)
+        
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController
+//        vc!.logoutDisagree()
     }
     
     override func viewDidLoad() {

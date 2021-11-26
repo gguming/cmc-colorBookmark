@@ -180,7 +180,7 @@ extension MiniCodeCheckViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
             if MiniCodeCheckValue == MiniCode {
                 let stringMiniCode = MiniCode.joined(separator: "")
-                MiniCodeInfo.shared.miniCodeValue = stringMiniCode
+//                MiniCodeInfo.shared.miniCodeValue = stringMiniCode
                 print(MiniCodeInfo.shared.miniCodeValue)
                 let miniCodeInput = MiniCodeRequest(miniCode: stringMiniCode)
                 dataManager.createMiniCode(miniCodeInput, delegate: self)
@@ -197,9 +197,12 @@ extension MiniCodeCheckViewController {
     }
     
     func createMiniCodeSuccess() {
+        let stringMiniCode = MiniCode.joined(separator: "")
+        UserDefaults.standard.set(stringMiniCode, forKey: "MiniCode")
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
         changeRootViewController(vc)
+        
   
     }
 }

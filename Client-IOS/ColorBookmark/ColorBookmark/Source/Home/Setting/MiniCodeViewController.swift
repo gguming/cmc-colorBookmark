@@ -8,7 +8,8 @@
 import UIKit
 
 class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    lazy var dataManager: ChangeSettingDataManager = ChangeSettingDataManager()
+    
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeValue: Array<String> = []
     
@@ -25,6 +26,8 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
     @IBAction func BackToSettingVC(_ sender: Any) {
+        let settingInput = SettingRequest(alarmStatus: "Y")
+        dataManager.changeSettingValue(settingInput)
         dismiss(animated: true, completion: nil)
     }
     

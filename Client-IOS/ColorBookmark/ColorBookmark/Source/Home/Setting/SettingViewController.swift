@@ -10,6 +10,7 @@ import UIKit
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let settingTitle = ["알림", "암호", "배경음악"]
+    let SettingValue = ["setting_1", "setting_2", "setting_3"]
 //    var onOffValue = [false, false, false]
     var currentCellNumber = [0,1,2]
     
@@ -58,9 +59,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.ContentLabel.text = "20:00 PM"
                 cell.cellNumber = currentCellNumber[indexPath.section]
                 print("셀 넘버")
-                
-            
-                if  SettingInfo.shared.settingOnOff[indexPath.section] == true {
+                print("유저디폴트")
+                print(UserDefaults.standard.string(forKey: SettingValue[indexPath.section])!)
+                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
                 else {
@@ -74,7 +75,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print("셀 넘버")
                 print(currentCellNumber)
                 
-                if  SettingInfo.shared.settingOnOff[indexPath.section] == true {
+                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
                 else {
@@ -88,7 +89,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print("셀 넘버")
                 print(currentCellNumber)
                 
-                if  SettingInfo.shared.settingOnOff[indexPath.section] == true {
+                if UserDefaults.standard.string(forKey: SettingValue[indexPath.section]) == "Y" {
                     cell.SettingSwitch.isOn = true
                 }
                 else {
@@ -127,6 +128,5 @@ extension SettingViewController: PresentVCDelegate {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    
     
 }
