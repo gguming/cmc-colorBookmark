@@ -47,7 +47,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section != 3 && indexPath.section != 4 {
         return tableView.estimatedRowHeight
+        }
+        let cellWidth = SettingTableview.frame.width
+        let cellHeight = cellWidth * 0.2
+        return cellHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

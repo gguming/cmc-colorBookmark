@@ -460,7 +460,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="ULU-lP-ATE" secondAttribute="trailing" id="wzK-eE-nDn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="SecondCellview" destination="ULU-lP-ATE" id="tVY-Yy-7K9"/>
                                             <outlet property="SecondSettingLabel" destination="0Wr-b3-63z" id="p9X-er-Cq0"/>
                                         </connections>
                                     </tableViewCell>
