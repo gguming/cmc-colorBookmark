@@ -20,8 +20,7 @@ class KakaoNicknameViewController: UIViewController {
     
     @IBAction func JoinButtonTapped(_ sender: Any) {
         let nicknameValue = NicknameTextField.text
-        UserDefaults.standard.set(nicknameValue, forKey: "Nickname")
-        
+        Constant.nickname = nicknameValue
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         changeRootViewController(vc)
@@ -35,6 +34,7 @@ class KakaoNicknameViewController: UIViewController {
     override func viewDidLoad() {
         
         JoinButton.layer.cornerRadius = 22
+        JoinButton.isEnabled = false
         NicknameTextField.layer.cornerRadius = 5
         self.NicknameTextField.addTarget(self, action: #selector(self.UnderlineNickNameTextField(_:)), for: .editingChanged)
         

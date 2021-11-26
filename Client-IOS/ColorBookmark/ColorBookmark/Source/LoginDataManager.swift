@@ -23,11 +23,8 @@ class LoginDataManager {
                         print("jwt 토큰값")
                        
                         print(response.result!.jwt)
-                        //MARK: Check Nickname UserDefaults
-                        UserDefaults.standard.set(response.result?.nickname, forKey: "Nickname")
-                        print(UserDefaults.standard.string(forKey: "nickname"))
-                        JwtInfo.shared.jwtValue = response.result?.jwt
                         Constant.jwt = response.result?.jwt
+                        Constant.nickname = response.result?.nickname
                         delegate.loginSuccess()
                     }
                     

@@ -22,8 +22,8 @@ class LoginAfterSigninDataManager {
                         print("회원가입 후 로그인 성공")
                         print("jwt 토큰값")
                         print(response.result!.jwt)
-                        UserDefaults.standard.set(response.result?.nickname, forKey: "Nickname")
-                        JwtInfo.shared.jwtValue = response.result?.jwt
+                        Constant.nickname = response.result?.nickname
+                        Constant.jwt = response.result?.jwt
                         delegate.LoginSuccess()
                     }
                     

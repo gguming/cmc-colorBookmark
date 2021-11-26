@@ -26,9 +26,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
     @IBAction func BackToSettingVC(_ sender: Any) {
-        let settingInput = SettingRequest(alarmStatus: "Y")
-        dataManager.changeSettingValue(settingInput)
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {Constant.setting_1 = "N"})
     }
     
     override func viewDidLoad() {
