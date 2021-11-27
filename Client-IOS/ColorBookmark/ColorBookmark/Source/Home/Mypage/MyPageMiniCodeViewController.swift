@@ -24,6 +24,7 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        MypageMiniCodeCollectionview.register(MypageMiniCodeCollectionViewCell.self, forCellWithReuseIdentifier: "MypageMiniCodeCollectionViewCell")
         MypageMiniCodeCollectionview.delegate = self
         MypageMiniCodeCollectionview.dataSource = self
     }
