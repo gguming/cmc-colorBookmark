@@ -21,9 +21,15 @@ class ChangeNicknameViewController: UIViewController {
     
     @IBAction func ChangeNicknameButtonTapped(_ sender: Any) {
         let nickname = NicknameTextField.text
-        
-        let changeNicknameInput = ChangeNicknameRequest(nickname: nickname!, miniCode: nil)
-        dataManager.changeNickname(changeNicknameInput, delegate: self)
+        if Constant.setting_1 == "Y" {
+            let changeNicknameInput = ChangeNicknameRequest(nickname: nickname!, miniCode: nil)
+            dataManager.changeNickname(changeNicknameInput, delegate: self)
+        }
+        else {
+            let changeNicknameInput = ChangeNicknameRequest(nickname: nickname!, miniCode: Constant.miniCode)
+            dataManager.changeNickname(changeNicknameInput, delegate: self)
+        }
+       
     }
     
     let changedBackgroundColor = #colorLiteral(red: 1, green: 0.2765524387, blue: 0.6389049292, alpha: 1)
@@ -66,6 +72,10 @@ extension ChangeNicknameViewController {
     func changeNicknameSuccess() {
         let newNickname = NicknameTextField.text
         Constant.nickname = newNickname
+//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "MyPageViewController")
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true, completion: nil)
         dismiss(animated: true, completion: nil)
     }
 }

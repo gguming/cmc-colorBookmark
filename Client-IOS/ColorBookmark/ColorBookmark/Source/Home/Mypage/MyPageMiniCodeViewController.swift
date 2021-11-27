@@ -1,50 +1,31 @@
 //
-//  MiniCodeViewController.swift
+//  MyPageMiniCodeViewController.swift
 //  ColorBookmark
 //
-//  Created by 김지훈 on 2021/11/22.
+//  Created by 김지훈 on 2021/11/27.
 //
 
 import UIKit
 
-class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    lazy var dataManager: ChangeSettingDataManager = ChangeSettingDataManager()
-    
+class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeValue: Array<String> = []
     
     @IBOutlet weak var minicode_1: UIImageView!
-    
     @IBOutlet weak var minicode_2: UIImageView!
-    
     @IBOutlet weak var minicode_3: UIImageView!
-    
     @IBOutlet weak var minicode_4: UIImageView!
+    @IBOutlet weak var MypageMiniCodeCollectionview: UICollectionView!
     
-    
-    @IBOutlet weak var MiniCodeCollectionviewHeight: NSLayoutConstraint!
-    @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
-    
-    @IBAction func BackToSettingVC(_ sender: Any) {
-        dismiss(animated: true, completion: { [self] in
-            Constant.setting_1 = "N"
-            let settingInput = SettingRequest(miniCodeStatus:  Constant.setting_1)
-            dataManager.changeSettingValue(settingInput)
-        })
+    @IBAction func BackToMypageVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MiniCodeCollectionview.delegate = self
-        MiniCodeCollectionview.dataSource = self
-        
-//        let leadingValue = view.frame.width * 0.075
-//        MiniCodeCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
-//
-//        let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
-//        MiniCodeCollectionviewHeight.constant = height
-//        self.view.setNeedsLayout()
- 
+        MypageMiniCodeCollectionview.delegate = self
+        MypageMiniCodeCollectionview.dataSource = self
     }
     
     func minicode() {
@@ -96,7 +77,8 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = MiniCodeCollectionview.dequeueReusableCell(withReuseIdentifier: "MiniCodeCollectionViewCell", for: indexPath) as! MiniCodeCollectionViewCell
+        let cell = MypageMiniCodeCollectionview.dequeueReusableCell(withReuseIdentifier: "MypageMiniCodeCollectionViewCell", for: indexPath) as! MypageMiniCodeCollectionViewCell
+        
         cell.layer.cornerRadius = 7
         cell.backgroundColor = .white
         
@@ -169,18 +151,19 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.bounds.width/3 - 6
+        let cellWidth = MypageMiniCodeCollectionview.bounds.width/3 - 6
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
 }
 
-extension MiniCodeViewController {
+extension MyPageMiniCodeViewController {
     func passwordEnd() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MiniCodeCheckViewController") as? MiniCodeCheckViewController
-        vc?.MiniCode = MiniCodeValue
-        vc!.modalPresentationStyle = .fullScreen
-        present(vc!, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Mypage", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChangeNicknameViewController")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+
     }
 }

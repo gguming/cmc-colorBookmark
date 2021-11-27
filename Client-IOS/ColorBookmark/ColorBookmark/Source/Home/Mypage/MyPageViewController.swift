@@ -66,6 +66,13 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         switch indexPath.section {
         case 0:
+            if Constant.setting_1 == "Y" {
+                let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+                let vc = mypageStoryboard.instantiateViewController(withIdentifier: "MyPageMiniCodeViewController")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+            
             let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
             let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangeNicknameViewController")
             vc.modalPresentationStyle = .fullScreen

@@ -82,10 +82,16 @@ class SettingTableViewCell: UITableViewCell {
         switch cellNumber {
         case 0:
             Constant.setting_0 = "Y"
+            let settingInput = SettingRequest(alarmStatus:  Constant.setting_0)
+            dataManager.getSettingValue(settingInput, delegate: self)
         case 1:
             Constant.setting_1 = "Y"
+            let settingInput = SettingRequest(miniCodeStatus: Constant.setting_1)
+            dataManager.getSettingValue(settingInput, delegate: self)
         case 2:
             Constant.setting_2 = "Y"
+            let settingInput = SettingRequest(BGMStatus: Constant.setting_2)
+            dataManager.getSettingValue(settingInput, delegate: self)
         default:
             break
         }
@@ -95,10 +101,16 @@ class SettingTableViewCell: UITableViewCell {
         switch cellNumber {
         case 0:
             Constant.setting_0 = "N"
+            let settingInput = SettingRequest(alarmStatus:  Constant.setting_0)
+            dataManager.getSettingValue(settingInput, delegate: self)
         case 1:
             Constant.setting_1 = "N"
+            let settingInput = SettingRequest(miniCodeStatus: Constant.setting_1)
+            dataManager.getSettingValue(settingInput, delegate: self)
         case 2:
             Constant.setting_2 = "N"
+            let settingInput = SettingRequest(BGMStatus: Constant.setting_2)
+            dataManager.getSettingValue(settingInput, delegate: self)
         default:
             break
         }
