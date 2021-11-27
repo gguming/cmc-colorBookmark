@@ -34,7 +34,7 @@ class EditDiaryViewController: UIViewController  {
 
 extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate{
     func addPhoto() {
-        print(11)
+        addPost()
     }
     
     func addPhotoInEmpty() {
@@ -77,7 +77,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             if pickedImg.isEmpty {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
                 cell.delegate = self
-        
+                
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoHaveTableViewCell", for: indexPath) as? PhotoHaveTableViewCell else {return UITableViewCell()}
@@ -188,6 +188,7 @@ extension EditDiaryViewController {
         }
         // picker뷰 present
         present(picker, animated: true, completion: nil)
+        
     }
 }
 

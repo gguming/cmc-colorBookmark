@@ -39,6 +39,7 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
         switch indexPath.item {
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoBtnCollectionViewCell", for: indexPath) as? PhotoBtnCollectionViewCell else {return UICollectionViewCell()}
+            cell.delegate = self
             
             return cell
         default:
@@ -52,6 +53,14 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 90.0, height: 100.0)
+    }
+    
+    
+}
+
+extension PhotoHaveTableViewCell: PhotoAddDelegate {
+    func appendPhoto() {
+        delegate?.addPhoto()
     }
     
     
