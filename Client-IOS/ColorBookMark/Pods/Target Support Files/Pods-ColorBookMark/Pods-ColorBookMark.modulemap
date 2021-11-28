@@ -1,0 +1,6 @@
+framework module Pods_ColorBookMark {
+  umbrella header "Pods-ColorBookMark-umbrella.h"
+
+  export *
+  module * { export * }
+}
