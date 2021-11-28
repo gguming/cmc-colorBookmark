@@ -83,7 +83,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoHaveTableViewCell", for: indexPath) as? PhotoHaveTableViewCell else {return UITableViewCell()}
                 cell.delegate = self
                 cell.photos = pickedImg
-        
+                cell.photoCollectionview.reloadData()
                 return cell
             }
             
@@ -184,7 +184,10 @@ extension EditDiaryViewController {
 
             picker.dismiss(animated: true) {
                 print(self.pickedImg.count)
-                self.tableview.reloadData()
+                DispatchQueue.main.async {
+                    self.tableview.reloadData()
+                }
+                
             }
         }
         // picker뷰 present
