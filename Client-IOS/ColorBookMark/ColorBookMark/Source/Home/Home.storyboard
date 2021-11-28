@@ -13,7 +13,7 @@
         <!--Test Home View Controller-->
         <scene sceneID="IgE-0g-vPh">
             <objects>
-                <viewController storyboardIdentifier="TestHomeViewController" id="ari-E9-mxg" customClass="TestHomeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestHomeViewController" id="ari-E9-mxg" customClass="TestHomeViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIk-XT-Okq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
         <!--Edit Diary View Controller-->
         <scene sceneID="XlA-ok-OeY">
             <objects>
-                <viewController storyboardIdentifier="EditDiaryViewController" id="kE6-Oh-X2c" customClass="EditDiaryViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditDiaryViewController" id="kE6-Oh-X2c" customClass="EditDiaryViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAS-ST-Rqq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,7 +225,7 @@
         <!--Calender View Controller-->
         <scene sceneID="RRr-7g-mxL">
             <objects>
-                <viewController storyboardIdentifier="CalenderViewController" id="kaX-20-mLo" customClass="CalenderViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalenderViewController" id="kaX-20-mLo" customClass="CalenderViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9B-Il-2Rn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,7 +374,7 @@
         <!--Setting View Controller-->
         <scene sceneID="P7x-IA-SQp">
             <objects>
-                <viewController storyboardIdentifier="SettingViewController" id="JQl-Sx-YjI" customClass="SettingViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" id="JQl-Sx-YjI" customClass="SettingViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kK-aN-can">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,7 +428,7 @@
                                 <rect key="frame" x="28" y="251" width="358" height="561"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondSettingTableViewCell" rowHeight="75" id="buy-G7-oZJ" customClass="SecondSettingTableViewCell" customModule="ColorBookmark" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondSettingTableViewCell" rowHeight="75" id="buy-G7-oZJ" customClass="SecondSettingTableViewCell" customModule="ColorBookMark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="358" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="buy-G7-oZJ" id="r96-Ha-moa">
@@ -509,7 +509,7 @@
         <!--Mini Code View Controller-->
         <scene sceneID="xRC-JJ-k6N">
             <objects>
-                <viewController storyboardIdentifier="MiniCodeViewController" id="Y4H-QB-r50" customClass="MiniCodeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MiniCodeViewController" id="Y4H-QB-r50" customClass="MiniCodeViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OEs-lC-i3U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -521,7 +521,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gUt-Ml-Lsv">
-                                <rect key="frame" x="32" y="558" width="350" height="200"/>
+                                <rect key="frame" x="32" y="562" width="350" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="diI-ag-eIL"/>
@@ -533,7 +533,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCodeCollectionViewCell" id="vNi-ea-dNq" customClass="MiniCodeCollectionViewCell" customModule="ColorBookmark" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCodeCollectionViewCell" id="vNi-ea-dNq" customClass="MiniCodeCollectionViewCell" customModule="ColorBookMark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1v2-FS-GxX">
@@ -610,7 +610,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tDB-Zc-CoZ" firstAttribute="top" secondItem="DW8-F6-wdO" secondAttribute="top" constant="53" id="026-aE-UHb"/>
-                            <constraint firstItem="DW8-F6-wdO" firstAttribute="bottom" secondItem="gUt-Ml-Lsv" secondAttribute="bottom" constant="104" id="1Uu-Vs-HP5"/>
+                            <constraint firstItem="DW8-F6-wdO" firstAttribute="bottom" secondItem="gUt-Ml-Lsv" secondAttribute="bottom" constant="100" id="1Uu-Vs-HP5"/>
                             <constraint firstItem="VL9-1b-H0k" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="DI6-Fq-bAZ"/>
                             <constraint firstItem="gUt-Ml-Lsv" firstAttribute="centerX" secondItem="DW8-F6-wdO" secondAttribute="centerX" id="JJO-g3-YPL"/>
                             <constraint firstItem="gUt-Ml-Lsv" firstAttribute="leading" secondItem="DW8-F6-wdO" secondAttribute="leading" constant="32" id="T77-xM-HTF"/>
@@ -641,7 +641,7 @@
         <!--My Page View Controller-->
         <scene sceneID="ahR-dQ-dPa">
             <objects>
-                <viewController storyboardIdentifier="MyPageViewController" id="K9V-9w-hDu" customClass="MyPageViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" id="K9V-9w-hDu" customClass="MyPageViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CuT-eF-Vmx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -692,7 +692,7 @@
                                 <rect key="frame" x="28" y="272" width="358" height="590"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MypageTableViewCell" id="5uy-Ft-ziW" customClass="MypageTableViewCell" customModule="ColorBookmark" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MypageTableViewCell" id="5uy-Ft-ziW" customClass="MypageTableViewCell" customModule="ColorBookMark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="358" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5uy-Ft-ziW" id="W9k-DJ-qXj">
@@ -757,6 +757,7 @@
                     </view>
                     <connections>
                         <outlet property="AccountLabel" destination="5FJ-EB-c4H" id="KDP-WX-4pL"/>
+                        <outlet property="LoginLabel" destination="set-Zl-Qc6" id="trl-3D-qYF"/>
                         <outlet property="LogoutContainerView" destination="UCM-3W-u3I" id="5PT-BJ-2Le"/>
                         <outlet property="MypageTableview" destination="jfE-o7-7dl" id="7Ho-hV-ztV"/>
                     </connections>
@@ -768,7 +769,7 @@
         <!--Mini Code Check View Controller-->
         <scene sceneID="Grj-Dt-zVT">
             <objects>
-                <viewController storyboardIdentifier="MiniCodeCheckViewController" id="rmK-4F-gvB" customClass="MiniCodeCheckViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MiniCodeCheckViewController" id="rmK-4F-gvB" customClass="MiniCodeCheckViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o0y-Jz-rgt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -780,7 +781,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a0K-c0-Axr">
-                                <rect key="frame" x="32" y="558" width="350" height="200"/>
+                                <rect key="frame" x="32" y="562" width="350" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="kbt-zT-LEP"/>
@@ -792,7 +793,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCodeCheckCollectionViewCell" id="5dg-JG-qke" customClass="MiniCodeCheckCollectionViewCell" customModule="ColorBookmark" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCodeCheckCollectionViewCell" id="5dg-JG-qke" customClass="MiniCodeCheckCollectionViewCell" customModule="ColorBookMark" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jnh-XR-cpL">
@@ -869,7 +870,7 @@
                             <constraint firstItem="iaL-KZ-pBQ" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="DBX-ld-AIC"/>
                             <constraint firstItem="a0K-c0-Axr" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="N7u-hQ-iUJ"/>
                             <constraint firstItem="E91-js-zxg" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="NcY-8E-S2t"/>
-                            <constraint firstItem="CJ5-6D-FkQ" firstAttribute="bottom" secondItem="a0K-c0-Axr" secondAttribute="bottom" constant="104" id="PAa-df-GN0"/>
+                            <constraint firstItem="CJ5-6D-FkQ" firstAttribute="bottom" secondItem="a0K-c0-Axr" secondAttribute="bottom" constant="100" id="PAa-df-GN0"/>
                             <constraint firstItem="s3e-AI-Dkd" firstAttribute="top" secondItem="Fzl-Bp-f14" secondAttribute="top" id="ZgQ-di-ua9"/>
                             <constraint firstItem="CJ5-6D-FkQ" firstAttribute="trailing" secondItem="Fzl-Bp-f14" secondAttribute="trailing" constant="28" id="Zhr-an-LGu"/>
                             <constraint firstItem="s3e-AI-Dkd" firstAttribute="leading" secondItem="Fzl-Bp-f14" secondAttribute="leading" id="cDz-JC-c1d"/>
@@ -897,7 +898,7 @@
         <!--Logout Pop View Controller-->
         <scene sceneID="TWl-ET-vla">
             <objects>
-                <viewController storyboardIdentifier="LogoutPopViewController" id="HKh-fI-7Gj" customClass="LogoutPopViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoutPopViewController" id="HKh-fI-7Gj" customClass="LogoutPopViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3FI-5O-9b8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -984,7 +985,7 @@
         <!--Logout View Controller-->
         <scene sceneID="RQE-sX-hFQ">
             <objects>
-                <viewController storyboardIdentifier="LogoutViewController" id="rwA-pI-k5n" customClass="LogoutViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoutViewController" id="rwA-pI-k5n" customClass="LogoutViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcM-yl-Ro3">
                         <rect key="frame" x="0.0" y="0.0" width="276" height="162"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

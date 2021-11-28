@@ -107,7 +107,6 @@
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
-		E96245FC2751D3EE003BEDC8 /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245FB2751D3EE003BEDC8 /* MypageMiniCodeCollectionViewCell.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
 		E9A236EB274F270F0043836A /* FindPasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236EA274F270F0043836A /* FindPasswordDataManager.swift */; };
 		E9A236ED274F27750043836A /* FindPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236EC274F27750043836A /* FindPasswordRequest.swift */; };
@@ -122,6 +121,7 @@
 		E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */; };
 		E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237042750CC790043836A /* ChangeSettingDataManager.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
+		E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */; };
 		E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */; };
 		E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
@@ -256,7 +256,6 @@
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
-		E96245FB2751D3EE003BEDC8 /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E9A236EA274F270F0043836A /* FindPasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordDataManager.swift; sourceTree = "<group>"; };
 		E9A236EC274F27750043836A /* FindPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordRequest.swift; sourceTree = "<group>"; };
@@ -271,6 +270,7 @@
 		E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNicknameViewController.swift; sourceTree = "<group>"; };
 		E9A237042750CC790043836A /* ChangeSettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingDataManager.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -736,7 +736,7 @@
 				E9A236F827507E950043836A /* ChangeNicknameViewController.swift */,
 				A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */,
 				E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */,
-				E96245FB2751D3EE003BEDC8 /* MypageMiniCodeCollectionViewCell.swift */,
+				E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -1089,7 +1089,7 @@
 				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
-				E96245FC2751D3EE003BEDC8 /* MypageMiniCodeCollectionViewCell.swift in Sources */,
+				E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */,
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
 				E9A236F3274F57BB0043836A /* ChangePasswordResponse.swift in Sources */,
 				E9336CCA274D004700686AF1 /* MiniCodeResponse.swift in Sources */,

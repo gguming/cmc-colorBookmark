@@ -90,7 +90,16 @@ struct Constant {
        }
     }
     
-//    UserDefaults.standard.set(yourInt, forKey: "intKey")
+    static var email: String?
+   = UserDefaults.standard.string(forKey: "checkEmail")
+    {
+        didSet {
+           // UserDefault에 저장
+           guard let email = email else { return }
+           print("email: \(email)")
+           UserDefaults.standard.setValue(email, forKey: "checkEmail")
+       }
+    }
     
     static var userId: Int?
    = UserDefaults.standard.integer(forKey: "checkUserId")
@@ -103,7 +112,7 @@ struct Constant {
        }
     }
 
-    static var settingArray = ["N", "N", "N"]
+//    static var settingArray = ["N", "N", "N"]
     static let SERVER_BASE_URL = "https://saekalpi.shop"
    
 }

@@ -20,9 +20,7 @@ class ChangeNicknameDataManager {
                     // 성공했을 때
                     if response.isSuccess {
                         print("닉네임 변경 성공")
-                   
                         delegate.changeNicknameSuccess()
-                     
                     }
                     
                     // 실패했을 때
