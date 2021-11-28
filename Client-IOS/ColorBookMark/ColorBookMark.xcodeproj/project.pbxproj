@@ -64,6 +64,7 @@
 		A4A59D27275110ED0018A7F3 /* PostColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */; };
 		A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D29275112050018A7F3 /* PostColorResponse.swift */; };
 		A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */; };
+		A4A91E242753CE2900273A01 /* AudioBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A91E232753CE2900273A01 /* AudioBackgroundViewController.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */; };
 		A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */; };
@@ -207,6 +208,7 @@
 		A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorRequest.swift; sourceTree = "<group>"; };
 		A4A59D29275112050018A7F3 /* PostColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorResponse.swift; sourceTree = "<group>"; };
 		A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorDataManager.swift; sourceTree = "<group>"; };
+		A4A91E232753CE2900273A01 /* AudioBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBackgroundViewController.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				A45DF802275382FA0067021C /* Audio.storyboard */,
 				A45DF804275383110067021C /* AudioViewController.swift */,
+				A4A91E232753CE2900273A01 /* AudioBackgroundViewController.swift */,
 			);
 			path = AudioRecord;
 			sourceTree = "<group>";
@@ -1031,6 +1034,7 @@
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
 				E9A236F927507E950043836A /* ChangeNicknameViewController.swift in Sources */,
+				A4A91E242753CE2900273A01 /* AudioBackgroundViewController.swift in Sources */,
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,

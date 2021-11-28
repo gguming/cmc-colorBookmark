@@ -9,20 +9,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Audio View Controller-->
+        <!--Audio Background View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AudioViewController" id="Y6W-OH-hqX" customClass="AudioViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AudioBackgroundViewController" id="Y6W-OH-hqX" customClass="AudioBackgroundViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-Ff-SBM">
+                                <rect key="frame" x="0.0" y="612" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ano-nF-ZgK"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="dM7-yA-Fc8" kind="embed" id="6hG-Tb-mcD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0dG-Ff-SBM" secondAttribute="trailing" id="5IA-EG-fyh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0dG-Ff-SBM" secondAttribute="bottom" id="W8v-wr-93J"/>
+                            <constraint firstItem="0dG-Ff-SBM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dyy-cx-BoN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="63"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="WHy-uI-xYt">
+            <objects>
+                <viewController storyboardIdentifier="AudioViewController" id="dM7-yA-Fc8" customClass="AudioViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dB-dZ-MsY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewx-Xx-XP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="25"/>
         </scene>
     </scenes>
     <resources>
