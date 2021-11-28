@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
     // Color section
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var collectionview: UICollectionView!
     
     // color data
@@ -124,6 +125,7 @@ class HomeViewController: UIViewController {
         colorView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
         editBtn.clipsToBounds = true
         editBtn.layer.cornerRadius = 15
+        nickNameLabel.text = "안녕하세요 \(String(describing: Constant.nickname ?? "색갈피"))님!"
         
         
     }

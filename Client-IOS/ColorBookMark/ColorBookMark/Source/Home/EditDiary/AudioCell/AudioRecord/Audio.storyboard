@@ -47,6 +47,7 @@
                     <view key="view" contentMode="scaleToFill" id="5dB-dZ-MsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ixt-sV-1go"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
