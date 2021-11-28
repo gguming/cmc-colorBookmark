@@ -926,6 +926,37 @@
             </objects>
             <point key="canvasLocation" x="2798.5507246376815" y="789.50892857142856"/>
         </scene>
+        <!--Delete Account Pop View Controller-->
+        <scene sceneID="XE3-u5-y3T">
+            <objects>
+                <viewController storyboardIdentifier="DeleteAccountPopViewController" id="Ebs-WT-p6e" customClass="DeleteAccountPopViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XWU-zz-RMw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEK-p8-Nee">
+                                <rect key="frame" x="69" y="372" width="276" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NEK-p8-Nee" secondAttribute="height" multiplier="17:10" id="N08-s0-jMd"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="DZ0-fy-V7l" kind="embed" id="TDt-TF-WzE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fHv-xB-oiP"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NEK-p8-Nee" firstAttribute="centerY" secondItem="fHv-xB-oiP" secondAttribute="centerY" id="17b-Aa-9L9"/>
+                            <constraint firstItem="NEK-p8-Nee" firstAttribute="centerX" secondItem="fHv-xB-oiP" secondAttribute="centerX" id="eDC-QZ-Mql"/>
+                            <constraint firstItem="NEK-p8-Nee" firstAttribute="width" secondItem="XWU-zz-RMw" secondAttribute="width" multiplier="1/1.5" id="sPS-Fv-rqw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BT-yt-Bmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="1504"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="HHE-93-2X0">
             <objects>
@@ -1046,7 +1077,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edp-lr-PzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3680" y="836"/>
+            <point key="canvasLocation" x="3693" y="790"/>
+        </scene>
+        <!--Delete Account View Controller-->
+        <scene sceneID="g3e-Nz-LEB">
+            <objects>
+                <viewController storyboardIdentifier="DeleteAccountViewController" id="DZ0-fy-V7l" customClass="DeleteAccountViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfz-aq-xrd">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="162"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정말로 탈퇴하시겠어요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ve-Zwv">
+                                <rect key="frame" x="44" y="32" width="188.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그동안 작성하신 기록은 모두 삭제됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-Zn-kVN">
+                                <rect key="frame" x="41.5" y="60" width="193.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="lhI-QY-bOe">
+                                <rect key="frame" x="11" y="102.5" width="254" height="33.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-vW-mnO">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="33.5"/>
+                                        <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ykj-vW-mnO" secondAttribute="height" multiplier="24:7" id="xoO-4B-JUZ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="아뇨">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NoButtonTapped:" destination="DZ0-fy-V7l" eventType="touchUpInside" id="WtB-jX-QBD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJu-Nz-io7">
+                                        <rect key="frame" x="139" y="0.0" width="115" height="33.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="네">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="YesButtonTapped:" destination="DZ0-fy-V7l" eventType="touchUpInside" id="Sge-lj-ycw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lhI-QY-bOe" firstAttribute="centerX" secondItem="dfz-aq-xrd" secondAttribute="centerX" id="3r5-tw-lsu"/>
+                            <constraint firstItem="zVs-ve-Zwv" firstAttribute="centerX" secondItem="dfz-aq-xrd" secondAttribute="centerX" id="6eW-jk-32G"/>
+                            <constraint firstItem="zVs-ve-Zwv" firstAttribute="top" secondItem="dfz-aq-xrd" secondAttribute="top" constant="32" id="8b9-wM-eWz"/>
+                            <constraint firstItem="DQM-Zn-kVN" firstAttribute="centerX" secondItem="dfz-aq-xrd" secondAttribute="centerX" id="S8l-6t-p38"/>
+                            <constraint firstItem="DQM-Zn-kVN" firstAttribute="top" secondItem="zVs-ve-Zwv" secondAttribute="bottom" constant="4" id="XBM-jT-AzK"/>
+                            <constraint firstItem="lhI-QY-bOe" firstAttribute="top" secondItem="DQM-Zn-kVN" secondAttribute="bottom" constant="28" id="vqF-5B-SaO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NoButton" destination="Ykj-vW-mnO" id="nb1-2i-J8m"/>
+                        <outlet property="YesButton" destination="vJu-Nz-io7" id="XIJ-Py-eqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvH-Bt-af8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3746" y="1503"/>
         </scene>
     </scenes>
     <resources>

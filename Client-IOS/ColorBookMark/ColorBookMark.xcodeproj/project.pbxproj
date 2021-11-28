@@ -123,6 +123,10 @@
 		E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237042750CC790043836A /* ChangeSettingDataManager.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */; };
+		E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */; };
+		E9DBB60A2753E07000F2A32D /* DeleteAccountPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6092753E07000F2A32D /* DeleteAccountPopViewController.swift */; };
+		E9DBB60C2753E62600F2A32D /* DeleteAccountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB60B2753E62600F2A32D /* DeleteAccountDataManager.swift */; };
+		E9DBB60E2753E66E00F2A32D /* DeleteAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB60D2753E66E00F2A32D /* DeleteAccountResponse.swift */; };
 		E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */; };
 		E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */; };
 		E9E4A926272ED4550037A815 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A925272ED4550037A815 /* Login.storyboard */; };
@@ -273,6 +277,10 @@
 		E9A237042750CC790043836A /* ChangeSettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingDataManager.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		E9DBB6092753E07000F2A32D /* DeleteAccountPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountPopViewController.swift; sourceTree = "<group>"; };
+		E9DBB60B2753E62600F2A32D /* DeleteAccountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountDataManager.swift; sourceTree = "<group>"; };
+		E9DBB60D2753E66E00F2A32D /* DeleteAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountResponse.swift; sourceTree = "<group>"; };
 		E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		E9E4A925272ED4550037A815 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -734,12 +742,14 @@
 				E9445B9B273B902E00B4EC82 /* MyPageViewController.swift */,
 				E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */,
 				E9E0CDB1274D466800ED9B2F /* Mypage.storyboard */,
-				E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */,
 				E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */,
 				E9A236F827507E950043836A /* ChangeNicknameViewController.swift */,
 				A4A59D202750F1C90018A7F3 /* LogoutPopViewController.swift */,
+				E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */,
 				E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */,
 				E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */,
+				E9DBB6092753E07000F2A32D /* DeleteAccountPopViewController.swift */,
+				E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -806,6 +816,7 @@
 				E9A236F4274F57C50043836A /* ChangePasswordRequest.swift */,
 				E9A236FA275085240043836A /* ChangeNicknameResponse.swift */,
 				E9A236FE2750853F0043836A /* ChangeNicknameRequest.swift */,
+				E9DBB60D2753E66E00F2A32D /* DeleteAccountResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -815,6 +826,7 @@
 			children = (
 				E9A236F6274F57D20043836A /* ChangePasswordDataManager.swift */,
 				E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */,
+				E9DBB60B2753E62600F2A32D /* DeleteAccountDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -1006,6 +1018,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */,
+				E9DBB60E2753E66E00F2A32D /* DeleteAccountResponse.swift in Sources */,
 				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				E9A236F5274F57C50043836A /* ChangePasswordRequest.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
@@ -1048,6 +1061,7 @@
 				E9336CD2274D144000686AF1 /* SettingRequest.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
+				E9DBB60C2753E62600F2A32D /* DeleteAccountDataManager.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */,
@@ -1066,6 +1080,7 @@
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,
 				A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */,
+				E9DBB60A2753E07000F2A32D /* DeleteAccountPopViewController.swift in Sources */,
 				E9A236ED274F27750043836A /* FindPasswordRequest.swift in Sources */,
 				A4A59D212750F1C90018A7F3 /* LogoutPopViewController.swift in Sources */,
 				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
@@ -1106,6 +1121,7 @@
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
+				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
 				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
