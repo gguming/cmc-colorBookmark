@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AudioHaveTableViewCell" rowHeight="157" id="wRO-KC-LeD" customClass="AudioHaveTableViewCell" customModule="ColorBookMark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wRO-KC-LeD" id="x2q-ik-fhd">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6G-dB-D2M">
+                        <rect key="frame" x="20" y="156" width="505" height="1"/>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="3ok-gb-rMO"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음성을 추가되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAB-rh-Vrk">
+                        <rect key="frame" x="28" y="10" width="489" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XL-3Xa">
+                        <rect key="frame" x="197.5" y="73.5" width="150" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="fKB-nJ-yn1"/>
+                            <constraint firstAttribute="height" constant="10" id="vv9-Lj-ffn"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wbs-XL-3Xa" firstAttribute="centerX" secondItem="x2q-ik-fhd" secondAttribute="centerX" id="GQa-9l-aaD"/>
+                    <constraint firstAttribute="bottom" secondItem="d6G-dB-D2M" secondAttribute="bottom" id="WS8-Ou-tga"/>
+                    <constraint firstItem="UAB-rh-Vrk" firstAttribute="top" secondItem="x2q-ik-fhd" secondAttribute="top" constant="10" id="ayh-47-cjw"/>
+                    <constraint firstAttribute="trailing" secondItem="d6G-dB-D2M" secondAttribute="trailing" constant="20" id="bNb-Hu-Vxf"/>
+                    <constraint firstAttribute="trailing" secondItem="UAB-rh-Vrk" secondAttribute="trailing" constant="28" id="dII-Bh-UsT"/>
+                    <constraint firstItem="UAB-rh-Vrk" firstAttribute="leading" secondItem="x2q-ik-fhd" secondAttribute="leading" constant="28" id="uDv-Gb-Omk"/>
+                    <constraint firstItem="Wbs-XL-3Xa" firstAttribute="centerY" secondItem="x2q-ik-fhd" secondAttribute="centerY" id="vOp-R0-pao"/>
+                    <constraint firstItem="d6G-dB-D2M" firstAttribute="leading" secondItem="x2q-ik-fhd" secondAttribute="leading" constant="20" id="wu0-rT-TsO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="yAC-db-C21"/>
+            <connections>
+                <outlet property="progressBar" destination="Wbs-XL-3Xa" id="VkR-Rm-MYH"/>
+            </connections>
+            <point key="canvasLocation" x="271.73913043478262" y="220.64732142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

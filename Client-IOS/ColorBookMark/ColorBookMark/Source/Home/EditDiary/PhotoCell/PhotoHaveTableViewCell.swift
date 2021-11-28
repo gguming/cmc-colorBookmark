@@ -19,6 +19,7 @@ class PhotoHaveTableViewCell: UITableViewCell {
         photoCollectionview.register(UINib(nibName: "PhotoBtnCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotoBtnCollectionViewCell")
         photoCollectionview.dataSource = self
         photoCollectionview.delegate = self
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

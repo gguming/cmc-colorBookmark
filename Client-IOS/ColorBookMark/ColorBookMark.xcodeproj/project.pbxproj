@@ -32,6 +32,10 @@
 		A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */; };
 		A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */; };
 		A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */; };
+		A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DF7FE27537D080067021C /* AudioHaveTableViewCell.swift */; };
+		A45DF80127537D080067021C /* AudioHaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45DF7FF27537D080067021C /* AudioHaveTableViewCell.xib */; };
+		A45DF803275382FA0067021C /* Audio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45DF802275382FA0067021C /* Audio.storyboard */; };
+		A45DF805275383110067021C /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DF804275383110067021C /* AudioViewController.swift */; };
 		A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */; };
 		A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */; };
 		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
@@ -171,6 +175,10 @@
 		A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
 		A45C040E273E353A00D4C26F /* EditBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBtnTableViewCell.swift; sourceTree = "<group>"; };
 		A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditBtnTableViewCell.xib; sourceTree = "<group>"; };
+		A45DF7FE27537D080067021C /* AudioHaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHaveTableViewCell.swift; sourceTree = "<group>"; };
+		A45DF7FF27537D080067021C /* AudioHaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioHaveTableViewCell.xib; sourceTree = "<group>"; };
+		A45DF802275382FA0067021C /* Audio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Audio.storyboard; sourceTree = "<group>"; };
+		A45DF804275383110067021C /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorPanelLayout.swift; sourceTree = "<group>"; };
 		A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryPanelLayout.swift; sourceTree = "<group>"; };
 		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +390,15 @@
 			path = ColorBookMark;
 			sourceTree = "<group>";
 		};
+		A45DF7FD27537C5B0067021C /* AudioRecord */ = {
+			isa = PBXGroup;
+			children = (
+				A45DF802275382FA0067021C /* Audio.storyboard */,
+				A45DF804275383110067021C /* AudioViewController.swift */,
+			);
+			path = AudioRecord;
+			sourceTree = "<group>";
+		};
 		A461AD3D2736D5980067C6D1 /* EditDiary */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,8 +603,11 @@
 		A47C4D56273BAF1F00CEB907 /* AudioCell */ = {
 			isa = PBXGroup;
 			children = (
+				A45DF7FD27537C5B0067021C /* AudioRecord */,
 				A45C040A273E2FD900D4C26F /* AudioTableViewCell.swift */,
 				A45C040B273E2FD900D4C26F /* AudioTableViewCell.xib */,
+				A45DF7FE27537D080067021C /* AudioHaveTableViewCell.swift */,
+				A45DF7FF27537D080067021C /* AudioHaveTableViewCell.xib */,
 			);
 			path = AudioCell;
 			sourceTree = "<group>";
@@ -917,7 +937,9 @@
 				A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
 				E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */,
+				A45DF80127537D080067021C /* AudioHaveTableViewCell.xib in Resources */,
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
+				A45DF803275382FA0067021C /* Audio.storyboard in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
 				A49DB73B27477CB400AF315F /* HeaderInfoTableViewCell.xib in Resources */,
 				E9E0CDB2274D466800ED9B2F /* Mypage.storyboard in Resources */,
@@ -1002,6 +1024,7 @@
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
 				E9A236EF274F27820043836A /* FindPasswordResponse.swift in Sources */,
 				E9A236F7274F57D20043836A /* ChangePasswordDataManager.swift in Sources */,
+				A45DF805275383110067021C /* AudioViewController.swift in Sources */,
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
 				A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
@@ -1012,6 +1035,7 @@
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
 				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
+				A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
