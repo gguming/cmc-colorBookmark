@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Foundation
+import AudioToolbox
 
 class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -28,10 +30,10 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
 
         MypageMiniCodeCollectionview.delegate = self
         MypageMiniCodeCollectionview.dataSource = self
+        let miniCode = Constant.miniCode!
+        MiniCodeCheckValue = miniCode.map { String($0) }
+        print(MiniCodeCheckValue)
         
-//        for number in Constant.miniCode {
-//            MiniCodeCheckValue.append(number)
-//        }
     }
     
     func minicode() {
@@ -109,11 +111,9 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
                 imageAttachment.image = UIImage(named: "177")
                 attributedString.append(NSAttributedString(attachment: imageAttachment))
                 cell.NumberLabel.attributedText = attributedString
-
             }
         default:
             break
-            
         }
         return cell
     }
@@ -158,15 +158,25 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
-
 }
 
 extension MyPageMiniCodeViewController {
     func passwordEnd() {
-        let storyboard = UIStoryboard(name: "Mypage", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ChangeNicknameViewController")
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            if MiniCodeCheckValue == MiniCodeValue {
+                let storyboard = UIStoryboard(name: "Mypage", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "ChangeNicknameViewController")
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true, completion: nil)
+            }
+            else {
+               AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                MiniCodeValue.removeAll()
+                minicode_1.image = UIImage(named: "101")
+                minicode_2.image = UIImage(named: "101")
+                minicode_3.image = UIImage(named: "101")
+                minicode_4.image = UIImage(named: "101")
+            }
+        }
     }
 }
