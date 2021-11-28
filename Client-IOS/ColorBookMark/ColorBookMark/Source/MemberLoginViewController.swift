@@ -82,7 +82,7 @@ class MemberLoginViewController: UIViewController {
 
 extension MemberLoginViewController {
     func loginSuccess() {
-        UserDefaults.standard.set(emailValue, forKey: "email")
+        Constant.email = emailValue
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         changeRootViewController(vc)

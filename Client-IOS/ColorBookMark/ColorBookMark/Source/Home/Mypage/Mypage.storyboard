@@ -13,7 +13,7 @@
         <!--Change Password View Controller-->
         <scene sceneID="g7r-n4-FkE">
             <objects>
-                <viewController storyboardIdentifier="ChangePasswordViewController" id="Z32-Ef-6fY" customClass="ChangePasswordViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="Z32-Ef-6fY" customClass="ChangePasswordViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0mG-GH-OFh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
         <!--Change Nickname View Controller-->
         <scene sceneID="4dd-vI-Lhg">
             <objects>
-                <viewController storyboardIdentifier="ChangeNicknameViewController" id="56V-XS-ePV" customClass="ChangeNicknameViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeNicknameViewController" id="56V-XS-ePV" customClass="ChangeNicknameViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J0O-Ri-Rel">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +246,7 @@
         <!--My Page Mini Code View Controller-->
         <scene sceneID="drQ-Bs-r6n">
             <objects>
-                <viewController storyboardIdentifier="MyPageMiniCodeViewController" id="1vm-RK-U7E" customClass="MyPageMiniCodeViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageMiniCodeViewController" id="1vm-RK-U7E" customClass="MyPageMiniCodeViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="icY-fA-A4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,44 +257,6 @@
                                 <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-CH-fE2">
-                                <rect key="frame" x="32" y="558" width="350" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="zxd-Lf-d9a"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ua-xw-kNC">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MypageMiniCodeCollectionviewCell" id="ylC-Yb-9Vv" customClass="MypageMiniCodeCollectionViewCell" customModule="ColorBookmark" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T1s-os-kG2">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-LI-bWc">
-                                                    <rect key="frame" x="64" y="64" width="0.0" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="5Vi-LI-bWc" firstAttribute="centerX" secondItem="T1s-os-kG2" secondAttribute="centerX" id="Tp5-wb-Feh"/>
-                                                <constraint firstItem="5Vi-LI-bWc" firstAttribute="centerY" secondItem="T1s-os-kG2" secondAttribute="centerY" id="t6B-gk-gTZ"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="NumberLabel" destination="5Vi-LI-bWc" id="xf6-JN-eiv"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Aj2-UH-buW">
                                 <rect key="frame" x="157" y="256" width="100" height="16"/>
                                 <subviews>
@@ -339,28 +301,68 @@
                                     <action selector="BackToMypageVC:" destination="1vm-RK-U7E" eventType="touchUpInside" id="6fv-8z-pXS"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pHt-bD-85Y">
+                                <rect key="frame" x="32" y="562" width="350" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="mkm-fa-Spc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eFj-1k-COZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MypageMiniCodeCollectionViewCell" id="m1e-94-Ff1" customClass="MypageMiniCodeCollectionViewCell" customModule="ColorBookMark" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="02g-tS-ShD">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YS-Xp-rok">
+                                                    <rect key="frame" x="64" y="64" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="4YS-Xp-rok" firstAttribute="centerX" secondItem="02g-tS-ShD" secondAttribute="centerX" id="cFO-r2-pIO"/>
+                                                <constraint firstItem="4YS-Xp-rok" firstAttribute="centerY" secondItem="02g-tS-ShD" secondAttribute="centerY" id="jeC-0d-ZzP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="NumberLabel" destination="4YS-Xp-rok" id="rRL-5H-x7P"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TQ1-Me-5wN"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UlX-Bh-vqJ" firstAttribute="leading" secondItem="XpW-ul-Isj" secondAttribute="leading" id="2eL-ga-SaO"/>
-                            <constraint firstItem="TQ1-Me-5wN" firstAttribute="bottom" secondItem="nBW-CH-fE2" secondAttribute="bottom" constant="104" id="96s-Ed-zlx"/>
+                            <constraint firstItem="pHt-bD-85Y" firstAttribute="centerX" secondItem="TQ1-Me-5wN" secondAttribute="centerX" id="95i-Xo-6YD"/>
                             <constraint firstItem="wGh-id-MHW" firstAttribute="top" secondItem="icY-fA-A4b" secondAttribute="top" constant="207" id="9tw-wP-iTQ"/>
                             <constraint firstItem="UlX-Bh-vqJ" firstAttribute="top" secondItem="XpW-ul-Isj" secondAttribute="top" id="MCz-gU-gme"/>
                             <constraint firstItem="Aj2-UH-buW" firstAttribute="centerX" secondItem="TQ1-Me-5wN" secondAttribute="centerX" id="SI4-kS-7sa"/>
                             <constraint firstItem="UlX-Bh-vqJ" firstAttribute="trailing" secondItem="XpW-ul-Isj" secondAttribute="trailing" id="Xzf-z5-04s"/>
-                            <constraint firstItem="nBW-CH-fE2" firstAttribute="centerX" secondItem="TQ1-Me-5wN" secondAttribute="centerX" id="b3z-vG-Cxk"/>
                             <constraint firstItem="XpW-ul-Isj" firstAttribute="top" secondItem="TQ1-Me-5wN" secondAttribute="top" constant="53" id="bkS-Yx-Fet"/>
                             <constraint firstItem="wGh-id-MHW" firstAttribute="centerX" secondItem="TQ1-Me-5wN" secondAttribute="centerX" id="clq-18-B6e"/>
                             <constraint firstItem="UlX-Bh-vqJ" firstAttribute="bottom" secondItem="XpW-ul-Isj" secondAttribute="bottom" id="fL1-wZ-b68"/>
                             <constraint firstItem="Aj2-UH-buW" firstAttribute="top" secondItem="wGh-id-MHW" secondAttribute="bottom" constant="20" id="fP4-dA-LoC"/>
-                            <constraint firstItem="TQ1-Me-5wN" firstAttribute="trailing" secondItem="nBW-CH-fE2" secondAttribute="trailing" constant="32" id="fW2-nF-Nhk"/>
+                            <constraint firstItem="TQ1-Me-5wN" firstAttribute="bottom" secondItem="pHt-bD-85Y" secondAttribute="bottom" constant="100" id="ibN-5U-TfV"/>
+                            <constraint firstItem="TQ1-Me-5wN" firstAttribute="trailing" secondItem="pHt-bD-85Y" secondAttribute="trailing" constant="32" id="sMh-Kc-VIl"/>
                             <constraint firstItem="TQ1-Me-5wN" firstAttribute="trailing" secondItem="XpW-ul-Isj" secondAttribute="trailing" constant="28" id="smv-MG-s2I"/>
                             <constraint firstItem="XpW-ul-Isj" firstAttribute="width" secondItem="XpW-ul-Isj" secondAttribute="height" id="tYN-OJ-TUH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="MypageMiniCodeCollectionview" destination="nBW-CH-fE2" id="LoE-tq-Epa"/>
+                        <outlet property="MypageMiniCodeCollectionview" destination="pHt-bD-85Y" id="FPX-Jm-8EW"/>
                         <outlet property="minicode_1" destination="5hf-Kg-rTM" id="fg4-gi-ZfD"/>
                         <outlet property="minicode_2" destination="6sH-3k-E0W" id="sMX-BH-4cM"/>
                         <outlet property="minicode_3" destination="xJB-Zg-Zf3" id="i9x-t4-Nm9"/>
@@ -369,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fO6-6D-Mp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="1025"/>
+            <point key="canvasLocation" x="273.91304347826087" y="1024.5535714285713"/>
         </scene>
     </scenes>
     <resources>

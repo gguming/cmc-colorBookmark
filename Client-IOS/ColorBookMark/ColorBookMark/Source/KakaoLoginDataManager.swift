@@ -23,6 +23,7 @@ class KakaoLoginDataManager {
                         print("kako jwt 토큰값")
                         Constant.jwt = response.result?.jwt
                         Constant.userId = response.result?.userId
+                        Constant.email = "Kakao"
                     
                     }
                     

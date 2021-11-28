@@ -16,11 +16,21 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var LoginLabel: UILabel!
     @IBOutlet weak var AccountLabel: UILabel!
     @IBOutlet weak var MypageTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        AccountLabel.text = UserDefaults.standard.string(forKey: "email")!
+        if Constant.email != "Kakao" {
+            AccountLabel.text = Constant.email
+            LoginLabel.text = "이메일로 로그인 하셨네요!"
+        }
+        
+        if Constant.email == "Kakao" {
+            AccountLabel.text = "Kakao Account"
+            LoginLabel.text = "카카오로 로그인 하셨네요!"
+        }
+        
         MypageTableview.delegate = self
         MypageTableview.dataSource = self
         MypageTableview.separatorStyle = .none

@@ -7,10 +7,11 @@
 
 import UIKit
 
-class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeValue: Array<String> = []
+    var MiniCodeCheckValue: Array<String> = []
     
     @IBOutlet weak var minicode_1: UIImageView!
     @IBOutlet weak var minicode_2: UIImageView!
@@ -24,9 +25,13 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        MypageMiniCodeCollectionview.register(MypageMiniCodeCollectionViewCell.self, forCellWithReuseIdentifier: "MypageMiniCodeCollectionViewCell")
+
         MypageMiniCodeCollectionview.delegate = self
         MypageMiniCodeCollectionview.dataSource = self
+        
+//        for number in Constant.miniCode {
+//            MiniCodeCheckValue.append(number)
+//        }
     }
     
     func minicode() {
@@ -114,8 +119,7 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        print("CHECK")
+
         switch indexPath.section {
         case 0:
             MiniCodeValue.append(String(1 + indexPath.item))
@@ -138,9 +142,7 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
                 print(MiniCodeValue)
             }
         }
-        
         minicode()
-     
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -152,7 +154,7 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MypageMiniCodeCollectionview.bounds.width/3 - 6
+        let cellWidth = MypageMiniCodeCollectionview.frame.width/3 - 6
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }

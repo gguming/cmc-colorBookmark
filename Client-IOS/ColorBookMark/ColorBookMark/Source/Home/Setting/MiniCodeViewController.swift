@@ -131,8 +131,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        print("CHECK")
+
         switch indexPath.section {
         case 0:
             MiniCodeValue.append(String(1 + indexPath.item))
@@ -155,9 +154,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
                 print(MiniCodeValue)
             }
         }
-        
         minicode()
-     
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -169,7 +166,7 @@ class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = MiniCodeCollectionview.bounds.width/3 - 6
+        let cellWidth = MiniCodeCollectionview.frame.width/3 - 6
         let cellHeight = cellWidth * 1/2.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
