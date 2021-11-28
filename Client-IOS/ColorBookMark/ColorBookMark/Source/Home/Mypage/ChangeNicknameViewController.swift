@@ -73,7 +73,7 @@ extension ChangeNicknameViewController {
         let newNickname = NicknameTextField.text
         Constant.nickname = newNickname
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SettingViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
 //        dismiss(animated: true, completion: nil)
