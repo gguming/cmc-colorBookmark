@@ -183,6 +183,7 @@ extension EditDiaryViewController {
             }
 
             picker.dismiss(animated: true) {
+                print(self.pickedImg.count)
                 self.tableview.reloadData()
             }
         }
