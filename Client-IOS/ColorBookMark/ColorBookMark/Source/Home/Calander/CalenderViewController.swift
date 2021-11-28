@@ -15,6 +15,7 @@ class CalenderViewController: UIViewController {
     lazy var dataManager: CalenderDataManager = CalenderDataManager()
     var constantMonth = 0
     var CalendarViewMonth = 0
+    var startDate = 0
     
     @IBAction func CancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -48,20 +49,18 @@ class CalenderViewController: UIViewController {
         self.CalenderCollectionview.reloadData()
         
        // let firstDay = cal.date(from: components+1)
-        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
-        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
-        let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
+//        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
+//        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
+//        let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
+//
+//        let currentYear = String(currentDate[..<firstIndex])
+//        let currentMonth = String(currentDate[secondIndex...])
+//        print("bbbb")
+//        print(currentYear)
         
-        let currentYear = String(currentDate[..<firstIndex])
-        let currentMonth = String(currentDate[secondIndex...])
-        print("bbbb")
-        print(currentYear)
-        if Int(exactly: cal.component(.year, from: now))! < Int(currentYear)! {
-
-        }
-        
-//        MARK: API 연결시 사용
-//        print(dateFormatter.string(from: firstDayOfMonth!) + ".1")
+//        if Int(exactly: cal.component(.year, from: now))! < Int(currentYear)! {
+//
+//        }
         
     }
     
@@ -107,8 +106,10 @@ class CalenderViewController: UIViewController {
         CalenderLabel.text = dateFormatter.string(from: firstDayOfMonth!)
         
         self.days.removeAll()
+        startDate = 0
         for day in weekdayAdding...daysCountInMonth {
             if day < 1 {
+                startDate += 1
                 self.days.append("")
             } else {
                 self.days.append(String(day))
@@ -125,31 +126,14 @@ class CalenderViewController: UIViewController {
         print(currentYear)
         print("MONTH")
         print(currentMonth)
+        print("리리ㅣㄹ")
+        print(startDate)
         }
     
     private func initCollection() {
           self.CalenderCollectionview.delegate = self
           self.CalenderCollectionview.dataSource = self
           self.CalenderCollectionview.register(UINib(nibName: "CalenderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CalenderCollectionViewCell")
-    }
-    
-    func getLastDayofMonth(currentMonth: Int) -> Int{
-        switch currentMonth {
-        case 1, 3, 5, 7, 8, 10, 12:
-            return 31
-        case 4, 6, 9, 11:
-            return 30
-        default:
-            if currentMonth % 400 == 0 {
-                return 29
-            }
-            else if currentMonth % 100 != 0 && currentMonth % 4 == 0{
-               return 29
-            }
-            else{
-                return 28
-            }
-        }
     }
     
     override func viewDidLoad() {
@@ -161,6 +145,7 @@ class CalenderViewController: UIViewController {
         TopView.layer.cornerRadius = 30
         super.viewDidLoad()
         self.initView()
+        
     }
 }
 
@@ -189,49 +174,33 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
         
         switch indexPath.section {
         case 0:
-            cell.backgroundColor = .green
+            cell.backgroundColor = .white
             cell.CircleImage.isHidden = true
             cell.DateLabel.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             cell.DateLabel.textAlignment = .center
             cell.DateLabel.text = weeks[indexPath.row]
             
-               default:
+        default:
             //MARK: check
             print(CalendarViewMonth, "__")
-            if indexPath.item < CalendarViewMonth {
-                print(indexPath.item, "@")
-                if calendarData?[indexPath.item].color == nil {
-//                    if cell.CircleImage.isHidden == false {
-//                        cell.CircleImage.isHidden = true
-//                    }
+            print(indexPath.row)
+            cell.backgroundColor = .white
+            let currentIndex = startDate + indexPath.row
+            
+            if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate - 1 {
+                print(currentIndex, "@")
+                
+                if calendarData?[indexPath.row - startDate].color == nil {
                     cell.CircleImage.tintColor = .clear
                 }
                 else {
-                    
-//                    let circleColor = UIColor(hex: calendarData?[indexPath.item].color! ?? "#000000")
-                    let circleColor = UIColor(hex: "#ffe700ff")
-                    print(indexPath.item)
-                    print(calendarData?[indexPath.item].color)
-                    print(circleColor)
-                    cell.CircleImage.tintColor = .brown
-//                    cell.CircleImage.tintColor = circleColor
+                    let CircleColor = calendarData?[indexPath.row - startDate].color! ?? "#000000"
+                    print(CircleColor)
+                    cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                 }
             }
-
-            
-//            print(calendarData?.)
-
-            
-          //  print(calendarData[])
-//            if CalendarInfo.shared.calenderColor[indexPath.row] == "nil" {
-//                cell.CircleImage.isHidden = true
-//            }
-//            else {
-//                let circleColor = UIColor(hex: CalendarInfo.shared.calenderColor[indexPath.row])
-//                cell.CircleImage.isHidden = false
-//                cell.CircleImage.tintColor = circleColor
-//            }
+        
             
             cell.CircleImage.isHidden = false
             cell.DateLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)

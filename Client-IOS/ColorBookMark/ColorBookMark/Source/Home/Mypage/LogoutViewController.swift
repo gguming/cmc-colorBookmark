@@ -13,6 +13,8 @@ import KakaoSDKCommon
 class LogoutViewController: UIViewController {
  
     let yesColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
+//    #192293
+    let CCC = #colorLiteral(red: 0.6352941176, green: 1, blue: 0.2117647059, alpha: 1)
     let noColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
     
     @IBOutlet weak var YesButton: UIButton!
