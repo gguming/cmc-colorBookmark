@@ -101,6 +101,14 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
             vc.modalTransitionStyle = .crossDissolve
             vc.view.backgroundColor = .black.withAlphaComponent(0.4)
             self.present(vc, animated: true, completion: nil)
+            
+        case 5:
+            let HomeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = HomeStoryboard.instantiateViewController(withIdentifier: "DeleteAccountPopViewController")
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.modalTransitionStyle = .crossDissolve
+            vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+            self.present(vc, animated: true, completion: nil)
         default:
             break
         }
