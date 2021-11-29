@@ -26,13 +26,32 @@
                                     <segue destination="dM7-yA-Fc8" kind="embed" id="6hG-Tb-mcD"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xD9-IT-UJ0">
+                                <rect key="frame" x="0.0" y="572" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-ZJ-Wao">
+                                        <rect key="frame" x="0.0" y="-2" width="44" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="126"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="O3x-ZJ-Wao" firstAttribute="leading" secondItem="xD9-IT-UJ0" secondAttribute="leading" id="GaU-JX-OdA"/>
+                                    <constraint firstItem="O3x-ZJ-Wao" firstAttribute="centerY" secondItem="xD9-IT-UJ0" secondAttribute="centerY" id="emd-py-Klm"/>
+                                    <constraint firstAttribute="height" constant="40" id="glp-hF-8YZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0dG-Ff-SBM" secondAttribute="trailing" id="5IA-EG-fyh"/>
+                            <constraint firstItem="xD9-IT-UJ0" firstAttribute="trailing" secondItem="0dG-Ff-SBM" secondAttribute="trailing" id="CsR-gw-aje"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0dG-Ff-SBM" secondAttribute="bottom" id="W8v-wr-93J"/>
+                            <constraint firstItem="0dG-Ff-SBM" firstAttribute="top" secondItem="xD9-IT-UJ0" secondAttribute="bottom" id="a43-yT-fs6"/>
                             <constraint firstItem="0dG-Ff-SBM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dyy-cx-BoN"/>
+                            <constraint firstItem="xD9-IT-UJ0" firstAttribute="leading" secondItem="0dG-Ff-SBM" secondAttribute="leading" id="j5f-Tw-Hql"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,7 +66,19 @@
                     <view key="view" contentMode="scaleToFill" id="5dB-dZ-MsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF8-xF-lQc">
+                                <rect key="frame" x="173.5" y="131.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ixt-sV-1go"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KF8-xF-lQc" firstAttribute="centerY" secondItem="ixt-sV-1go" secondAttribute="centerY" id="SgA-CT-bQs"/>
+                            <constraint firstItem="KF8-xF-lQc" firstAttribute="centerX" secondItem="ixt-sV-1go" secondAttribute="centerX" id="jgT-Xt-ko3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewx-Xx-XP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -56,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="126" width="44" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
