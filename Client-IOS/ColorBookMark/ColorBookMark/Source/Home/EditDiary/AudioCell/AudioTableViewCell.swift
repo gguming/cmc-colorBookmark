@@ -8,7 +8,7 @@
 import UIKit
 
 class AudioTableViewCell: UITableViewCell {
-
+    var recordPresentDelegate: RecordDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +19,13 @@ class AudioTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    @IBAction func addRecordBtnTapped(_ sender: Any) {
+        recordPresentDelegate?.presentRecordVC()
+        
+    }
     
+}
+
+protocol RecordDelegate{
+    func presentRecordVC()
 }

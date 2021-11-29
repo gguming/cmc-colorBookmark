@@ -22,6 +22,7 @@ class EditDiaryViewController: UIViewController  {
         tableview.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
         tableview.register(UINib(nibName: "PhotoHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoHaveTableViewCell")
         tableview.register(UINib(nibName: "AudioTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioTableViewCell")
+        tableview.register(UINib(nibName: "AudioHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioHaveTableViewCell")
         tableview.register(UINib(nibName: "EditBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "EditBtnTableViewCell")
        
         
@@ -32,7 +33,16 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate{
+    func presentRecordVC() {
+        let sb = UIStoryboard(name: "Audio", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func addPhoto() {
         addPost()
     }
@@ -90,6 +100,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
+            cell.recordPresentDelegate = self
         
             return cell
             

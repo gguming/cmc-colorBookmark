@@ -35,6 +35,7 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
         return 1 + (photos?.count ?? 0)
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch indexPath.item {
