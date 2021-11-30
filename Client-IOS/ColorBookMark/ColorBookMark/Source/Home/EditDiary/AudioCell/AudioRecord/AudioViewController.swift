@@ -27,6 +27,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
         super.viewDidLoad()
 
         setUI()
+        setupRecorder()
         playBtn.isEnabled = false
     }
     
@@ -44,26 +45,30 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     
     @IBAction func playBtnTapped(_ sender: Any) {
         if playBtn.imageView?.image == UIImage(systemName: "play.fill") {
-            playBtn.setImage(systemName: "stop.fill")
+            print(1)
+            playBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             recordBtn.isEnabled = false
             setupPlayer()
             soundPlayer.play()
-            progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
+//            progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
         } else {
+            print(122)
             soundPlayer.stop()
-            playBtn.setTitle("Play", for: .normal)
             
+            playBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
             recordBtn.isEnabled = false
         }
     }
     
     @IBAction func recordBtnTapped(_ sender: Any) {
         if recordBtn.imageView?.image == UIImage(systemName: "circle.fill") {
+            print(1)
             soundRecorder.record()
             recordBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             playBtn.isEnabled = false
             progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
         } else {
+            print(122)
             soundRecorder.stop()
             recordBtn.setImage(UIImage(systemName: "circle.fill"), for: .normal)
             setupPlayer()
@@ -105,7 +110,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
             soundPlayer.currentTime = 0
 //            progress.progress = 0
 //            endTime.text = convertNSTimeInterval12String(soundPlayer.duration)
-            infoLabel.text = convertNSTimeInterval12String(0)
+//            infoLabel.text = convertNSTimeInterval12String(0)
             
             soundPlayer.prepareToPlay()
             soundPlayer.volume = 1.0
@@ -121,19 +126,10 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         recordBtn.isEnabled = true
-//        playBtn.setTitle("Play", for: .normal)
+        playBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
     
-    @IBAction func recordAct(_ sender: Any) {
-        
-        
-       
-    }
-    
-    @IBAction func playAct(_ sender: Any) {
-        
-      
-    }
+   
     
     func convertNSTimeInterval12String(_ time:TimeInterval) -> String {
         let min = Int(time/60)
@@ -143,7 +139,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     }
     
     @objc func updatePlayTime(){
-        infoLabel.text = convertNSTimeInterval12String(soundPlayer.currentTime) // 재생 시간인 audioPlayer.currentTime을 lblCurrentTime에 나타냄
+//        infoLabel.text = convertNSTimeInterval12String(soundPlayer.currentTime) // 재생 시간인 audioPlayer.currentTime을 lblCurrentTime에 나타냄
 //        progress.progress = Float(soundPlayer.currentTime/soundPlayer.duration) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
     @objc func updateRecordTime(){
