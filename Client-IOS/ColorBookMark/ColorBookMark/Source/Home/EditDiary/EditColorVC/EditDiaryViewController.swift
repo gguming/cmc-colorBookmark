@@ -61,6 +61,8 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func dismissEditDiary() {
+        let recordInfo = RecordInfo.shared
+        recordInfo.recordURL = nil
         self.dismiss(animated: true, completion: nil)
     }
     

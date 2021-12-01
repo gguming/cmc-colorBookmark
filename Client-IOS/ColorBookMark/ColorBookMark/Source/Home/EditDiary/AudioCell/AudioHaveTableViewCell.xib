@@ -31,16 +31,41 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XL-3Xa">
-                        <rect key="frame" x="197.5" y="73.5" width="150" height="10"/>
+                        <rect key="frame" x="188.5" y="54.5" width="168" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="fKB-nJ-yn1"/>
-                            <constraint firstAttribute="height" constant="10" id="vv9-Lj-ffn"/>
+                            <constraint firstAttribute="width" constant="168" id="fKB-nJ-yn1"/>
+                            <constraint firstAttribute="height" constant="48" id="vv9-Lj-ffn"/>
                         </constraints>
-                        <color key="progressTintColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="progressTintColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                     </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7T-40-tgG">
+                        <rect key="frame" x="307.5" y="71.5" width="34" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-fw-xFM">
+                        <rect key="frame" x="203.5" y="67.5" width="15" height="22"/>
+                        <color key="tintColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="play.fill" catalog="system"/>
+                        <connections>
+                            <action selector="playBtnTapped:" destination="wRO-KC-LeD" eventType="touchUpInside" id="PJj-6w-Fpp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aH-Ca-CoX">
+                        <rect key="frame" x="361.5" y="27.5" width="22" height="22"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="recordX"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="s7T-40-tgG" firstAttribute="centerY" secondItem="Wbs-XL-3Xa" secondAttribute="centerY" id="A0O-3T-FAK"/>
+                    <constraint firstItem="5aH-Ca-CoX" firstAttribute="leading" secondItem="Wbs-XL-3Xa" secondAttribute="trailing" constant="5" id="EkM-Fp-sZh"/>
                     <constraint firstItem="Wbs-XL-3Xa" firstAttribute="centerX" secondItem="x2q-ik-fhd" secondAttribute="centerX" id="GQa-9l-aaD"/>
+                    <constraint firstItem="QRY-fw-xFM" firstAttribute="centerY" secondItem="Wbs-XL-3Xa" secondAttribute="centerY" id="In0-OR-2D2"/>
+                    <constraint firstItem="s7T-40-tgG" firstAttribute="trailing" secondItem="Wbs-XL-3Xa" secondAttribute="trailing" constant="-15" id="LDQ-aZ-UhU"/>
+                    <constraint firstItem="Wbs-XL-3Xa" firstAttribute="top" secondItem="5aH-Ca-CoX" secondAttribute="bottom" constant="5" id="SkO-9H-ufK"/>
                     <constraint firstAttribute="bottom" secondItem="d6G-dB-D2M" secondAttribute="bottom" id="WS8-Ou-tga"/>
                     <constraint firstItem="UAB-rh-Vrk" firstAttribute="top" secondItem="x2q-ik-fhd" secondAttribute="top" constant="10" id="ayh-47-cjw"/>
                     <constraint firstAttribute="trailing" secondItem="d6G-dB-D2M" secondAttribute="trailing" constant="20" id="bNb-Hu-Vxf"/>
@@ -48,13 +73,20 @@
                     <constraint firstItem="UAB-rh-Vrk" firstAttribute="leading" secondItem="x2q-ik-fhd" secondAttribute="leading" constant="28" id="uDv-Gb-Omk"/>
                     <constraint firstItem="Wbs-XL-3Xa" firstAttribute="centerY" secondItem="x2q-ik-fhd" secondAttribute="centerY" id="vOp-R0-pao"/>
                     <constraint firstItem="d6G-dB-D2M" firstAttribute="leading" secondItem="x2q-ik-fhd" secondAttribute="leading" constant="20" id="wu0-rT-TsO"/>
+                    <constraint firstItem="QRY-fw-xFM" firstAttribute="leading" secondItem="Wbs-XL-3Xa" secondAttribute="leading" constant="15" id="wwS-5X-1Hl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="yAC-db-C21"/>
             <connections>
+                <outlet property="durationTime" destination="s7T-40-tgG" id="rMT-sa-iBq"/>
+                <outlet property="playBtn" destination="QRY-fw-xFM" id="tD9-3Q-BdX"/>
                 <outlet property="progressBar" destination="Wbs-XL-3Xa" id="VkR-Rm-MYH"/>
             </connections>
             <point key="canvasLocation" x="271.73913043478262" y="220.64732142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="recordX" width="22" height="22"/>
+    </resources>
 </document>
