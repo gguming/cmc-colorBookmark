@@ -7,12 +7,18 @@
 
 import UIKit
 
-class AudioBackgroundViewController: UIViewController {
-
+class AudioBackgroundViewController: UIViewController{
+    var recordSaveDelegate: recordSaveDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        recordSaveDelegate?.recordSave()
+        
     }
     
 
@@ -21,4 +27,8 @@ class AudioBackgroundViewController: UIViewController {
     }
     
 
+}
+
+protocol recordSaveDelegate {
+    func recordSave()
 }
