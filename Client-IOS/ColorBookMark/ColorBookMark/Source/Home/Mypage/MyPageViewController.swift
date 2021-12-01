@@ -21,14 +21,21 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var MypageTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Constant.email != "Kakao" {
-            AccountLabel.text = Constant.email
-            LoginLabel.text = "이메일로 로그인 하셨네요!"
-        }
+        MypageTableview.separatorStyle = .none
         
         if Constant.email == "Kakao" {
             AccountLabel.text = "Kakao Account"
             LoginLabel.text = "카카오로 로그인 하셨네요!"
+        }
+        
+        if Constant.email == "Apple" {
+            AccountLabel.text = "Apple Account"
+            LoginLabel.text = "애플 아이디로 로그인 하셨네요!"
+        }
+        
+        else {
+            AccountLabel.text = Constant.email
+            LoginLabel.text = "이메일로 로그인 하셨네요!"
         }
         
         MypageTableview.delegate = self
@@ -64,7 +71,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MypageTableview.frame.width * 0.15
+        return MypageTableview.frame.width * 0.15 + 12
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

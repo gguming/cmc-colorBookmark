@@ -200,7 +200,9 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                 }
             }
-        
+            else {
+                cell.CircleImage.tintColor = .clear
+            }
             
             cell.CircleImage.isHidden = false
             cell.DateLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)

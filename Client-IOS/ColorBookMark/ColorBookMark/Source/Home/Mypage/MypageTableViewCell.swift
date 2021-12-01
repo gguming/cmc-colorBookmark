@@ -9,10 +9,12 @@ import UIKit
 
 class MypageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var MypageView: UIView!
     @IBOutlet weak var MypageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 12
+        MypageView.layer.cornerRadius = 12
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
