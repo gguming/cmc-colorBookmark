@@ -53,7 +53,6 @@ class LoginPageViewController: UIViewController {
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
     
     override func viewDidLoad() {
-
         let topHeight = view.frame.height * 1/4
         iconImage.topAnchor.constraint(equalTo: view.topAnchor, constant: topHeight).isActive = true
         kakaoButton.layer.cornerRadius = 20

@@ -112,7 +112,18 @@ struct Constant {
        }
     }
 
-//    static var settingArray = ["N", "N", "N"]
+    static var notFirstTimeLaunch: Bool?
+   = UserDefaults.standard.bool(forKey: "checkNotFirstTimeLaunch")
+    {
+        didSet {
+           // UserDefault에 저장
+           guard let notFirstTimeLaunch = notFirstTimeLaunch else { return }
+           print("notFirstTimeLaunch: \(notFirstTimeLaunch)")
+           UserDefaults.standard.set(notFirstTimeLaunch, forKey: "checkNotFirstTimeLaunch")
+       }
+    }
+    
+
     static let SERVER_BASE_URL = "https://saekalpi.shop"
    
 }
