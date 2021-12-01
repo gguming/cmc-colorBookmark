@@ -11,7 +11,6 @@ import YPImagePicker
 class EditDiaryViewController: UIViewController  {
     var pickedImg: [UIImage] = []
     var colors: [Colors]?
-    var recordUrl:URL?
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,18 +99,10 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             
             
         case 4:
-            if recordUrl == .none {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
-                cell.recordPresentDelegate = self
-            
-                return cell
-            } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioHaveTableViewCell", for: indexPath) as? AudioHaveTableViewCell else {return UITableViewCell()}
-                
-            
-                return cell
-            }
-            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
+            cell.recordPresentDelegate = self
+        
+            return cell
             
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditBtnTableViewCell", for: indexPath) as? EditBtnTableViewCell else {return UITableViewCell()}
