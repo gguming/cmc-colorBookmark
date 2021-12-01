@@ -57,6 +57,9 @@
                         <rect key="frame" x="361.5" y="27.5" width="22" height="22"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="recordX"/>
+                        <connections>
+                            <action selector="deleteBtnTapped:" destination="wRO-KC-LeD" eventType="touchUpInside" id="Ddz-hn-HY6"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

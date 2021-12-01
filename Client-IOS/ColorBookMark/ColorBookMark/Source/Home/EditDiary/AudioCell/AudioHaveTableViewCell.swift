@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
+    
+    var deleteRecordDelegate: DeleteRecordDelegate?
 
     
     var soundPlayer : AVAudioPlayer!
@@ -23,7 +25,10 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
         super.awakeFromNib()
         // Initialization code
         setupPlayer()
-        playBtn.layer.cornerRadius = 24
+        progressBar.layer.cornerRadius = 24
+        progressBar.clipsToBounds = true
+        
+        
         
     }
 
@@ -33,6 +38,9 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
         // Configure the view for the selected state
     }
     
+    @IBAction func deleteBtnTapped(_ sender: Any) {
+        deleteRecordDelegate?.deleteRecord()
+    }
     
     @IBAction func playBtnTapped(_ sender: Any) {
         
@@ -83,3 +91,9 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
         progressBar.progress = Float(soundPlayer.currentTime/soundPlayer.duration) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
 }
+
+protocol DeleteRecordDelegate {
+    func deleteRecord()
+}
+
+
