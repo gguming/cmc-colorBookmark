@@ -11,7 +11,11 @@ import KakaoSDKAuth
 import KakaoSDKUser
 import KakaoSDKCommon
 
-class LoginPageViewController: UIViewController {
+class LoginPageViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    
     lazy var dataManager: KakaoLoginDataManager = KakaoLoginDataManager()
     
     @IBAction func KakaoLogin(_ sender: Any) {
@@ -36,12 +40,15 @@ class LoginPageViewController: UIViewController {
     }
     
     @IBAction func AppleLogin(_ sender: Any) {
+        print("애플로그인1")
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
         let controller = ASAuthorizationController(authorizationRequests: [request])
         controller.delegate = self
-        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.presentationContextProvider = self
         controller.performRequests()
+//        controller.presentationContextProvider = self
+//        controller.performRequests()
     }
     
     @IBAction func EmailLogin(_ sender: Any) {
@@ -78,16 +85,23 @@ class LoginPageViewController: UIViewController {
 
 extension LoginPageViewController : ASAuthorizationControllerDelegate  {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        print("애플로그인2")
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             let user = credential.user
             print("👨‍🍳 \(user)")
             if let email = credential.email {
                 print("✉️ \(email)")
+                Constant.email = email
             }
         }
+        
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
+        changeRootViewController(vc)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("애플로그인3")
         print("error \(error)")
     }
 }
