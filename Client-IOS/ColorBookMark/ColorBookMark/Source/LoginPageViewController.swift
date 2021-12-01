@@ -87,13 +87,15 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         print("애플로그인2")
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            let user = credential.user
-            print("👨‍🍳 \(user)")
             if let email = credential.email {
-                print("✉️ \(email)")
                 Constant.email = email
             }
+            else {
+                Constant.email = "Apple"
+            }
         }
+        
+    
         
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
