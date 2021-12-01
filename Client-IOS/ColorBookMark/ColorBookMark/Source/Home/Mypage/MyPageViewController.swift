@@ -21,6 +21,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var MypageTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        MypageTableview.separatorStyle = .none
         
         if Constant.email == "Kakao" {
             AccountLabel.text = "Kakao Account"
@@ -70,7 +71,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MypageTableview.frame.width * 0.15
+        return MypageTableview.frame.width * 0.15 + 12
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
