@@ -35,7 +35,13 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate{
+    func deleteRecord() {
+        let recordInfo = RecordInfo.shared
+        recordInfo.recordURL = nil
+        self.tableview.reloadData()
+    }
+    
     func recordSave() {
         self.tableview.reloadData()
     }
@@ -61,6 +67,8 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func dismissEditDiary() {
+        let recordInfo = RecordInfo.shared
+        recordInfo.recordURL = nil
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -116,7 +124,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioHaveTableViewCell", for: indexPath) as? AudioHaveTableViewCell else {return UITableViewCell()}
-                
+                cell.deleteRecordDelegate = self
             
                 return cell
             }
