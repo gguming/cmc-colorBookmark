@@ -9,11 +9,16 @@ import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backView.backgroundColor = .red
+        backView.layer.cornerRadius = 45
+        backView.isHidden = true
+        
     }
     
 
@@ -26,9 +31,9 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
     
     func selectAni() {
-        colorView.layer.masksToBounds = true
-        colorView.layer.borderWidth = 2
-        colorView.layer.borderColor = UIColor(red: 255, green: 111, blue: 111, alpha: 1).cgColor
+//        colorView.layer.masksToBounds = true
+        backView.isHidden = true
+        self.isSelected = true
     }
 
 }
