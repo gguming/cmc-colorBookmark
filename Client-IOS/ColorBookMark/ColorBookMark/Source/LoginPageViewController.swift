@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 import KakaoSDKAuth
 import KakaoSDKUser
 import KakaoSDKCommon
@@ -35,6 +36,12 @@ class LoginPageViewController: UIViewController {
     }
     
     @IBAction func AppleLogin(_ sender: Any) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
     }
     
     @IBAction func EmailLogin(_ sender: Any) {
@@ -67,4 +74,20 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
     }
 
+}
+
+extension LoginPageViewController : ASAuthorizationControllerDelegate  {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let user = credential.user
+            print("👨‍🍳 \(user)")
+            if let email = credential.email {
+                print("✉️ \(email)")
+            }
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("error \(error)")
+    }
 }
