@@ -9,6 +9,7 @@ import UIKit
 import YPImagePicker
 
 class EditDiaryViewController: UIViewController  {
+    var recordUrl: URL?
     var pickedImg: [UIImage] = []
     var colors: [Colors]?
     @IBOutlet var tableview: UITableView!
@@ -29,17 +30,25 @@ class EditDiaryViewController: UIViewController  {
         tableview.dataSource = self
         tableview.delegate = self
         
+        
     }
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate{
+    func recordSave() {
+        self.tableview.reloadData()
+    }
+    
+   
+    
     func presentRecordVC() {
         let sb = UIStoryboard(name: "Audio", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+        vc.recordSaveDelegate = self
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -99,10 +108,18 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             
             
         case 4:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
-            cell.recordPresentDelegate = self
-        
-            return cell
+            if recordUrl == nil {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
+                cell.recordPresentDelegate = self
+            
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioHaveTableViewCell", for: indexPath) as? AudioHaveTableViewCell else {return UITableViewCell()}
+                
+            
+                return cell
+            }
+            
             
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditBtnTableViewCell", for: indexPath) as? EditBtnTableViewCell else {return UITableViewCell()}

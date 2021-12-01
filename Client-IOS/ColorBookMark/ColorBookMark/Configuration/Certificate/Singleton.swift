@@ -42,5 +42,8 @@ class ColorPickerInfo {
 
 class RecordInfo {
     static let shared = RecordInfo()
+    var recordURL: URL?
+    
+    private init() {}
     
 }
