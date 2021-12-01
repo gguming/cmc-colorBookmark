@@ -218,21 +218,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if let cell = CalenderCollectionview.cellForItem(at: indexPath) as? CalenderCollectionViewCell{
-            cell.CircleImage.tintColor = .brown
-        }
-        
-        let cell = CalenderCollectionview.dequeueReusableCell(withReuseIdentifier: "CalenderCollectionViewCell", for: indexPath) as! CalenderCollectionViewCell
-        cell.CircleImage.tintColor = .brown
-        print("cell SELECTED")
-        print(days[indexPath.row])
-        
-//        cell.CircleImage.isHidden = true
-//        cell.backgroundColor = UIColor.mainPink
-        
-        //self.CalenderCollectionview.reloadData()
-        //print(CalendarInfo.shared.calenderDate[indexPath.row])
+
     }
     
 }
