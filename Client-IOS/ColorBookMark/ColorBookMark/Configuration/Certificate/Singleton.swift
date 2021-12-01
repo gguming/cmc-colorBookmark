@@ -39,3 +39,8 @@ class ColorPickerInfo {
     
     private init() {}
 }
+
+class RecordInfo {
+    static let shared = RecordInfo()
+    
+}
