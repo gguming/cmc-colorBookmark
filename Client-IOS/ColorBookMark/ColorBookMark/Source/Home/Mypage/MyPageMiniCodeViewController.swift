@@ -27,13 +27,10 @@ class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         MypageMiniCodeCollectionview.delegate = self
         MypageMiniCodeCollectionview.dataSource = self
         let miniCode = Constant.miniCode!
         MiniCodeCheckValue = miniCode.map { String($0) }
-        print(MiniCodeCheckValue)
-        
     }
     
     func minicode() {
