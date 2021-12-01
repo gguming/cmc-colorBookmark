@@ -108,7 +108,8 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             
             
         case 4:
-            if recordUrl == nil {
+            let recordInfo = RecordInfo.shared
+            if recordInfo.recordURL == nil {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "AudioTableViewCell", for: indexPath) as? AudioTableViewCell else {return UITableViewCell()}
                 cell.recordPresentDelegate = self
             
