@@ -77,6 +77,8 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
         }
     }
     @IBAction func saveBtnTapped(_ sender: Any) {
+        let sb = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
     }
     
     
