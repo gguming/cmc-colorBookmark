@@ -28,7 +28,19 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
 
         setUI()
         setupRecorder()
+        saveBtn.isEnabled = false
         playBtn.isEnabled = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let sb = UIStoryboard(name: "Home", bundle: nil)
+        if let vc = sb.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController{
+            DispatchQueue.main.async {
+                vc.tableview.reloadData()
+            }
+        }
+        
     }
     
     func setUI(){
@@ -66,16 +78,25 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
             soundRecorder.record()
             recordBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             playBtn.isEnabled = false
+            saveBtn.isEnabled = false
+            saveBtn.backgroundColor = hexStringToUIColor(hex: "#F2F2F2")
             progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
         } else {
             print(122)
             soundRecorder.stop()
             recordBtn.setImage(UIImage(systemName: "circle.fill"), for: .normal)
             setupPlayer()
+            
             playBtn.isEnabled = false
         }
     }
     @IBAction func saveBtnTapped(_ sender: Any) {
+        let sb = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "EditDiaryViewController") as? EditDiaryViewController else {return}
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
+        print(audioFilename)
+        vc.recordUrl = audioFilename
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -121,6 +142,8 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         playBtn.isEnabled = true
+        saveBtn.isEnabled = true
+        saveBtn.backgroundColor = .red
         
     }
     
@@ -144,6 +167,28 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     }
     @objc func updateRecordTime(){
         infoLabel.text = convertNSTimeInterval12String(soundRecorder.currentTime)
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
 
