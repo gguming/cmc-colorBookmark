@@ -44,46 +44,56 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
         let recordInfo = RecordInfo.shared
         
         if !pickedImg.isEmpty {
-            for img in 0..<pickedImg.count{
-                guard let image = pickedImg[img].pngData() else {return}
-                storage.child("images/\(uuid)/\(img).png").putData(image,
-                                                              metadata: nil){ _, error in
-                    guard error == nil else {
-                        print("Failed to upload")
-                        return
-                    }
-                    self.storage.child("images/\(uuid)/\(img).png").downloadURL { url, error in
-                        guard let url = url, error == nil else {
+            DispatchQueue.global(qos: .userInteractive).sync {
+                
+                for img in 0..<pickedImg.count{
+                    guard let image = pickedImg[img].pngData() else {return}
+                    storage.child("images/\(uuid)/\(img).png").putData(image,
+                                                                  metadata: nil){ _, error in
+                        guard error == nil else {
+                            print("Failed to upload")
                             return
                         }
-                        
-                        let urlString = url.absoluteString
-                        self.imgUrls.append(urlString)
-                        print("-------> URL : \(urlString)")
-                        
+                        self.storage.child("images/\(uuid)/\(img).png").downloadURL { url, error in
+                            guard let url = url, error == nil else {
+                                return
+                            }
+                            
+                            let urlString = url.absoluteString
+                            self.imgUrls.append(urlString)
+                            print("-------> URL : \(urlString)")
+                            
+                        }
                     }
+                    
                 }
-                
             }
+            
         }
         
         if recordInfo.recordURL != nil {
-            guard let record = recordInfo.recordURL else {return}
-            storage.child("record/\(uuid)/\(record).m4a").putFile(from: record, metadata: nil) { metadata, error in
-                if error != nil {
-                    print(error ?? "error")
-                }
-
-                self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { url, error in
-                    guard let url = url, error == nil else {
-                        return
+            DispatchQueue.global(qos: .userInteractive).sync {
+                guard let record = recordInfo.recordURL else {return}
+                storage.child("record/\(uuid)/\(record).m4a").putFile(from: record, metadata: nil) { metadata, error in
+                    if error != nil {
+                        print(error ?? "error")
                     }
-                    let urlString = url.absoluteString
-                    self.recordUrl = urlString
-                    print("------->record URL : \(urlString)")
-                })
+
+                    self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { url, error in
+                        guard let url = url, error == nil else {
+                            return
+                        }
+                        let urlString = url.absoluteString
+                        self.recordUrl = urlString
+                        print("------->record URL : \(urlString)")
+                    })
+                }
+                
+                
             }
+            
         }
+        
         
         
     }

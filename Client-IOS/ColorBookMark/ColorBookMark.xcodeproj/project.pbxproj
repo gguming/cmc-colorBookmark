@@ -54,6 +54,7 @@
 		A4901A3D2758B1740024CD0F /* PostDiaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */; };
 		A4901A3F2758B7C40024CD0F /* PostDiaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */; };
 		A4901A412758B8FE0024CD0F /* PostDiaryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A402758B8FE0024CD0F /* PostDiaryDataManager.swift */; };
+		A4901A442758BE2A0024CD0F /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A432758BE2A0024CD0F /* IndicatorView.swift */; };
 		A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */; };
 		A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */; };
 		A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */; };
@@ -205,6 +206,7 @@
 		A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryRequest.swift; sourceTree = "<group>"; };
 		A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryResponse.swift; sourceTree = "<group>"; };
 		A4901A402758B8FE0024CD0F /* PostDiaryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryDataManager.swift; sourceTree = "<group>"; };
+		A4901A432758BE2A0024CD0F /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
 		A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 		A46839E4272E74B6005BA79E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				A4901A422758BE0D0024CD0F /* Common */,
 				A46839E6272E753E005BA79E /* Certificate */,
 				A46839E5272E74DC005BA79E /* Extension */,
 			);
@@ -655,6 +658,14 @@
 				A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		A4901A422758BE0D0024CD0F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4901A432758BE2A0024CD0F /* IndicatorView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A49DB73727477C9C00AF315F /* HeaderCell */ = {
@@ -1046,6 +1057,7 @@
 				E9DBB60E2753E66E00F2A32D /* DeleteAccountResponse.swift in Sources */,
 				E9445BA0273C72B500B4EC82 /* EmailCheckResponse.swift in Sources */,
 				E9A236F5274F57C50043836A /* ChangePasswordRequest.swift in Sources */,
+				A4901A442758BE2A0024CD0F /* IndicatorView.swift in Sources */,
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
