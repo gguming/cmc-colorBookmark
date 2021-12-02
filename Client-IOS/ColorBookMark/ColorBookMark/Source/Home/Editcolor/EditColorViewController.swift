@@ -88,7 +88,7 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
             cell.setUI()
-            cell.colorView.backgroundColor = hexStringToUIColor(hex: "#\(colors?[indexPath.item-1].color ?? "000000")")
+            cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item-1].color ?? "#000000")")
             cell.colorNameLabel.text = colors?[indexPath.item-1].colorName
             return cell
         }

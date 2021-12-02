@@ -165,7 +165,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
         cell.setUI()
-        cell.colorView.backgroundColor = hexStringToUIColor(hex: "#\(colors?[indexPath.item].color ?? "000000")")
+        cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }

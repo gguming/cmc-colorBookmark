@@ -288,5 +288,15 @@ extension EditDiaryViewController {
 // delegate
 
 extension EditDiaryViewController {
+    func didSuccessPostDiary(_ result: PostDiaryResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message)
+       
+        
+    }
     
+    func failedToPostDiary(message: String) {
+        print("------>>>>\(message)")
+        
+    }
 }
