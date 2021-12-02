@@ -8,7 +8,7 @@
 import UIKit
 
 class EditBtnTableViewCell: UITableViewCell {
-
+    var addDiaryDelegate: AddDiaryDelegate?
     @IBOutlet weak var editBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +22,12 @@ class EditBtnTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func addDiaryBtnTapped(_ sender: Any) {
+        addDiaryDelegate?.addDiary()
+    }
+    
+}
+
+protocol AddDiaryDelegate {
+    func addDiary()
 }

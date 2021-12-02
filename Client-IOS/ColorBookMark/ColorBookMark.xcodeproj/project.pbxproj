@@ -413,6 +413,7 @@
 		A461AD3D2736D5980067C6D1 /* EditDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A4901A392758A56F0024CD0F /* Entity */,
 				A47C4D51273BAE1E00CEB907 /* HeadCell */,
 				A47C4D53273BAE8800CEB907 /* ColorCell */,
 				A47C4D54273BAE9200CEB907 /* TextCell */,
@@ -630,6 +631,21 @@
 				A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */,
 			);
 			path = AddDiarayBtnCell;
+			sourceTree = "<group>";
+		};
+		A4901A392758A56F0024CD0F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4901A3A2758A57D0024CD0F /* New Group */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A4901A3A2758A57D0024CD0F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A49DB73727477C9C00AF315F /* HeaderCell */ = {
