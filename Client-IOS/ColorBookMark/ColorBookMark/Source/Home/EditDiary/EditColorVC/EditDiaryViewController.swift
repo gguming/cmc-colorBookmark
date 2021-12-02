@@ -7,11 +7,14 @@
 
 import UIKit
 import YPImagePicker
+import FirebaseStorage
 
 class EditDiaryViewController: UIViewController  {
-    var recordUrl: URL?
+    var recordUrl: String?
     var pickedImg: [UIImage] = []
+    var imgUrls: [String] = []
     var colors: [Colors]?
+    let storage = Storage.storage().reference()
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,56 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate{
+    func addDiary() {
+        let uuid = UUID().uuidString
+        let recordInfo = RecordInfo.shared
+        
+        if !pickedImg.isEmpty {
+            for img in 0..<pickedImg.count{
+                guard let image = pickedImg[img].pngData() else {return}
+                storage.child("images/\(uuid)/\(img).png").putData(image,
+                                                              metadata: nil){ _, error in
+                    guard error == nil else {
+                        print("Failed to upload")
+                        return
+                    }
+                    self.storage.child("images/\(uuid)/\(img).png").downloadURL { url, error in
+                        guard let url = url, error == nil else {
+                            return
+                        }
+                        
+                        let urlString = url.absoluteString
+                        self.imgUrls.append(urlString)
+                        print("-------> URL : \(urlString)")
+                        
+                    }
+                }
+                
+            }
+        }
+        
+        if recordInfo.recordURL != nil {
+            guard let record = recordInfo.recordURL else {return}
+            storage.child("record/\(uuid)/\(record).m4a").putFile(from: record, metadata: nil) { metadata, error in
+                if error != nil {
+                    print(error ?? "error")
+                }
+
+                self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { url, error in
+                    guard let url = url, error == nil else {
+                        return
+                    }
+                    let urlString = url.absoluteString
+                    self.recordUrl = urlString
+                    print("------->record URL : \(urlString)")
+                })
+            }
+        }
+        
+        
+    }
+    
     func deleteRecord() {
         let recordInfo = RecordInfo.shared
         recordInfo.recordURL = nil
@@ -132,7 +184,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditBtnTableViewCell", for: indexPath) as? EditBtnTableViewCell else {return UITableViewCell()}
-        
+            cell.addDiaryDelegate = self
             return cell
             
         default:
@@ -236,5 +288,15 @@ extension EditDiaryViewController {
 // delegate
 
 extension EditDiaryViewController {
+    func didSuccessPostDiary(_ result: PostDiaryResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message)
+       
+        
+    }
     
+    func failedToPostDiary(message: String) {
+        print("------>>>>\(message)")
+        
+    }
 }

@@ -10,11 +10,15 @@ import UIKit
 class TextTableViewCell: UITableViewCell {
 
     let placeHolder = "글을 입력해 주세요"
+    let recordInfo = RecordInfo.shared
     @IBOutlet weak var textView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
         textView.text = placeHolder
+        if textView.text == placeHolder {
+            recordInfo.text = ""
+        }
         
     }
 
@@ -29,6 +33,7 @@ class TextTableViewCell: UITableViewCell {
 extension TextTableViewCell: UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeHolder {
+            recordInfo.text = ""
             textView.text = nil
         }
     }
@@ -36,6 +41,8 @@ extension TextTableViewCell: UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = placeHolder
+            recordInfo.text = ""
         }
+        recordInfo.text = textView.text
     }
 }

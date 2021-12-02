@@ -48,6 +48,17 @@ class ColorTableViewCell: UITableViewCell {
         )
     }
     
+    func hexStringFromColor(color: UIColor) -> String {
+        let components = color.cgColor.components
+        let r: CGFloat = components?[0] ?? 0.0
+        let g: CGFloat = components?[1] ?? 0.0
+        let b: CGFloat = components?[2] ?? 0.0
+
+        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
+        print(hexString)
+        return hexString
+     }
+    
 }
 
 extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -59,7 +70,7 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
         cell.setUI()
         
-        cell.colorView.backgroundColor = hexStringToUIColor(hex: "#\(colors?[indexPath.item].color ?? "000000")")
+        cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }
@@ -70,11 +81,11 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
-        
-        cell.selectAni()
-        
+        let colorInfo = ColorPickerInfo.shared
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
+//        
+        colorInfo.color = colors?[indexPath.item].color
+        colorInfo.colorName = colors?[indexPath.item].colorName
         
     }
     

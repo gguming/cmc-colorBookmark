@@ -51,6 +51,9 @@
 		A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475558227476D7C00593C70 /* StoryTableViewCell.swift */; };
 		A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475558327476D7C00593C70 /* StoryTableViewCell.xib */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
+		A4901A3D2758B1740024CD0F /* PostDiaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */; };
+		A4901A3F2758B7C40024CD0F /* PostDiaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */; };
+		A4901A412758B8FE0024CD0F /* PostDiaryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A402758B8FE0024CD0F /* PostDiaryDataManager.swift */; };
 		A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */; };
 		A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */; };
 		A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */; };
@@ -199,6 +202,9 @@
 		A475558227476D7C00593C70 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		A475558327476D7C00593C70 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryRequest.swift; sourceTree = "<group>"; };
+		A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryResponse.swift; sourceTree = "<group>"; };
+		A4901A402758B8FE0024CD0F /* PostDiaryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryDataManager.swift; sourceTree = "<group>"; };
 		A49DB72B2747757F00AF315F /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		A49DB72C2747757F00AF315F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
 		A49DB72F2747764C00AF315F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -413,6 +419,7 @@
 		A461AD3D2736D5980067C6D1 /* EditDiary */ = {
 			isa = PBXGroup;
 			children = (
+				A4901A392758A56F0024CD0F /* PostDiaryDataManager */,
 				A47C4D51273BAE1E00CEB907 /* HeadCell */,
 				A47C4D53273BAE8800CEB907 /* ColorCell */,
 				A47C4D54273BAE9200CEB907 /* TextCell */,
@@ -630,6 +637,24 @@
 				A45C040F273E353A00D4C26F /* EditBtnTableViewCell.xib */,
 			);
 			path = AddDiarayBtnCell;
+			sourceTree = "<group>";
+		};
+		A4901A392758A56F0024CD0F /* PostDiaryDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4901A3B2758B14E0024CD0F /* Entity */,
+				A4901A402758B8FE0024CD0F /* PostDiaryDataManager.swift */,
+			);
+			path = PostDiaryDataManager;
+			sourceTree = "<group>";
+		};
+		A4901A3B2758B14E0024CD0F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */,
+				A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		A49DB73727477C9C00AF315F /* HeaderCell */ = {
@@ -1105,6 +1130,8 @@
 				A4BAF46D274DDDF500187878 /* PhotoBtnCollectionViewCell.swift in Sources */,
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
+				A4901A3F2758B7C40024CD0F /* PostDiaryResponse.swift in Sources */,
+				A4901A412758B8FE0024CD0F /* PostDiaryDataManager.swift in Sources */,
 				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
@@ -1112,6 +1139,7 @@
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
 				E9A236F3274F57BB0043836A /* ChangePasswordResponse.swift in Sources */,
 				E9336CCA274D004700686AF1 /* MiniCodeResponse.swift in Sources */,
+				A4901A3D2758B1740024CD0F /* PostDiaryRequest.swift in Sources */,
 				A49DB735274776B600AF315F /* ButtonsTableViewCell.swift in Sources */,
 				E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */,
 				E9A237012750876B0043836A /* ChangeNicknameDataManager.swift in Sources */,
