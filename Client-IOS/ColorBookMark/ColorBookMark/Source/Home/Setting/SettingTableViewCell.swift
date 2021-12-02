@@ -13,6 +13,7 @@ protocol PresentVCDelegate: AnyObject {
 }
 
 class SettingTableViewCell: UITableViewCell {
+    let userNotiCenter = UNUserNotificationCenter.current()
     lazy var dataManager: SettingDataManager = SettingDataManager()
     weak var cellDelegate: PresentVCDelegate?
     var cellNumber: Int? = nil
@@ -130,6 +131,9 @@ extension SettingTableViewCell {
             print("알림 ON")
             let settingInput = SettingRequest(alarmStatus: "Y")
             dataManager.getSettingValue(settingInput, delegate: self)
+            print("^^^")
+            requestAuthNoti()
+            requestSendNoti(seconds: 3)
         case 1:
             print("암호 ON")
             let settingInput = SettingRequest(miniCodeStatus: "Y")
@@ -142,6 +146,37 @@ extension SettingTableViewCell {
             dataManager.getSettingValue(settingInput, delegate: self)
         default:
             break
+        }
+    }
+}
+
+extension SettingTableViewCell {
+    func requestAuthNoti() {
+        print("HHHH")
+            let notiAuthOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
+            userNotiCenter.requestAuthorization(options: notiAuthOptions) { (success, error) in
+                if let error = error {
+                    print(#function, error)
+                }
+            }
+        }
+    
+    func requestSendNoti(seconds: Double) {
+        print("GGGGG")
+        let notiContent = UNMutableNotificationContent()
+        notiContent.title = "색갈피 알림"
+        notiContent.body = "10시가 되었습니다! 색갈피를 작성해주세요"
+
+        
+        var datComp = DateComponents()
+        datComp.hour = 22
+        datComp.minute = 0
+        let trigger = UNCalendarNotificationTrigger(dateMatching: datComp, repeats: true)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notiContent, trigger: trigger)
+        
+        userNotiCenter.add(request) { (error) in
+            print(#function, error)
         }
     }
 }

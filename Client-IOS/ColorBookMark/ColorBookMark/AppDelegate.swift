@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         KakaoSDK.initSDK(appKey: "e2a97fb8904d79724a04615b8f993706")
         FirebaseApp.configure()
+        UNUserNotificationCenter.current().delegate = self
         
         return true
     }
@@ -39,3 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        completionHandler()
+    }
+}
