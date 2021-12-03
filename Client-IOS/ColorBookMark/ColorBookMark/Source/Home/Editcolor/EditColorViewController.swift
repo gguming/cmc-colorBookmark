@@ -94,6 +94,11 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
         }
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("ㅎㅎㅎ")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 104.0, height: 148.0)
     }

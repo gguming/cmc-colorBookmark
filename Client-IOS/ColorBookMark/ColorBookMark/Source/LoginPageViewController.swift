@@ -85,7 +85,7 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
 
 extension LoginPageViewController : ASAuthorizationControllerDelegate  {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-
+        
         print("애플로그인2")
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             if let email = credential.email {
@@ -93,6 +93,16 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
             }
             else {
                 Constant.email = "Apple"
+            }
+            
+            if let authorizationCode = credential.authorizationCode,
+               let identityToken = credential.identityToken,
+               let authString = String(data: authorizationCode, encoding: .utf8),
+               let tokenString = String(data: identityToken, encoding: .utf8) {
+                print("authorizationCode: \(authorizationCode)")
+                print("identityToken: \(identityToken)")
+                print("authString: \(authString)")
+                print("tokenString: \(tokenString)")
             }
         }
         

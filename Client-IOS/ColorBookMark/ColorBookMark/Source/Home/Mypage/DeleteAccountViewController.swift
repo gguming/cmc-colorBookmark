@@ -19,6 +19,8 @@ class DeleteAccountViewController: UIViewController {
     @IBOutlet weak var NoButton: UIButton!
     
     @IBAction func YesButtonTapped(_ sender: Any) {
+        Constant.notFirstTimeLaunch = false
+        
         UserApi.shared.logout {(error) in
             if let error = error {
                 print(error)

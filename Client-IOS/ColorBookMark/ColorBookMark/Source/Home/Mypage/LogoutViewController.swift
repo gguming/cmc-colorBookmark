@@ -19,6 +19,8 @@ class LogoutViewController: UIViewController {
     @IBOutlet weak var NoButton: UIButton!
     
     @IBAction func YesButtonTapped(_ sender: Any) {
+        Constant.notFirstTimeLaunch = false
+        
         UserApi.shared.logout {(error) in
             if let error = error {
                 print(error)
@@ -30,6 +32,8 @@ class LogoutViewController: UIViewController {
         
         Constant.jwt = nil
  
+       
+        
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
         changeRootViewController(vc)
