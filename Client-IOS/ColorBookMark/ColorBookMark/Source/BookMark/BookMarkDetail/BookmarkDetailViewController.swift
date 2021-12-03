@@ -10,6 +10,8 @@ import UIKit
 class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
     
+    var modifyMode: Bool?
+    
 
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
@@ -17,6 +19,7 @@ class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        modifyMode = false
         tableview.backgroundColor = .clear
         tableview.dataSource = self
         tableview.delegate = self
