@@ -75,6 +75,8 @@
 		A4BAF46A274DC0B600187878 /* PhotoHaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF468274DC0B600187878 /* PhotoHaveTableViewCell.xib */; };
 		A4BAF46D274DDDF500187878 /* PhotoBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF46B274DDDF500187878 /* PhotoBtnCollectionViewCell.swift */; };
 		A4BAF46E274DDDF500187878 /* PhotoBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF46C274DDDF500187878 /* PhotoBtnCollectionViewCell.xib */; };
+		A4C037D32759D28000486C62 /* BookmarkHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C037D12759D28000486C62 /* BookmarkHeaderTableViewCell.swift */; };
+		A4C037D42759D28000486C62 /* BookmarkHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C037D22759D28000486C62 /* BookmarkHeaderTableViewCell.xib */; };
 		A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FC7273F71290091565C /* EditColor.storyboard */; };
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */; };
@@ -227,6 +229,8 @@
 		A4BAF468274DC0B600187878 /* PhotoHaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoHaveTableViewCell.xib; sourceTree = "<group>"; };
 		A4BAF46B274DDDF500187878 /* PhotoBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBtnCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BAF46C274DDDF500187878 /* PhotoBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoBtnCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4C037D12759D28000486C62 /* BookmarkHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A4C037D22759D28000486C62 /* BookmarkHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A4C69FC7273F71290091565C /* EditColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditColor.storyboard; sourceTree = "<group>"; };
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorBtnCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -356,13 +360,6 @@
 				A4333EAB274CBA15002EEB8C /* ColorResponse.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BookMarkHeadCell;
 			sourceTree = "<group>";
 		};
 		A43BF39C273BEA41008DF16A /* ColorCollectionCell */ = {
@@ -715,6 +712,15 @@
 			path = PhotoCollectionCell;
 			sourceTree = "<group>";
 		};
+		A4C037D02759D22700486C62 /* BookMarkHeadCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4C037D12759D28000486C62 /* BookmarkHeaderTableViewCell.swift */,
+				A4C037D22759D28000486C62 /* BookmarkHeaderTableViewCell.xib */,
+			);
+			path = BookMarkHeadCell;
+			sourceTree = "<group>";
+		};
 		A4C3BEC92737A50F006A42E0 /* Calander */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,8 +749,8 @@
 		A4C69FC9273F71400091565C /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
+				A4C037D02759D22700486C62 /* BookMarkHeadCell */,
 				A475557A2747653000593C70 /* BookMarkDetail */,
-				A4333EB0274CD5B4002EEB8C /* BookMarkHeadCell */,
 				A475557527474F5400593C70 /* BookMarkCell */,
 				A4C69FCA273F71590091565C /* BookMark.storyboard */,
 				A47555732747480200593C70 /* BookmarkViewController.swift */,
@@ -988,6 +994,7 @@
 				A4EA33412757908500121E5A /* GoogleService-Info.plist in Resources */,
 				E9E4A9872734EE090037A815 /* Home.storyboard in Resources */,
 				E9445BBC273F614300B4EC82 /* SettingTableViewCell.xib in Resources */,
+				A4C037D42759D28000486C62 /* BookmarkHeaderTableViewCell.xib in Resources */,
 				A45DF80127537D080067021C /* AudioHaveTableViewCell.xib in Resources */,
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
 				A45DF803275382FA0067021C /* Audio.storyboard in Resources */,
@@ -1095,6 +1102,7 @@
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
+				A4C037D32759D28000486C62 /* BookmarkHeaderTableViewCell.swift in Sources */,
 				E9336CD2274D144000686AF1 /* SettingRequest.swift in Sources */,
 				A45C0410273E353A00D4C26F /* EditBtnTableViewCell.swift in Sources */,
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
