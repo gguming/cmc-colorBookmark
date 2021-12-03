@@ -10,6 +10,8 @@ import UIKit
 class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
     
+    var modifyMode: Bool?
+    
 
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
@@ -17,6 +19,7 @@ class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        modifyMode = false
         tableview.backgroundColor = .clear
         tableview.dataSource = self
         tableview.delegate = self
@@ -25,6 +28,15 @@ class BookmarkDetailViewController: UIViewController {
         tableview.register(UINib(nibName: "StoryTableViewCell", bundle: nil), forCellReuseIdentifier: "StoryTableViewCell")
         tableview.register(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "ImagesTableViewCell")
         tableview.register(UINib(nibName: "RecordTableViewCell", bundle: nil), forCellReuseIdentifier: "RecordTableViewCell")
+        
+        tableview.register(UINib(nibName: "StoryHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "StoryHaveTableViewCell")
+        tableview.register(UINib(nibName: "ImageHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageHaveTableViewCell")
+        tableview.register(UINib(nibName: "RecordHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "RecordHaveTableViewCell")
+        
+        tableview.register(UINib(nibName: "ModifyStoryTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyStoryTableViewCell")
+        tableview.register(UINib(nibName: "ModifyImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyImageCellTableViewCell")
+        tableview.register(UINib(nibName: "ModifyRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyRecordTableViewCell")
+        
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
         
         dayView.layer.cornerRadius = 8
