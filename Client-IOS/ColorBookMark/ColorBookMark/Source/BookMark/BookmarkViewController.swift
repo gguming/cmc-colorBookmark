@@ -23,6 +23,7 @@ class BookmarkViewController: UIViewController {
         tableview.dataSource = self
         tableview.delegate = self
         tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
+        tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
         setUI()
         
         
@@ -40,14 +41,31 @@ class BookmarkViewController: UIViewController {
 
 extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 5
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
-        cell.backView.layer.cornerRadius = 8
-        cell.clipsToBounds = true
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkHeaderTableViewCell", for: indexPath) as? BookmarkHeaderTableViewCell else {return UITableViewCell()}
+            cell.buttonUI()
+            return cell
+            
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
+            cell.backView.layer.cornerRadius = 8
+            cell.clipsToBounds = true
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,6 +76,10 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     
