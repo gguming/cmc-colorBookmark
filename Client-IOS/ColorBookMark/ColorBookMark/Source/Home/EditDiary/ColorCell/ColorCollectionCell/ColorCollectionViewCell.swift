@@ -9,6 +9,9 @@ import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
 
+    var colorDelegate: ColorCollectionViewCellDelegate?
+    var index: Int = 0
+    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorNameLabel: UILabel!
@@ -19,10 +22,24 @@ class ColorCollectionViewCell: UICollectionViewCell {
         backView.layer.cornerRadius = 45
         backView.isHidden = true
         
+        let tapGesture_1 = UITapGestureRecognizer(target: self, action: #selector(EditColorCircle))
+        colorView.addGestureRecognizer(tapGesture_1)
+        colorView.isUserInteractionEnabled = true
+        
+        let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(EditColorName))
+        colorNameLabel.addGestureRecognizer(tapGesture_2)
+        colorNameLabel.isUserInteractionEnabled = true
+
+
     }
     
-
-
+    @objc func EditColorCircle() {
+        self.colorDelegate?.selectedColorCircle(index: index)
+    }
+    
+    @objc func EditColorName() {
+        self.colorDelegate?.selectedColorName(index: index)
+    }
     
     
     func setUI() {
