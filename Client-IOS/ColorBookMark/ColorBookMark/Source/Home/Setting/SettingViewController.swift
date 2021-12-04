@@ -159,16 +159,6 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("PPPPPP")
-//        if indexPath.section == 3 {
-//            print("kakkakakaka")
-//            let notionUrl = NSURL(string: "https://mixolydian-gerbil-052.notion.site/2a306dbd3c104c4e8066d7695a647db2")
-//            let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl as! URL)
-//            present(notionSafariView, animated: true, completion: nil)
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
@@ -183,7 +173,6 @@ extension SettingViewController: PresentVCDelegate {
     }
     
     @objc func ToNotionSafari() {
-        print("리얼?")
         let notionUrl = NSURL(string: "https://mixolydian-gerbil-052.notion.site/2a306dbd3c104c4e8066d7695a647db2")
         let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl as! URL)
         present(notionSafariView, animated: true, completion: nil)
