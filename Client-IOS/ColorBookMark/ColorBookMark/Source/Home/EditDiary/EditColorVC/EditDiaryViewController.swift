@@ -35,6 +35,8 @@ class EditDiaryViewController: UIViewController  {
         
         
     }
+    
+//    private func currentMonth()
 
 }
 
