@@ -15,10 +15,7 @@ class TextTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
-        textView.text = placeHolder
-        if textView.text == placeHolder {
-            recordInfo.text = ""
-        }
+        
         
     }
 
@@ -31,18 +28,14 @@ class TextTableViewCell: UITableViewCell {
 }
 
 extension TextTableViewCell: UITextViewDelegate{
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == placeHolder {
-            recordInfo.text = ""
-            textView.text = nil
-        }
-    }
-    
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if textView.text == placeHolder {
+//            recordInfo.text = ""
+//            textView.text = nil
+//        }
+//    }
+//
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = placeHolder
-            recordInfo.text = ""
-        }
         recordInfo.text = textView.text
     }
 }
