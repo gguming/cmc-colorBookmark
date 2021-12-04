@@ -923,11 +923,11 @@
 				E9445B99273B8FE400B4EC82 /* SettingViewController.swift */,
 				E9445BB9273F614300B4EC82 /* SettingTableViewCell.swift */,
 				E9445BBA273F614300B4EC82 /* SettingTableViewCell.xib */,
+				E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */,
 				E9336CB9274B45FE00686AF1 /* MiniCodeViewController.swift */,
 				E9336CBB274B463C00686AF1 /* MiniCodeCollectionViewCell.swift */,
 				E9336CBF274CDA9400686AF1 /* MiniCodeCheckViewController.swift */,
 				E9336CC1274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift */,
-				E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
