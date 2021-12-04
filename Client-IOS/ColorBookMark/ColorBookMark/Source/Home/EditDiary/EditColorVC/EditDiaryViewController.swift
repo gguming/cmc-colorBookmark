@@ -28,7 +28,6 @@ class EditDiaryViewController: UIViewController  {
         tableview.register(UINib(nibName: "AudioTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioTableViewCell")
         tableview.register(UINib(nibName: "AudioHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "AudioHaveTableViewCell")
         tableview.register(UINib(nibName: "EditBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "EditBtnTableViewCell")
-       
         
         tableview.dataSource = self
         tableview.delegate = self

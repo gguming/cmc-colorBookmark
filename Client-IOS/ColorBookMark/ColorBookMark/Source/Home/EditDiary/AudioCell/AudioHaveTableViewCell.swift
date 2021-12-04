@@ -60,6 +60,7 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
     func setupPlayer() {
         let audioFilename = RecordInfo.shared.recordURL
         do {
+            
             soundPlayer = try AVAudioPlayer(contentsOf: audioFilename!)
             soundPlayer.delegate = self
             soundPlayer.stop()

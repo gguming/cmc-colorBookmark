@@ -9,6 +9,9 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
+    @IBAction func deletePhotoBtnTapped(_ sender: Any) {
+        
+    }
     @IBOutlet weak var img: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
