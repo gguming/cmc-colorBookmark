@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ColorCollectionViewCellDelegate {
+    func selectedColorCircle(index: Int)
+    func selectedColorName(index: Int)
+}
+
 class EditColorViewController: UIViewController {
     
     var colors: [Colors]?
@@ -90,13 +95,11 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
             cell.setUI()
             cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item-1].color ?? "#000000")")
             cell.colorNameLabel.text = colors?[indexPath.item-1].colorName
+            cell.index = indexPath.row
+            cell.colorDelegate = self
             return cell
         }
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("ㅎㅎㅎ")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -133,8 +136,16 @@ extension EditColorViewController {
         
     }
     
-    
-    
 }
 
+extension EditColorViewController: ColorCollectionViewCellDelegate{
+    func selectedColorName(index: Int) {
+//        let cell = collectionview.cellForItem(at: index) as! ColorCollectionViewCell
 
+    }
+    
+    func selectedColorCircle(index: Int) {
+      
+    }
+
+}
