@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		521F991BDB31C54538C3FF84 /* Pods_ColorBookMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB02CA2A382EE95510514044 /* Pods_ColorBookMark.framework */; };
+		A415224F275B22330090655D /* BackgroundColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415224E275B22330090655D /* BackgroundColorDataManager.swift */; };
+		A4152251275B22650090655D /* GetBackgroundColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4152250275B22650090655D /* GetBackgroundColorRequest.swift */; };
+		A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4152252275B227E0090655D /* GetBackgroundColorResponse.swift */; };
 		A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D4B81275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift */; };
 		A42D4B84275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42D4B82275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib */; };
 		A42D4B8A275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D4B88275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift */; };
@@ -172,6 +175,9 @@
 		72DF6957315B9B2345F4D344 /* Pods-BookMarkofColors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMarkofColors.debug.xcconfig"; path = "Target Support Files/Pods-BookMarkofColors/Pods-BookMarkofColors.debug.xcconfig"; sourceTree = "<group>"; };
 		76AA424305B3C72DF16F6516 /* Pods-ColorBookMark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookMark.release.xcconfig"; path = "Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark.release.xcconfig"; sourceTree = "<group>"; };
 		9F018461C39BAF8F70241EBB /* Pods-ColorBookMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookMark.debug.xcconfig"; path = "Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark.debug.xcconfig"; sourceTree = "<group>"; };
+		A415224E275B22330090655D /* BackgroundColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorDataManager.swift; sourceTree = "<group>"; };
+		A4152250275B22650090655D /* GetBackgroundColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBackgroundColorRequest.swift; sourceTree = "<group>"; };
+		A4152252275B227E0090655D /* GetBackgroundColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBackgroundColorResponse.swift; sourceTree = "<group>"; };
 		A42D4B81275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHaveTableViewCell.swift; sourceTree = "<group>"; };
 		A42D4B82275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryHaveTableViewCell.xib; sourceTree = "<group>"; };
 		A42D4B88275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyStoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -376,6 +382,32 @@
 				EB02CA2A382EE95510514044 /* Pods_ColorBookMark.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A415224B275B21E90090655D /* BackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				A415224D275B220F0090655D /* DataManager */,
+				A415224C275B22010090655D /* Entity */,
+			);
+			path = BackgroundColor;
+			sourceTree = "<group>";
+		};
+		A415224C275B22010090655D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4152250275B22650090655D /* GetBackgroundColorRequest.swift */,
+				A4152252275B227E0090655D /* GetBackgroundColorResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A415224D275B220F0090655D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A415224E275B22330090655D /* BackgroundColorDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		A42D4B85275A0EAC00D5B9B3 /* ModifyStorycell */ = {
@@ -936,6 +968,7 @@
 		E9E4A9852734EDDA0037A815 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A415224B275B21E90090655D /* BackgroundColor */,
 				E9336CB427493A3700686AF1 /* Mypage */,
 				A4C69FC6273F71120091565C /* Editcolor */,
 				E9445B98273B8F8500B4EC82 /* Setting */,
@@ -1157,15 +1190,18 @@
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
+				A4152251275B22650090655D /* GetBackgroundColorRequest.swift in Sources */,
 				E9A236F927507E950043836A /* ChangeNicknameViewController.swift in Sources */,
 				A4A91E242753CE2900273A01 /* AudioBackgroundViewController.swift in Sources */,
 				E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */,
 				E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */,
 				A49DB72D2747757F00AF315F /* ImagesTableViewCell.swift in Sources */,
+				A415224F275B22330090655D /* BackgroundColorDataManager.swift in Sources */,
 				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
 				A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
+				A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */,
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
 				A42D4B92275A0FBE00D5B9B3 /* ModifyRecordTableViewCell.swift in Sources */,

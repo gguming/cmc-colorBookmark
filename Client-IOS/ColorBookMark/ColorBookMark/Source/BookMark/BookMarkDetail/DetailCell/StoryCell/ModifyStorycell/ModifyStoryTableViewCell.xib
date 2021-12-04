@@ -39,19 +39,10 @@
                         <rect key="frame" x="0.0" y="27" width="320" height="117"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-Cm-Gdc">
-                                <rect key="frame" x="103" y="33" width="114.5" height="51.5"/>
+                                <rect key="frame" x="103" y="51.5" width="114.5" height="14.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storyImg" translatesAutoresizingMaskIntoConstraints="NO" id="ERE-fB-VpE">
-                                        <rect key="frame" x="41" y="0.0" width="32" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="Z34-Ky-jFA"/>
-                                            <constraint firstAttribute="width" constant="32" id="w43-en-zqq"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 스토리가 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-ae-4Rg">
-                                        <rect key="frame" x="0.0" y="37" width="114.5" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -81,7 +72,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="storyImg" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
