@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyPageViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var LogoutContainerView: UIView!
     
     let myPageTitle = ["닉네임 수정", "비밀변호 변경", "개인정보처리방침", "서비스이용약관", "로그아웃", "회원 탈퇴"]
@@ -72,10 +72,6 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MypageTableview.frame.width * 0.15 + 12
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

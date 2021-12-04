@@ -38,7 +38,7 @@ class DeleteAccountViewController: UIViewController {
             }
             self.deleteAccountSuccess()
         }
-        
+        Constant.didLogin = false
         dataManager.deleteAccount(delegate: self)
     }
     

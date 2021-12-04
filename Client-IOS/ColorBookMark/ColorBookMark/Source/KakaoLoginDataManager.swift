@@ -24,6 +24,7 @@ class KakaoLoginDataManager {
                         Constant.jwt = response.result?.jwt
                         Constant.userId = response.result?.userId
                         Constant.email = "Kakao"
+                        Constant.didLogin = true
                     
                     }
                     

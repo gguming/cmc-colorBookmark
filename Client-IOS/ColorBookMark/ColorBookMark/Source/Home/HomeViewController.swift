@@ -62,8 +62,10 @@ class HomeViewController: BaseViewController {
         collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
         collectionview.dataSource = self
         collectionview.delegate = self
+        print("시작화면 닉네임 값")
+        print(Constant.nickname)
+        print(Constant.jwt)
         
-
     }
     
     func getColors() {

@@ -123,6 +123,17 @@ struct Constant {
        }
     }
     
+    static var didLogin: Bool?
+   = UserDefaults.standard.bool(forKey: "checkDidLogin")
+    {
+        didSet {
+           // UserDefault에 저장
+           guard let didLogin = didLogin else { return }
+           print("didLogin: \(didLogin)")
+           UserDefaults.standard.set(didLogin, forKey: "checkDidLogin")
+       }
+    }
+    
 
     static let SERVER_BASE_URL = "https://saekalpi.shop"
    

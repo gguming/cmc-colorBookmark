@@ -31,9 +31,8 @@ class LogoutViewController: UIViewController {
         }
         
         Constant.jwt = nil
- 
-       
-        
+        Constant.didLogin = false
+
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
         changeRootViewController(vc)
