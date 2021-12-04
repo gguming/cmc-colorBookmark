@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -15,6 +16,7 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
     let grayColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
     let boldFont = UIFont.systemFont(ofSize: 16, weight: .bold)
     var currentCellNumber = [0,1,2]
+   
     
     @IBOutlet weak var NicknameLabel: UILabel!
     @IBAction func ToMypageButtonTapped(_ sender: Any) {
@@ -39,7 +41,7 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +49,7 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section != 3 && indexPath.section != 4 {
+        if indexPath.section != 3 {
         return tableView.estimatedRowHeight
         }
         let cellWidth = SettingTableview.frame.width
@@ -145,13 +147,27 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
         let cell = SettingTableview.dequeueReusableCell(withIdentifier: "SecondSettingTableViewCell", for: indexPath) as! SecondSettingTableViewCell
         
         switch indexPath.section {
-        case 3: cell.SecondSettingLabel.text = "백업과 복원"
-        case 4: cell.SecondSettingLabel.text = "색갈피는?"
+        case 3:
+            cell.SecondSettingLabel.text = "색갈피는?"
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ToNotionSafari))
+            cell.SecondCellview.addGestureRecognizer(tapGesture)
+            cell.SecondCellview.isUserInteractionEnabled = true
+            
         default: break
         }
         
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("PPPPPP")
+//        if indexPath.section == 3 {
+//            print("kakkakakaka")
+//            let notionUrl = NSURL(string: "https://mixolydian-gerbil-052.notion.site/2a306dbd3c104c4e8066d7695a647db2")
+//            let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl as! URL)
+//            present(notionSafariView, animated: true, completion: nil)
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
@@ -164,5 +180,12 @@ extension SettingViewController: PresentVCDelegate {
         let vc = homeStoryboard.instantiateViewController(withIdentifier: "MiniCodeViewController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func ToNotionSafari() {
+        print("리얼?")
+        let notionUrl = NSURL(string: "https://mixolydian-gerbil-052.notion.site/2a306dbd3c104c4e8066d7695a647db2")
+        let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl as! URL)
+        present(notionSafariView, animated: true, completion: nil)
     }
 }
