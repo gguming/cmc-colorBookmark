@@ -22,13 +22,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
         backView.layer.cornerRadius = 45
         backView.isHidden = true
         
-//        let tapGesture_1 = UITapGestureRecognizer(target: self, action: #selector(EditColorCircle))
-//        colorView.addGestureRecognizer(tapGesture_1)
-//        colorView.isUserInteractionEnabled = true
-//        
-//        let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(EditColorName))
-//        colorNameLabel.addGestureRecognizer(tapGesture_2)
-//        colorNameLabel.isUserInteractionEnabled = true
+        
 
 
     }
@@ -51,6 +45,16 @@ class ColorCollectionViewCell: UICollectionViewCell {
 //        colorView.layer.masksToBounds = true
         backView.isHidden = true
         self.isSelected = true
+    }
+    
+    func setGesture() {
+        let tapGesture_1 = UITapGestureRecognizer(target: self, action: #selector(EditColorCircle))
+        colorView.addGestureRecognizer(tapGesture_1)
+        colorView.isUserInteractionEnabled = true
+        
+        let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(EditColorName))
+        colorNameLabel.addGestureRecognizer(tapGesture_2)
+        colorNameLabel.isUserInteractionEnabled = true
     }
 
 }

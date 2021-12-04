@@ -45,6 +45,8 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
         let uuid = UUID().uuidString
         let recordInfo = RecordInfo.shared
         
+        
+        print("시작시작시작시작시작")
         if !pickedImg.isEmpty {
             DispatchQueue.global(qos: .userInteractive).sync {
                 
@@ -95,6 +97,8 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
             }
             
         }
+        
+        print("끝끝끝끝끝")
         
         
         
