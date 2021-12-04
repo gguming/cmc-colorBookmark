@@ -9,7 +9,7 @@ import UIKit
 import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
         let SB = UIStoryboard(name: "BookMark", bundle: nil)
@@ -43,7 +43,9 @@ class HomeViewController: UIViewController {
     // color data
     
     lazy var colorDataManager: GetColorListDataManager = GetColorListDataManager()
+//    lazy var backcolorDataManager: BackgroundColorDataManager = BackgroundColorDataManager()
     var colors: [Colors]?
+//    var backgroundColors: [BackColors]?
     
     
     // Action for color
@@ -54,13 +56,19 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getColors()
         calendarSetUI()
         colorviewSetUI()
         collectionview.register(UINib(nibName: "ColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColorCollectionViewCell")
         collectionview.dataSource = self
         collectionview.delegate = self
-        colorDataManager.getColors(delegate: self)
+        
 
+    }
+    
+    func getColors() {
+        colorDataManager.getColors(delegate: self)
+//        backcolorDataManager.getBackgroundColors(delegate: self)
     }
     
     private func editDiaryVC(){
@@ -151,6 +159,22 @@ class HomeViewController: UIViewController {
             alpha: CGFloat(1.0)
         )
     }
+    
+//    func setBackgroundColors() {
+//        let gradient = CAGradientLayer()
+//        gradient.frame = self.view.frame
+//        gradient.colors = [hexStringToUIColor(hex: backgroundColors?[0].color ?? "#FFFFFF").cgColor,
+//                           hexStringToUIColor(hex: backgroundColors?[1].color ?? "#FFFFFF").cgColor,hexStringToUIColor(hex: backgroundColors?[2].color ?? "#FFFFFF").cgColor]
+//        
+//        gradient.startPoint = CGPoint(x: 0, y: 0)
+//        gradient.endPoint = CGPoint(x: 1, y: 1)
+//        
+//        gradient.type = .radial
+////        gradient.mask = shape
+//
+//        self.view.layer.addSublayer(gradient)
+//        print(444444)
+//    }
 }
 
 
@@ -197,6 +221,8 @@ extension HomeViewController {
         print("------>>>>\(message)")
         
     }
+    
+    
     
 }
 

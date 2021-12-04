@@ -8,6 +8,17 @@
 import Foundation
 
 
-struct GetBackgroundColorResponse:Decodable {
+struct GetBackgroundColorResponse: Decodable {
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+    var result: [BackColors]?
     
 }
+
+
+struct BackColors: Decodable {
+    var color: String?
+    var count: Int?
+}
+
