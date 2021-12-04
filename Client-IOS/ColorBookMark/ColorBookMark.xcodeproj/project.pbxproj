@@ -38,7 +38,7 @@
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
 		A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88A272D094D009ABED6 /* SceneDelegate.swift */; };
-		A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* ViewController.swift */; };
+		A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* BaseViewController.swift */; };
 		A45AE890272D094D009ABED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE88E272D094D009ABED6 /* Main.storyboard */; };
 		A45AE892272D094F009ABED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45AE891272D094F009ABED6 /* Assets.xcassets */; };
 		A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45AE893272D094F009ABED6 /* LaunchScreen.storyboard */; };
@@ -206,7 +206,7 @@
 		A45AE885272D094D009ABED6 /* ColorBookMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBookMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A45AE88C272D094D009ABED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A45AE88C272D094D009ABED6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A45AE88F272D094D009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A45AE891272D094F009ABED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45AE894272D094F009ABED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -519,7 +519,7 @@
 				A4C69FC9273F71400091565C /* BookMark */,
 				E9E4A9852734EDDA0037A815 /* Home */,
 				A45AE88E272D094D009ABED6 /* Main.storyboard */,
-				A45AE88C272D094D009ABED6 /* ViewController.swift */,
+				A45AE88C272D094D009ABED6 /* BaseViewController.swift */,
 				A46839F2272E82D2005BA79E /* WalkThrough */,
 				A46839ED272E7626005BA79E /* Login */,
 			);
@@ -1174,7 +1174,7 @@
 				E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */,
 				A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */,
 				A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */,
-				A45AE88D272D094D009ABED6 /* ViewController.swift in Sources */,
+				A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
 				A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */,
 				E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */,
