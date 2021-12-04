@@ -130,6 +130,11 @@
 		E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */; };
 		E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */; };
 		E95683BB275BEC4300F075CF /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */; };
+		E95683BD275C2BC800F075CF /* OriginalColorPickerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */; };
+		E95683BF275C2BD600F075CF /* OriginalColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683BE275C2BD600F075CF /* OriginalColorPickerViewController.swift */; };
+		E95683C1275C2FB600F075CF /* PatchColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C0275C2FB600F075CF /* PatchColorResponse.swift */; };
+		E95683C3275C2FC700F075CF /* PatchColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C2275C2FC700F075CF /* PatchColorRequest.swift */; };
+		E95683C5275C311800F075CF /* PatchColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C4275C311800F075CF /* PatchColorDataManager.swift */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
@@ -307,6 +312,11 @@
 		E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceViewController.swift; sourceTree = "<group>"; };
 		E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = ../../../../../../../Downloads/BackgroundMusic.mp3; sourceTree = "<group>"; };
+		E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalColorPickerMainViewController.swift; sourceTree = "<group>"; };
+		E95683BE275C2BD600F075CF /* OriginalColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalColorPickerViewController.swift; sourceTree = "<group>"; };
+		E95683C0275C2FB600F075CF /* PatchColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorResponse.swift; sourceTree = "<group>"; };
+		E95683C2275C2FC700F075CF /* PatchColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorRequest.swift; sourceTree = "<group>"; };
+		E95683C4275C311800F075CF /* PatchColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorDataManager.swift; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -775,6 +785,8 @@
 			children = (
 				A4A59D26275110ED0018A7F3 /* PostColorRequest.swift */,
 				A4A59D29275112050018A7F3 /* PostColorResponse.swift */,
+				E95683C2275C2FC700F075CF /* PatchColorRequest.swift */,
+				E95683C0275C2FB600F075CF /* PatchColorResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -784,6 +796,7 @@
 			children = (
 				A4A59D23275110AD0018A7F3 /* Entity */,
 				A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */,
+				E95683C4275C311800F075CF /* PatchColorDataManager.swift */,
 			);
 			path = PostColor;
 			sourceTree = "<group>";
@@ -868,6 +881,8 @@
 			children = (
 				A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */,
 				A439A07527483E18000DCA61 /* ColorPickerMainViewController.swift */,
+				E95683BE275C2BD600F075CF /* OriginalColorPickerViewController.swift */,
+				E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -1183,6 +1198,7 @@
 				A42D4B96275A0FD900D5B9B3 /* RecordHaveTableViewCell.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
+				E95683C1275C2FB600F075CF /* PatchColorResponse.swift in Sources */,
 				A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */,
 				E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */,
 				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
@@ -1214,6 +1230,7 @@
 				A415224F275B22330090655D /* BackgroundColorDataManager.swift in Sources */,
 				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
 				A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */,
+				E95683BD275C2BC800F075CF /* OriginalColorPickerMainViewController.swift in Sources */,
 				E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
@@ -1228,6 +1245,7 @@
 				A49DB73A27477CB400AF315F /* HeaderInfoTableViewCell.swift in Sources */,
 				E9DBB60C2753E62600F2A32D /* DeleteAccountDataManager.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
+				E95683BF275C2BD600F075CF /* OriginalColorPickerViewController.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */,
 				E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */,
@@ -1249,6 +1267,7 @@
 				E9A236ED274F27750043836A /* FindPasswordRequest.swift in Sources */,
 				A4A59D212750F1C90018A7F3 /* LogoutPopViewController.swift in Sources */,
 				A42D4B9A275A0FFE00D5B9B3 /* ImageHaveTableViewCell.swift in Sources */,
+				E95683C5275C311800F075CF /* PatchColorDataManager.swift in Sources */,
 				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */,
@@ -1293,6 +1312,7 @@
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
+				E95683C3275C2FC700F075CF /* PatchColorRequest.swift in Sources */,
 				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 				A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */,
 			);

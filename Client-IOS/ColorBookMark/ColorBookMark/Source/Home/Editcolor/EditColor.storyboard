@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Color Picker Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ColorPickerMainViewController" id="Y6W-OH-hqX" customClass="ColorPickerMainViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorPickerMainViewController" id="Y6W-OH-hqX" customClass="ColorPickerMainViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Edit Color View Controller-->
         <scene sceneID="8ie-SV-PGZ">
             <objects>
-                <viewController storyboardIdentifier="EditColorViewController" id="5Bz-pZ-Mjb" customClass="EditColorViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditColorViewController" id="5Bz-pZ-Mjb" customClass="EditColorViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pg2-k9-37k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,10 +185,76 @@
             </objects>
             <point key="canvasLocation" x="-778.26086956521749" y="-342.1875"/>
         </scene>
+        <!--Original Color Picker Main View Controller-->
+        <scene sceneID="7yF-0w-FJY">
+            <objects>
+                <viewController storyboardIdentifier="OriginalColorPickerMainViewController" id="rMi-2f-Kb4" customClass="OriginalColorPickerMainViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpi-pF-kpX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNW-Qj-JVy">
+                                <rect key="frame" x="40" y="124" width="334" height="467.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UNW-Qj-JVy" secondAttribute="height" multiplier="1:1.4" id="pK6-K5-XtL"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="9e7-ed-sOO" kind="embed" id="lOD-PI-z5D"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jrx-Hh-YAF">
+                                <rect key="frame" x="40" y="591.5" width="334" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DP0-6N-AOl">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="취소"/>
+                                        <connections>
+                                            <action selector="cancelBtnTapped:" destination="rMi-2f-Kb4" eventType="touchUpInside" id="sSa-zF-4r3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-Q6-TNc">
+                                        <rect key="frame" x="167" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="저장"/>
+                                        <connections>
+                                            <action selector="saveBtnTapped:" destination="rMi-2f-Kb4" eventType="touchUpInside" id="Eoy-Fk-1B0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HZQ-Kp-clz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="714-I7-o9z"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jrx-Hh-YAF" firstAttribute="trailing" secondItem="UNW-Qj-JVy" secondAttribute="trailing" id="28E-T8-q3z"/>
+                            <constraint firstItem="714-I7-o9z" firstAttribute="trailing" secondItem="UNW-Qj-JVy" secondAttribute="trailing" constant="40" id="2hv-2d-iYw"/>
+                            <constraint firstItem="UNW-Qj-JVy" firstAttribute="leading" secondItem="714-I7-o9z" secondAttribute="leading" constant="40" id="5Ws-Wj-Bjx"/>
+                            <constraint firstItem="jrx-Hh-YAF" firstAttribute="leading" secondItem="UNW-Qj-JVy" secondAttribute="leading" id="fB2-md-mLl"/>
+                            <constraint firstItem="UNW-Qj-JVy" firstAttribute="top" secondItem="714-I7-o9z" secondAttribute="top" constant="80" id="gNg-d9-ofD"/>
+                            <constraint firstItem="jrx-Hh-YAF" firstAttribute="top" secondItem="UNW-Qj-JVy" secondAttribute="bottom" id="qrb-ZJ-lSy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="DP0-6N-AOl" id="j4T-XJ-5JI"/>
+                        <outlet property="saveBtn" destination="Fei-Q6-TNc" id="baQ-6x-Il2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISt-ad-iX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="345"/>
+        </scene>
         <!--Color Picker View Controller-->
         <scene sceneID="UaK-T4-2N3">
             <objects>
-                <viewController storyboardIdentifier="ColorPickerViewController" id="xlj-vM-0iL" customClass="ColorPickerViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorPickerViewController" id="xlj-vM-0iL" customClass="ColorPickerViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="obt-kl-Xc9">
                         <rect key="frame" x="0.0" y="0.0" width="334" height="467.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,6 +265,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05f-Md-U05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204" y="-349"/>
+        </scene>
+        <!--Original Color Picker View Controller-->
+        <scene sceneID="Tkl-HY-1Mr">
+            <objects>
+                <viewController storyboardIdentifier="OriginalColorPickerViewController" id="9e7-ed-sOO" customClass="OriginalColorPickerViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cFS-xU-mZf">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="467.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4G5-bo-Ro8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="345"/>
         </scene>
     </scenes>
     <resources>

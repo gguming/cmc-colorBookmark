@@ -72,9 +72,7 @@ class EditColorViewController: UIViewController {
     func getColor() {
         colorDataManager.getColorsinEditColor(delegate: self)
     }
-    
-
-    
+      
 }
 
 extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
