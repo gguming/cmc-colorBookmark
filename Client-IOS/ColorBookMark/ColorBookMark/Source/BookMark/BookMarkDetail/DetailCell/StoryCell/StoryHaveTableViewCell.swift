@@ -9,9 +9,11 @@ import UIKit
 
 class StoryHaveTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var textView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textView.isEditable = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

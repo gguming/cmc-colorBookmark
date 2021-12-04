@@ -38,31 +38,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-VT-dXl">
                         <rect key="frame" x="0.0" y="27" width="320" height="117"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="faK-qL-eVb">
-                                <rect key="frame" x="103" y="33" width="114.5" height="51.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storyImg" translatesAutoresizingMaskIntoConstraints="NO" id="MAY-lP-oHO">
-                                        <rect key="frame" x="41" y="0.0" width="32" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Q6J-UF-f7K"/>
-                                            <constraint firstAttribute="height" constant="32" id="fCB-fp-uva"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 스토리가 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN5-qJ-0A7">
-                                        <rect key="frame" x="0.0" y="37" width="114.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-cf-oQa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="faK-qL-eVb" firstAttribute="centerX" secondItem="QC7-VT-dXl" secondAttribute="centerX" id="ZYD-p5-Rux"/>
-                            <constraint firstItem="faK-qL-eVb" firstAttribute="centerY" secondItem="QC7-VT-dXl" secondAttribute="centerY" id="ifU-XG-rmt"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0v-cf-oQa" secondAttribute="trailing" id="20h-Ee-gne"/>
+                            <constraint firstItem="Y0v-cf-oQa" firstAttribute="top" secondItem="QC7-VT-dXl" secondAttribute="top" id="CbS-uH-aFS"/>
+                            <constraint firstAttribute="bottom" secondItem="Y0v-cf-oQa" secondAttribute="bottom" id="ZUj-sZ-LsT"/>
+                            <constraint firstItem="Y0v-cf-oQa" firstAttribute="leading" secondItem="QC7-VT-dXl" secondAttribute="leading" id="yjj-ZH-IVV"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -77,11 +66,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="lyw-Nf-22L"/>
+            <connections>
+                <outlet property="textView" destination="Y0v-cf-oQa" id="FW0-Ig-Ef9"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="143.30357142857142"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="storyImg" width="16" height="16"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
