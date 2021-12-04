@@ -47,8 +47,6 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
         controller.delegate = self
         controller.presentationContextProvider = self
         controller.performRequests()
-//        controller.presentationContextProvider = self
-//        controller.performRequests()
     }
     
     @IBAction func EmailLogin(_ sender: Any) {
@@ -90,9 +88,11 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             if let email = credential.email {
                 Constant.email = email
+                print(Constant.email)
             }
             else {
                 Constant.email = "Apple"
+                print(Constant.email)
             }
             
             if let authorizationCode = credential.authorizationCode,
@@ -104,8 +104,11 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
                 print("authString: \(authString)")
                 print("tokenString: \(tokenString)")
             }
+
         }
         
+       
+        Constant.didLogin = true
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
         changeRootViewController(vc)

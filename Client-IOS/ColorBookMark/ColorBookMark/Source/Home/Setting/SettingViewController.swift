@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     let settingTitle = ["알림", "암호", "배경음악"]
     var onOff = "OFF"

@@ -25,17 +25,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
+        print("시작화면")
         
-        if(Constant.notFirstTimeLaunch == false){
+        //MARK: FIRST TIME
+        if Constant.notFirstTimeLaunch == false {
+            print("FIRST TIME")
             Constant.notFirstTimeLaunch = true
             let storyboard = UIStoryboard(name: "WalkThrough", bundle: nil)
             let vc_2 = storyboard.instantiateViewController(withIdentifier: "WalkThroughViewController")
             window?.rootViewController = vc_2
         }
+        
+        //MARK: NOT FIRST TIME
         else{
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let vc_1 = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
-            window?.rootViewController = vc_1
+            //MARK: LOGIN OK
+            if Constant.didLogin == true {
+                print("LOGIN OK")
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let vc_1 = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+                window?.rootViewController = vc_1
+            }
+            else {
+                //MARK: LOGIN X
+                print("LOGIN X")
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                let vc_3 = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
+                window?.rootViewController = vc_3
+            }
            }
         window?.makeKeyAndVisible()
     }

@@ -21,6 +21,7 @@ class KakaoNicknameViewController: UIViewController {
     @IBAction func JoinButtonTapped(_ sender: Any) {
         let nicknameValue = NicknameTextField.text
         Constant.nickname = nicknameValue
+        Constant.didLogin = true
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         changeRootViewController(vc)
