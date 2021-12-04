@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController {
+class BookmarkViewController: BaseViewController {
     @IBOutlet weak var monthView: UIView!
     @IBOutlet weak var monthBtn: UIButton!
     
@@ -26,8 +26,20 @@ class BookmarkViewController: UIViewController {
         tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
         setUI()
         
-        
-
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let changeColors: [CGColor] = [
+           .init(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),
+           .init(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1),
+           .init(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
+        ]
+        let colorAnimation = CABasicAnimation(keyPath: "colors")
+        colorAnimation.toValue = changeColors
+        colorAnimation.duration = 10
+        colorAnimation.autoreverses = true
+        colorAnimation.repeatCount = .infinity
+        gradientLayer.add(colorAnimation, forKey: "colorChangeAnimation")
         
     }
     private func setUI() {
@@ -69,7 +81,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 102
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
