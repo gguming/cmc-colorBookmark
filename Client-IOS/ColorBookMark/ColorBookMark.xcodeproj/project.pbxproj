@@ -129,6 +129,7 @@
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
 		E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */; };
 		E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */; };
+		E95683BB275BEC4300F075CF /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
@@ -305,6 +306,7 @@
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceViewController.swift; sourceTree = "<group>"; };
 		E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = ../../../../../../../Downloads/BackgroundMusic.mp3; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 		A46839E4272E74B6005BA79E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				E95683B9275BEC2F00F075CF /* Music */,
 				A4901A422758BE0D0024CD0F /* Common */,
 				A46839E6272E753E005BA79E /* Certificate */,
 				A46839E5272E74DC005BA79E /* Extension */,
@@ -946,6 +949,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		E95683B9275BEC2F00F075CF /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		E9A236F0274F578D0043836A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1116,7 @@
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */,
 				A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */,
+				E95683BB275BEC4300F075CF /* BackgroundMusic.mp3 in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,
@@ -1445,6 +1457,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1480,6 +1493,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

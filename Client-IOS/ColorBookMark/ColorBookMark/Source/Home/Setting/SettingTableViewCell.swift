@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol PresentVCDelegate: AnyObject {
     
@@ -16,6 +17,8 @@ class SettingTableViewCell: UITableViewCell {
     let userNotiCenter = UNUserNotificationCenter.current()
     lazy var dataManager: SettingDataManager = SettingDataManager()
     weak var cellDelegate: PresentVCDelegate?
+//    var player: AVAudioPlayer!
+    var audioPlayer : AVAudioPlayer!
     var cellNumber: Int? = nil
     var onOff = "OFF"
     let pinkColor = #colorLiteral(red: 1, green: 0.1490196078, blue: 0.5725490196, alpha: 1)
@@ -112,6 +115,7 @@ class SettingTableViewCell: UITableViewCell {
             Constant.setting_2 = "N"
             let settingInput = SettingRequest(BGMStatus: Constant.setting_2)
             dataManager.getSettingValue(settingInput, delegate: self)
+            audioPlayer.stop()
         default:
             break
         }
@@ -131,7 +135,6 @@ extension SettingTableViewCell {
             print("알림 ON")
             let settingInput = SettingRequest(alarmStatus: "Y")
             dataManager.getSettingValue(settingInput, delegate: self)
-            print("^^^")
             requestAuthNoti()
             requestSendNoti(seconds: 3)
         case 1:
@@ -144,6 +147,7 @@ extension SettingTableViewCell {
             print("배경음악 ON")
             let settingInput = SettingRequest(BGMStatus: "Y")
             dataManager.getSettingValue(settingInput, delegate: self)
+            initPlayer()
         default:
             break
         }
@@ -152,7 +156,6 @@ extension SettingTableViewCell {
 
 extension SettingTableViewCell {
     func requestAuthNoti() {
-        print("HHHH")
             let notiAuthOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
             userNotiCenter.requestAuthorization(options: notiAuthOptions) { (success, error) in
                 if let error = error {
@@ -162,7 +165,6 @@ extension SettingTableViewCell {
         }
     
     func requestSendNoti(seconds: Double) {
-        print("GGGGG")
         let notiContent = UNMutableNotificationContent()
         notiContent.title = "색갈피 알림"
         notiContent.body = "10시가 되었습니다! 색갈피를 작성해주세요"
@@ -179,4 +181,20 @@ extension SettingTableViewCell {
             print(#function, error)
         }
     }
+    
+    func initPlayer() {
+        guard let url = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")
+        else {
+            print("error to get the mp3 file")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
+        }
+        catch {
+            print("audio file error")
+        }
+        audioPlayer?.play()
+    }
+
 }
