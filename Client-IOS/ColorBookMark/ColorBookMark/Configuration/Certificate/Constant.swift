@@ -39,12 +39,15 @@ struct Constant {
    = UserDefaults.standard.string(forKey: "checkNickname")
     {
         didSet {
-           // UserDefault에 저장
-           guard let nickname = nickname else { return }
-           print("nickname: \(nickname)")
-           UserDefaults.standard.setValue(jwt, forKey: "checkNickname")
+            // UserDefault에 저장
+            guard let nickname = nickname else { return }
+            print("nickname: \(nickname)")
+            UserDefaults.standard.setValue(jwt, forKey: "checkNickname")
+//            UserDefaults.synchronize()
        }
+     
     }
+    
     
     static var setting_0: String?
    = UserDefaults.standard.string(forKey: "checkSetting_0")
