@@ -127,6 +127,8 @@
 		E9445BC42742A70400B4EC82 /* CalenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC32742A70400B4EC82 /* CalenderResponse.swift */; };
 		E9445BC82745559700B4EC82 /* CalenderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC72745559700B4EC82 /* CalenderRequest.swift */; };
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
+		E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */; };
+		E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
@@ -156,7 +158,6 @@
 		E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */; };
 		E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94D272FD42F0037A815 /* UILabel.swift */; };
 		E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */; };
-		E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */; };
 		E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A955273012940037A815 /* SigninPasswordViewController.swift */; };
 		E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A957273012C20037A815 /* FindPasswordViewController.swift */; };
 		E9E4A9872734EE090037A815 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A9862734EE090037A815 /* Home.storyboard */; };
@@ -302,6 +303,8 @@
 		E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageTableViewCell.swift; sourceTree = "<group>"; };
 		E9445BCD2747BE0C00B4EC82 /* CMC-IOS-ColorBookmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CMC-IOS-ColorBookmark.entitlements"; sourceTree = "<group>"; };
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
+		E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceViewController.swift; sourceTree = "<group>"; };
+		E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -331,7 +334,6 @@
 		E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNickNameViewController.swift; sourceTree = "<group>"; };
 		E9E4A94D272FD42F0037A815 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
-		E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		E9E4A955273012940037A815 /* SigninPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A957273012C20037A815 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A9862734EE090037A815 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -569,7 +571,6 @@
 				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
 				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
 				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
-				E9E4A953272FDC9B0037A815 /* TermsOfUseViewController.swift */,
 				E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */,
 			);
 			name = Login;
@@ -884,6 +885,8 @@
 				E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */,
 				E9DBB6092753E07000F2A32D /* DeleteAccountPopViewController.swift */,
 				E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */,
+				E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */,
+				E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -1199,6 +1202,7 @@
 				A415224F275B22330090655D /* BackgroundColorDataManager.swift in Sources */,
 				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
 				A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */,
+				E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
 				A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */,
@@ -1235,6 +1239,7 @@
 				A42D4B9A275A0FFE00D5B9B3 /* ImageHaveTableViewCell.swift in Sources */,
 				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
+				E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */,
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
@@ -1275,7 +1280,6 @@
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
-				E9E4A954272FDC9B0037A815 /* TermsOfUseViewController.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
 				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 				A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */,

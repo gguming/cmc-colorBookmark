@@ -21,9 +21,6 @@ class ColorCollectionViewCell: UICollectionViewCell {
         backView.backgroundColor = .red
         backView.layer.cornerRadius = 45
         backView.isHidden = true
-        
-        
-
 
     }
     

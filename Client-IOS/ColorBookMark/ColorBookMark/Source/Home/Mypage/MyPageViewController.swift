@@ -97,6 +97,18 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             
+        case 2:
+            let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+            let vc = mypageStoryboard.instantiateViewController(withIdentifier: "TermsOfUseViewController")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
+        case 3:
+            let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+            let vc = mypageStoryboard.instantiateViewController(withIdentifier: "TermsofServiceViewController")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
         case 4:
             let HomeStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = HomeStoryboard.instantiateViewController(withIdentifier: "LogoutPopViewController")
