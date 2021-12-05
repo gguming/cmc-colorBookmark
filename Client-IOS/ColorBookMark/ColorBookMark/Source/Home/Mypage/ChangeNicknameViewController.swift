@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangeNicknameViewController: UIViewController {
+class ChangeNicknameViewController: BaseViewController {
     
     lazy var dataManager: ChangeNicknameDataManager = ChangeNicknameDataManager()
 
@@ -38,6 +38,8 @@ class ChangeNicknameViewController: UIViewController {
     let unabledBackgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
     
     override func viewDidLoad() {
+//        view.backgroundColor = UIColor(white: 1, alpha: 1)
+//        base.backgroundColor = UIColor.white.withAlphaComponent(1)
         ChangeNicknameButton.layer.cornerRadius = 22
         NicknameTextField.layer.cornerRadius = 5
 //        ChangeNicknameButton.isEnabled = false
