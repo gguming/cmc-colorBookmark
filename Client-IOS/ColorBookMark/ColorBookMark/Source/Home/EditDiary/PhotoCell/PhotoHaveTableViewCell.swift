@@ -9,6 +9,7 @@ import UIKit
 
 class PhotoHaveTableViewCell: UITableViewCell {
     var delegate: AddPhotoDelegate?
+    var deletePhoto: DeletePhotoDelegate?
     var photos: [UIImage]?
 
     @IBOutlet weak var photoCollectionview: UICollectionView!
@@ -28,6 +29,8 @@ class PhotoHaveTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+   
+    
 }
 
 extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -46,7 +49,10 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
             return cell
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell else {return UICollectionViewCell()}
+            cell.deleteBtnDelegate = self
             cell.img.image = photos?[indexPath.item-1]
+            cell.index = indexPath.item-1
+           
             
             return cell
         }
@@ -58,9 +64,17 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     
+    
+    
 }
 
-extension PhotoHaveTableViewCell: PhotoAddDelegate {
+
+
+extension PhotoHaveTableViewCell: PhotoAddDelegate, DeleteBtnDelegate {
+    func deleteBtn(index: Int) {
+        deletePhoto?.deletePhoto(index: index)
+    }
+    
     func appendPhoto() {
         delegate?.addPhoto()
     }
@@ -71,3 +85,8 @@ extension PhotoHaveTableViewCell: PhotoAddDelegate {
 protocol AddPhotoDelegate {
     func addPhoto()
 }
+
+protocol DeletePhotoDelegate {
+    func deletePhoto(index: Int)
+}
+

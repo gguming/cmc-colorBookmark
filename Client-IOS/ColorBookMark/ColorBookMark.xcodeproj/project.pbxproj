@@ -65,6 +65,7 @@
 		A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475557B2747655300593C70 /* BookmarkDetailViewController.swift */; };
 		A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A475558227476D7C00593C70 /* StoryTableViewCell.swift */; };
 		A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A475558327476D7C00593C70 /* StoryTableViewCell.xib */; };
+		A47C0369275C58EE00C5DCB0 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A47C0368275C58EE00C5DCB0 /* BackgroundMusic.mp3 */; };
 		A47CE6E8272ECE2D00154628 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */; };
 		A4901A3D2758B1740024CD0F /* PostDiaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */; };
 		A4901A3F2758B7C40024CD0F /* PostDiaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */; };
@@ -129,7 +130,6 @@
 		E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445BC9274644E000B4EC82 /* MypageTableViewCell.swift */; };
 		E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */; };
 		E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */; };
-		E95683BB275BEC4300F075CF /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */; };
 		E95683BD275C2BC800F075CF /* OriginalColorPickerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */; };
 		E95683BF275C2BD600F075CF /* OriginalColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683BE275C2BD600F075CF /* OriginalColorPickerViewController.swift */; };
 		E95683C1275C2FB600F075CF /* PatchColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C0275C2FB600F075CF /* PatchColorResponse.swift */; };
@@ -241,6 +241,7 @@
 		A475557B2747655300593C70 /* BookmarkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailViewController.swift; sourceTree = "<group>"; };
 		A475558227476D7C00593C70 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		A475558327476D7C00593C70 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
+		A47C0368275C58EE00C5DCB0 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
 		A47CE6E7272ECE2D00154628 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		A4901A3C2758B1740024CD0F /* PostDiaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryRequest.swift; sourceTree = "<group>"; };
 		A4901A3E2758B7C40024CD0F /* PostDiaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiaryResponse.swift; sourceTree = "<group>"; };
@@ -311,7 +312,6 @@
 		E94D9323BD7C302C3FF6C659 /* Pods-CMC-IOS-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceViewController.swift; sourceTree = "<group>"; };
 		E95683B7275BB2FE00F075CF /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
-		E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = ../../../../../../../Downloads/BackgroundMusic.mp3; sourceTree = "<group>"; };
 		E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalColorPickerMainViewController.swift; sourceTree = "<group>"; };
 		E95683BE275C2BD600F075CF /* OriginalColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalColorPickerViewController.swift; sourceTree = "<group>"; };
 		E95683C0275C2FB600F075CF /* PatchColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorResponse.swift; sourceTree = "<group>"; };
@@ -543,7 +543,7 @@
 		A46839E4272E74B6005BA79E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				E95683B9275BEC2F00F075CF /* Music */,
+				A47C0367275C58CF00C5DCB0 /* Music */,
 				A4901A422758BE0D0024CD0F /* Common */,
 				A46839E6272E753E005BA79E /* Certificate */,
 				A46839E5272E74DC005BA79E /* Extension */,
@@ -671,6 +671,14 @@
 				A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */,
 			);
 			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		A47C0367275C58CF00C5DCB0 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A47C0368275C58EE00C5DCB0 /* BackgroundMusic.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		A47C4D51273BAE1E00CEB907 /* HeadCell */ = {
@@ -964,14 +972,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		E95683B9275BEC2F00F075CF /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				E95683BA275BEC4300F075CF /* BackgroundMusic.mp3 */,
-			);
-			path = Music;
-			sourceTree = "<group>";
-		};
 		E9A236F0274F578D0043836A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,6 +1100,7 @@
 			files = (
 				A4BAF46E274DDDF500187878 /* PhotoBtnCollectionViewCell.xib in Resources */,
 				A42D4B9B275A0FFE00D5B9B3 /* ImageHaveTableViewCell.xib in Resources */,
+				A47C0369275C58EE00C5DCB0 /* BackgroundMusic.mp3 in Resources */,
 				A4C69FC8273F71290091565C /* EditColor.storyboard in Resources */,
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
@@ -1131,7 +1132,6 @@
 				A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */,
 				A49DB736274776B600AF315F /* ButtonsTableViewCell.xib in Resources */,
 				A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */,
-				E95683BB275BEC4300F075CF /* BackgroundMusic.mp3 in Resources */,
 				E9E4A98F273512350037A815 /* CalenderCollectionViewCell.xib in Resources */,
 				E9E4A926272ED4550037A815 /* Login.storyboard in Resources */,
 				A45C040D273E2FD900D4C26F /* AudioTableViewCell.xib in Resources */,

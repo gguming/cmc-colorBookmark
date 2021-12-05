@@ -9,10 +9,13 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
-    @IBAction func deletePhotoBtnTapped(_ sender: Any) {
-        
+    @IBAction func deleteBtnTapped(_ sender: Any) {
+        deleteBtnDelegate?.deleteBtn(index: self.index ?? 1)
     }
+    
     @IBOutlet weak var img: UIImageView!
+    var deleteBtnDelegate: DeleteBtnDelegate?
+    var index: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,3 +24,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
 
 }
+
+protocol DeleteBtnDelegate{
+    func deleteBtn(index: Int)
+}
+

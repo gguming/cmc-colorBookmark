@@ -39,7 +39,12 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate{
+    func deletePhoto(index: Int) {
+        pickedImg.remove(at: index)
+        tableview.reloadData()
+    }
+    
     func addDiary() {
         let uuid = UUID().uuidString
         let recordInfo = RecordInfo.shared
@@ -176,6 +181,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoHaveTableViewCell", for: indexPath) as? PhotoHaveTableViewCell else {return UITableViewCell()}
                 cell.delegate = self
+                cell.deletePhoto = self
                 cell.photos = pickedImg
                 cell.photoCollectionview.reloadData()
                 return cell
