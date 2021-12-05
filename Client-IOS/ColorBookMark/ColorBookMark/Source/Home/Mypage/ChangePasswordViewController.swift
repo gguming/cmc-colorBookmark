@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: BaseViewController {
     lazy var dataManager: ChangePasswordDataManager = ChangePasswordDataManager()
     var passwordCheck: String? = nil
     
@@ -39,6 +39,7 @@ class ChangePasswordViewController: UIViewController {
     let unabledBackgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
     
     override func viewDidLoad() {
+        self.view.backgroundColor = .white.withAlphaComponent(0.5)
         ChangePasswordButton.layer.cornerRadius = 22
         PasswordChangeTextField.layer.cornerRadius = 5
         PasswordChangeCheckTextField.layer.cornerRadius = 5
