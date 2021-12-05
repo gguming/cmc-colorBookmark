@@ -48,7 +48,6 @@ struct Constant {
      
     }
     
-    
     static var setting_0: String?
    = UserDefaults.standard.string(forKey: "checkSetting_0")
     {
@@ -134,6 +133,17 @@ struct Constant {
            guard let didLogin = didLogin else { return }
            print("didLogin: \(didLogin)")
            UserDefaults.standard.set(didLogin, forKey: "checkDidLogin")
+       }
+    }
+    
+    static var account: String?
+   = UserDefaults.standard.string(forKey: "checkAccount")
+    {
+        didSet {
+           // UserDefault에 저장
+           guard let account = account else { return }
+           print("account: \(account)")
+           UserDefaults.standard.setValue(account, forKey: "checkAccount")
        }
     }
     

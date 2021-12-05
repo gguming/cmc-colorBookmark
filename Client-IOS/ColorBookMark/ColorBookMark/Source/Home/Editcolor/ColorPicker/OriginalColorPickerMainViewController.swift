@@ -11,11 +11,13 @@ class OriginalColorPickerMainViewController: UIViewController {
 
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
-    lazy var postcolorDataManager: PostColorDataManager = PostColorDataManager()
+//    lazy var postcolorDataManager: PostColorDataManager = PostColorDataManager()
     
     @available(iOS 14.0, *)
     @IBAction func saveBtnTapped(_ sender: Any) {
 //        presentAlert()
+//        데이터매니저에 연결 
+        
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {

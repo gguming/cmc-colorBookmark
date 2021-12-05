@@ -972,7 +972,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BT-yt-Bmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="1504"/>
+            <point key="canvasLocation" x="2799" y="1472"/>
+        </scene>
+        <!--Change Password Check Pop View Controller-->
+        <scene sceneID="PxZ-lt-d6m">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordCheckPopViewController" id="YEi-Mr-9g1" customClass="ChangePasswordCheckPopViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aKK-w2-4gJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spj-5P-TrF">
+                                <rect key="frame" x="69" y="388" width="276" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="spj-5P-TrF" secondAttribute="height" multiplier="17:8" id="sB3-0Q-Y8u"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="qM7-6T-m7l" kind="embed" id="ofd-9W-8ju"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wr9-Wx-heG"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="spj-5P-TrF" firstAttribute="width" secondItem="aKK-w2-4gJ" secondAttribute="width" multiplier="1/1.5" id="0oc-0o-1Lq"/>
+                            <constraint firstItem="spj-5P-TrF" firstAttribute="centerX" secondItem="Wr9-Wx-heG" secondAttribute="centerX" id="XzV-l1-EUx"/>
+                            <constraint firstItem="spj-5P-TrF" firstAttribute="centerY" secondItem="Wr9-Wx-heG" secondAttribute="centerY" id="rcb-up-XJv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYN-uK-wPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="2152"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HHE-93-2X0">
@@ -1167,7 +1198,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvH-Bt-af8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3746" y="1503"/>
+            <point key="canvasLocation" x="3745" y="1472"/>
+        </scene>
+        <!--Change Password Check View Controller-->
+        <scene sceneID="mC8-6e-NSh">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordCheckViewController" id="qM7-6T-m7l" customClass="ChangePasswordCheckViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RoN-Bp-83c">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="130"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자체 로그인 계정만 가능합니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-KF-f52">
+                                <rect key="frame" x="36.5" y="45" width="203.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tF-QC-Gic">
+                                <rect key="frame" x="0.0" y="65.5" width="276" height="64.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpV-4Y-1NH">
+                                <rect key="frame" x="93.5" y="85" width="89" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NpV-4Y-1NH" secondAttribute="height" multiplier="24:7" id="QMB-rz-8vI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ConfirmButtonTapped:" destination="qM7-6T-m7l" eventType="touchUpInside" id="NNY-4I-v05"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NpV-4Y-1NH" firstAttribute="height" secondItem="RoN-Bp-83c" secondAttribute="height" multiplier="0.2" id="2Qa-d8-3OD"/>
+                            <constraint firstItem="NpV-4Y-1NH" firstAttribute="centerX" secondItem="RoN-Bp-83c" secondAttribute="centerX" id="Gr7-21-Xi9"/>
+                            <constraint firstItem="NpV-4Y-1NH" firstAttribute="centerY" secondItem="8tF-QC-Gic" secondAttribute="centerY" id="HJe-mm-VKN"/>
+                            <constraint firstItem="8tF-QC-Gic" firstAttribute="top" secondItem="A8N-KF-f52" secondAttribute="bottom" id="MLM-Ps-hBx"/>
+                            <constraint firstAttribute="bottom" secondItem="8tF-QC-Gic" secondAttribute="bottom" id="XnV-F4-clN"/>
+                            <constraint firstItem="8tF-QC-Gic" firstAttribute="leading" secondItem="RoN-Bp-83c" secondAttribute="leading" id="cEd-qs-lny"/>
+                            <constraint firstAttribute="trailing" secondItem="8tF-QC-Gic" secondAttribute="trailing" id="iIc-4X-Qod"/>
+                            <constraint firstItem="A8N-KF-f52" firstAttribute="top" secondItem="RoN-Bp-83c" secondAttribute="top" constant="45" id="j68-qo-dwA"/>
+                            <constraint firstItem="A8N-KF-f52" firstAttribute="centerX" secondItem="RoN-Bp-83c" secondAttribute="centerX" id="tq1-2T-qjV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ConfirmButton" destination="NpV-4Y-1NH" id="Cyj-kH-Jd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urf-W9-aaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3744.9275362318845" y="2151.5625"/>
         </scene>
     </scenes>
     <resources>
