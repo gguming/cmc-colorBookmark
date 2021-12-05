@@ -11,6 +11,11 @@ class BookmarkViewController: BaseViewController {
     @IBOutlet weak var monthView: UIView!
     @IBOutlet weak var monthBtn: UIButton!
     
+    var date: String?
+    var bookmarks: [BookMarks]?
+    lazy var dataManager: BookMarkDataManager = BookMarkDataManager()
+    
+    
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -24,6 +29,7 @@ class BookmarkViewController: BaseViewController {
         tableview.delegate = self
         tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
         tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
+        dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
         setUI()
         
     }
@@ -51,6 +57,22 @@ class BookmarkViewController: BaseViewController {
 
 }
 
+extension BookmarkViewController{
+    func didSuccessGetBookMakrs(_ result: GetBookMarkResponse) {
+        print("------>\(result)")
+        bookmarks = result.result
+        tableview.reloadData()
+       
+        
+    }
+    
+    func failedToGetBookMakrs(message: String) {
+        print("------>>>>\(message)")
+        
+    }
+    
+}
+
 extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -58,7 +80,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             return 1
         default:
-            return 5
+            return bookmarks?.count ?? 0
         }
         
         

@@ -38,22 +38,19 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-2D-1Bw">
                         <rect key="frame" x="0.0" y="27" width="320" height="117"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-Cm-Gdc">
-                                <rect key="frame" x="103" y="51.5" width="114.5" height="14.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 스토리가 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-ae-4Rg">
-                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ntP-em-aXv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0jY-Cm-Gdc" firstAttribute="centerX" secondItem="Usb-2D-1Bw" secondAttribute="centerX" id="WWq-qH-xgs"/>
-                            <constraint firstItem="0jY-Cm-Gdc" firstAttribute="centerY" secondItem="Usb-2D-1Bw" secondAttribute="centerY" id="Z6C-0w-3km"/>
+                            <constraint firstAttribute="trailing" secondItem="ntP-em-aXv" secondAttribute="trailing" id="ARi-n5-ddB"/>
+                            <constraint firstItem="ntP-em-aXv" firstAttribute="leading" secondItem="Usb-2D-1Bw" secondAttribute="leading" id="bLO-xt-QUF"/>
+                            <constraint firstAttribute="bottom" secondItem="ntP-em-aXv" secondAttribute="bottom" id="xaP-LQ-S3T"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -62,16 +59,23 @@
                     <constraint firstItem="Usb-2D-1Bw" firstAttribute="leading" secondItem="fXW-a4-5Ob" secondAttribute="leading" id="DCl-0h-J3m"/>
                     <constraint firstItem="Nd5-in-rgT" firstAttribute="leading" secondItem="fXW-a4-5Ob" secondAttribute="leading" id="FH4-27-0dl"/>
                     <constraint firstAttribute="bottom" secondItem="Usb-2D-1Bw" secondAttribute="bottom" id="Ib6-2Z-fGt"/>
+                    <constraint firstItem="ntP-em-aXv" firstAttribute="top" secondItem="Nd5-in-rgT" secondAttribute="bottom" id="MjH-Wd-q4g"/>
                     <constraint firstAttribute="trailing" secondItem="Usb-2D-1Bw" secondAttribute="trailing" id="fKq-hf-K5c"/>
                     <constraint firstItem="Usb-2D-1Bw" firstAttribute="top" secondItem="Nd5-in-rgT" secondAttribute="bottom" id="fPT-FD-RJJ"/>
                     <constraint firstAttribute="trailing" secondItem="Nd5-in-rgT" secondAttribute="trailing" id="oqO-9k-keY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="3VW-gH-MFi"/>
+            <connections>
+                <outlet property="textView" destination="ntP-em-aXv" id="1fF-r0-JqB"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="143.30357142857142"/>
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
