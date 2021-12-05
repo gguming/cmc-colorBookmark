@@ -38,6 +38,9 @@
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
 		A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */; };
 		A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */; };
+		A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */; };
+		A45A9BA5275D70BD00D312D5 /* GetBookMarkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA4275D70BD00D312D5 /* GetBookMarkRequest.swift */; };
+		A45A9BA7275D71B400D312D5 /* GetBookMarkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA6275D71B400D312D5 /* GetBookMarkResponse.swift */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
 		A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88A272D094D009ABED6 /* SceneDelegate.swift */; };
 		A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* BaseViewController.swift */; };
@@ -216,6 +219,9 @@
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyButtonsTableViewCell.xib; sourceTree = "<group>"; };
+		A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDataManager.swift; sourceTree = "<group>"; };
+		A45A9BA4275D70BD00D312D5 /* GetBookMarkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookMarkRequest.swift; sourceTree = "<group>"; };
+		A45A9BA6275D71B400D312D5 /* GetBookMarkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookMarkResponse.swift; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* ColorBookMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBookMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -485,6 +491,31 @@
 			path = ModifyButtonCell;
 			sourceTree = "<group>";
 		};
+		A45A9B9F275D704500D312D5 /* BookMarkDetailDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookMarkDetailDataManager;
+			sourceTree = "<group>";
+		};
+		A45A9BA0275D706600D312D5 /* BookMarkDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A45A9BA3275D70A000D312D5 /* Entity */,
+				A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */,
+			);
+			path = BookMarkDataManager;
+			sourceTree = "<group>";
+		};
+		A45A9BA3275D70A000D312D5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A45A9BA4275D70BD00D312D5 /* GetBookMarkRequest.swift */,
+				A45A9BA6275D71B400D312D5 /* GetBookMarkResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +658,7 @@
 		A475557A2747653000593C70 /* BookMarkDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A45A9B9F275D704500D312D5 /* BookMarkDetailDataManager */,
 				A475557D27476B3A00593C70 /* DetailCell */,
 				A475557B2747655300593C70 /* BookmarkDetailViewController.swift */,
 			);
@@ -884,6 +916,7 @@
 		A4C69FC9273F71400091565C /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
+				A45A9BA0275D706600D312D5 /* BookMarkDataManager */,
 				A4C037D02759D22700486C62 /* BookMarkHeadCell */,
 				A475557A2747653000593C70 /* BookMarkDetail */,
 				A475557527474F5400593C70 /* BookMarkCell */,
@@ -1259,6 +1292,7 @@
 				A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */,
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
+				A45A9BA7275D71B400D312D5 /* GetBookMarkResponse.swift in Sources */,
 				A42D4B92275A0FBE00D5B9B3 /* ModifyRecordTableViewCell.swift in Sources */,
 				E9E4A98B2734EEA80037A815 /* CalenderViewController.swift in Sources */,
 				A4C037D32759D28000486C62 /* BookmarkHeaderTableViewCell.swift in Sources */,
@@ -1298,6 +1332,7 @@
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
+				A45A9BA5275D70BD00D312D5 /* GetBookMarkRequest.swift in Sources */,
 				E9E4A997273A2EFD0037A815 /* SigninResponse.swift in Sources */,
 				E9A236EB274F270F0043836A /* FindPasswordDataManager.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
@@ -1321,6 +1356,7 @@
 				A4901A412758B8FE0024CD0F /* PostDiaryDataManager.swift in Sources */,
 				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,
+				A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
 				E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */,
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
