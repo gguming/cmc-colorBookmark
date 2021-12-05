@@ -115,7 +115,9 @@ class SettingTableViewCell: UITableViewCell {
             Constant.setting_2 = "N"
             let settingInput = SettingRequest(BGMStatus: Constant.setting_2)
             dataManager.getSettingValue(settingInput, delegate: self)
-            audioPlayer.stop()
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                appDelegate.stopBackgroundMusic()
+            }
         default:
             break
         }
@@ -147,7 +149,9 @@ extension SettingTableViewCell {
             print("배경음악 ON")
             let settingInput = SettingRequest(BGMStatus: "Y")
             dataManager.getSettingValue(settingInput, delegate: self)
-            initPlayer()
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                appDelegate.playBackgroundMusic()
+                    }
         default:
             break
         }
@@ -181,20 +185,4 @@ extension SettingTableViewCell {
             print(#function, error)
         }
     }
-    
-    func initPlayer() {
-        guard let url = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")
-        else {
-            print("error to get the mp3 file")
-            return
-        }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
-        }
-        catch {
-            print("audio file error")
-        }
-        audioPlayer?.play()
-    }
-
 }
