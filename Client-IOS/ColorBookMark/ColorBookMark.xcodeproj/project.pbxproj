@@ -135,6 +135,8 @@
 		E95683C1275C2FB600F075CF /* PatchColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C0275C2FB600F075CF /* PatchColorResponse.swift */; };
 		E95683C3275C2FC700F075CF /* PatchColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C2275C2FC700F075CF /* PatchColorRequest.swift */; };
 		E95683C5275C311800F075CF /* PatchColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C4275C311800F075CF /* PatchColorDataManager.swift */; };
+		E95683C7275CADC500F075CF /* ChangePasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C6275CADC500F075CF /* ChangePasswordCheckViewController.swift */; };
+		E95683C9275CADD300F075CF /* ChangePasswordCheckPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683C8275CADD300F075CF /* ChangePasswordCheckPopViewController.swift */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
@@ -317,6 +319,8 @@
 		E95683C0275C2FB600F075CF /* PatchColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorResponse.swift; sourceTree = "<group>"; };
 		E95683C2275C2FC700F075CF /* PatchColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorRequest.swift; sourceTree = "<group>"; };
 		E95683C4275C311800F075CF /* PatchColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchColorDataManager.swift; sourceTree = "<group>"; };
+		E95683C6275CADC500F075CF /* ChangePasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCheckViewController.swift; sourceTree = "<group>"; };
+		E95683C8275CADD300F075CF /* ChangePasswordCheckPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCheckPopViewController.swift; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -909,6 +913,8 @@
 				E9E0CDB3274D4D6700ED9B2F /* LogoutViewController.swift */,
 				E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */,
 				E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */,
+				E95683C8275CADD300F075CF /* ChangePasswordCheckPopViewController.swift */,
+				E95683C6275CADC500F075CF /* ChangePasswordCheckViewController.swift */,
 				E9DBB6092753E07000F2A32D /* DeleteAccountPopViewController.swift */,
 				E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */,
 				E95683B5275BB0CC00F075CF /* TermsofServiceViewController.swift */,
@@ -1199,6 +1205,7 @@
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
 				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
 				E95683C1275C2FB600F075CF /* PatchColorResponse.swift in Sources */,
+				E95683C7275CADC500F075CF /* ChangePasswordCheckViewController.swift in Sources */,
 				A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */,
 				E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */,
 				E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */,
@@ -1294,6 +1301,7 @@
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,
 				A4901A3F2758B7C40024CD0F /* PostDiaryResponse.swift in Sources */,
+				E95683C9275CADD300F075CF /* ChangePasswordCheckPopViewController.swift in Sources */,
 				A4901A412758B8FE0024CD0F /* PostDiaryDataManager.swift in Sources */,
 				E9336CC2274CDCCA00686AF1 /* MiniCodeCheckCollectionViewCell.swift in Sources */,
 				A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */,

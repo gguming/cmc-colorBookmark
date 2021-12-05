@@ -25,6 +25,7 @@ class KakaoLoginDataManager {
                         Constant.userId = response.result?.userId
                         Constant.email = "Kakao"
                         Constant.didLogin = true
+                        Constant.account = "Kakao"
                     
                     }
                     

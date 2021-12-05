@@ -22,21 +22,35 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         MypageTableview.separatorStyle = .none
-        
-        if Constant.email == "Kakao" {
+        print("확인용")
+        print(Constant.account)
+        if Constant.account == "Kakao" {
             AccountLabel.text = "Kakao Account"
             LoginLabel.text = "카카오로 로그인 하셨네요!"
         }
-        
-        if Constant.email == "Apple" {
+        else if Constant.account == "Apple" {
             AccountLabel.text = "Apple Account"
             LoginLabel.text = "애플 아이디로 로그인 하셨네요!"
         }
-        
         else {
             AccountLabel.text = Constant.email
             LoginLabel.text = "이메일로 로그인 하셨네요!"
         }
+        
+//        if Constant.email == "Kakao" {
+//            AccountLabel.text = "Kakao Account"
+//            LoginLabel.text = "카카오로 로그인 하셨네요!"
+//        }
+//
+//        if Constant.email == "Apple" {
+//            AccountLabel.text = "Apple Account"
+//            LoginLabel.text = "애플 아이디로 로그인 하셨네요!"
+//        }
+//
+//        else {
+//            AccountLabel.text = Constant.email
+//            LoginLabel.text = "이메일로 로그인 하셨네요!"
+//        }
         
         MypageTableview.delegate = self
         MypageTableview.dataSource = self
@@ -92,11 +106,21 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
             self.present(vc, animated: true, completion: nil)
             
         case 1:
-            let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
-            let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-            
+            if Constant.account != "ColorBookMark" {
+                let HomeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+                let vc = HomeStoryboard.instantiateViewController(withIdentifier: "ChangePasswordCheckPopViewController")
+                vc.modalPresentationStyle = .overCurrentContext
+                vc.modalTransitionStyle = .crossDissolve
+                vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+                self.present(vc, animated: true, completion: nil)
+            }
+            else {
+                let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
+                let vc = mypageStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+
         case 2:
             let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
             let vc = mypageStoryboard.instantiateViewController(withIdentifier: "TermsOfUseViewController")

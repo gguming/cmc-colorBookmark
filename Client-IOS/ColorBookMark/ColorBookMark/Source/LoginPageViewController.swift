@@ -40,6 +40,7 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
     }
     
     @IBAction func AppleLogin(_ sender: Any) {
+        Constant.account = "Apple"
         print("애플로그인1")
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]

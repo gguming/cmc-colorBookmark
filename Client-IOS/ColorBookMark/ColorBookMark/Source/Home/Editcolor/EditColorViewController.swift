@@ -138,12 +138,21 @@ extension EditColorViewController {
 
 extension EditColorViewController: ColorCollectionViewCellDelegate{
     func selectedColorName(index: Int) {
-//        let cell = collectionview.cellForItem(at: index) as! ColorCollectionViewCell
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "OriginalColorPickerMainViewController") as? OriginalColorPickerMainViewController else {return}
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.view.alpha = 0.3
+        vc.view.backgroundColor = .black.withAlphaComponent(0.3)
+        self.present(vc, animated: true, completion: nil)
+//        이거 한다음에
+//        데이터매니져에 연결후에 델리겟으로
+//        reloadData 하기
 
     }
     
     func selectedColorCircle(index: Int) {
-      
+        //        데이터매니져에 연결한 다음에
+        //        reloadData
     }
 
 }
