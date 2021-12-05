@@ -24,6 +24,7 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
         MypageTableview.separatorStyle = .none
         print("확인용")
         print(Constant.account)
+        print(Constant.nickname)
         if Constant.account == "Kakao" {
             AccountLabel.text = "Kakao Account"
             LoginLabel.text = "카카오로 로그인 하셨네요!"
