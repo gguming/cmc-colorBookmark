@@ -1,15 +1,19 @@
 //
-//  ModifyImageCellTableViewCell.swift
+//  ModifyButtonsTableViewCell.swift
 //  ColorBookMark
 //
-//  Created by SUN on 2021/12/03.
+//  Created by SUN on 2021/12/06.
 //
 
 import UIKit
 
-class ModifyImageCellTableViewCell: UITableViewCell {
+class ModifyButtonsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var modifyImgCollectionview: UICollectionView!
+    var doneDelegate: ModifyModeDelegate?
+    
+    @IBAction func doneBtnTapped(_ sender: Any) {
+        doneDelegate?.doneModifytMode()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

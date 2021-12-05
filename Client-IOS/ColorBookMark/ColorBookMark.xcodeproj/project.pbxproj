@@ -36,6 +36,8 @@
 		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
+		A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */; };
+		A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */; };
 		A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE888272D094D009ABED6 /* AppDelegate.swift */; };
 		A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88A272D094D009ABED6 /* SceneDelegate.swift */; };
 		A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45AE88C272D094D009ABED6 /* BaseViewController.swift */; };
@@ -212,6 +214,8 @@
 		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonsTableViewCell.swift; sourceTree = "<group>"; };
+		A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		A45AE885272D094D009ABED6 /* ColorBookMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBookMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45AE888272D094D009ABED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45AE88A272D094D009ABED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -472,6 +476,15 @@
 			path = ColorCollectionCell;
 			sourceTree = "<group>";
 		};
+		A45A9B96275D699100D312D5 /* ModifyButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */,
+				A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */,
+			);
+			path = ModifyButtonCell;
+			sourceTree = "<group>";
+		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +684,7 @@
 		A475558127476B8000593C70 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
+				A45A9B96275D699100D312D5 /* ModifyButtonCell */,
 				A49DB733274776B600AF315F /* ButtonsTableViewCell.swift */,
 				A49DB734274776B600AF315F /* ButtonsTableViewCell.xib */,
 			);
@@ -1129,6 +1143,7 @@
 				A4C037D42759D28000486C62 /* BookmarkHeaderTableViewCell.xib in Resources */,
 				A45DF80127537D080067021C /* AudioHaveTableViewCell.xib in Resources */,
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
+				A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */,
 				A45DF803275382FA0067021C /* Audio.storyboard in Resources */,
 				A42D4B93275A0FBE00D5B9B3 /* ModifyRecordTableViewCell.xib in Resources */,
 				A42D4B97275A0FD900D5B9B3 /* RecordHaveTableViewCell.xib in Resources */,
@@ -1278,6 +1293,7 @@
 				A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */,
 				E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */,
 				E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */,
+				A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */,
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,

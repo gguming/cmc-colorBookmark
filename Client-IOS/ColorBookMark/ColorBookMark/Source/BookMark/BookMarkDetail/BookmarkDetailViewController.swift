@@ -38,6 +38,7 @@ class BookmarkDetailViewController: UIViewController {
         tableview.register(UINib(nibName: "ModifyRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyRecordTableViewCell")
         
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
+        tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
         
         dayView.layer.cornerRadius = 8
 
@@ -47,6 +48,20 @@ class BookmarkDetailViewController: UIViewController {
 
     
 
+}
+
+extension BookmarkDetailViewController: ModifyModeDelegate{
+    func doneModifytMode() {
+        modifyMode = false
+        tableview.reloadData()
+    }
+    
+    func changeModifyMode() {
+        modifyMode = true
+        tableview.reloadData()
+    }
+    
+    
 }
 
 extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,28 +87,65 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             cell.clipsToBounds = true
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
-            cell.layer.cornerRadius = 8
-            cell.clipsToBounds = true
-            return cell
+            if !(modifyMode ?? false) {
+            
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyStoryTableViewCell", for: indexPath) as? ModifyStoryTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            }
+           
             
         case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
-            cell.layer.cornerRadius = 8
-            cell.clipsToBounds = true
-            return cell
+            if !(modifyMode ?? false){
+            
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyImageCellTableViewCell", for: indexPath) as? ModifyImageCellTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            }
+           
             
         case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
-            cell.layer.cornerRadius = 8
-            cell.clipsToBounds = true
-            return cell
+            if !(modifyMode ?? false){
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyRecordTableViewCell", for: indexPath) as? ModifyRecordTableViewCell else {return UITableViewCell()}
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            }
+           
+           
             
         case 4:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonsTableViewCell", for: indexPath) as? ButtonsTableViewCell else {return UITableViewCell()}
-            cell.layer.cornerRadius = 8
-            cell.clipsToBounds = true
-            return cell
+            if !(modifyMode ?? false){
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonsTableViewCell", for: indexPath) as? ButtonsTableViewCell else {return UITableViewCell()}
+                cell.modifyDelegate = self
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyButtonsTableViewCell", for: indexPath) as? ModifyButtonsTableViewCell else {return UITableViewCell()}
+                cell.doneDelegate = self
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
+                return cell
+            }
+           
         default:
             return UITableViewCell()
         }

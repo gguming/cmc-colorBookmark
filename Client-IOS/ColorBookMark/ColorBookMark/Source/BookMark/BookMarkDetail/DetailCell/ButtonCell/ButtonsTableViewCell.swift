@@ -9,10 +9,13 @@ import UIKit
 
 class ButtonsTableViewCell: UITableViewCell {
 
+    var modifyDelegate: ModifyModeDelegate?
+    
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var trashBtn: UIButton!
     
     @IBAction func editBtnTapped(_ sender: Any) {
+        modifyDelegate?.changeModifyMode()
     }
     @IBAction func trashBtnTapped(_ sender: Any) {
     }
@@ -31,4 +34,10 @@ class ButtonsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+protocol ModifyModeDelegate{
+    func changeModifyMode()
+    
+    func doneModifytMode()
 }

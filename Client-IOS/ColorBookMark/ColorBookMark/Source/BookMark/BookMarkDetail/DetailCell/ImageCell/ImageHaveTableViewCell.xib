@@ -38,31 +38,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JER-IU-PQz">
                         <rect key="frame" x="0.0" y="27" width="320" height="117"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-eZ-qvz">
-                                <rect key="frame" x="108" y="33" width="104" height="51.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailImg" translatesAutoresizingMaskIntoConstraints="NO" id="WwW-LH-hcc">
-                                        <rect key="frame" x="36" y="0.0" width="32" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="GOZ-Hx-uDY"/>
-                                            <constraint firstAttribute="width" constant="32" id="Rmt-we-Gmy"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 사진이 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCT-ac-CBi">
-                                        <rect key="frame" x="0.0" y="37" width="104" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lya-xs-L3o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3YD-GT-YFY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vjR-eZ-qvz" firstAttribute="centerX" secondItem="JER-IU-PQz" secondAttribute="centerX" id="1kn-lA-Eck"/>
-                            <constraint firstItem="vjR-eZ-qvz" firstAttribute="centerY" secondItem="JER-IU-PQz" secondAttribute="centerY" id="PDs-pv-4zV"/>
+                            <constraint firstItem="lya-xs-L3o" firstAttribute="leading" secondItem="JER-IU-PQz" secondAttribute="leading" id="9Wn-f3-7Oz"/>
+                            <constraint firstAttribute="trailing" secondItem="lya-xs-L3o" secondAttribute="trailing" id="ZW9-OQ-6S9"/>
+                            <constraint firstAttribute="bottom" secondItem="lya-xs-L3o" secondAttribute="bottom" id="aBc-0L-xCB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,15 +64,18 @@
                     <constraint firstAttribute="trailing" secondItem="TwM-5y-0ez" secondAttribute="trailing" id="RgW-jW-x2h"/>
                     <constraint firstItem="JER-IU-PQz" firstAttribute="leading" secondItem="YJ2-EV-oKM" secondAttribute="leading" id="Rgd-hT-xwn"/>
                     <constraint firstItem="TwM-5y-0ez" firstAttribute="top" secondItem="YJ2-EV-oKM" secondAttribute="top" id="m56-Sa-xsV"/>
+                    <constraint firstItem="lya-xs-L3o" firstAttribute="top" secondItem="TwM-5y-0ez" secondAttribute="bottom" id="p1w-QP-ynJ"/>
                     <constraint firstAttribute="bottom" secondItem="JER-IU-PQz" secondAttribute="bottom" id="wcm-F1-UsI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ff7-q8-SDk"/>
+            <connections>
+                <outlet property="imgHaveCollectionview" destination="lya-xs-L3o" id="kcc-O3-9yN"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="143.30357142857142"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="detailImg" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
