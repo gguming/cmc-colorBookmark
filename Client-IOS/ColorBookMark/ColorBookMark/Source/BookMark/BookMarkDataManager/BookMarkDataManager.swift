@@ -12,7 +12,7 @@ class BookMarkDataManager {
         let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
 
 
-        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/targeted-month", method: .get, parameters: ["date": "2021-12"], encoding: JSONEncoding(), headers: header)
+        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/targeted-month?date=\(date)", method: .get, parameters: nil, encoding: JSONEncoding(), headers: header)
             .validate()
             .responseDecodable(of: GetBookMarkResponse.self) { response in
                 switch response.result {

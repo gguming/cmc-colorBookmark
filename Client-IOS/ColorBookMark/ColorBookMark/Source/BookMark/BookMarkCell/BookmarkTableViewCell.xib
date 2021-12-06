@@ -83,6 +83,7 @@
                 <outlet property="backView" destination="qT5-0J-l07" id="Dxu-IT-OR5"/>
                 <outlet property="colorLabel" destination="3dl-Yo-fi3" id="CZ9-OB-8KB"/>
                 <outlet property="colorView" destination="57S-Tx-Ng7" id="rPg-1D-iDr"/>
+                <outlet property="contentCollectionview" destination="AdK-7Y-SP0" id="mnp-ob-t76"/>
                 <outlet property="dayLabel" destination="70s-XT-MIq" id="bf2-SR-dmr"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>

@@ -36,6 +36,12 @@
 		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
+		A4551BEB275DC98800F77EFD /* ModifyImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */; };
+		A4551BEC275DC98800F77EFD /* ModifyImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */; };
+		A4551BEF275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */; };
+		A4551BF0275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */; };
+		A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */; };
+		A4551BF4275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */; };
 		A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */; };
 		A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */; };
 		A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */; };
@@ -217,6 +223,12 @@
 		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgBtnCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgBtnCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkContentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookMarkContentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDataManager.swift; sourceTree = "<group>"; };
@@ -516,6 +528,17 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A45A9BAA275DB0D200D312D5 /* collectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */,
+				A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */,
+				A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */,
+				A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */,
+			);
+			path = collectionCell;
+			sourceTree = "<group>";
+		};
 		A45AE87C272D094D009ABED6 = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +674,8 @@
 			children = (
 				A475557627474F7300593C70 /* BookmarkTableViewCell.swift */,
 				A475557727474F7300593C70 /* BookmarkTableViewCell.xib */,
+				A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */,
+				A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */,
 			);
 			path = BookMarkCell;
 			sourceTree = "<group>";
@@ -692,6 +717,7 @@
 		A475557F27476B6500593C70 /* ImageCell */ = {
 			isa = PBXGroup;
 			children = (
+				A45A9BAA275DB0D200D312D5 /* collectionCell */,
 				A42D4B86275A0EF400D5B9B3 /* ModifyImageCell */,
 				A42D4B98275A0FFE00D5B9B3 /* ImageHaveTableViewCell.swift */,
 				A42D4B99275A0FFE00D5B9B3 /* ImageHaveTableViewCell.xib */,
@@ -1176,8 +1202,11 @@
 				A4C037D42759D28000486C62 /* BookmarkHeaderTableViewCell.xib in Resources */,
 				A45DF80127537D080067021C /* AudioHaveTableViewCell.xib in Resources */,
 				A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */,
+				A4551BF0275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib in Resources */,
+				A4551BEC275DC98800F77EFD /* ModifyImgCollectionViewCell.xib in Resources */,
 				A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */,
 				A45DF803275382FA0067021C /* Audio.storyboard in Resources */,
+				A4551BF4275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib in Resources */,
 				A42D4B93275A0FBE00D5B9B3 /* ModifyRecordTableViewCell.xib in Resources */,
 				A42D4B97275A0FD900D5B9B3 /* RecordHaveTableViewCell.xib in Resources */,
 				A45C0411273E353A00D4C26F /* EditBtnTableViewCell.xib in Resources */,
@@ -1344,6 +1373,7 @@
 				A49DB7312747764C00AF315F /* RecordTableViewCell.swift in Sources */,
 				A4A59D27275110ED0018A7F3 /* PostColorRequest.swift in Sources */,
 				E9336CC8274D003900686AF1 /* MiniCodeDataManager.swift in Sources */,
+				A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */,
 				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
@@ -1375,6 +1405,8 @@
 				E95683C3275C2FC700F075CF /* PatchColorRequest.swift in Sources */,
 				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 				A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */,
+				A4551BEB275DC98800F77EFD /* ModifyImgCollectionViewCell.swift in Sources */,
+				A4551BEF275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

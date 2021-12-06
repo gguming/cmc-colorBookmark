@@ -36,9 +36,9 @@ class BookmarkViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let changeColors: [CGColor] = [
-           .init(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),
-           .init(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1),
-           .init(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
+           CGColor(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),
+           CGColor(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1),
+           CGColor(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
         ]
         let colorAnimation = CABasicAnimation(keyPath: "colors")
         colorAnimation.toValue = changeColors
