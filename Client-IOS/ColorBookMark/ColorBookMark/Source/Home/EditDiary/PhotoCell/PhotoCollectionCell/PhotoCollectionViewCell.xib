@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="88" height="100"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeG-Eo-Otr">
-                        <rect key="frame" x="63" y="5" width="20" height="20"/>
+                        <rect key="frame" x="63" y="10" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="7sS-B5-agC"/>
                             <constraint firstAttribute="height" constant="20" id="nJZ-bN-4BI"/>
@@ -29,7 +29,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="yp_remove"/>
+                        <state key="normal" image="removeBtn"/>
                         <connections>
                             <action selector="deleteBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="D0t-w4-7PZ"/>
                         </connections>
@@ -43,7 +43,7 @@
                 <constraint firstAttribute="bottom" secondItem="y4F-66-UfP" secondAttribute="bottom" id="Qq0-A6-kyp"/>
                 <constraint firstAttribute="trailing" secondItem="y4F-66-UfP" secondAttribute="trailing" id="V6a-f1-h0W"/>
                 <constraint firstItem="y4F-66-UfP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yw2-dG-zna"/>
-                <constraint firstItem="HeG-Eo-Otr" firstAttribute="top" secondItem="y4F-66-UfP" secondAttribute="top" constant="5" id="eIs-XR-Ujh"/>
+                <constraint firstItem="HeG-Eo-Otr" firstAttribute="top" secondItem="y4F-66-UfP" secondAttribute="top" constant="10" id="eIs-XR-Ujh"/>
             </constraints>
             <size key="customSize" width="88" height="100"/>
             <connections>
@@ -53,6 +53,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="yp_remove" width="32" height="32"/>
+        <image name="removeBtn" width="66" height="66"/>
     </resources>
 </document>
