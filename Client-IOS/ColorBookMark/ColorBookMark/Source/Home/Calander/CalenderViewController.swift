@@ -170,8 +170,6 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = CalenderCollectionview.dequeueReusableCell(withReuseIdentifier: "CalenderCollectionViewCell", for: indexPath) as! CalenderCollectionViewCell
         
-//        cell.backgroundColor = .blue
-        
         switch indexPath.section {
         case 0:
             cell.backgroundColor = .white
@@ -183,14 +181,16 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
         default:
             //MARK: check
+            //끝일 30 or 31
             print(CalendarViewMonth, "__")
+            // 달력에서 현재 row
             print(indexPath.row)
             cell.backgroundColor = .white
             let currentIndex = startDate + indexPath.row
             
             if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate - 1 {
                 print(currentIndex, "@")
-                
+                print(indexPath.row - startDate, "+++")
                 if calendarData?[indexPath.row - startDate].color == nil {
                     cell.CircleImage.tintColor = .clear
                 }
