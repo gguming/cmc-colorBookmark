@@ -42,7 +42,7 @@ struct Constant {
             // UserDefault에 저장
             guard let nickname = nickname else { return }
             print("nickname: \(nickname)")
-            UserDefaults.standard.setValue(jwt, forKey: "checkNickname")
+            UserDefaults.standard.setValue(nickname, forKey: "checkNickname")
 //            UserDefaults.synchronize()
        }
      
