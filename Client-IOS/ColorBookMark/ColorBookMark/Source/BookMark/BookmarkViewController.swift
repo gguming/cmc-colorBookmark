@@ -91,12 +91,18 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkHeaderTableViewCell", for: indexPath) as? BookmarkHeaderTableViewCell else {return UITableViewCell()}
             cell.buttonUI()
+            cell.bookmarkCountInfoLabel.text = "이번달은 총 \(bookmarks?.count ?? 0)번 감정을 끼웠습니다."
             return cell
             
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
             cell.backView.layer.cornerRadius = 8
             cell.clipsToBounds = true
+            cell.contents = bookmarks?[indexPath.row].selectMonthDiary?.diaryContents
+            cell.colorView.backgroundColor = hexStringToUIColor22(hex: bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.color ?? "#000000")
+            cell.colorLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.colorName
+            cell.dayLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.date
+            
             return cell
         }
         
@@ -109,6 +115,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
         vc.modalPresentationStyle = .fullScreen
+        vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
         self.present(vc, animated: false, completion: nil)
     }
     

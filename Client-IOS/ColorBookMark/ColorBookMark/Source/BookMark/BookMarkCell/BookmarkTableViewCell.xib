@@ -34,12 +34,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-7Y-SP0">
-                                <rect key="frame" x="24" y="52" width="150" height="42"/>
+                                <rect key="frame" x="24" y="56" width="150" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="R5m-Nc-ZUm"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Di-xd-89S">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Di-xd-89S">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -64,8 +64,8 @@
                             <constraint firstAttribute="trailing" secondItem="57S-Tx-Ng7" secondAttribute="trailing" constant="24" id="bbP-Xr-B6S"/>
                             <constraint firstAttribute="bottom" secondItem="57S-Tx-Ng7" secondAttribute="bottom" id="cz5-7P-Pb6"/>
                             <constraint firstItem="70s-XT-MIq" firstAttribute="top" secondItem="qT5-0J-l07" secondAttribute="top" constant="12" id="hIM-oU-BXa"/>
-                            <constraint firstAttribute="bottom" secondItem="AdK-7Y-SP0" secondAttribute="bottom" constant="4" id="nDG-wl-88v"/>
-                            <constraint firstItem="AdK-7Y-SP0" firstAttribute="top" secondItem="3dl-Yo-fi3" secondAttribute="bottom" constant="4" id="wDH-fg-LMx"/>
+                            <constraint firstAttribute="bottom" secondItem="AdK-7Y-SP0" secondAttribute="bottom" constant="12" id="nDG-wl-88v"/>
+                            <constraint firstItem="AdK-7Y-SP0" firstAttribute="top" secondItem="3dl-Yo-fi3" secondAttribute="bottom" constant="8" id="wDH-fg-LMx"/>
                         </constraints>
                     </view>
                 </subviews>

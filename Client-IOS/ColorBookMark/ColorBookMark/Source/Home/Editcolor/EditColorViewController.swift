@@ -16,6 +16,7 @@ class EditColorViewController: UIViewController {
     
     var colors: [Colors]?
 
+    @IBOutlet weak var nickInfoLabel: UILabel!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
@@ -45,6 +46,7 @@ class EditColorViewController: UIViewController {
         confirmBtn.clipsToBounds = true
         resetBtn.layer.cornerRadius = 13
         confirmBtn.layer.cornerRadius = 15
+        nickInfoLabel.text = "안녕하세요 \(Constant.nickname ?? "")님!"
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

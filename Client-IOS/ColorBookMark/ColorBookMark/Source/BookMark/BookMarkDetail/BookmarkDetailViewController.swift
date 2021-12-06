@@ -10,6 +10,7 @@ import UIKit
 class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
     
+    var diaryId: Int?
     var modifyMode: Bool?
     
 

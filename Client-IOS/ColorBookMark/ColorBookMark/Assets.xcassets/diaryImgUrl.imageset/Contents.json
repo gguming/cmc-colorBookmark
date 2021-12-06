@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "diaryIdImgUrl.png",
+      "filename" : "diaryImgUrl.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "diaryImgUrl-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "diaryImgUrl-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
