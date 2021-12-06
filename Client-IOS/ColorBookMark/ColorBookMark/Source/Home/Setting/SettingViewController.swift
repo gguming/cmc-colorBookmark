@@ -65,7 +65,7 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
             switch indexPath.section {
             case 0:
                 cell.TitleLabel.text = settingTitle[indexPath.section]
-                cell.ContentLabel.text = "20:00 PM"
+                cell.ContentLabel.text = "22:00 PM"
                 cell.cellNumber = currentCellNumber[indexPath.section]
                 print("셀 넘버")
                 print("유저디폴트0")
