@@ -226,7 +226,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
             return 80
             
         case 1:
-            return 169
+            return 159
        
         case 2:
             return 150
