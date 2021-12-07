@@ -23,7 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         }
 
+    //MARK: 앱 화면 입장
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        print("AAAAA", 4444)
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
@@ -56,13 +58,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
            }
         window?.makeKeyAndVisible()
+        
+        if Constant.setting_2 == "Y" {
+            print("음악 재시작")
+            playBackgroundMusic()
+        }
     }
 
+    //MARK: 앱을 종료할 때
     func sceneDidDisconnect(_ scene: UIScene) {
-        if Constant.setting_2 == "Y" {
-            print("음악 종료")
-            audioPlayer?.stop()
-        }
+        print("AAAAA", 3333)
+//        if Constant.setting_2 == "Y" {
+//            print("음악 종료")
+//            audioPlayer?.stop()
+//        }
+        
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
@@ -74,24 +84,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
+    //MARK: 여러창으로 갈 때
     func sceneWillResignActive(_ scene: UIScene) {
+        print("AAAAA", 5555)
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
 
+    //MARK: 배경에서 다시 돌아올 때
     func sceneWillEnterForeground(_ scene: UIScene) {
+        print("AAAAA", 2222)
         if Constant.setting_2 == "Y" {
-            print("음악 종료")
-            audioPlayer?.stop()
+            print("음악 재시작")
+            playBackgroundMusic()
         }
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
+    //MARK: 아예 배경화면으로 갈 때
     func sceneDidEnterBackground(_ scene: UIScene) {
+        print("AAAAA", 1111)
+
         if Constant.setting_2 == "Y" {
-            print("음악 재시작")
-            playBackgroundMusic()
+            print("음악 종료")
+            audioPlayer?.stop()
         }
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
@@ -112,6 +129,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         audioPlayer?.play()
     }
-    
 }
 

@@ -21,7 +21,7 @@ class EditColorViewController: UIViewController {
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
     
-    lazy var colorDataManager: GetColorListDataManager = GetColorListDataManager()
+    lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
     
     @IBAction func confirmBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -72,7 +72,7 @@ class EditColorViewController: UIViewController {
     }
     
     func getColor() {
-        colorDataManager.getColorsinEditColor(delegate: self)
+        colorDataManager.getMyColorinEditColor(delegate: self)
     }
       
 }

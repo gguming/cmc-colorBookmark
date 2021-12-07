@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         do {
+            print("왜안돼")
             audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
         }
         catch {

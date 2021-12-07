@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import AudioToolbox
 
-class MiniCodeCheckViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MiniCodeCheckViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     lazy var dataManager: MiniCodeDataManager = MiniCodeDataManager()
     
