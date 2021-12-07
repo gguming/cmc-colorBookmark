@@ -179,7 +179,12 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func addPhoto() {
-        addPost()
+        if pickedImg.count == 5 {
+            presentBottomAlert(message: "최대 5개 사진을 추가할 수 있습니다.")
+        } else {
+            addPost()
+        }
+        
     }
     
     func addPhotoInEmpty() {
@@ -310,7 +315,7 @@ extension EditDiaryViewController {
         config.hidesStatusBar = false
         config.hidesBottomBar = false
         config.maxCameraZoomFactor = 2.0
-        config.library.maxNumberOfItems = 4
+        config.library.maxNumberOfItems = 5 - pickedImg.count
         config.gallery.hidesRemoveButton = false
         config.library.skipSelectionsGallery = false
         config.library.defaultMultipleSelection = false

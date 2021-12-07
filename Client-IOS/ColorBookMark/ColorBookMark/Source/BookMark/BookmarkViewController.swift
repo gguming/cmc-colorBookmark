@@ -30,11 +30,14 @@ class BookmarkViewController: BaseViewController {
         tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
         tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
         dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
+        
         setUI()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
+        tableview.reloadData()
         let changeColors: [CGColor] = [
            CGColor(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),
            CGColor(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1),
@@ -46,6 +49,9 @@ class BookmarkViewController: BaseViewController {
         colorAnimation.autoreverses = true
         colorAnimation.repeatCount = .infinity
         gradientLayer.add(colorAnimation, forKey: "colorChangeAnimation")
+        
+       
+        
         
     }
     private func setUI() {
@@ -117,10 +123,14 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
-        vc.modalPresentationStyle = .fullScreen
-        vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
-        self.present(vc, animated: false, completion: nil)
+        if indexPath.section == 1{
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
+            vc.modalPresentationStyle = .fullScreen
+            vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
+            vc.index = indexPath.row - 1
+            self.present(vc, animated: false, completion: nil)
+        }
+       
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

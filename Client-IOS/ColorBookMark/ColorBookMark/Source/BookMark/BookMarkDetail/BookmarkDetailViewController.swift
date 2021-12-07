@@ -14,6 +14,7 @@ class BookmarkDetailViewController: UIViewController {
     var diaryId: Int?
     var modifyMode: Bool?
     var bookmarkDetail: Diary?
+    var index: Int?
     lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
     lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
     @IBAction func backBtnTapped(_ sender: Any) {
@@ -204,10 +205,14 @@ extension BookmarkDetailViewController {
     
     func didSuccessDelete(_ result: DeleteDiaryResponse) {
         print("------>\(result)")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
+        vc.presentBottomAlert(message: result.message ?? "")
+        vc.bookmarks?.remove(at: index!)
+        vc.tableview.reloadData()
         self.dismiss(animated: true) {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
             vc.presentBottomAlert(message: result.message ?? "")
-            vc.tableview.reloadData()
+           
         }
         
        
