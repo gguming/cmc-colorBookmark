@@ -182,14 +182,14 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
         default:
             //MARK: check
             //끝일 30 or 31
-            print(CalendarViewMonth, "__")
+            print(CalendarViewMonth, "끝일")
             // 달력에서 현재 row
-            print(indexPath.row)
+            print(indexPath.row, "현재 row")
             cell.backgroundColor = .white
             let currentIndex = startDate + indexPath.row
             
             if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate - 1 {
-                print(currentIndex, "@")
+                print(currentIndex, "api에 넣는 인덱스값")
                 print(indexPath.row - startDate, "+++")
                 if calendarData?[indexPath.row - startDate].color == nil {
                     cell.CircleImage.tintColor = .clear
