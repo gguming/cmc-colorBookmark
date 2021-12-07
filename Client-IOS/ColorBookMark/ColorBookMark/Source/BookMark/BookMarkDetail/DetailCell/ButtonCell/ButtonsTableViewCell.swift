@@ -18,6 +18,7 @@ class ButtonsTableViewCell: UITableViewCell {
         modifyDelegate?.changeModifyMode()
     }
     @IBAction func trashBtnTapped(_ sender: Any) {
+        modifyDelegate?.deleteDiary()
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,4 +41,8 @@ protocol ModifyModeDelegate{
     func changeModifyMode()
     
     func doneModifytMode()
+    
+    func deleteDiary()
 }
+
+

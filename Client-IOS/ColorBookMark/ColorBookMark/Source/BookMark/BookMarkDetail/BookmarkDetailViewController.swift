@@ -10,10 +10,12 @@ import UIKit
 class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
     
+    @IBOutlet weak var dateLabel: UILabel!
     var diaryId: Int?
     var modifyMode: Bool?
-    
-
+    var bookmarkDetail: Diary?
+    lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
+    lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -40,18 +42,21 @@ class BookmarkDetailViewController: UIViewController {
         
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
         tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
-        
+        bookmarkDetilDataManager.getBookMarkDetail(diaryId: diaryId ?? 0, delegate: self)
         dayView.layer.cornerRadius = 8
 
        
     }
     
 
-    
-
 }
 
+
 extension BookmarkDetailViewController: ModifyModeDelegate{
+    func deleteDiary() {
+        deleteDiaryDataManager.diaryDelete(diaryId: diaryId ?? 0, delegate: self)
+    }
+    
     func doneModifytMode() {
         modifyMode = false
         tableview.reloadData()
@@ -85,8 +90,11 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderInfoTableViewCell", for: indexPath) as? HeaderInfoTableViewCell else {return UITableViewCell()}
+            cell.nickNameLabel.text = "오늘 \(Constant.nickname ?? "")님의 색갈피는"
+            cell.colorLabel.text = "\(bookmarkDetail?.diary?.diaryContents?.colorName ?? "")의 색"
             cell.layer.cornerRadius = 8
             cell.clipsToBounds = true
+            
             return cell
         case 1:
             if !(modifyMode ?? false) {
@@ -175,4 +183,83 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     
+}
+
+
+extension BookmarkDetailViewController {
+    func didSuccessGetBookMarkDetail(_ result: GetBookMarkDetailResponse) {
+        print("------>\(result)")
+        bookmarkDetail = result.result
+        setDetailBackgroundColors()
+        tableview.reloadData()
+        
+       
+        
+    }
+    
+    func failedToGetBookMarkDetail(message: String) {
+        print("------>>>>\(message)")
+        
+    }
+    
+    func didSuccessDelete(_ result: DeleteDiaryResponse) {
+        print("------>\(result)")
+        self.dismiss(animated: true) {
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
+            vc.presentBottomAlert(message: result.message ?? "")
+            vc.tableview.reloadData()
+        }
+        
+       
+        
+    }
+    
+    func failedToDelete(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        
+    }
+    
+    func setDetailBackgroundColors() {
+        let customDate = bookmarkDetail?.diary?.diaryContents?.date?.components(separatedBy: "-")
+        dateLabel.text = "\(customDate?[0] ?? "2021").\(customDate?[1] ?? "12").\(customDate?[2] ??  "1")"
+        
+        let colors: [CGColor] = [
+            hexStringToUIColor(hex:"#FFFFFF").cgColor,
+            hexStringToUIColor(hex:bookmarkDetail?.diary?.diaryContents?.color ?? "#ffffff").cgColor,
+                                  ]
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame  = self.view.bounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        let layer = CALayer()
+        layer.frame = self.view.bounds
+        layer.backgroundColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        self.view.layer.insertSublayer(layer, at: 1)
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 }
