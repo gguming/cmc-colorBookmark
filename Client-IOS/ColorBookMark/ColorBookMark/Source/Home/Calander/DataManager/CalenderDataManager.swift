@@ -26,6 +26,7 @@ class CalenderDataManager {
                     // 성공했을 때
                     if response.isSuccess {
                         print("캘린더 연결 성공")
+                        print(response.result)
                         delegate.getCalenderSuccess(data: response.result)
                     }
                     

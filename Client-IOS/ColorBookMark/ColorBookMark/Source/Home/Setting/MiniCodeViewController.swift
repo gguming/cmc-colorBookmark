@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MiniCodeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     lazy var dataManager: ChangeSettingDataManager = ChangeSettingDataManager()
     
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]

@@ -150,6 +150,7 @@
 		E95683CF275E410500F075CF /* PostMyColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683CE275E410500F075CF /* PostMyColorResponse.swift */; };
 		E95683D1275E428100F075CF /* CheckMyColorDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683D0275E428100F075CF /* CheckMyColorDataManger.swift */; };
 		E95683D3275E42DC00F075CF /* CheckMyColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683D2275E42DC00F075CF /* CheckMyColorResponse.swift */; };
+		E95683D52760116400F075CF /* GetMyColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95683D42760116400F075CF /* GetMyColorDataManager.swift */; };
 		E96245F7275150E6003BEDC8 /* SecondSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */; };
 		E96245FA2751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */; };
 		E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */; };
@@ -347,6 +348,7 @@
 		E95683CE275E410500F075CF /* PostMyColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMyColorResponse.swift; sourceTree = "<group>"; };
 		E95683D0275E428100F075CF /* CheckMyColorDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMyColorDataManger.swift; sourceTree = "<group>"; };
 		E95683D2275E42DC00F075CF /* CheckMyColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMyColorResponse.swift; sourceTree = "<group>"; };
+		E95683D42760116400F075CF /* GetMyColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyColorDataManager.swift; sourceTree = "<group>"; };
 		E96245F5275150E6003BEDC8 /* SecondSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingTableViewCell.swift; sourceTree = "<group>"; };
 		E96245F92751D0E9003BEDC8 /* MyPageMiniCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMiniCodeViewController.swift; sourceTree = "<group>"; };
 		E9A236E8274E327E0043836A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -963,6 +965,7 @@
 			children = (
 				A4333EAA274CB9F9002EEB8C /* Entity */,
 				A4333EAD274CC409002EEB8C /* GetColorListDataManager.swift */,
+				E95683D42760116400F075CF /* GetMyColorDataManager.swift */,
 			);
 			path = ColorData;
 			sourceTree = "<group>";
@@ -1408,6 +1411,7 @@
 				E9336CCC274D005100686AF1 /* MiniCodeRequest.swift in Sources */,
 				E9A236FB275085240043836A /* ChangeNicknameResponse.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
+				E95683D52760116400F075CF /* GetMyColorDataManager.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,

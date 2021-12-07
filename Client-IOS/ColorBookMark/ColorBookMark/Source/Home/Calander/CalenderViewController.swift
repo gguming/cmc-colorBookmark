@@ -42,7 +42,7 @@ class CalenderViewController: UIViewController {
         print(constantMonth)
         let calenderInput: Parameters = ["page" : constantMonth]
         dataManager.getCalenderMonth(calenderInput, delegate: self)
-        
+        print("에에에")
         let firstDayOfMonth = cal.date(from: components)
         components.month = components.month! + 1
         self.calculation()
@@ -184,14 +184,15 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             //끝일 30 or 31
             print(CalendarViewMonth, "끝일")
             // 달력에서 현재 row
-            print(indexPath.row, "현재 row")
+            print(indexPath.row, "달력에서의 현재 row")
             cell.backgroundColor = .white
             let currentIndex = startDate + indexPath.row
-            
-            if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate - 1 {
-                print(currentIndex, "api에 넣는 인덱스값")
-                print(indexPath.row - startDate, "+++")
+
+            if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate {
+//                print(currentIndex, "row + startdate")
+                print(indexPath.row - startDate, "api에 넣는 인덱스값[]")
                 if calendarData?[indexPath.row - startDate].color == nil {
+                    print("요기까지는 오케이")
                     cell.CircleImage.tintColor = .clear
                 }
                 else {
@@ -256,11 +257,9 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
 extension CalenderViewController {
     func getCalenderSuccess(data: [CalendarResult]) {
         calendarData = data
-        print("데이터 개수 ")
-        print(calendarData?.count)
-//        print(calendarData[0])
-        print(calendarData?[17].color)
-//        print(calendarData[18].color)
+        print("전체 데이터 보기")
+//        print(calendarData)
+
         CalenderCollectionview.reloadData()
     }
 }
