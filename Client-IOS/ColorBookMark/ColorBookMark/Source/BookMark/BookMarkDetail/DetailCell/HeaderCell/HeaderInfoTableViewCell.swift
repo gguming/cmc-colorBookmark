@@ -9,6 +9,8 @@ import UIKit
 
 class HeaderInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -15,6 +15,8 @@ class EditDiaryViewController: UIViewController  {
     var imgUrls: [String] = []
     var colors: [Colors]?
     let storage = Storage.storage().reference()
+    
+    lazy var postDataManager: PostDiaryDataManager = PostDiaryDataManager()
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,41 +48,81 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func addDiary() {
+        showIndicator()
         let uuid = UUID().uuidString
         let recordInfo = RecordInfo.shared
-        
-        
+        let colorInfo = ColorPickerInfo.shared
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = formatter.string(from: Date())
+        var count = 0
+        var request = PostDiaryRequest()
+        request.date = currentDate
+        request.content = recordInfo.text
+        if colorInfo.color == nil {
+            presentBottomAlert(message: "색깔을 골라주세요!")
+            return
+        }
+        request.color = colorInfo.color
+        request.colorName = colorInfo.colorName
         print("시작시작시작시작시작")
         if !pickedImg.isEmpty {
-            DispatchQueue.global(qos: .userInteractive).sync {
                 
-                for img in 0..<pickedImg.count{
-                    guard let image = pickedImg[img].pngData() else {return}
-                    storage.child("images/\(uuid)/\(img).png").putData(image,
-                                                                  metadata: nil){ _, error in
-                        guard error == nil else {
-                            print("Failed to upload")
+            for img in 0..<pickedImg.count{
+                guard let image = pickedImg[img].pngData() else {return}
+                storage.child("images/\(uuid)/\(img).png").putData(image,
+                                                              metadata: nil){ _, error in
+                    guard error == nil else {
+                        print("Failed to upload")
+                        return
+                    }
+                    self.storage.child("images/\(uuid)/\(img).png").downloadURL { url, error in
+                        guard let url = url, error == nil else {
                             return
                         }
-                        self.storage.child("images/\(uuid)/\(img).png").downloadURL { url, error in
-                            guard let url = url, error == nil else {
-                                return
+                        
+                        let urlString = url.absoluteString
+                        self.imgUrls.append(urlString)
+                        print("-------> URL : \(urlString)")
+                        count += 1
+                        
+                        
+                        if count == self.pickedImg.count{
+                            if recordInfo.recordURL != nil {
+                                guard let record = recordInfo.recordURL else {return}
+                                self.storage.child("record/\(uuid)/\(record).m4a").putFile(from: record, metadata: nil) { metadata, error in
+                                    if error != nil {
+                                        print(error ?? "error")
+                                    }
+
+                                    self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { url, error in
+                                        guard let url = url, error == nil else {
+                                            return
+                                        }
+                                        let urlString = url.absoluteString
+                                        self.recordUrl = urlString
+                                        print("------->record URL : \(urlString)")
+                                        request.diaryImgUrl = self.imgUrls
+                                        request.recordContent = urlString
+                                        
+                                        self.postDataManager.diaryPost(request, delegate: self)
+                                        self.dismissIndicator()
+                                        
+                                    })
+                                }
+                            } else {
+                                request.diaryImgUrl = self.imgUrls
+                                self.postDataManager.diaryPost(request, delegate: self)
+                                self.dismissIndicator()
                             }
-                            
-                            let urlString = url.absoluteString
-                            self.imgUrls.append(urlString)
-                            print("-------> URL : \(urlString)")
-                            
                         }
                     }
-                    
                 }
+                
             }
-            
-        }
         
-        if recordInfo.recordURL != nil {
-            DispatchQueue.global(qos: .userInteractive).sync {
+        } else {
+            if recordInfo.recordURL != nil {
                 guard let record = recordInfo.recordURL else {return}
                 storage.child("record/\(uuid)/\(record).m4a").putFile(from: record, metadata: nil) { metadata, error in
                     if error != nil {
@@ -94,13 +136,19 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
                         let urlString = url.absoluteString
                         self.recordUrl = urlString
                         print("------->record URL : \(urlString)")
+                        request.recordContent = urlString
+                        self.postDataManager.diaryPost(request, delegate: self)
+                        self.dismissIndicator()
+                        
                     })
                 }
-                
-                
+            } else {
+                self.postDataManager.diaryPost(request, delegate: self)
+                self.dismissIndicator()
             }
-            
         }
+        
+        
         
         print("끝끝끝끝끝")
         
@@ -318,6 +366,7 @@ extension EditDiaryViewController {
     
     func failedToPostDiary(message: String) {
         print("------>>>>\(message)")
+        presentBottomAlert(message: message)
         
     }
 }

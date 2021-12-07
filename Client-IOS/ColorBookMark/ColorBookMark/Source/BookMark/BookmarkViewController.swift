@@ -49,8 +49,12 @@ class BookmarkViewController: BaseViewController {
         
     }
     private func setUI() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM"
+        let currentDate = formatter.string(from: Date())
         monthView.layer.cornerRadius = 8
         monthBtn.titleLabel?.textAlignment = .left
+        monthBtn.setTitle(currentDate, for: .normal)
         tableview.backgroundColor = .clear
     }
  

@@ -108,6 +108,8 @@
 		A4C69FCB273F71590091565C /* BookMark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C69FCA273F71590091565C /* BookMark.storyboard */; };
 		A4CBCECC274B734D0092131B /* EditColorBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */; };
 		A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */; };
+		A4D2891E275F70CA001E7194 /* BookMarkDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D2891D275F70CA001E7194 /* BookMarkDetailDataManager.swift */; };
+		A4D28923275F71FA001E7194 /* GetBookMarkDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D28922275F71FA001E7194 /* GetBookMarkDetailResponse.swift */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		A4EA33412757908500121E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4EA33402757908500121E5A /* GoogleService-Info.plist */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
@@ -299,6 +301,8 @@
 		A4C69FCA273F71590091565C /* BookMark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookMark.storyboard; sourceTree = "<group>"; };
 		A4CBCECA274B734D0092131B /* EditColorBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorBtnCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4CBCECB274B734D0092131B /* EditColorBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditColorBtnCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4D2891D275F70CA001E7194 /* BookMarkDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDetailDataManager.swift; sourceTree = "<group>"; };
+		A4D28922275F71FA001E7194 /* GetBookMarkDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookMarkDetailResponse.swift; sourceTree = "<group>"; };
 		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		A4EA33402757908500121E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +514,8 @@
 		A45A9B9F275D704500D312D5 /* BookMarkDetailDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				A4D2891F275F70D3001E7194 /* Entity */,
+				A4D2891D275F70CA001E7194 /* BookMarkDetailDataManager.swift */,
 			);
 			path = BookMarkDetailDataManager;
 			sourceTree = "<group>";
@@ -958,6 +964,14 @@
 			path = BookMark;
 			sourceTree = "<group>";
 		};
+		A4D2891F275F70D3001E7194 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4D28922275F71FA001E7194 /* GetBookMarkDetailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A4D874B1274C822700079B7F /* ColorData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1304,6 +1318,7 @@
 				E9E4A9892734EE9A0037A815 /* HomeViewController.swift in Sources */,
 				E9A236EF274F27820043836A /* FindPasswordResponse.swift in Sources */,
 				E9A236F7274F57D20043836A /* ChangePasswordDataManager.swift in Sources */,
+				A4D2891E275F70CA001E7194 /* BookMarkDetailDataManager.swift in Sources */,
 				A45DF805275383110067021C /* AudioViewController.swift in Sources */,
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
 				A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */,
@@ -1398,6 +1413,7 @@
 				A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */,
 				E9E4A999273A30D50037A815 /* SigninRequest.swift in Sources */,
 				E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */,
+				A4D28923275F71FA001E7194 /* GetBookMarkDetailResponse.swift in Sources */,
 				E9336CBC274B463C00686AF1 /* MiniCodeCollectionViewCell.swift in Sources */,
 				E9A236F3274F57BB0043836A /* ChangePasswordResponse.swift in Sources */,
 				E9336CCA274D004700686AF1 /* MiniCodeResponse.swift in Sources */,
