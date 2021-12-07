@@ -7,10 +7,12 @@
 
 import UIKit
 import KakaoSDKAuth
+import AVFoundation
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var audioPlayer : AVAudioPlayer!
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
             if let url = URLContexts.first?.url {
@@ -57,6 +59,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
+        if Constant.setting_2 == "Y" {
+            print("음악 종료")
+            audioPlayer?.stop()
+        }
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
@@ -74,16 +80,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
+        if Constant.setting_2 == "Y" {
+            print("음악 종료")
+            audioPlayer?.stop()
+        }
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+        if Constant.setting_2 == "Y" {
+            print("음악 재시작")
+            playBackgroundMusic()
+        }
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
 
-
+    func playBackgroundMusic() {
+        guard let url = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")
+        else {
+            print("error to get the mp3 file")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
+        }
+        catch {
+            print("audio file error")
+        }
+        audioPlayer?.play()
+    }
+    
 }
 
