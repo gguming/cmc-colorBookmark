@@ -15,7 +15,7 @@ class BookmarkDetailViewController: UIViewController {
     var modifyMode: Bool?
     var bookmarkDetail: Diary?
     lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
-
+    lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -53,6 +53,10 @@ class BookmarkDetailViewController: UIViewController {
 
 
 extension BookmarkDetailViewController: ModifyModeDelegate{
+    func deleteDiary() {
+        deleteDiaryDataManager.diaryDelete(diaryId: diaryId ?? 0, delegate: self)
+    }
+    
     func doneModifytMode() {
         modifyMode = false
         tableview.reloadData()
@@ -198,7 +202,27 @@ extension BookmarkDetailViewController {
         
     }
     
+    func didSuccessDelete(_ result: DeleteDiaryResponse) {
+        print("------>\(result)")
+        self.dismiss(animated: true) {
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
+            vc.presentBottomAlert(message: result.message ?? "")
+            vc.tableview.reloadData()
+        }
+        
+       
+        
+    }
+    
+    func failedToDelete(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        
+    }
+    
     func setDetailBackgroundColors() {
+        let customDate = bookmarkDetail?.diary?.diaryContents?.date?.components(separatedBy: "-")
+        dateLabel.text = "\(customDate?[0] ?? "2021").\(customDate?[1] ?? "12").\(customDate?[2] ??  "1")"
         
         let colors: [CGColor] = [
             hexStringToUIColor(hex:"#FFFFFF").cgColor,

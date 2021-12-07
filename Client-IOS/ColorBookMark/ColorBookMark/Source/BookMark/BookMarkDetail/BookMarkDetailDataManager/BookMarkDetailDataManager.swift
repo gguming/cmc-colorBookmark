@@ -24,12 +24,12 @@ class BookMarkDetailDataManager{
                     // 실패했을 때
                     else {
                         switch response.code {
-                        case 2000..<3000: delegate.failedToGetBookMarkDetail(message: response.message ?? "" )
+                        case 2000..<3000: delegate.failedToGetBookMarkDetail(message: response.message)
                             print(response.message as Any)
-                        case 3000..<4000: delegate.failedToGetBookMarkDetail(message: response.message ?? "" )
+                        case 3000..<4000: delegate.failedToGetBookMarkDetail(message: response.message)
                             print(response.message as Any)
-                        case 4000: delegate.failedToGetBookMarkDetail(message: response.message ?? "" )
-                        default: delegate.failedToGetBookMarkDetail(message: response.message ?? "" )
+                        case 4000: delegate.failedToGetBookMarkDetail(message: response.message)
+                        default: delegate.failedToGetBookMarkDetail(message: response.message)
                             print(response.message as Any)
                         }
                     }
