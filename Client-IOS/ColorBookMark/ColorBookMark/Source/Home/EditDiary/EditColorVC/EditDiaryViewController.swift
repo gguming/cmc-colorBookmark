@@ -57,7 +57,7 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
         let currentDate = formatter.string(from: Date())
         var count = 0
         var request = PostDiaryRequest()
-        request.date = currentDate
+//        request.date = currentDate
         request.content = recordInfo.text
         if colorInfo.color == nil {
             presentBottomAlert(message: "색깔을 골라주세요!")

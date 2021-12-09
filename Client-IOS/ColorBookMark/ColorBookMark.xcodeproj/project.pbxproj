@@ -95,6 +95,8 @@
 		A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D29275112050018A7F3 /* PostColorResponse.swift */; };
 		A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */; };
 		A4A91E242753CE2900273A01 /* AudioBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A91E232753CE2900273A01 /* AudioBackgroundViewController.swift */; };
+		A4AA7ED92761C84B009B1129 /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA7ED82761C84B009B1129 /* MonthPicker.swift */; };
+		A4AA7EDB2761C943009B1129 /* MonthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA7EDA2761C943009B1129 /* MonthPickerViewController.swift */; };
 		A4AEB9022744B3BD00901C5B /* EditColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */; };
 		A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */; };
 		A4BAF466274DC09A00187878 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */; };
@@ -291,6 +293,8 @@
 		A4A59D29275112050018A7F3 /* PostColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorResponse.swift; sourceTree = "<group>"; };
 		A4A59D2D2751128C0018A7F3 /* PostColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorDataManager.swift; sourceTree = "<group>"; };
 		A4A91E232753CE2900273A01 /* AudioBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBackgroundViewController.swift; sourceTree = "<group>"; };
+		A4AA7ED82761C84B009B1129 /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
+		A4AA7EDA2761C943009B1129 /* MonthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewController.swift; sourceTree = "<group>"; };
 		A4AEB9012744B3BC00901C5B /* EditColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorViewController.swift; sourceTree = "<group>"; };
 		A4BAF463274DC09A00187878 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4BAF464274DC09A00187878 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -904,6 +908,15 @@
 			path = PostColor;
 			sourceTree = "<group>";
 		};
+		A4AA7ED72761C83A009B1129 /* MonthPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA7ED82761C84B009B1129 /* MonthPicker.swift */,
+				A4AA7EDA2761C943009B1129 /* MonthPickerViewController.swift */,
+			);
+			path = MonthPicker;
+			sourceTree = "<group>";
+		};
 		A4AEB9032744B55F00901C5B /* EditColorBtnCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +974,7 @@
 		A4C69FC9273F71400091565C /* BookMark */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA7ED72761C83A009B1129 /* MonthPicker */,
 				A45A9BA0275D706600D312D5 /* BookMarkDataManager */,
 				A4C037D02759D22700486C62 /* BookMarkHeadCell */,
 				A475557A2747653000593C70 /* BookMarkDetail */,
@@ -1325,6 +1339,7 @@
 				A46839EF272E7E63005BA79E /* UIViewController.swift in Sources */,
 				A42D4B96275A0FD900D5B9B3 /* RecordHaveTableViewCell.swift in Sources */,
 				E9445B9E273C6FB700B4EC82 /* EmailCheckDataManager.swift in Sources */,
+				A4AA7ED92761C84B009B1129 /* MonthPicker.swift in Sources */,
 				E9E0CDB4274D4D6700ED9B2F /* LogoutViewController.swift in Sources */,
 				E95683C7275CADC500F075CF /* ChangePasswordCheckViewController.swift in Sources */,
 				A4A59D2A275112050018A7F3 /* PostColorResponse.swift in Sources */,
@@ -1393,6 +1408,7 @@
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
 				A475558427476D7C00593C70 /* StoryTableViewCell.swift in Sources */,
 				E9445BB6273E59DF00B4EC82 /* LoginDataManager.swift in Sources */,
+				A4AA7EDB2761C943009B1129 /* MonthPickerViewController.swift in Sources */,
 				E9445B9C273B902E00B4EC82 /* MyPageViewController.swift in Sources */,
 				A45AE889272D094D009ABED6 /* AppDelegate.swift in Sources */,
 				A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */,

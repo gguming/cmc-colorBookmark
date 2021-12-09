@@ -182,7 +182,7 @@ extension SettingTableViewCell {
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: notiContent, trigger: trigger)
         
         userNotiCenter.add(request) { (error) in
-            print(#function, error)
+            print(#function, error ?? "")
         }
     }
 }

@@ -28,7 +28,7 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
                _ = oauthToken
                let accessToken = oauthToken?.accessToken
                print("에세스 토큰")
-               print(accessToken)
+               print(accessToken ?? "")
                
                let kakaoLoginInput = KakaoLoginRequest(accessToken: accessToken!)
                dataManager.getKakaoLoginJwt(kakaoLoginInput, delegate: self)
@@ -89,11 +89,11 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             if let email = credential.email {
                 Constant.email = email
-                print(Constant.email)
+                print(Constant.email ?? "")
             }
             else {
                 Constant.email = "Apple"
-                print(Constant.email)
+                print(Constant.email ?? "")
             }
             
             if let authorizationCode = credential.authorizationCode,
