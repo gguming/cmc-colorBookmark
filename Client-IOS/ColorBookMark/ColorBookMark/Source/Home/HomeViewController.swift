@@ -9,6 +9,10 @@ import UIKit
 import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
+protocol ColorHomeCollectionDelegate: AnyObject {
+    func reloadHomeColorCollectionView()
+}
+
 class HomeViewController: BaseViewController {
     
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
@@ -115,6 +119,7 @@ class HomeViewController: BaseViewController {
         let appearance = SurfaceAppearance()
         let sb = UIStoryboard(name: "EditColor", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.homeColorDelegate = self
         vc.colors = self.colors
         fpc.set(contentViewController: vc)
         fpc.addPanel(toParent: self)
@@ -235,9 +240,11 @@ extension HomeViewController {
     
     func failedToGetColors(message: String) {
         print("------>>>>\(message)")
-        
     }
-    
-    
-    
+}
+
+extension HomeViewController: ColorHomeCollectionDelegate {
+    func reloadHomeColorCollectionView() {
+        getColors()
+    }
 }
