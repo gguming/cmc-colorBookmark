@@ -12,7 +12,7 @@ struct PostDiaryRequest: Encodable{
     var recordContent: String?
     var color: String?
     var colorName: String?
-    var diaryId: String?
+    var date: String?
     var diaryImgUrl: [String]?
     
 }

@@ -105,6 +105,8 @@ extension BookmarkViewController: ChangeMonthDelegate{
 //        formatter.dateFormat = "yyyy.MM"
 //        let currentDate = formatter.string(from: Date())
         dataManager.getBookMark(date: month, delegate: self)
+        self.date = month
+        dateForBtn = monthForBtn
         monthBtn.setTitle(monthForBtn, for: .normal)
     }
     

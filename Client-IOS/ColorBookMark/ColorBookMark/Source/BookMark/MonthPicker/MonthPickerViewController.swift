@@ -28,8 +28,8 @@ class MonthPickerViewController: UIViewController {
             self.month = string
             self.monthForBtn = string22
             
-            print(self.month)
-            print(self.monthForBtn)
+            print(self.month as Any)
+            print(self.monthForBtn as Any)
             // should show something like 05/2015
         }
         expiryDatePicker.frame = CGRect(x: 0, y: 0, width: calanderView.bounds.width, height: calanderView.bounds.height)

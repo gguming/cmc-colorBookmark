@@ -48,3 +48,9 @@ class RecordInfo {
     private init() {}
     
 }
+
+class ModifyDetailInfo {
+    static let shared = ModifyDetailInfo()
+    var diary: Diary?
+    private init() {}
+}
