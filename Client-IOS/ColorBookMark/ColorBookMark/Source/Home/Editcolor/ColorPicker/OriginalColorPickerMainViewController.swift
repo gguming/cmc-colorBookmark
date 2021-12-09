@@ -11,6 +11,7 @@ class OriginalColorPickerMainViewController: UIViewController {
 
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
+    weak var colorCollectionviewDelegate: ColorReloadDelegate?
     lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
     lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
     var currentColorId = 0
@@ -22,9 +23,6 @@ class OriginalColorPickerMainViewController: UIViewController {
         print(currentColorId)
         let request = PostMyColorRequest(color: colorInfo!, myColorId: currentColorId)
         editColorDataManager.editMyColor(request, delegate: self)
-//        presentAlert()
-//        데이터매니저에 연결 
-        
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
@@ -43,6 +41,8 @@ extension OriginalColorPickerMainViewController {
         print("------>\(result)")
         presentBottomAlert(message: result.message ?? "")
         self.dismiss(animated: true, completion: nil)
+        self.colorCollectionviewDelegate?.reloadColorCollectionView()
+        //여기서 델리겟 패턴으로 editVC collectionview reload
     }
     
     func failedToEditColors(message: String) {
