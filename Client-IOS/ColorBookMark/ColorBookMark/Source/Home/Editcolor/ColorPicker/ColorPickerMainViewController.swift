@@ -64,12 +64,7 @@ extension ColorPickerMainViewController{
     func didSuccessPostColors(_ result: PostMyColorResponse) {
         print("!!!------>\(result)")
         presentBottomAlert(message: result.message ?? "")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        self.dismiss(animated: true, completion: {
-            print("리로드")
-//            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-//            vc.collectionview.reloadData()
-        })
+        self.dismiss(animated: true, completion: nil)
     }
     
     func failedToPostColors(message: String) {

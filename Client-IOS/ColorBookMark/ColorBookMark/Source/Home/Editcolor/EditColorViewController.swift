@@ -13,7 +13,6 @@ protocol ColorCollectionViewCellDelegate {
 }
 
 class EditColorViewController: UIViewController {
-    //MARK: check
     var colors: [Colors]?
 
     @IBOutlet weak var nickInfoLabel: UILabel!
@@ -25,7 +24,10 @@ class EditColorViewController: UIViewController {
     lazy var colorNameDataManager: CheckMyColorDataManger = CheckMyColorDataManger()
     lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
     
+    
     @IBAction func confirmBtnTapped(_ sender: Any) {
+//        let HomeVC =
+//        colorDataManager.getMyColorinEditColor(delegate: <#T##EditColorViewController#>)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -74,6 +76,7 @@ class EditColorViewController: UIViewController {
     }
     
     func getColor() {
+        print("09090")
         colorDataManager.getMyColorinEditColor(delegate: self)
     }
       
@@ -121,12 +124,11 @@ extension EditColorViewController: ClickEditBtn {
         vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension EditColorViewController {
     func didSuccessGetColors(_ result: ColorResponse) {
+        print("ㅛㅛㅛㅗㅗ")
         print("------>\(result)")
         colors = result.result
         collectionview.reloadData()
@@ -146,11 +148,6 @@ extension EditColorViewController: ColorCollectionViewCellDelegate{
         print(index)
         let currentColorId = colors?[index].myColorId
         presentAlert(colorId: currentColorId!)
-      
-//        이거 한다음에
-//        데이터매니져에 연결후에 델리겟으로
-//        reloadData 하기
-
     }
     
     func selectedColorCircle(index: Int) {
@@ -200,14 +197,13 @@ extension EditColorViewController: ColorCollectionViewCellDelegate{
 }
 
 extension EditColorViewController {
-    func didSuccessEditColors(_ result: PostMyColorResponse) {
+    func didSuccessEditColorName(_ result: PostMyColorResponse) {
         print("------>\(result)")
         presentBottomAlert(message: result.message ?? "")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
-        self.dismiss(animated: true, completion: nil)
+        getColor()
     }
     
-    func failedToEditColors(message: String) {
+    func failedToEditColorName(message: String) {
         print("------>>>>\(message)")
         presentBottomAlert(message: message)
         self.dismiss(animated: true, completion: nil)

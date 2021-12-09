@@ -14,7 +14,6 @@ struct CalendarResponse: Decodable{
     let result: [CalendarResult]
 }
 
-// MARK: - Result
 struct CalendarResult: Decodable {
     let date: String
     let color: String?

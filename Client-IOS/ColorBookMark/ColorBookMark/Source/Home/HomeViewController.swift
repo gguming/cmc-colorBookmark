@@ -230,9 +230,7 @@ extension HomeViewController {
     func didSuccessGetColors(_ result: ColorResponse) {
         print("------>\(result)")
         colors = result.result
-        collectionview.reloadData()
-       
-        
+        collectionview.reloadData()    
     }
     
     func failedToGetColors(message: String) {
