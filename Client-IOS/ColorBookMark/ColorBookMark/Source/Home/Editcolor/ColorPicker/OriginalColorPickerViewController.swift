@@ -31,10 +31,11 @@ class OriginalColorPickerViewController: UIColorPickerViewController {
 
 @available(iOS 14.0, *)
 extension OriginalColorPickerViewController: UIColorPickerViewControllerDelegate{
-    func originalColorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
         let color = hexStringFromColor(color: viewController.selectedColor)
         let colorInfo = ColorPickerInfo.shared
         colorInfo.color = color
+        print("컬러확인 - 컬러편집")
         print(color)
     }
 }

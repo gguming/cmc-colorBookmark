@@ -11,6 +11,5 @@ import Foundation
 struct SettingRequest: Encodable {
     var alarmStatus: String?
     var miniCodeStatus: String?
-    var NameStatus: String?
     var BGMStatus: String?
 }

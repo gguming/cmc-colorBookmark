@@ -7,10 +7,9 @@
 
 import Foundation
 import Alamofire
-//MARK: delegate 위치 바꾸기
 
 class CheckMyColorDataManger {
-    func checkMyColor(delegate: SettingTableViewCell) {
+    func checkMyColor(delegate: EditColorViewController) {
         AF.request( "\(Constant.SERVER_BASE_URL)/app/diarys/myColor", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
             .validate()
             .responseDecodable(of: CheckMyColorResponse.self) { response in
@@ -21,6 +20,7 @@ class CheckMyColorDataManger {
                     // 성공했을 때
                     if response.isSuccess {
                       print("조회성공")
+                        
                        
                     }
                     

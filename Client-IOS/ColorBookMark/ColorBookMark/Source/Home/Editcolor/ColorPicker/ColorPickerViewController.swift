@@ -16,6 +16,7 @@ class ColorPickerViewController: UIColorPickerViewController {
         self.supportsAlpha = false
         self.delegate = self
     }
+    
     func hexStringFromColor(color: UIColor) -> String {
         let components = color.cgColor.components
         let r: CGFloat = components?[0] ?? 0.0
@@ -35,6 +36,8 @@ extension ColorPickerViewController: UIColorPickerViewControllerDelegate{
         let color = hexStringFromColor(color: viewController.selectedColor)
         let colorInfo = ColorPickerInfo.shared
         colorInfo.color = color
+        print("컬러확인 - 등록")
         print(color)
+        print("끝ㅌ")
     }
 }
