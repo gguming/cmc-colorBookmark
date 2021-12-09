@@ -86,7 +86,7 @@ class SettingTableViewCell: UITableViewCell {
         switch cellNumber {
         case 0:
             Constant.setting_0 = "Y"
-            let settingInput = SettingRequest(alarmStatus:  Constant.setting_0)
+            let settingInput = SettingRequest(alarmStatus: Constant.setting_0)
             dataManager.getSettingValue(settingInput, delegate: self)
         case 1:
             Constant.setting_1 = "Y"

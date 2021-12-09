@@ -11,6 +11,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
 
     var colorDelegate: ColorCollectionViewCellDelegate?
     var index: Int = 0
+    var myColorId = 0
     
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
@@ -21,10 +22,10 @@ class ColorCollectionViewCell: UICollectionViewCell {
         backView.backgroundColor = .red
         backView.layer.cornerRadius = 45
         backView.isHidden = true
-
     }
     
     @objc func EditColorCircle() {
+        print("#######")
         self.colorDelegate?.selectedColorCircle(index: index)
     }
     

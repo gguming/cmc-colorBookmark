@@ -11,10 +11,16 @@ class OriginalColorPickerMainViewController: UIViewController {
 
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
-//    lazy var postcolorDataManager: PostColorDataManager = PostColorDataManager()
+    lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
+    var currentColorId = 0
     
     @available(iOS 14.0, *)
     @IBAction func saveBtnTapped(_ sender: Any) {
+        let colorInfo = ColorPickerInfo.shared.color
+        print(colorInfo)
+        print(currentColorId)
+        let request = PostMyColorRequest(color: colorInfo!, myColorId: currentColorId)
+        editColorDataManager.editMyColor(request, delegate: self)
 //        presentAlert()
 //        데이터매니저에 연결 
         
@@ -30,40 +36,20 @@ class OriginalColorPickerMainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    @available(iOS 14.0, *)
-//    private func presentAlert() {
-//        let alert = UIAlertController(title: "감정 이름 설정", message: nil, preferredStyle: .alert)
-//        alert.addTextField(configurationHandler: nil)
-//        let ok = UIAlertAction(title: "저장", style: .default) { action in
-//            let colorName = alert.textFields?[0].text
-//            let colorInfo = ColorPickerInfo.shared.color
-//
-//            if colorName?.count == 0 {
-//                self.presentBottomAlert(message: "감정 이름을 입력해 주세요!")
-//                self.presentAlert()
-//            } else if colorName?.count ?? 6 > 5 {
-//                self.presentBottomAlert(message: "5자 이하로 입력해 주세요!")
-//                self.presentAlert()
-//
-//            }else if colorInfo == nil {
-//                self.presentBottomAlert(message: "컬러를 골라주세요")
-//            }else {
-//
-//                let request = PostColorRequest(color: colorInfo!, colorName: "\(colorName ?? "")")
-//                print(request)
-//                self.postcolorDataManager.postColor(request, delegate: self)
-//                print(1)
-//            }
-//
-//
-//        }
-//        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-//        alert.addAction(ok)
-//        alert.addAction(cancel)
-//
-////        let confirm = UIAlertAction(
-//        self.present(alert, animated: true, completion: nil)
-//
-//    }
 
+}
+
+extension OriginalColorPickerMainViewController {
+    func didSuccessEditColors(_ result: PostMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func failedToEditColors(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 }

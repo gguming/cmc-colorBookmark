@@ -8,8 +8,10 @@
 import Foundation
 
 struct PostMyColorRequest: Encodable {
-    let color: String
-    let colorName: String?
-    let myColorId: Int
-    let status: String?
+    var color: String?
+    var colorName: String?
+    var myColorId: Int?
+    var status: String?
 }
+
+
