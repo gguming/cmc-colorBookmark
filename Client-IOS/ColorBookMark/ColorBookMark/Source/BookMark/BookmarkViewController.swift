@@ -12,6 +12,7 @@ class BookmarkViewController: BaseViewController {
     @IBOutlet weak var monthBtn: UIButton!
     
     var date: String?
+    var dateForBtn: String?
     var bookmarks: [BookMarks]?
     lazy var dataManager: BookMarkDataManager = BookMarkDataManager()
     
@@ -21,6 +22,12 @@ class BookmarkViewController: BaseViewController {
     }
     
     @IBAction func monthBtnTapped(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "MonthPickerViewController") as? MonthPickerViewController else {return}
+        vc.changeMonthDelegate = self
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.view.backgroundColor = .black.withAlphaComponent(0.3)
+        self.present(vc, animated: true, completion: nil)
         
     }
     @IBOutlet weak var tableview: UITableView!
@@ -37,7 +44,11 @@ class BookmarkViewController: BaseViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM"
+        let currentDate = formatter.string(from: Date())
         dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
+        monthBtn.setTitle(dateForBtn ?? currentDate, for: .normal)
         tableview.reloadData()
         let changeColors: [CGColor] = [
            CGColor(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),
@@ -59,9 +70,10 @@ class BookmarkViewController: BaseViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy.MM"
         let currentDate = formatter.string(from: Date())
+        
         monthView.layer.cornerRadius = 8
         monthBtn.titleLabel?.textAlignment = .left
-        monthBtn.setTitle(currentDate, for: .normal)
+        monthBtn.setTitle(dateForBtn ?? currentDate, for: .normal)
         tableview.backgroundColor = .clear
     }
  
@@ -78,9 +90,24 @@ extension BookmarkViewController{
     }
     
     func failedToGetBookMakrs(message: String) {
+        bookmarks = []
+        tableview.reloadData()
         print("------>>>>\(message)")
+        presentBottomAlert(message: message)
         
     }
+    
+}
+
+extension BookmarkViewController: ChangeMonthDelegate{
+    func changeMonth(month: String, monthForBtn: String) {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy.MM"
+//        let currentDate = formatter.string(from: Date())
+        dataManager.getBookMark(date: month, delegate: self)
+        monthBtn.setTitle(monthForBtn, for: .normal)
+    }
+    
     
 }
 

@@ -149,10 +149,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-Ud-Y3g">
-                                <rect key="frame" x="50" y="353" width="314" height="200"/>
+                                <rect key="frame" x="50" y="329" width="314" height="248"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7z-ZR-WPQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-cf-gHj">
+                                                <rect key="frame" x="243" y="20" width="51" height="33"/>
+                                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="51" id="JAp-r8-Tcs"/>
+                                                    <constraint firstAttribute="height" constant="33" id="c6i-H5-dG4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="완료">
+                                                    <color key="titleColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-Ud-19c">
+                                                <rect key="frame" x="12" y="16.5" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="UFj-hE-iK1"/>
+                                                    <constraint firstAttribute="width" constant="40" id="epv-PI-mxX"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="iconIonicIosArrowBack"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="gpt-Ud-19c" firstAttribute="leading" secondItem="Y7z-ZR-WPQ" secondAttribute="leading" constant="12" id="Jot-bX-Et0"/>
+                                            <constraint firstAttribute="bottom" secondItem="o9y-cf-gHj" secondAttribute="bottom" id="Xmx-lU-A3G"/>
+                                            <constraint firstAttribute="trailing" secondItem="o9y-cf-gHj" secondAttribute="trailing" constant="20" id="eaM-ZU-Sqn"/>
+                                            <constraint firstItem="gpt-Ud-19c" firstAttribute="centerY" secondItem="o9y-cf-gHj" secondAttribute="centerY" id="iHK-Dc-zt9"/>
+                                            <constraint firstAttribute="height" constant="53" id="xfD-c2-MiG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVm-I8-e3F">
+                                        <rect key="frame" x="0.0" y="53" width="314" height="195"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="D3I-Me-xZI"/>
+                                    <constraint firstAttribute="height" constant="248" id="D3I-Me-xZI"/>
+                                    <constraint firstAttribute="bottom" secondItem="tVm-I8-e3F" secondAttribute="bottom" id="H5S-F4-SVB"/>
+                                    <constraint firstItem="tVm-I8-e3F" firstAttribute="top" secondItem="Y7z-ZR-WPQ" secondAttribute="bottom" id="VaS-JX-CY3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y7z-ZR-WPQ" secondAttribute="trailing" id="YDf-Cv-H1Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="tVm-I8-e3F" secondAttribute="trailing" id="f4b-x9-s7g"/>
+                                    <constraint firstItem="Y7z-ZR-WPQ" firstAttribute="top" secondItem="2cB-Ud-Y3g" secondAttribute="top" id="hDF-ed-E0l"/>
+                                    <constraint firstItem="tVm-I8-e3F" firstAttribute="leading" secondItem="2cB-Ud-Y3g" secondAttribute="leading" id="tKo-dK-eXX"/>
+                                    <constraint firstItem="Y7z-ZR-WPQ" firstAttribute="leading" secondItem="2cB-Ud-Y3g" secondAttribute="leading" id="yCz-vZ-r59"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -164,7 +212,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calanderView" destination="2cB-Ud-Y3g" id="9WY-TM-tDG"/>
+                        <outlet property="backBtn" destination="gpt-Ud-19c" id="EAq-2A-afR"/>
+                        <outlet property="calanderView" destination="tVm-I8-e3F" id="7Hv-bt-K6z"/>
+                        <outlet property="calanderbackView" destination="2cB-Ud-Y3g" id="VPA-jB-Abw"/>
+                        <outlet property="completeBtn" destination="o9y-cf-gHj" id="dBZ-lL-8or"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfD-kO-Ddx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
