@@ -62,10 +62,10 @@ class PostMyColorDataManager {
                         switch response.code {
                         case 1016:
                             print("마이컬러 삭제 성공 @@@@@")
-                            delegate.didSuccessEditColors(response)
+                            delegate.didSuccessEditColorName(response)
                         case 1012:
                             print("마이컬러 등록/수정 성공 @@@@@")
-                            delegate.didSuccessEditColors(response)
+                            delegate.didSuccessEditColorName(response)
                         default: break
                         }
                     }
@@ -74,18 +74,18 @@ class PostMyColorDataManager {
                     else {
                         switch response.code {
                         
-                        case 2000..<3000: delegate.failedToEditColors(message: response.message ?? "")
+                        case 2000..<3000: delegate.failedToEditColorName(message: response.message ?? "")
                             print(response.message as Any)
-                        case 3000..<4000: delegate.failedToEditColors(message: response.message ?? "")
+                        case 3000..<4000: delegate.failedToEditColorName(message: response.message ?? "")
                             print(response.message as Any)
-                        case 4000: delegate.failedToEditColors(message: response.message ?? "")
-                        default: delegate.failedToEditColors(message: response.message ?? "")
+                        case 4000: delegate.failedToEditColorName(message: response.message ?? "")
+                        default: delegate.failedToEditColorName(message: response.message ?? "")
                             print(response.message as Any)
                         }
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    delegate.failedToEditColors(message: "서버와의 연결이 원활하지 않습니다")
+                    delegate.failedToEditColorName(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
     }

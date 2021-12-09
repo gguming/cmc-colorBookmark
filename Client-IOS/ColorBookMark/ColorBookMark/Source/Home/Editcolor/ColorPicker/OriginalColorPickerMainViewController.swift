@@ -12,6 +12,7 @@ class OriginalColorPickerMainViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
     lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
+    lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
     var currentColorId = 0
     
     @available(iOS 14.0, *)
@@ -35,8 +36,6 @@ class OriginalColorPickerMainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
 }
 
 extension OriginalColorPickerMainViewController {

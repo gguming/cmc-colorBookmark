@@ -7,10 +7,9 @@
 
 import UIKit
 
-class SigninNickNameViewController: UIViewController {
+class SigninNickNameViewController: BaseViewController {
     lazy var signinDataManager: SigninDataManager = SigninDataManager()
     lazy var loginDataManager: LoginAfterSigninDataManager = LoginAfterSigninDataManager()
-    
     
     var emailValue = ""
     var passwordValue = ""

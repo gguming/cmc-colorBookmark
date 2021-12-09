@@ -172,6 +172,8 @@
 		E9A237012750876B0043836A /* ChangeNicknameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */; };
 		E9A237032750BDAC0043836A /* KakaoNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */; };
 		E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A237042750CC790043836A /* ChangeSettingDataManager.swift */; };
+		E9B76DDF2762551200BC990F /* CalenderLimitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DDE2762551200BC990F /* CalenderLimitDataManager.swift */; };
+		E9B76DE12762561A00BC990F /* CalenderLimitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE02762561A00BC990F /* CalenderLimitResponse.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */; };
 		E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */; };
@@ -376,6 +378,8 @@
 		E9A237002750876B0043836A /* ChangeNicknameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameDataManager.swift; sourceTree = "<group>"; };
 		E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoNicknameViewController.swift; sourceTree = "<group>"; };
 		E9A237042750CC790043836A /* ChangeSettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSettingDataManager.swift; sourceTree = "<group>"; };
+		E9B76DDE2762551200BC990F /* CalenderLimitDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderLimitDataManager.swift; sourceTree = "<group>"; };
+		E9B76DE02762561A00BC990F /* CalenderLimitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderLimitResponse.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -1097,6 +1101,7 @@
 			isa = PBXGroup;
 			children = (
 				E9445BBF2742A67500B4EC82 /* CalenderDataManager.swift */,
+				E9B76DDE2762551200BC990F /* CalenderLimitDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -1104,8 +1109,9 @@
 		E9445BC22742A6E700B4EC82 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				E9445BC32742A70400B4EC82 /* CalenderResponse.swift */,
 				E9445BC72745559700B4EC82 /* CalenderRequest.swift */,
+				E9445BC32742A70400B4EC82 /* CalenderResponse.swift */,
+				E9B76DE02762561A00BC990F /* CalenderLimitResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1431,6 +1437,7 @@
 				E9A236EB274F270F0043836A /* FindPasswordDataManager.swift in Sources */,
 				E9E4A98E273512350037A815 /* CalenderCollectionViewCell.swift in Sources */,
 				A42D4B8E275A0F6300D5B9B3 /* ModifyImageCellTableViewCell.swift in Sources */,
+				E9B76DE12762561A00BC990F /* CalenderLimitResponse.swift in Sources */,
 				E95683D1275E428100F075CF /* CheckMyColorDataManger.swift in Sources */,
 				E95683CF275E410500F075CF /* PostMyColorResponse.swift in Sources */,
 				A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */,
@@ -1442,6 +1449,7 @@
 				E9336CC8274D003900686AF1 /* MiniCodeDataManager.swift in Sources */,
 				A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */,
 				A4333EAE274CC409002EEB8C /* GetColorListDataManager.swift in Sources */,
+				E9B76DDF2762551200BC990F /* CalenderLimitDataManager.swift in Sources */,
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A42D4B8A275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift in Sources */,

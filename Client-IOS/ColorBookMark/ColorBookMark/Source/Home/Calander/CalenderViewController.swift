@@ -12,10 +12,14 @@ import Alamofire
 class CalenderViewController: UIViewController {
     var calendarData: [CalendarResult]?
     
-    lazy var dataManager: CalenderDataManager = CalenderDataManager()
+    lazy var calendarDataManager: CalenderDataManager = CalenderDataManager()
+    lazy var calendarLimitDataManager: CalenderLimitDataManager = CalenderLimitDataManager()
+    
     var constantMonth = 0
     var CalendarViewMonth = 0
     var startDate = 0
+    var min = 0
+    var max = 0
     
     @IBAction func CancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -27,11 +31,10 @@ class CalenderViewController: UIViewController {
         print(constantMonth)
         
         let calenderInput: Parameters = ["page" : constantMonth]
-        dataManager.getCalenderMonth(calenderInput, delegate: self)
-        
         components.month = components.month! - 1
         self.calculation()
-        self.CalenderCollectionview.reloadData()
+
+        calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
         let firstDayOfMonth = cal.date(from: components)
  
     }
@@ -41,12 +44,13 @@ class CalenderViewController: UIViewController {
         print("컨스턴트먼쓰+")
         print(constantMonth)
         let calenderInput: Parameters = ["page" : constantMonth]
-        dataManager.getCalenderMonth(calenderInput, delegate: self)
-        print("에에에")
-        let firstDayOfMonth = cal.date(from: components)
         components.month = components.month! + 1
         self.calculation()
-        self.CalenderCollectionview.reloadData()
+
+        calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
+        print("에에에")
+        let firstDayOfMonth = cal.date(from: components)
+//        self.CalenderCollectionview.reloadData()
         
        // let firstDay = cal.date(from: components+1)
 //        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
@@ -127,6 +131,7 @@ class CalenderViewController: UIViewController {
         print("MONTH")
         print(currentMonth)
         print("리리ㅣㄹ")
+        print(days.count)
         print(startDate)
         }
     
@@ -137,9 +142,14 @@ class CalenderViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        print("데이터매니져")
+        calendarLimitDataManager.getCalenderLimit(delegate: self)
+        print("민맥스")
+        print(min)
+        print(max)
         constantMonth = 0
         let calenderInput: Parameters = ["page" : constantMonth]
-        dataManager.getCalenderMonth(calenderInput, delegate: self)
+        calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
         print(cal.component(.month, from: now) )
         self.view.layer.cornerRadius = 30
         TopView.layer.cornerRadius = 30
@@ -177,26 +187,28 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             cell.DateLabel.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             cell.DateLabel.textAlignment = .center
-            cell.DateLabel.text = weeks[indexPath.row]
+            cell.DateLabel.text = weeks[indexPath.item]
             
         default:
             //MARK: check
             //끝일 30 or 31
             print(CalendarViewMonth, "끝일")
             // 달력에서 현재 row
-            print(indexPath.row, "달력에서의 현재 row")
+            print(indexPath.item, "달력에서의 현재 item")
             cell.backgroundColor = .white
-            let currentIndex = startDate + indexPath.row
-
-            if indexPath.row > startDate - 1 && indexPath.row < CalendarViewMonth + startDate {
+            let currentIndex = startDate + indexPath.item
+            print("startdate")
+            print(startDate)
+            if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
 //                print(currentIndex, "row + startdate")
-                print(indexPath.row - startDate, "api에 넣는 인덱스값[]")
-                if calendarData?[indexPath.row - startDate].color == nil {
+                print(indexPath.item - startDate, "api에 넣는 인덱스값[]")
+                if calendarData?[indexPath.item - startDate].color == nil {
                     print("요기까지는 오케이")
                     cell.CircleImage.tintColor = .clear
                 }
                 else {
-                    let CircleColor = calendarData?[indexPath.row - startDate].color! ?? "#000000"
+                    print("###")
+                    let CircleColor = calendarData?[indexPath.item - startDate].color! ?? "#000000"
                     print(CircleColor)
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                 }
@@ -208,7 +220,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             cell.CircleImage.isHidden = false
             cell.DateLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
             cell.DateLabel.textAlignment = .center
-            cell.DateLabel.text = days[indexPath.row]
+            cell.DateLabel.text = days[indexPath.item]
             
             if cell.DateLabel.text == "" {
                 cell.CircleImage.isHidden = true
@@ -257,9 +269,8 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
 extension CalenderViewController {
     func getCalenderSuccess(data: [CalendarResult]) {
         calendarData = data
-        print("전체 데이터 보기")
-//        print(calendarData)
-
         CalenderCollectionview.reloadData()
     }
+    
+    
 }
