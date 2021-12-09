@@ -12,7 +12,7 @@ import Alamofire
 class PostDiaryDataManager {
     func diaryPost(_ parameters: PostDiaryRequest, delegate: EditDiaryViewController) {
         let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
-        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/date", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/final-editing", method: .patch, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
             .validate()
             .responseDecodable(of: PostDiaryResponse.self) { response in
                 switch response.result {

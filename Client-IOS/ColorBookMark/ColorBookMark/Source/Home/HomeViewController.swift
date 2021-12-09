@@ -65,8 +65,8 @@ class HomeViewController: BaseViewController {
         collectionview.dataSource = self
         collectionview.delegate = self
         print("시작화면 닉네임 값")
-        print(Constant.nickname)
-        print(Constant.jwt)
+        print(Constant.nickname as Any)
+        print(Constant.jwt as Any)
         
     }
     override func viewWillAppear(_ animated: Bool) {

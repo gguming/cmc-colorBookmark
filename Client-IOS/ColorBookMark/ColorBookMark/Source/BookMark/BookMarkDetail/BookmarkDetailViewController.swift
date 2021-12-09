@@ -14,6 +14,7 @@ class BookmarkDetailViewController: UIViewController {
     var diaryId: Int?
     var modifyMode: Bool?
     var bookmarkDetail: Diary?
+    var index: Int?
     lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
     lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
     @IBAction func backBtnTapped(_ sender: Any) {
@@ -44,11 +45,11 @@ class BookmarkDetailViewController: UIViewController {
         tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
         bookmarkDetilDataManager.getBookMarkDetail(diaryId: diaryId ?? 0, delegate: self)
         dayView.layer.cornerRadius = 8
-
-       
+        
+        
     }
     
-
+    
 }
 
 
@@ -82,7 +83,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 2))
         view.backgroundColor = .clear
-
+        
         return view
     }
     
@@ -98,33 +99,47 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             return cell
         case 1:
             if !(modifyMode ?? false) {
-            
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
-                return cell
+                if bookmarkDetail?.diary?.diaryContents?.content == nil {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
+                    cell.layer.cornerRadius = 8
+                    cell.clipsToBounds = true
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
+                    cell.layer.cornerRadius = 8
+                    cell.clipsToBounds = true
+                    cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
+                    return cell
+                }
+                
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyStoryTableViewCell", for: indexPath) as? ModifyStoryTableViewCell else {return UITableViewCell()}
                 cell.layer.cornerRadius = 8
                 cell.clipsToBounds = true
                 return cell
             }
-           
+            
             
         case 2:
             if !(modifyMode ?? false){
-            
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
-                return cell
+                if (bookmarkDetail?.diary?.diaryImage == nil) {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
+                    cell.layer.cornerRadius = 8
+                    cell.clipsToBounds = true
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
+                    cell.layer.cornerRadius = 8
+                    cell.clipsToBounds = true
+                    return cell
+                }
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyImageCellTableViewCell", for: indexPath) as? ModifyImageCellTableViewCell else {return UITableViewCell()}
                 cell.layer.cornerRadius = 8
                 cell.clipsToBounds = true
                 return cell
             }
-           
+            
             
         case 3:
             if !(modifyMode ?? false){
@@ -138,8 +153,8 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 cell.clipsToBounds = true
                 return cell
             }
-           
-           
+            
+            
             
         case 4:
             if !(modifyMode ?? false){
@@ -155,7 +170,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 cell.clipsToBounds = true
                 return cell
             }
-           
+            
         default:
             return UITableViewCell()
         }
@@ -193,7 +208,7 @@ extension BookmarkDetailViewController {
         setDetailBackgroundColors()
         tableview.reloadData()
         
-       
+        
         
     }
     
@@ -204,13 +219,17 @@ extension BookmarkDetailViewController {
     
     func didSuccessDelete(_ result: DeleteDiaryResponse) {
         print("------>\(result)")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
+        vc.presentBottomAlert(message: result.message ?? "")
+        vc.bookmarks?.remove(at: index!)
+        vc.tableview.reloadData()
         self.dismiss(animated: true) {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
             vc.presentBottomAlert(message: result.message ?? "")
-            vc.tableview.reloadData()
+            
         }
         
-       
+        
         
     }
     
@@ -227,7 +246,7 @@ extension BookmarkDetailViewController {
         let colors: [CGColor] = [
             hexStringToUIColor(hex:"#FFFFFF").cgColor,
             hexStringToUIColor(hex:bookmarkDetail?.diary?.diaryContents?.color ?? "#ffffff").cgColor,
-                                  ]
+        ]
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame  = self.view.bounds
         gradientLayer.colors = colors
@@ -243,18 +262,18 @@ extension BookmarkDetailViewController {
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
+        
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-
+        
         if ((cString.count) != 6) {
             return UIColor.gray
         }
-
+        
         var rgbValue:UInt64 = 0
         Scanner(string: cString).scanHexInt64(&rgbValue)
-
+        
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
