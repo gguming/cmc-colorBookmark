@@ -18,7 +18,7 @@ class PostColorDataManager {
                 case .success(let response):
                     // 성공했을 때
                     if response.isSuccess {
-                        delegate.didSuccessPostColors(response)
+                       // delegate.didSuccessPostColors(response)
                     }
                     // 실패했을 때
                     else {

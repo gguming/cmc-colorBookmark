@@ -44,7 +44,7 @@ class HomeViewController: BaseViewController {
     
     // color data
     
-    lazy var colorDataManager: GetColorListDataManager = GetColorListDataManager()
+    lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
 //    lazy var backcolorDataManager: BackgroundColorDataManager = BackgroundColorDataManager()
     var colors: [Colors]?
 //    var backgroundColors: [BackColors]?
@@ -86,7 +86,7 @@ class HomeViewController: BaseViewController {
     }
     
     func getColors() {
-        colorDataManager.getColors(delegate: self)
+        colorDataManager.getMyColor(delegate: self)
 //        backcolorDataManager.getBackgroundColors(delegate: self)
     }
     

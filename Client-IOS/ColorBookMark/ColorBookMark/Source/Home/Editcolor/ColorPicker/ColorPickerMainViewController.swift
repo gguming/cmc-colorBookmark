@@ -67,7 +67,7 @@ class ColorPickerMainViewController: UIViewController {
 }
 
 extension ColorPickerMainViewController{
-    func didSuccessPostColors(_ result: PostColorResponse) {
+    func didSuccessPostColors(_ result: PostMyColorResponse) {
         print("------>\(result)")
         presentBottomAlert(message: result.message ?? "")
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}

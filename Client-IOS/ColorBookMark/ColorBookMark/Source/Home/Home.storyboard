@@ -470,7 +470,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XXZ-yX-DlL"/>
-                        <color key="backgroundColor" red="0.19215686269999999" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fz7-bB-7gw" firstAttribute="top" secondItem="kKd-uv-FgT" secondAttribute="bottom" constant="27" id="3Pr-tR-bVx"/>
                             <constraint firstItem="Ki1-rT-IB1" firstAttribute="trailing" secondItem="o29-Ox-lzg" secondAttribute="trailing" id="3Yj-Qi-2OI"/>
@@ -608,7 +607,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DW8-F6-wdO"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tDB-Zc-CoZ" firstAttribute="top" secondItem="DW8-F6-wdO" secondAttribute="top" constant="53" id="026-aE-UHb"/>
                             <constraint firstItem="DW8-F6-wdO" firstAttribute="bottom" secondItem="gUt-Ml-Lsv" secondAttribute="bottom" constant="100" id="1Uu-Vs-HP5"/>
@@ -746,7 +744,6 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YBh-JS-frZ"/>
-                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EdL-jZ-HZQ" firstAttribute="centerY" secondItem="N2b-QL-HPt" secondAttribute="centerY" id="13m-TO-uQZ"/>
                             <constraint firstItem="UCM-3W-u3I" firstAttribute="centerX" secondItem="YBh-JS-frZ" secondAttribute="centerX" id="49Y-5U-yrj"/>
@@ -882,7 +879,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CJ5-6D-FkQ"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fzl-Bp-f14" firstAttribute="width" secondItem="Fzl-Bp-f14" secondAttribute="height" id="9Ep-5D-UeQ"/>
                             <constraint firstItem="iaL-KZ-pBQ" firstAttribute="centerX" secondItem="CJ5-6D-FkQ" secondAttribute="centerX" id="DBX-ld-AIC"/>
@@ -1236,6 +1232,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jyr-1K-oBX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NpV-4Y-1NH" firstAttribute="height" secondItem="RoN-Bp-83c" secondAttribute="height" multiplier="0.17" id="2Qa-d8-3OD"/>

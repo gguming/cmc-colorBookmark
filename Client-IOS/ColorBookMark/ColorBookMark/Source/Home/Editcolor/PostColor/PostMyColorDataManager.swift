@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class PostMyColorDataManager {
-    func postMyColor(_ parameters: PostMyColorRequest, delegate: SettingTableViewCell) {
+    func postMyColor(_ parameters: PostMyColorRequest, delegate: ColorPickerMainViewController) {
         AF.request( "\(Constant.SERVER_BASE_URL)/app/diarys/myColor/status", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: headers)
             .validate()
             .responseDecodable(of: PostMyColorResponse.self) { response in
@@ -24,7 +24,8 @@ class PostMyColorDataManager {
                         case 1012: print("마이컬러 등록/수정 성공")
                         default: break
                         }
-                       
+                        
+                        delegate.didSuccessPostColors(response)
                     }
                     
                     // 실패했을 때

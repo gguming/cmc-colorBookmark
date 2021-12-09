@@ -18,6 +18,7 @@ struct ColorResponse: Decodable {
 
 
 struct Colors: Decodable {
+    var myColorId: Int
     var color: String?
     var colorName: String?
 }
