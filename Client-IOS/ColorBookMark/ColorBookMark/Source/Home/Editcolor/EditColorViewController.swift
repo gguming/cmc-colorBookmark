@@ -22,6 +22,7 @@ class EditColorViewController: UIViewController {
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
+    weak var homeColorDelegate: ColorHomeCollectionDelegate?
     
     lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
     lazy var colorNameDataManager: CheckMyColorDataManger = CheckMyColorDataManger()
@@ -29,9 +30,8 @@ class EditColorViewController: UIViewController {
     
     
     @IBAction func confirmBtnTapped(_ sender: Any) {
-//        let HomeVC =
-//        colorDataManager.getMyColorinEditColor(delegate: <#T##EditColorViewController#>)
         self.dismiss(animated: true, completion: nil)
+        homeColorDelegate?.reloadHomeColorCollectionView()
     }
     
     @IBAction func resetBtnTapped(_ sender: Any) {
@@ -120,6 +120,7 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
 extension EditColorViewController: ClickEditBtn {
     func presentColorPicker() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ColorPickerMainViewController") as? ColorPickerMainViewController else {return}
+        vc.colorCollectionviewDelegate = self
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.view.alpha = 0.3

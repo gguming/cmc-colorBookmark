@@ -11,7 +11,7 @@ import Foundation
 class ColorPickerMainViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
-    
+    weak var colorCollectionviewDelegate: ColorReloadDelegate?
     lazy var postMyColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
     
     @available(iOS 14.0, *)
@@ -65,6 +65,11 @@ extension ColorPickerMainViewController{
         print("!!!------>\(result)")
         presentBottomAlert(message: result.message ?? "")
         self.dismiss(animated: true, completion: nil)
+        
+        //MARK: 여기다가 똑같이 구현
+        print(123123)
+        self.colorCollectionviewDelegate?.reloadColorCollectionView()
+        print(000000)
     }
     
     func failedToPostColors(message: String) {

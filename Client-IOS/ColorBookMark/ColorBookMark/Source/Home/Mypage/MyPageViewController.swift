@@ -37,22 +37,7 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
             AccountLabel.text = Constant.email
             LoginLabel.text = "이메일로 로그인 하셨네요!"
         }
-        
-//        if Constant.email == "Kakao" {
-//            AccountLabel.text = "Kakao Account"
-//            LoginLabel.text = "카카오로 로그인 하셨네요!"
-//        }
-//
-//        if Constant.email == "Apple" {
-//            AccountLabel.text = "Apple Account"
-//            LoginLabel.text = "애플 아이디로 로그인 하셨네요!"
-//        }
-//
-//        else {
-//            AccountLabel.text = Constant.email
-//            LoginLabel.text = "이메일로 로그인 하셨네요!"
-//        }
-        
+    
         MypageTableview.delegate = self
         MypageTableview.dataSource = self
         MypageTableview.separatorStyle = .none
