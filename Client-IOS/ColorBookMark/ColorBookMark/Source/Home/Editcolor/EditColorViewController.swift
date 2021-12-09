@@ -7,14 +7,17 @@
 
 import UIKit
 
-protocol ColorCollectionViewCellDelegate {
+protocol ColorCollectionViewCellDelegate: AnyObject {
     func selectedColorCircle(index: Int)
     func selectedColorName(index: Int)
 }
 
+protocol ColorReloadDelegate: AnyObject {
+    func reloadColorCollectionView()
+}
+
 class EditColorViewController: UIViewController {
     var colors: [Colors]?
-
     @IBOutlet weak var nickInfoLabel: UILabel!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
@@ -76,7 +79,6 @@ class EditColorViewController: UIViewController {
     }
     
     func getColor() {
-        print("09090")
         colorDataManager.getMyColorinEditColor(delegate: self)
     }
       
@@ -128,7 +130,6 @@ extension EditColorViewController: ClickEditBtn {
 
 extension EditColorViewController {
     func didSuccessGetColors(_ result: ColorResponse) {
-        print("ㅛㅛㅛㅗㅗ")
         print("------>\(result)")
         colors = result.result
         collectionview.reloadData()
@@ -144,23 +145,20 @@ extension EditColorViewController {
 @available(iOS 14.0, *)
 extension EditColorViewController: ColorCollectionViewCellDelegate{
     func selectedColorName(index: Int) {
-        print(222222222)
         print(index)
         let currentColorId = colors?[index].myColorId
         presentAlert(colorId: currentColorId!)
     }
     
     func selectedColorCircle(index: Int) {
-        print(111111111)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "OriginalColorPickerMainViewController") as? OriginalColorPickerMainViewController else {return}
+        vc.colorCollectionviewDelegate = self
         vc.currentColorId = (colors?[index].myColorId)!
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.view.alpha = 0.3
         vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
-        //        데이터매니져에 연결한 다음에
-        //        reloadData
     }
 
     
@@ -208,5 +206,11 @@ extension EditColorViewController {
         presentBottomAlert(message: message)
         self.dismiss(animated: true, completion: nil)
         
+    }
+}
+
+extension EditColorViewController: ColorReloadDelegate {
+    func reloadColorCollectionView() {
+        getColor()
     }
 }

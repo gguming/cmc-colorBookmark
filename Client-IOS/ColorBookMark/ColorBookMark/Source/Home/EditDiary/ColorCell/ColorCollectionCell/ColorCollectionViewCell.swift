@@ -9,7 +9,7 @@ import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
 
-    var colorDelegate: ColorCollectionViewCellDelegate?
+    weak var colorDelegate: ColorCollectionViewCellDelegate?
     var index: Int = 0
     var myColorId = 0
     
