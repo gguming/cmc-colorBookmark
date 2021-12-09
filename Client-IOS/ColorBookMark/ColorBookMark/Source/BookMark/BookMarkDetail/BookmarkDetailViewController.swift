@@ -80,12 +80,10 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 2))
-        view.backgroundColor = .clear
-        
-        return view
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        
+//        return UIView()
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
@@ -250,8 +248,8 @@ extension BookmarkDetailViewController {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame  = self.view.bounds
         gradientLayer.colors = colors
-        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         let layer = CALayer()

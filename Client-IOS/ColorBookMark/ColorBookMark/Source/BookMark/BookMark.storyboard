@@ -39,7 +39,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="oyd-bD-tof" firstAttribute="leading" secondItem="7TA-7n-rXI" secondAttribute="leading" constant="16" id="8ID-42-Qjd"/>
                                     <constraint firstAttribute="bottom" secondItem="oyd-bD-tof" secondAttribute="bottom" constant="12" id="U8Q-1p-gdT"/>
@@ -103,7 +102,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="PIq-ge-OUF" firstAttribute="leading" secondItem="COt-Wb-Nqt" secondAttribute="leading" constant="16" id="6zf-rq-gmf"/>
                                     <constraint firstAttribute="bottom" secondItem="PIq-ge-OUF" secondAttribute="bottom" constant="12" id="7Nl-QJ-coF"/>
