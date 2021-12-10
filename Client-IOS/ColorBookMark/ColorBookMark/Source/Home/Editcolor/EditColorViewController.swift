@@ -28,6 +28,7 @@ class EditColorViewController: UIViewController {
     lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
     lazy var colorNameDataManager: CheckMyColorDataManger = CheckMyColorDataManger()
     lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
+    lazy var resetColorDataManager: ResetMyColorDataManager = ResetMyColorDataManager()
     
     
     @IBAction func confirmBtnTapped(_ sender: Any) {
@@ -36,7 +37,7 @@ class EditColorViewController: UIViewController {
     }
     
     @IBAction func resetBtnTapped(_ sender: Any) {
-        
+        resetColorDataManager.checkMyColor(delegate: self)
     }
     
     override func viewDidLoad() {
@@ -225,6 +226,19 @@ extension EditColorViewController {
     }
     
     func failedToDeleteMyColor(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func didSuccessResetMyColor(_ result: ResetMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        getColor()
+    }
+    
+    func failedToResetMyColor(message: String) {
         print("------>>>>\(message)")
         presentBottomAlert(message: message)
         self.dismiss(animated: true, completion: nil)

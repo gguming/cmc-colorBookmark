@@ -21,7 +21,7 @@ class OriginalColorPickerMainViewController: UIViewController {
         let colorInfo = ColorPickerInfo.shared.color
         print(colorInfo)
         print(currentColorId)
-        let request = PostMyColorRequest(color: colorInfo!, myColorId: currentColorId)
+        let request = PostMyColorRequest(color: colorInfo ?? "#000000", myColorId: currentColorId)
         editColorDataManager.editMyColor(request, delegate: self)
     }
     
