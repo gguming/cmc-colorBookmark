@@ -59,10 +59,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            }
         window?.makeKeyAndVisible()
         
-        if Constant.setting_2 == "Y" {
-            print("음악 재시작")
-            playBackgroundMusic()
-        }
+//        if Constant.setting_2 == "Y" {
+//            print("음악 재시작")
+//            playBackgroundMusic()
+//        }
     }
 
     //MARK: 앱을 종료할 때
@@ -96,7 +96,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("AAAAA", 2222)
         if Constant.setting_2 == "Y" {
             print("음악 재시작")
-            playBackgroundMusic()
+            audioPlayer?.play()
         }
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
@@ -108,30 +108,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if Constant.setting_2 == "Y" {
             print("음악 종료")
-            if audioPlayer.isPlaying {
-                audioPlayer?.stop()
-            }
+            audioPlayer?.stop()
         }
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-    }
-
-    func playBackgroundMusic() {
-        guard let url = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")
-        else {
-            print("error to get the mp3 file")
-            return
-        }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
-        }
-        catch {
-            print("audio file error")
-        }
-        if audioPlayer.isPlaying == false {
-            audioPlayer?.play()
-        }
     }
 }
 

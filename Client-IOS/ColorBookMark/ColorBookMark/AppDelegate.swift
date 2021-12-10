@@ -16,11 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var audioPlayer : AVAudioPlayer!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      
+        let audioSession = AVAudioSession.sharedInstance()
+            do {
+                try audioSession.setCategory(AVAudioSession.Category.playback)
+            } catch {
+                print("Setting category to AVAudioSessionCategoryPlayback failed.")
+            }
+        
         KakaoSDK.initSDK(appKey: "e2a97fb8904d79724a04615b8f993706")
         FirebaseApp.configure()
         UNUserNotificationCenter.current().delegate = self
-       
+      
         return true
     }
 
@@ -59,9 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func stopBackgroundMusic() {
-        if audioPlayer.isPlaying {
-            audioPlayer?.stop()
-        }
+        audioPlayer?.stop()
+//        if audioPlayer.isPlaying {
+//            audioPlayer?.stop()
+//        }
     }
 }
 

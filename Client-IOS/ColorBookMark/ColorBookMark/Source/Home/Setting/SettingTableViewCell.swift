@@ -17,7 +17,6 @@ class SettingTableViewCell: UITableViewCell {
     let userNotiCenter = UNUserNotificationCenter.current()
     lazy var dataManager: SettingDataManager = SettingDataManager()
     weak var cellDelegate: PresentVCDelegate?
-//    var player: AVAudioPlayer!
     var audioPlayer : AVAudioPlayer!
     var cellNumber: Int? = nil
     var onOff = "OFF"
