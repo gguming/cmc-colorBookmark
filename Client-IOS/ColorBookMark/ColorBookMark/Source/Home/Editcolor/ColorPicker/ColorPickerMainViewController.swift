@@ -48,14 +48,12 @@ class ColorPickerMainViewController: UIViewController {
                 let request = PostMyColorRequest(color: colorInfo!, colorName: "\(colorName ?? "")")
                 print(request)
                 self.postMyColorDataManager.postMyColor(request, delegate: self)
-                print(1)
             }
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(ok)
         alert.addAction(cancel)
         
-//        let confirm = UIAlertAction(
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -65,11 +63,7 @@ extension ColorPickerMainViewController{
         print("!!!------>\(result)")
         presentBottomAlert(message: result.message ?? "")
         self.dismiss(animated: true, completion: nil)
-        
-        //MARK: 여기다가 똑같이 구현
-        print(123123)
         self.colorCollectionviewDelegate?.reloadColorCollectionView()
-        print(000000)
     }
     
     func failedToPostColors(message: String) {

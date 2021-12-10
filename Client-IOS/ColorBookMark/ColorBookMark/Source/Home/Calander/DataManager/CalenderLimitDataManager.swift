@@ -22,7 +22,7 @@ class CalenderLimitDataManager {
                     if response.isSuccess {
                         print("캘린더 범위 확인")
                         print(response.result)
-//                        delegate.min = (response.result[])
+                        delegate.min = (response.result[0].min)
                         delegate.max = (response.result[0].max)
                     }
                     

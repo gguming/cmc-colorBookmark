@@ -46,17 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         do {
-            print("왜안돼")
             audioPlayer = try AVAudioPlayer(contentsOf: URL(string: url)!)
         }
         catch {
             print("audio file error")
         }
-        audioPlayer?.play()
+        if audioPlayer.isPlaying == false {
+            audioPlayer.numberOfLoops = -1
+            audioPlayer.prepareToPlay()
+            audioPlayer?.play()
+        }
     }
     
     func stopBackgroundMusic() {
-        audioPlayer?.stop()
+        if audioPlayer.isPlaying {
+            audioPlayer?.stop()
+        }
     }
 }
 

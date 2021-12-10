@@ -364,6 +364,8 @@
                         <outlet property="CalenderLabel" destination="Xl6-3m-HH0" id="Zjw-oR-V8b"/>
                         <outlet property="NextButton" destination="Rf5-jm-cCz" id="D5q-TW-P2o"/>
                         <outlet property="NextButtonImage" destination="nob-EH-gID" id="dif-WH-aSu"/>
+                        <outlet property="PrevButton" destination="OOm-e2-GoK" id="Ofk-PS-nQB"/>
+                        <outlet property="PrevButtonImage" destination="d5y-cp-9zi" id="Pjp-x5-NJe"/>
                         <outlet property="TopView" destination="N9Y-GN-77l" id="9LJ-Er-SO0"/>
                     </connections>
                 </viewController>

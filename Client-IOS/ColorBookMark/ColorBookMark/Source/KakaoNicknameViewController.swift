@@ -14,10 +14,6 @@ class KakaoNicknameViewController: UIViewController {
     @IBOutlet weak var JoinButton: UIButton!
     @IBOutlet weak var JoinLabel: UILabel!
     
-    @IBAction func BackToLoginPage(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func JoinButtonTapped(_ sender: Any) {
         let nicknameValue = NicknameTextField.text
         Constant.nickname = nicknameValue

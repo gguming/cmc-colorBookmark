@@ -12,7 +12,7 @@
         <!--Login Page View Controller-->
         <scene sceneID="1gr-4V-tgH">
             <objects>
-                <viewController storyboardIdentifier="LoginPageViewController" id="fVy-kr-ov3" customClass="LoginPageViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPageViewController" id="fVy-kr-ov3" customClass="LoginPageViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mS-d4-Scr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
         <!--Login Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginMainViewController" id="Y6W-OH-hqX" customClass="LoginMainViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginMainViewController" id="Y6W-OH-hqX" customClass="LoginMainViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
         <!--Member Login View Controller-->
         <scene sceneID="fkS-Np-4Nk">
             <objects>
-                <viewController storyboardIdentifier="MemberLoginViewController" id="nzW-az-z5J" customClass="MemberLoginViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemberLoginViewController" id="nzW-az-z5J" customClass="MemberLoginViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d4c-qs-uyp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +359,7 @@
         <!--Signin Nick Name View Controller-->
         <scene sceneID="8rC-mj-du0">
             <objects>
-                <viewController storyboardIdentifier="SigninNickNameViewController" id="e6U-Z4-5jN" customClass="SigninNickNameViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninNickNameViewController" id="e6U-Z4-5jN" customClass="SigninNickNameViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZb-tL-PjM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -498,7 +498,7 @@
         <!--Privacy Policy View Controller-->
         <scene sceneID="XMJ-i2-9gv">
             <objects>
-                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="U5j-LH-ndQ" customClass="PrivacyPolicyViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="U5j-LH-ndQ" customClass="PrivacyPolicyViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axp-XC-5En">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,7 +513,7 @@
         <!--Terms Of Use View Controller-->
         <scene sceneID="IE7-D4-Ncb">
             <objects>
-                <viewController storyboardIdentifier="TermsOfUseViewController" id="gHc-ig-OiO" customClass="TermsOfUseViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsOfUseViewController" id="gHc-ig-OiO" customClass="TermsOfUseViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fka-th-PsK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,7 +528,7 @@
         <!--Find Password View Controller-->
         <scene sceneID="4wA-bq-FJA">
             <objects>
-                <viewController storyboardIdentifier="FindPasswordViewController" id="Cox-iz-VUp" customClass="FindPasswordViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindPasswordViewController" id="Cox-iz-VUp" customClass="FindPasswordViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Dd-Zf-hDa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -644,7 +644,7 @@
         <!--Signin Password View Controller-->
         <scene sceneID="6iE-uM-pRo">
             <objects>
-                <viewController storyboardIdentifier="SigninPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninPasswordViewController" id="Ohq-kh-oJU" customClass="SigninPasswordViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a46-HU-hwh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -802,7 +802,7 @@
         <!--Kakao Nickname View Controller-->
         <scene sceneID="b7n-lq-ca7">
             <objects>
-                <viewController storyboardIdentifier="KakaoNicknameViewController" id="H0K-bu-Hbj" customClass="KakaoNicknameViewController" customModule="ColorBookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KakaoNicknameViewController" id="H0K-bu-Hbj" customClass="KakaoNicknameViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlp-R4-80p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -856,41 +856,23 @@
                                     <constraint firstAttribute="height" constant="3" id="Mso-rZ-SWm"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_back" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-lP-CfJ">
-                                <rect key="frame" x="24" y="104" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="LZz-lP-CfJ" secondAttribute="height" multiplier="1:1" id="xVj-ZW-oiG"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65e-zF-DGS">
-                                <rect key="frame" x="24" y="104" width="44" height="44"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <connections>
-                                    <action selector="BackToLoginPage:" destination="H0K-bu-Hbj" eventType="touchUpInside" id="4FF-Fd-9RD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hmt-gg-t3t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LZz-lP-CfJ" firstAttribute="leading" secondItem="hmt-gg-t3t" secondAttribute="leading" constant="24" id="2zm-J2-pcR"/>
                             <constraint firstItem="Bwa-Wq-BxL" firstAttribute="bottom" secondItem="Jat-Sd-3lO" secondAttribute="bottom" constant="14" id="50C-8F-Icz"/>
                             <constraint firstItem="OEE-Na-AYW" firstAttribute="leading" secondItem="Pf6-XW-ZDj" secondAttribute="leading" id="5Ll-Em-qxf"/>
                             <constraint firstItem="qni-kb-oRs" firstAttribute="top" secondItem="KTW-P1-7S6" secondAttribute="bottom" constant="12" id="8ds-bK-0Jo"/>
                             <constraint firstItem="Bwa-Wq-BxL" firstAttribute="trailing" secondItem="Jat-Sd-3lO" secondAttribute="trailing" constant="32" id="AFo-Oa-hM2"/>
-                            <constraint firstItem="LZz-lP-CfJ" firstAttribute="centerY" secondItem="fGa-Gy-xRU" secondAttribute="centerY" id="Cxu-Cr-odh"/>
                             <constraint firstItem="KTW-P1-7S6" firstAttribute="centerX" secondItem="hmt-gg-t3t" secondAttribute="centerX" id="JSe-ZM-p3w"/>
                             <constraint firstItem="Bwa-Wq-BxL" firstAttribute="centerX" secondItem="hmt-gg-t3t" secondAttribute="centerX" id="Lhd-vE-KBZ"/>
                             <constraint firstItem="Bwa-Wq-BxL" firstAttribute="top" secondItem="OEE-Na-AYW" secondAttribute="bottom" constant="96.5" id="N1D-58-d5T"/>
                             <constraint firstItem="qni-kb-oRs" firstAttribute="centerX" secondItem="hmt-gg-t3t" secondAttribute="centerX" id="OTj-JW-0zJ"/>
                             <constraint firstItem="Pf6-XW-ZDj" firstAttribute="centerX" secondItem="hmt-gg-t3t" secondAttribute="centerX" id="OTo-lE-FRt"/>
                             <constraint firstItem="Pf6-XW-ZDj" firstAttribute="height" secondItem="qni-kb-oRs" secondAttribute="height" multiplier="1.7" id="XyT-TB-mh0"/>
-                            <constraint firstItem="65e-zF-DGS" firstAttribute="top" secondItem="LZz-lP-CfJ" secondAttribute="top" id="YLh-w8-MEB"/>
-                            <constraint firstItem="65e-zF-DGS" firstAttribute="bottom" secondItem="LZz-lP-CfJ" secondAttribute="bottom" id="b6h-sR-HXA"/>
                             <constraint firstAttribute="height" secondItem="qni-kb-oRs" secondAttribute="height" multiplier="30.8966" id="bMe-Ok-eOX"/>
                             <constraint firstItem="345-Fe-MT2" firstAttribute="centerX" secondItem="hmt-gg-t3t" secondAttribute="centerX" id="bxQ-18-p9y"/>
                             <constraint firstItem="Jat-Sd-3lO" firstAttribute="top" secondItem="Bwa-Wq-BxL" secondAttribute="top" constant="15" id="cc4-1J-eFa"/>
-                            <constraint firstItem="65e-zF-DGS" firstAttribute="leading" secondItem="LZz-lP-CfJ" secondAttribute="leading" id="eVF-jD-lLT"/>
                             <constraint firstItem="Pf6-XW-ZDj" firstAttribute="leading" secondItem="hmt-gg-t3t" secondAttribute="leading" constant="24" id="gWw-sv-iGy"/>
                             <constraint firstItem="OEE-Na-AYW" firstAttribute="trailing" secondItem="Pf6-XW-ZDj" secondAttribute="trailing" id="kns-xG-8vD"/>
                             <constraint firstItem="Pf6-XW-ZDj" firstAttribute="top" secondItem="345-Fe-MT2" secondAttribute="bottom" constant="24" id="let-wF-AND"/>
@@ -898,7 +880,6 @@
                             <constraint firstItem="KTW-P1-7S6" firstAttribute="top" secondItem="fGa-Gy-xRU" secondAttribute="bottom" constant="24" id="pkl-Wb-BdA"/>
                             <constraint firstItem="fGa-Gy-xRU" firstAttribute="top" secondItem="hmt-gg-t3t" secondAttribute="top" constant="72" id="qDY-lF-RVE"/>
                             <constraint firstItem="OEE-Na-AYW" firstAttribute="bottom" secondItem="Pf6-XW-ZDj" secondAttribute="bottom" id="qJD-KB-DNO"/>
-                            <constraint firstItem="65e-zF-DGS" firstAttribute="trailing" secondItem="LZz-lP-CfJ" secondAttribute="trailing" id="rgF-fn-dLk"/>
                             <constraint firstItem="hmt-gg-t3t" firstAttribute="trailing" secondItem="Pf6-XW-ZDj" secondAttribute="trailing" constant="24" id="sqo-AP-Y8b"/>
                             <constraint firstItem="Jat-Sd-3lO" firstAttribute="leading" secondItem="Bwa-Wq-BxL" secondAttribute="leading" constant="32" id="uHK-7A-RpB"/>
                             <constraint firstItem="345-Fe-MT2" firstAttribute="top" secondItem="qni-kb-oRs" secondAttribute="bottom" constant="8" id="xIz-IN-6EY"/>

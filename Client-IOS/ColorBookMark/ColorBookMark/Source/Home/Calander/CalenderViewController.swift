@@ -21,6 +21,8 @@ class CalenderViewController: UIViewController {
     var min = 0
     var max = 0
     
+    @IBOutlet weak var PrevButtonImage: UIImageView!
+    @IBOutlet weak var PrevButton: UIButton!
     @IBAction func CancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -33,7 +35,13 @@ class CalenderViewController: UIViewController {
         let calenderInput: Parameters = ["page" : constantMonth]
         components.month = components.month! - 1
         self.calculation()
-
+        print(min)
+        if min >= constantMonth {
+            PrevButton.isEnabled = false
+//            #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
+            PrevButtonImage.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+            PrevButtonImage.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        }
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
         let firstDayOfMonth = cal.date(from: components)
  
@@ -224,6 +232,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
             if cell.DateLabel.text == "" {
                 cell.CircleImage.isHidden = true
+
             }
 
                }
@@ -271,6 +280,4 @@ extension CalenderViewController {
         calendarData = data
         CalenderCollectionview.reloadData()
     }
-    
-    
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CalendarResponse: Decodable{
+struct CalendarResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
