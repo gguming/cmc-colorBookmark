@@ -35,7 +35,6 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func DeleteColor() {
-        print("하이")
         self.colorDelegate?.selectedColorDelete(index: index)
     }
     

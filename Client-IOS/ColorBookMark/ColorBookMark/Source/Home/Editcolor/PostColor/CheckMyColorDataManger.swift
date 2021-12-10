@@ -16,12 +16,10 @@ class CheckMyColorDataManger {
      
                 switch response.result {
                 case .success(let response):
-                    
+            
                     // 성공했을 때
                     if response.isSuccess {
-                      print("조회성공")
-                        
-                       
+                        print("조회성공")
                     }
                     
                     // 실패했을 때
