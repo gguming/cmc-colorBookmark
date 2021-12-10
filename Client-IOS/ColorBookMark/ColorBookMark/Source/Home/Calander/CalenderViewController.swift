@@ -29,51 +29,40 @@ class CalenderViewController: UIViewController {
     
     @IBAction func PrevButtonTapped(_ sender: Any) {
         constantMonth -= 1
-        print("컨스턴트먼쓰-")
         print(constantMonth)
         
         let calenderInput: Parameters = ["page" : constantMonth]
         components.month = components.month! - 1
         self.calculation()
-        print(min)
+        
+        NextButton.isEnabled = true
+        NextButtonImage.tintColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        
         if min >= constantMonth {
             PrevButton.isEnabled = false
-//            #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
-            PrevButtonImage.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
-            PrevButtonImage.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+            PrevButtonImage.tintColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
         }
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
-        let firstDayOfMonth = cal.date(from: components)
+       
  
     }
     
     @IBAction func NextButtonTapped(_ sender: Any) {
         constantMonth += 1
-        print("컨스턴트먼쓰+")
         print(constantMonth)
         let calenderInput: Parameters = ["page" : constantMonth]
         components.month = components.month! + 1
         self.calculation()
+        
+        PrevButton.isEnabled = true
+        PrevButtonImage.tintColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        
+        if max <= constantMonth {
+            NextButton.isEnabled = false
+            NextButtonImage.tintColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
+        }
 
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
-        print("에에에")
-        let firstDayOfMonth = cal.date(from: components)
-//        self.CalenderCollectionview.reloadData()
-        
-       // let firstDay = cal.date(from: components+1)
-//        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
-//        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
-//        let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
-//
-//        let currentYear = String(currentDate[..<firstIndex])
-//        let currentMonth = String(currentDate[secondIndex...])
-//        print("bbbb")
-//        print(currentYear)
-        
-//        if Int(exactly: cal.component(.year, from: now))! < Int(currentYear)! {
-//
-//        }
-        
     }
     
     @IBOutlet weak var NextButtonImage: UIImageView!
@@ -107,11 +96,9 @@ class CalenderViewController: UIViewController {
     
     private func calculation() {
         let firstDayOfMonth = cal.date(from: components)
-        print("실험")
         print(dateFormatter.string(from: firstDayOfMonth!) + ".1")
         let firstWeekday = cal.component(.weekday, from: firstDayOfMonth!)
         daysCountInMonth = cal.range(of: .day, in: .month, for: firstDayOfMonth!)!.count
-        print("ZZZZZZ")
         print(daysCountInMonth)
         CalendarViewMonth = daysCountInMonth
         weekdayAdding = 2 - firstWeekday
@@ -127,21 +114,7 @@ class CalenderViewController: UIViewController {
                 self.days.append(String(day))
             }
         }
-        
-        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
-        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
-        let currentYear = currentDate[..<firstIndex]
-        let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
-        let currentMonth = String(currentDate[secondIndex...])
-       
-        print("YEAR")
-        print(currentYear)
-        print("MONTH")
-        print(currentMonth)
-        print("리리ㅣㄹ")
-        print(days.count)
-        print(startDate)
-        }
+    }
     
     private func initCollection() {
           self.CalenderCollectionview.delegate = self
@@ -150,11 +123,7 @@ class CalenderViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        print("데이터매니져")
         calendarLimitDataManager.getCalenderLimit(delegate: self)
-        print("민맥스")
-        print(min)
-        print(max)
         constantMonth = 0
         let calenderInput: Parameters = ["page" : constantMonth]
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
@@ -169,7 +138,6 @@ class CalenderViewController: UIViewController {
 
 
 extension CalenderViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -196,33 +164,26 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             cell.DateLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             cell.DateLabel.textAlignment = .center
             cell.DateLabel.text = weeks[indexPath.item]
+            cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
             
         default:
-            //MARK: check
-            //끝일 30 or 31
-            print(CalendarViewMonth, "끝일")
-            // 달력에서 현재 row
-            print(indexPath.item, "달력에서의 현재 item")
             cell.backgroundColor = .white
-            let currentIndex = startDate + indexPath.item
-            print("startdate")
-            print(startDate)
+            
             if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
-//                print(currentIndex, "row + startdate")
-                print(indexPath.item - startDate, "api에 넣는 인덱스값[]")
                 if calendarData?[indexPath.item - startDate].color == nil {
-                    print("요기까지는 오케이")
                     cell.CircleImage.tintColor = .clear
+                    cell.DateLabel.textColor = #colorLiteral(red: 0.4235294118, green: 0.4235294118, blue: 0.4235294118, alpha: 1)
                 }
                 else {
-                    print("###")
                     let CircleColor = calendarData?[indexPath.item - startDate].color! ?? "#000000"
                     print(CircleColor)
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
+                    cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
                 }
             }
             else {
                 cell.CircleImage.tintColor = .clear
+                cell.DateLabel.textColor = #colorLiteral(red: 0.4235294118, green: 0.4235294118, blue: 0.4235294118, alpha: 1)
             }
             
             cell.CircleImage.isHidden = false
@@ -232,10 +193,8 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
             
             if cell.DateLabel.text == "" {
                 cell.CircleImage.isHidden = true
-
             }
-
-               }
+        }
         return cell
     }
     
