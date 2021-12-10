@@ -108,7 +108,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if Constant.setting_2 == "Y" {
             print("음악 종료")
-            audioPlayer?.stop()
+            if audioPlayer.isPlaying {
+                audioPlayer?.stop()
+            }
         }
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
@@ -127,7 +129,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         catch {
             print("audio file error")
         }
-        audioPlayer?.play()
+        if audioPlayer.isPlaying == false {
+            audioPlayer?.play()
+        }
     }
 }
 

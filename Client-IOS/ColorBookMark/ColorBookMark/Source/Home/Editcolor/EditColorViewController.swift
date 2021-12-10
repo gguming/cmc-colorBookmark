@@ -10,6 +10,7 @@ import UIKit
 protocol ColorCollectionViewCellDelegate: AnyObject {
     func selectedColorCircle(index: Int)
     func selectedColorName(index: Int)
+    func selectedColorDelete(index: Int)
 }
 
 protocol ColorReloadDelegate: AnyObject {
@@ -102,6 +103,7 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
             cell.setUI()
             cell.setGesture()
             cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item-1].color ?? "#000000")")
+            cell.deleteButton.isHidden = false
             cell.colorNameLabel.text = colors?[indexPath.item-1].colorName
             cell.index = indexPath.item - 1
             cell.colorDelegate = self
@@ -145,6 +147,13 @@ extension EditColorViewController {
 
 @available(iOS 14.0, *)
 extension EditColorViewController: ColorCollectionViewCellDelegate{
+    func selectedColorDelete(index: Int) {
+        let currentColorId = colors?[index].myColorId
+        let request = PostMyColorRequest(myColorId: currentColorId, status: "N")
+        print(request)
+        self.editColorDataManager.deleteMyColor(request, delegate: self)
+    }
+    
     func selectedColorName(index: Int) {
         print(index)
         let currentColorId = colors?[index].myColorId
@@ -203,6 +212,19 @@ extension EditColorViewController {
     }
     
     func failedToEditColorName(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func didSuccessDeleteMyColor(_ result: PostMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        getColor()
+    }
+    
+    func failedToDeleteMyColor(message: String) {
         print("------>>>>\(message)")
         presentBottomAlert(message: message)
         self.dismiss(animated: true, completion: nil)
