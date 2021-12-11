@@ -174,6 +174,12 @@
                                     <action selector="BackToLoginPageVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bkn-z7-6ci"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일이 정확하지 않으면 비밀번호 분실 시 찾기 어려울 수 있습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21z-U1-ldR">
+                                <rect key="frame" x="45.5" y="420" width="323" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14901960780000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,6 +190,7 @@
                             <constraint firstItem="uAg-NO-YD9" firstAttribute="top" secondItem="c1r-rk-O3r" secondAttribute="bottom" constant="24" id="5Aw-6L-FLE"/>
                             <constraint firstItem="4TY-eJ-46p" firstAttribute="centerY" secondItem="c1r-rk-O3r" secondAttribute="centerY" id="7WN-GU-6cD"/>
                             <constraint firstItem="d6F-CA-fYc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Baf-dm-mBg"/>
+                            <constraint firstItem="gIg-uf-9te" firstAttribute="top" secondItem="21z-U1-ldR" secondAttribute="bottom" constant="12" id="CcY-yM-r6f"/>
                             <constraint firstItem="Emm-Wn-oLA" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="D7p-P1-DQn"/>
                             <constraint firstItem="ZQc-Fm-KLZ" firstAttribute="top" secondItem="d6F-CA-fYc" secondAttribute="bottom" constant="12" id="DmI-5c-kWv"/>
                             <constraint firstItem="gIg-uf-9te" firstAttribute="trailing" secondItem="rYH-34-Zpn" secondAttribute="trailing" constant="32" id="FyY-g6-QS8"/>
@@ -209,10 +216,12 @@
                             <constraint firstItem="gIg-uf-9te" firstAttribute="top" secondItem="ZQc-Fm-KLZ" secondAttribute="bottom" constant="69" id="lQh-pc-dBy"/>
                             <constraint firstItem="c1r-rk-O3r" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="72" id="mnI-Zw-HIE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4TY-eJ-46p" secondAttribute="trailing" constant="24" id="p2l-Nx-ZS8"/>
+                            <constraint firstItem="21z-U1-ldR" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="rIV-Ad-f8J"/>
                             <constraint firstItem="c1r-rk-O3r" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="xgX-W7-GWV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CheckEmailInputLabel" destination="ZQc-Fm-KLZ" id="s2m-P0-Dft"/>
                         <outlet property="ContinueButton" destination="gIg-uf-9te" id="Uoa-PG-e5f"/>
                         <outlet property="ContinueLabel" destination="rYH-34-Zpn" id="7Mn-ev-B45"/>
                         <outlet property="EmailTextField" destination="d6F-CA-fYc" id="vjt-Xw-ow7"/>
@@ -494,36 +503,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJ2-3o-NzN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1990" y="1355"/>
-        </scene>
-        <!--Privacy Policy View Controller-->
-        <scene sceneID="XMJ-i2-9gv">
-            <objects>
-                <viewController storyboardIdentifier="PrivacyPolicyViewController" id="U5j-LH-ndQ" customClass="PrivacyPolicyViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Axp-XC-5En">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Kqe-Lw-UYg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8F6-80-qdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="2052"/>
-        </scene>
-        <!--Terms Of Use View Controller-->
-        <scene sceneID="IE7-D4-Ncb">
-            <objects>
-                <viewController storyboardIdentifier="TermsOfUseViewController" id="gHc-ig-OiO" customClass="TermsOfUseViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fka-th-PsK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="WEo-fe-ZMa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ag-nu-Q7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2877" y="2052"/>
         </scene>
         <!--Find Password View Controller-->
         <scene sceneID="4wA-bq-FJA">
@@ -895,6 +874,491 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc3-5w-gFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2784" y="1355"/>
+        </scene>
+        <!--Termsof Service Login View Controller-->
+        <scene sceneID="1Zu-LC-qxh">
+            <objects>
+                <viewController storyboardIdentifier="TermsofServiceLoginViewController" id="bAs-Ak-C9S" customClass="TermsofServiceLoginViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="My4-XF-mjW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-5f-KC4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho5-t8-xkZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="4802"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUN-ml-gUN">
+                                                <rect key="frame" x="10" y="20" width="394" height="4762"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">색갈피 서비스 이용 약관
+
+제1조 목적
+
+본 이용약관은 “서비스 색갈피(이하 색갈피)”의 서비스의 이용 조건과 운영에 관한 제반사항 규정을 목적으로 합니다.
+
+제2조 용어의 정의
+
+본 약관에서 사용되는 주요한 용어의 정의는 다음과 같습니다.
+① 회원 : 색갈피의 약관에 동의하고 개인정보를 제공하여 회원 등록을 한 자로서, 색갈피와의 이용 계약을 체결하고 색갈피(이하 서비스)를 이용하는 이용자를 말합니다.
+
+② 이용 계약 : 서비스 이용과 관련하여 색갈피와 회원 간에 체결 하는 계약을 말합니다.
+
+③ 회원 아이디(이하 "ID") : 회원의 식별과 회원의 서비스 이용을 위하여 회원별로 부여하는 고유한 문자와 숫자의 조합을 말합니다.
+
+④ 비밀번호 : 회원이 부여 받은 ID와 일치된 회원임을 확인하고 회원의 권익 보호를 위하여 회원이 선정한 문자와 숫자의 조합을 말합니다.
+
+⑤ 운영자 : 서비스를 운영하는 운영자를 말합니다.
+
+⑥ 해지 : 회원이 이용 계약을 해약하는 것을 말합니다.
+
+제3조 약관 외 준칙
+
+운영자는 필요한 경우 별도로 운영 정책을 공지 안내할 수 있으며, 본 약관과 운영 정책이 중첩될 경우 운영 정책이 우선 적용됩니다.
+
+제4조 이용 계약 체결
+
+① 이용 계약은 회원으로 등록하여 서비스를 이용하려는 자의 본 약관 내용에 대한 동의와 가입 신청에 대하여 운영자의 이용 승낙으로 성립합니다.
+② 회원으로 등록하여 서비스를 이용하려는 자는 가입 신청 시 본 약관을 읽고 "가입 버튼"을 선택하는 것으로 본 약관에 대한 동의 의사 표시를 합니다.
+
+제5조 서비스 이용 신청
+
+① 회원으로 등록하여 서비스를 이용하려는 이용자는 서비스에서 요청하는 제반정보(이용자ID, 비밀번호, 닉네임 등)를 제공해야 합니다.
+② 타인의 정보를 도용하거나 허위의 정보를 등록하는 등 본인의 진정한 정보를 등록하지 않은 회원은 서비스 이용과 관련하여 아무런 권리를 주장할 수 없으며, 관계 법령에 따라 처벌 받을 수 있습니다.
+
+제6조 개인정보처리방침
+
+색갈피 및 운영자는 회원가입 시 제공한 개인정보 중 비밀번호를 가지고 있지 않으며 이와 관련된 부분은 색갈피의 개인정보처리방침을 따릅니다. 운영자는 관계 법령이 정하는 바에 따라 회원 등록 정보를 포함한 회원의 개인정보를 보호하기 위하여 노력을 합니다.
+회원의 개인정보보호에 관하여 관계 법령 및 색갈피가 정하는 개인정보처리방침에 정한 바에 따릅니다.
+
+단, 회원의 귀책 사유로 인해 노출된 정보에 대해 운영자는 일체의 책임을 지지 않습니다. 운영자는 회원이 미풍양속에 저해되거나 국가 안보에 위배되는 게시물 등 위법한 게시물을 등록 · 배포할 경우 관련 기관의 요청이 있을 시 회원의 자료를 열람 및 해당 자료를 관련 기관에 제출할 수 있습니다.
+
+제7조 운영자의 의무
+
+① 운영자는 이용 회원으로부터 제기되는 의견이나 불만이 정당하다고 인정할 경우에는 가급적 빨리 처리하여야 합니다. 다만, 개인적인 사정으로 신속한 처리가 곤란한 경우에는 사후에 공지 또는 이용 회원에게 쪽지, 전자 우편 등을 보내는 등 최선을 다합니다.
+② 운영자는 계속적이고 안정적인 서비스 제공을 위하여 설비에 장애가 생기거나 유실된 때에는 이를 지체 없이 수리 또는 복구할 수 있도록 노력합니다. 다만, 천재지변 또는 서비스 색갈피나 운영자에 부득이한 사유가 있는 경우, 서비스 운영을 일시 정지할 수 있습니다.
+
+제8조 회원의 의무
+
+① 회원은 본 약관에서 규정하는 사항과 운영자가 정한 제반 규정, 공지사항 및 운영 정책 등 색갈피가 공지하는 사항 및 관계 법령을 준수하여야 하며, 기타 색갈피의 업무에 방해가 되는 행위, 색갈피의 명예를 손상시키는 행위를 해서는 안됩니다.
+② 회원은 색갈피의 명시적 동의가 없는 한 서비스의 이용 권한, 기타 이용계약 상 지위를 타인에게 양도, 증여할 수 없으며, 이를 담보로 제공할 수 없습니다.
+
+③ 이용고객은 아이디 및 비밀번호 관리에 상당한 주의를 기울여야 하며, 운영자나 색갈피의 동의 없이 제 3자에게 아이디를 제공하여 이용하게 할 수 없습니다.
+
+④ 회원은 운영자와 색갈피 및 제 3자의 지적 재산권을 침해해서는 안됩니다.
+
+제9조 서비스 이용 시간
+
+① 서비스 이용 시간은 업무 상 또는 기술 상 특별한 지장이 없는 한 연중무휴 1일 24시간을 원칙으로 합니다. 단, 색갈피는 시스템 정기 점검, 증설 및 교체를 위해 색갈피가 정한 날이나 시간에 서비스를 일시 중단할 수 있으며 예정된 작업으로 인한 서비스 일시 중단은 사전에 공지하오니 수시로 참고하시길 바랍니다.
+② 단, 색갈피는 다음 경우에 대하여 사전 공지나 예고없이 서비스를 일시적 혹은 영구적으로 중단할 수 있습니다.
+
+- 긴급한 시스템 점검, 증설, 교체, 고장 혹은 오동작을 일으키는 경우
+
+- 국가비상사태, 정전, 천재지변 등의 불가항력적인 사유가 있는 경우
+
+- 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지한 경우
+
+- 서비스 이용의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 경우
+
+③ 전항에 의한 서비스 중단의 경우 색갈피는 사전에 공지사항 등을 통하여 회원에게 통지 합니다. 단, 색갈피가 통제할 수 없는 사유로 발생한 서비스의 중단에 대하여 사전 공지가 불가능한 경우에는 사후 공지로 대신합니다.
+
+제10조 서비스 이용 해지
+
+① 회원이 색갈피와의 이용 계약을 해지하고자 하는 경우에는 회원 본인이 온라인을 통하여 등록 해지 신청을 하여야 합니다.
+② 해지와 동시에 색갈피가 제공하는 색갈피와 관련된 회원 정보가 자동적으로 삭제됨으로 운영자는 더 이상 해지 신청자의 정보를 볼 수 없습니다.
+
+제11조 서비스 이용 제한
+
+회원은 다음 각 호에 해당하는 행위를 하여서는 아니되며 해당 행위를 한 경우에 색갈피는 회원의 서비스 이용 제한 및 적법한 조치를 취할 수 있으며 이용 계약을 해지하거나 기간을 정하여 서비스를 중지할 수 있습니다.
+① 회원 가입 시 혹은 가입 후 정보 변경시 허위 내용을 등록하는 행위
+
+② 타인의 서비스 이용을 방해하거나 정보를 도용하는 행위
+
+③ 색갈피의 운영진, 직원 또는 관계자를 사칭하는 행위
+
+④ 색갈피 , 기타 제 3자의 인격권 또는 지적재산권을 침해하거나 업무를 방해하는 행위
+
+⑤ 다른 회원의 ID를 부정하게 사용하는 행위
+
+⑥ 다른 회원에 대한 개인정보를 그 동의 없이 수집, 저장, 공개하는 행위
+
+⑦ 범죄와 결부된다고 객관적으로 판단되는 행위
+
+⑧ 기타 관련 법령에 위배되는 행위
+
+제12조 게시물의 관리
+
+① 색갈피의 게시물과 자료의 관리 및 운영의 책임은 운영자에게 있습니다. 운영자는 항상 불량 게시물 및 자료에 대하여 모니터링을 하여야 하며, 불량 게시물 및 자료를 발견하거나 신고를 받으면 해당 게시물 및 자료를 삭제하고 이를 등록한 회원에게 주의를 주어야 합니다.
+한편, 이용 회원이 올린 게시물에 대해서는 게시자 본인에게 책임이 있으니 회원 스스로 본 이용약관에서 위배되는 게시물은 게재해서는 안됩니다.
+
+② 정보통신윤리위원회 등 공공기관의 시정요구가 있는 경우 운영자는 회원의 사전동의 없이 게시물을 삭제하거나 이동할 수 있습니다.
+
+③ 불량게시물의 판단기준은 다음과 같습니다.
+
+- 다른 회원 또는 제3자에게 심한 모욕을 주거나 명예를 손상시키는 내용인 경우
+
+- 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우
+
+- 불법 복제 또는 해킹을 조장하는 내용인 경우
+
+- 영리를 목적으로 하는 광고일 경우
+
+- 범죄와 결부된다고 객관적으로 인정되는 내용일 경우
+
+- 다른 이용자 또는 제 3자와 저작권 등 기타 권리를 침해하는 경우
+
+- 기타 관계법령에 위배된다고 판단되는 경우
+
+④ 색갈피 및 운영자는 게시물 등에 대하여 제 3자로부터 명예 훼손, 지적재산권 등의 권리 침해를 이유로 게시 중단 요청을 받은 경우 이를 임시로 게시중단(전송중단)할 수 있으며, 게시중단 요청자와 게시물 등록자 간에 소송, 합의 기타 이에 준하는 관련 기관의 결정 등이 이루어져 색갈피에 접수된 경우 이에 따릅니다.
+
+제13조 게시물의 보관
+
+색갈피 운영자가 불가피한 사정으로 본 색갈피를 중단하게 될 경우, 회원에게 사전 공지를 하고 게시물의 이전이 쉽도록 모든 조치를 취하기 위해 노력합니다.
+
+제14조 게시물에 대한 저작권
+
+① 회원이 서비스 내에 게시한 게시물의 저작권은 게시한 회원에게 귀속됩니다. 또한 색갈피는 게시자의 동의 없이 게시물을 상업적으로 이용할 수 없습니다. 다만 비영리 목적인 경우는 그러하지 아니하며, 또한 서비스 내의 게재권을 갖습니다.
+② 회원은 서비스를 이용하여 취득한 정보를 임의 가공, 판매하는 행위 등 서비스에 게재된 자료를 상업적으로 사용할 수 없습니다.
+
+③ 운영자는 회원이 게시하거나 등록하는 서비스 내의 내용물, 게시 내용에 대해 제12조 각 호에 해당된다고 판단되는 경우 사전 통지 없이 삭제하거나 이동 또는 등록 거부할 수 있습니다.
+
+제15조 손해배상
+
+① 본 서비스에서 발생한 모든 민,형법상 책임은 회원 본인에게 1차적으로 있습니다.
+② 본 사이트로부터 회원이 받은 손해가 천재지변 등 불가항력적이거나 회원의 고의 또는 과실로 인하여 발생한 때에는 손해배상을 하지 하지 않습니다.
+
+제16조 면책
+
+① 운영자는 회원이 색갈피의 서비스 제공으로부터 기대되는 이익을 얻지 못하였거나 서비스 자료에 대한 취사선택 또는 이용으로 발생하는 손해 등에 대해서는 책임이 면제됩니다.
+② 운영자는 본 서비스 기반 및 타 통신업자가 제공하는 전기통신서비스의 장애로 인한 경우에는 책임이 면제되며 본 서비스 기반과 관련되어 발생한 손해에 대해서는 서비스의 이용약관에 준합니다.
+
+③ 운영자는 회원이 저장, 게시 또는 전송한 자료와 관련하여 일체의 책임을 지지 않습니다.
+
+④ 운영자는 회원의 귀책 사유로 인하여 서비스 이용의 장애가 발생한 경우에는 책임지지 아니합니다.
+
+⑤ 운영자는 회원 상호 간 또는 회원과 제 3자 상호 간, 기타 회원의 본 서비스 내외를 불문한 일체의 활동(데이터 전송, 기타 커뮤니티 활동 포함)에 대하여 책임을 지지 않습니다.
+
+⑥ 운영자는 회원이 게시 또는 전송한 자료 및 본 서비스로 회원이 제공 받을 수 있는 모든 자료들의 진위, 신뢰도, 정확성 등 그 내용에 대해서는 책임지지 아니합니다.
+
+⑦ 운영자는 회원 상호 간 또는 회원과 제3자 상호 간에 서비스를 매개로 하여 물품 거래 등을 한 경우에 그로부터 발생하는 일체의 손해에 대하여 책임지지 아니합니다.
+
+⑧ 운영자는 회원 간 또는 회원과 제 3자 간에 발생한 일체의 분쟁에 대하여 책임지지 아니합니다.
+
+⑨ 운영자는 서버 등 설비의 관리, 점검, 보수, 교체 과정 또는 소프트웨어의 운용 과정에서 고의 또는 고의에 준하는 중대한 과실 없이 발생할 수 있는 시스템의 장애, 제 3자의 공격으로 인한 시스템의 장애, 국내 외의 저명한 연구 기관이나 보안 관련 업체에 의해 대응 방법이 개발되지 아니한 컴퓨터 바이러스 등의 유포나 기타 운영자가 통제할 수 없는 불가항력적 사유로 인한 회원의 손해에 대하여 책임지지 않습니다.
+
+부칙
+
+이 약관은 2021.12.05부터 시행합니다.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="RUN-ml-gUN" firstAttribute="top" secondItem="Ho5-t8-xkZ" secondAttribute="top" constant="20" id="Exe-lp-RFE"/>
+                                            <constraint firstAttribute="bottom" secondItem="RUN-ml-gUN" secondAttribute="bottom" constant="20" id="cOd-S1-CsT"/>
+                                            <constraint firstAttribute="trailing" secondItem="RUN-ml-gUN" secondAttribute="trailing" constant="10" id="dJc-hl-Edg"/>
+                                            <constraint firstItem="RUN-ml-gUN" firstAttribute="leading" secondItem="Ho5-t8-xkZ" secondAttribute="leading" constant="10" id="kWr-Oe-VFc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ho5-t8-xkZ" firstAttribute="top" secondItem="k8Q-z0-FlG" secondAttribute="top" id="f8V-MT-X1i"/>
+                                    <constraint firstItem="Ho5-t8-xkZ" firstAttribute="width" secondItem="BZK-2I-tJ2" secondAttribute="width" id="oht-Xr-kvm"/>
+                                    <constraint firstItem="Ho5-t8-xkZ" firstAttribute="trailing" secondItem="k8Q-z0-FlG" secondAttribute="trailing" id="qZH-Gx-FiC"/>
+                                    <constraint firstItem="Ho5-t8-xkZ" firstAttribute="bottom" secondItem="k8Q-z0-FlG" secondAttribute="bottom" id="z6U-tb-fQe"/>
+                                    <constraint firstItem="Ho5-t8-xkZ" firstAttribute="leading" secondItem="k8Q-z0-FlG" secondAttribute="leading" id="zXC-1Z-OeJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="k8Q-z0-FlG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BZK-2I-tJ2"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7BW-VS-qgb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7BW-VS-qgb" firstAttribute="bottom" secondItem="SLa-5f-KC4" secondAttribute="bottom" id="FMF-p2-Gn2"/>
+                            <constraint firstItem="7BW-VS-qgb" firstAttribute="trailing" secondItem="SLa-5f-KC4" secondAttribute="trailing" id="I4R-3b-6Xr"/>
+                            <constraint firstItem="SLa-5f-KC4" firstAttribute="top" secondItem="7BW-VS-qgb" secondAttribute="top" id="esY-8a-hSH"/>
+                            <constraint firstItem="SLa-5f-KC4" firstAttribute="leading" secondItem="7BW-VS-qgb" secondAttribute="leading" id="itT-HB-34e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SelfView" destination="My4-XF-mjW" id="Xef-2a-zcg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQD-aY-kkn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="2132"/>
+        </scene>
+        <!--Terms Of Use Login View Controller-->
+        <scene sceneID="gmj-XX-NLo">
+            <objects>
+                <viewController storyboardIdentifier="TermsOfUseLoginViewController" id="KwX-wV-cec" customClass="TermsOfUseLoginViewController" customModule="ColorBookMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buz-WE-cBX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-6O-OBO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-sC-DPX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="5142"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpz-MG-IWA">
+                                                <rect key="frame" x="10" y="20" width="394" height="5102"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">색갈피 개인정보처리방침
+
+서비스 색갈피(이하 색갈피)는 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.
+
+색갈피는 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
+
+○ 본 방침은부터 2021년 12월 18일부터 시행됩니다.
+
+1. 개인정보의 처리 목적
+
+색갈피는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용 되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.
+
+① 홈페이지 회원가입 및 관리
+회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 각종 고지·통지, 고충처리, 분쟁 조정을 위한 기록 보존 등을 목적으로 개인정보를 처리합니다.
+
+② 민원사무 처리
+민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 등을 목적으로 개인정보를 처리합니다.
+
+③ 재화 또는 서비스 제공
+서비스 제공, 콘텐츠 제공, 맞춤 서비스 제공, 본인인증, 요금결제·정산 등을 목적으로 개인정보를 처리합니다.
+
+④ 마케팅 및 광고에의 활용
+신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인, 접속빈도 파악 또는 회원의 서비스 이용에 대한 통계 등을 목적으로 개인정보를 처리합니다.
+
+2. 개인정보 파일 현황
+
+① 개인정보 파일명 : 색갈피개인정보처리방침
+개인정보 항목 : 이메일, 비밀번호, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+
+수집방법 : 홈페이지
+
+보유근거 : 정보 주체의 동의
+
+보유기간 : 회원 탈퇴 시 지체 없이 파기
+
+관련법령 : 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년, 대금결제 및 재화 등의 공급에 관한 기록 : 5년, 계약 또는 청약철회 등에 관한 기록 : 5년
+
+3. 개인정보의 처리 및 보유 기간
+
+① 색갈피는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 보유,이용기간 내에서 개인정보를 처리,보유합니다.
+
+② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
+가. 홈페이지 회원가입 및 관리
+
+홈페이지 회원가입 및 관리와 관련한 개인정보는 수집.이용에 관한 동의일로부터까지 위 이용목적을 위하여 보유, 이용됩니다.
+
+보유근거 : 정보 주체의 동의
+
+보유기간 : 회원 탈퇴 시 지체 없이 파기
+
+관련법령
+
+1)소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+
+2)대금결제 및 재화 등의 공급에 관한 기록 : 5년
+
+3)계약 또는 청약철회 등에 관한 기록 : 5년
+
+나. 민원사무 처리
+
+민원사무 처리와 관련한 개인정보는 수집.이용에 관한 동의일로부터까지 위 이용목적을 위하여 보유, 이용됩니다.
+
+보유근거 : 정보 주체의 동의
+
+보유기간 : 회원 탈퇴 시 지체 없이 파기
+
+관련법령
+
+1)소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+
+2)대금결제 및 재화 등의 공급에 관한 기록 : 5년
+
+3)계약 또는 청약철회 등에 관한 기록 : 5년
+
+다. 재화 또는 서비스 제공
+
+재화 또는 서비스 제공과 관련한 개인정보는 수집.이용에 관한 동의일로부터까지 위 이용목적을 위하여 보유, 이용됩니다.
+
+보유근거 : 정보 주체의 동의
+
+보유기간 : 회원 탈퇴 시 지체 없이 파기
+
+관련법령
+
+1)소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+
+2)대금결제 및 재화 등의 공급에 관한 기록 : 5년
+
+3)계약 또는 청약철회 등에 관한 기록 : 5년
+
+라. 마케팅 및 광고에의 활용
+
+마케팅 및 광고에의 활용과 관련한 개인정보는 수집.이용에 관한 동의일로부터까지 위 이용목적을 위하여 보유.이용됩니다.
+
+보유근거 : 정보 주체의 동의
+
+보유기간 : 회원 탈퇴 시 지체 없이 파기
+
+관련법령
+
+1)소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+
+2)대금결제 및 재화 등의 공급에 관한 기록 : 5년
+
+3)계약 또는 청약철회 등에 관한 기록 : 5년
+
+4. 정보주체와 법정대리인의 권리·의무 및 그 행사방법
+
+이용자는 개인정보주체로써 다음과 같은 권리를 행사할 수 있습니다.
+① 정보주체는 색갈피에 대해 언제든지 개인정보 열람,정정,삭제,처리정지 요구 등의 권리를 행사할 수 있습니다.
+
+② 제1항에 따른 권리 행사는 색갈피에 대해 개인정보 보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 색갈피는 이에 대해 지체 없이 조치하겠습니다.
+
+③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.
+
+④ 개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.
+
+⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
+
+⑥ 색갈피는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.
+
+5. 처리하는 개인정보의 항목 작성
+
+① 색갈피는 다음의 개인정보 항목을 처리하고 있습니다.
+가. 홈페이지 회원가입 및 관리
+
+필수항목 : 이메일, 비밀번호, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+
+나. 민원사무 처리
+
+필수항목 : 이메일, 비밀번호, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+
+다. 재화 또는 서비스 제공
+
+필수항목 : 이메일, 비밀번호, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+
+라. 마케팅 및 광고에의 활용
+
+필수항목 : 이메일, 비밀번호, 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+
+6. 개인정보의 파기
+
+색갈피는 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.
+① 파기 절차
+
+이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져(종이의 경우 별도의 서류) 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다. 이 때, DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.
+
+② 파기 기한
+
+이용자의 개인정보는 개인정보의 보유기간이 경과된 경우에는 보유기간의 종료일로부터 5일 이내에, 개인정보의 처리 목적 달성, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5일 이내에 그 개인정보를 파기합니다.
+
+③ 파기 방법
+
+전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다
+
+7. 개인정보 자동 수집 장치의 설치•운영 및 거부에 관한 사항
+
+① 색갈피는 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다.
+② 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다. 가. 쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 보안접속 여부, 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용됩니다. 나. 쿠키의 설치•운영 및 거부 : 웹브라우저 상단의 도구&gt;인터넷 옵션&gt;개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다. 다. 쿠키 저장을 거부할 경우 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다.
+
+8. 개인정보 보호책임자 작성
+
+① 색갈피는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+▶ 개인정보 보호책임자
+
+성명 : 최승훈
+
+직책 : 디자이너
+
+직급 : 창립멤버
+
+연락처 : 010 - 9258 - 1066 , shun0325@naver.com
+
+※ 개인정보 보호 담당부서로 연결됩니다.
+
+▶ 개인정보 보호 담당부서
+
+부서명 : 색갈피
+
+담당자 : 최승훈
+
+연락처 : 010 - 9258 - 1066 , shun0325@naver.com
+
+② 정보주체께서는 색갈피의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 색갈피는 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.
+
+9. 개인정보 열람청구
+
+정보주체는 (개인정보 보호법) 제 35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다.
+&lt;색갈피&gt;는 정보주체의 개인정보 열람 청구가 신속하게 처리되도록 노력하겠습니다.
+
+&gt; 개인정보 열람 청구 접수, 처리 부서
+부서명 : 색갈피
+담당자 : 최승훈
+연락처 : 010 - 9258 - 1066 , shun0325@naver.com
+
+10. 권익침해 구제방법
+
+정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷 진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.
+
+ 1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr) 2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)
+3. 대검찰청 : (국번없이) 1301 (www.spo.go.kr)
+4. 경찰청 : (국번없이) 182 (ecrm.cyber.go.kr)
+「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정 보의 처리정지 등)의 규정에 의한 요구에 대 하여 공공기관의 장이 행한 처분 또는 부작위 로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.
+※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참 고하시기 바랍니다.
+
+11. 개인정보 처리방침 변경
+이 개인정보처리방침은 2021. 12. 05부터 적용됩니다.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Bpz-MG-IWA" firstAttribute="leading" secondItem="Mi5-sC-DPX" secondAttribute="leading" constant="10" id="B0D-Jr-pdl"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bpz-MG-IWA" secondAttribute="trailing" constant="10" id="JZ6-Zl-jYn"/>
+                                            <constraint firstItem="Bpz-MG-IWA" firstAttribute="top" secondItem="Mi5-sC-DPX" secondAttribute="top" constant="20" id="fRf-rT-fxp"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bpz-MG-IWA" secondAttribute="bottom" constant="20" id="qa2-Ww-gmg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mi5-sC-DPX" firstAttribute="top" secondItem="sCs-x7-hlm" secondAttribute="top" id="5zm-NQ-bbY"/>
+                                    <constraint firstItem="Mi5-sC-DPX" firstAttribute="bottom" secondItem="sCs-x7-hlm" secondAttribute="bottom" id="8qV-Xa-tEh"/>
+                                    <constraint firstItem="Mi5-sC-DPX" firstAttribute="trailing" secondItem="sCs-x7-hlm" secondAttribute="trailing" id="9a9-tr-FGD"/>
+                                    <constraint firstItem="Mi5-sC-DPX" firstAttribute="width" secondItem="7sx-nU-ROf" secondAttribute="width" id="SPT-qs-YDu"/>
+                                    <constraint firstItem="Mi5-sC-DPX" firstAttribute="leading" secondItem="sCs-x7-hlm" secondAttribute="leading" id="yTN-UG-Q8w"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sCs-x7-hlm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7sx-nU-ROf"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mSJ-GI-mCf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mSJ-GI-mCf" firstAttribute="trailing" secondItem="QIe-6O-OBO" secondAttribute="trailing" id="19B-e0-VcU"/>
+                            <constraint firstItem="mSJ-GI-mCf" firstAttribute="bottom" secondItem="QIe-6O-OBO" secondAttribute="bottom" id="E9s-fI-m0L"/>
+                            <constraint firstItem="QIe-6O-OBO" firstAttribute="top" secondItem="mSJ-GI-mCf" secondAttribute="top" id="WoJ-wS-HD9"/>
+                            <constraint firstItem="QIe-6O-OBO" firstAttribute="leading" secondItem="mSJ-GI-mCf" secondAttribute="leading" id="g9p-3X-pz0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SelfView" destination="buz-WE-cBX" id="74q-tj-OSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wH-Eg-oJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2841" y="2131"/>
         </scene>
     </scenes>
     <resources>

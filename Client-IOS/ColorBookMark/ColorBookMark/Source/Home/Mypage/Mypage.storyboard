@@ -388,7 +388,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAS-44-Mop">
                                                 <rect key="frame" x="10" y="20" width="394" height="4762"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <mutableString key="text">색갈피 서비스 이용 약관
+                                                <string key="text">색갈피 서비스 이용 약관
 
 제1조 목적
 
@@ -545,7 +545,7 @@
 
 부칙
 
-이 약관은 2021.12.05부터 시행합니다.</mutableString>
+이 약관은 2021.12.05부터 시행합니다.</string>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -606,7 +606,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mc-HM-dv0">
                                                 <rect key="frame" x="10" y="20" width="394" height="5102"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <mutableString key="text">색갈피 개인정보처리방침
+                                                <string key="text">색갈피 개인정보처리방침
 
 서비스 색갈피(이하 색갈피)는 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.
 
@@ -812,7 +812,7 @@
 ※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참 고하시기 바랍니다.
 
 11. 개인정보 처리방침 변경
-이 개인정보처리방침은 2021. 12. 05부터 적용됩니다.</mutableString>
+이 개인정보처리방침은 2021. 12. 05부터 적용됩니다.</string>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

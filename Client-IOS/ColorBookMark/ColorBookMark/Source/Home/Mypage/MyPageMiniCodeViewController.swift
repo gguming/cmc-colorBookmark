@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import AudioToolbox
 
-class MyPageMiniCodeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MyPageMiniCodeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     let numberValue: Array<Int> = [1,2,3,4,5,6,7,8,9]
     var MiniCodeValue: Array<String> = []

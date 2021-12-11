@@ -96,11 +96,17 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
                 print(Constant.email ?? "")
             }
             
+//            let authString = String(data: authorizationCode, encoding: .utf8),
             if let authorizationCode = credential.authorizationCode,
                let identityToken = credential.identityToken,
                let authString = String(data: authorizationCode, encoding: .utf8),
                let tokenString = String(data: identityToken, encoding: .utf8) {
+                let authCode = String(decoding: authorizationCode, as: Unicode.ASCII.self)
+           
+                print("realUserStatus: \(credential.realUserStatus)")
                 print("authorizationCode: \(authorizationCode)")
+                print()
+                print(authCode)
                 print("identityToken: \(identityToken)")
                 print("authString: \(authString)")
                 print("tokenString: \(tokenString)")

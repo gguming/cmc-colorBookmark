@@ -37,14 +37,6 @@ class MiniCodeViewController: BaseViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         MiniCodeCollectionview.delegate = self
         MiniCodeCollectionview.dataSource = self
-        
-//        let leadingValue = view.frame.width * 0.075
-//        MiniCodeCollectionview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingValue).isActive = true
-//
-//        let height = MiniCodeCollectionview.collectionViewLayout.collectionViewContentSize.height
-//        MiniCodeCollectionviewHeight.constant = height
-//        self.view.setNeedsLayout()
- 
     }
     
     func minicode() {
