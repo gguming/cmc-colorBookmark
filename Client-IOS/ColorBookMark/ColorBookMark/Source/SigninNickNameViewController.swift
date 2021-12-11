@@ -11,7 +11,6 @@ class SigninNickNameViewController: UIViewController {
     lazy var signinDataManager: SigninDataManager = SigninDataManager()
     lazy var loginDataManager: LoginAfterSigninDataManager = LoginAfterSigninDataManager()
     
-    
     var emailValue = ""
     var passwordValue = ""
     var nicknameValue = ""

@@ -41,7 +41,7 @@ class SigninPasswordViewController: UIViewController {
     let unabledBackgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
     
     override func viewDidLoad() {
-        self.view.backgroundColor = .white.withAlphaComponent(0.3)
+      //  self.view.backgroundColor = .white.withAlphaComponent(0.3)
         ContinueButton.layer.cornerRadius = 22
         PasswordTextField.layer.cornerRadius = 5
         PasswordCheckTextField.layer.cornerRadius = 5

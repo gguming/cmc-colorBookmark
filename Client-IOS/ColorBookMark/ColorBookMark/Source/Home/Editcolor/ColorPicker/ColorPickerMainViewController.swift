@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Foundation
 
 class ColorPickerMainViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
-    
-    lazy var postcolorDataManager: PostColorDataManager = PostColorDataManager()
+    weak var colorCollectionviewDelegate: ColorReloadDelegate?
+    lazy var postMyColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
     
     @available(iOS 14.0, *)
     @IBAction func saveBtnTapped(_ sender: Any) {
@@ -44,42 +45,31 @@ class ColorPickerMainViewController: UIViewController {
             }else if colorInfo == nil {
                 self.presentBottomAlert(message: "컬러를 골라주세요")
             }else {
-                
-                let request = PostColorRequest(color: colorInfo!, colorName: "\(colorName ?? "")")
+                let request = PostMyColorRequest(color: colorInfo!, colorName: "\(colorName ?? "")")
                 print(request)
-                self.postcolorDataManager.postColor(request, delegate: self)
-                print(1)
+                self.postMyColorDataManager.postMyColor(request, delegate: self)
             }
-            
-            
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(ok)
         alert.addAction(cancel)
         
-//        let confirm = UIAlertAction(
         self.present(alert, animated: true, completion: nil)
-        
     }
-    
-
-   
 }
 
 extension ColorPickerMainViewController{
     func didSuccessPostColors(_ result: PostMyColorResponse) {
-        print("------>\(result)")
+        print("!!!------>\(result)")
         presentBottomAlert(message: result.message ?? "")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
         self.dismiss(animated: true, completion: nil)
-        
-        
+        self.colorCollectionviewDelegate?.reloadColorCollectionView()
     }
     
     func failedToPostColors(message: String) {
         print("------>>>>\(message)")
-        self.dismiss(animated: true, completion: nil)
         presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
         
     }
 }

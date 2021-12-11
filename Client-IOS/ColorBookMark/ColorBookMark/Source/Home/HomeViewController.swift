@@ -9,9 +9,11 @@ import UIKit
 import MaterialComponents.MaterialBottomSheet
 import FloatingPanel
 
-class HomeViewController: BaseViewController {
+protocol ColorHomeCollectionDelegate: AnyObject {
+    func reloadHomeColorCollectionView()
+}
 
-   
+class HomeViewController: BaseViewController {
     
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
         let SB = UIStoryboard(name: "BookMark", bundle: nil)
@@ -117,6 +119,7 @@ class HomeViewController: BaseViewController {
         let appearance = SurfaceAppearance()
         let sb = UIStoryboard(name: "EditColor", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "EditColorViewController") as? EditColorViewController else {return}
+        vc.homeColorDelegate = self
         vc.colors = self.colors
         fpc.set(contentViewController: vc)
         fpc.addPanel(toParent: self)
@@ -210,6 +213,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.setUI()
         cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
+        cell.myColorId = colors?[indexPath.item].myColorId ?? 0
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -231,16 +235,16 @@ extension HomeViewController {
     func didSuccessGetColors(_ result: ColorResponse) {
         print("------>\(result)")
         colors = result.result
-        collectionview.reloadData()
-       
-        
+        collectionview.reloadData()    
     }
     
     func failedToGetColors(message: String) {
         print("------>>>>\(message)")
-        
     }
-    
-    
-    
+}
+
+extension HomeViewController: ColorHomeCollectionDelegate {
+    func reloadHomeColorCollectionView() {
+        getColors()
+    }
 }

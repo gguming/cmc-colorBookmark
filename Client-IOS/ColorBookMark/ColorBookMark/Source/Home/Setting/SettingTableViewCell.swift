@@ -17,7 +17,6 @@ class SettingTableViewCell: UITableViewCell {
     let userNotiCenter = UNUserNotificationCenter.current()
     lazy var dataManager: SettingDataManager = SettingDataManager()
     weak var cellDelegate: PresentVCDelegate?
-//    var player: AVAudioPlayer!
     var audioPlayer : AVAudioPlayer!
     var cellNumber: Int? = nil
     var onOff = "OFF"
@@ -86,7 +85,7 @@ class SettingTableViewCell: UITableViewCell {
         switch cellNumber {
         case 0:
             Constant.setting_0 = "Y"
-            let settingInput = SettingRequest(alarmStatus:  Constant.setting_0)
+            let settingInput = SettingRequest(alarmStatus: Constant.setting_0)
             dataManager.getSettingValue(settingInput, delegate: self)
         case 1:
             Constant.setting_1 = "Y"

@@ -364,6 +364,8 @@
                         <outlet property="CalenderLabel" destination="Xl6-3m-HH0" id="Zjw-oR-V8b"/>
                         <outlet property="NextButton" destination="Rf5-jm-cCz" id="D5q-TW-P2o"/>
                         <outlet property="NextButtonImage" destination="nob-EH-gID" id="dif-WH-aSu"/>
+                        <outlet property="PrevButton" destination="OOm-e2-GoK" id="Ofk-PS-nQB"/>
+                        <outlet property="PrevButtonImage" destination="d5y-cp-9zi" id="Pjp-x5-NJe"/>
                         <outlet property="TopView" destination="N9Y-GN-77l" id="9LJ-Er-SO0"/>
                     </connections>
                 </viewController>
@@ -387,6 +389,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="126" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-RI-bD5">
                                 <rect key="frame" x="28" y="99" width="44" height="44"/>
+                                <color key="tintColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sZh-RI-bD5" secondAttribute="height" id="Yff-iY-adE"/>
                                 </constraints>
@@ -653,6 +656,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="126" translatesAutoresizingMaskIntoConstraints="NO" id="EdL-jZ-HZQ">
                                 <rect key="frame" x="28" y="109" width="44" height="44"/>
+                                <color key="tintColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EdL-jZ-HZQ" secondAttribute="height" id="F9I-hs-cBz"/>
                                 </constraints>

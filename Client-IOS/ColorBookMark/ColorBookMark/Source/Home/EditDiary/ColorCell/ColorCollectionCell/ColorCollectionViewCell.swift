@@ -9,9 +9,11 @@ import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
 
-    var colorDelegate: ColorCollectionViewCellDelegate?
+    weak var colorDelegate: ColorCollectionViewCellDelegate?
     var index: Int = 0
+    var myColorId = 0
     
+    @IBOutlet weak var deleteButton: UIImageView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorNameLabel: UILabel!
@@ -21,7 +23,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
         backView.backgroundColor = .red
         backView.layer.cornerRadius = 45
         backView.isHidden = true
-
+        deleteButton.isHidden = true
     }
     
     @objc func EditColorCircle() {
@@ -30,6 +32,10 @@ class ColorCollectionViewCell: UICollectionViewCell {
     
     @objc func EditColorName() {
         self.colorDelegate?.selectedColorName(index: index)
+    }
+    
+    @objc func DeleteColor() {
+        self.colorDelegate?.selectedColorDelete(index: index)
     }
     
     
@@ -52,6 +58,10 @@ class ColorCollectionViewCell: UICollectionViewCell {
         let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(EditColorName))
         colorNameLabel.addGestureRecognizer(tapGesture_2)
         colorNameLabel.isUserInteractionEnabled = true
+        
+        let tapGesture_3 = UITapGestureRecognizer(target: self, action: #selector(DeleteColor))
+        deleteButton.addGestureRecognizer(tapGesture_3)
+        deleteButton.isUserInteractionEnabled = true
     }
 
 }

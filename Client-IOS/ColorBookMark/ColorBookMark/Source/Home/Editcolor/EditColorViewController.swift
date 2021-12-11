@@ -7,28 +7,37 @@
 
 import UIKit
 
-protocol ColorCollectionViewCellDelegate {
+protocol ColorCollectionViewCellDelegate: AnyObject {
     func selectedColorCircle(index: Int)
     func selectedColorName(index: Int)
+    func selectedColorDelete(index: Int)
+}
+
+protocol ColorReloadDelegate: AnyObject {
+    func reloadColorCollectionView()
 }
 
 class EditColorViewController: UIViewController {
-    
     var colors: [Colors]?
-
     @IBOutlet weak var nickInfoLabel: UILabel!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
+    weak var homeColorDelegate: ColorHomeCollectionDelegate?
     
     lazy var colorDataManager: GetMyColorDataManager = GetMyColorDataManager()
+    lazy var colorNameDataManager: CheckMyColorDataManger = CheckMyColorDataManger()
+    lazy var editColorDataManager: PostMyColorDataManager = PostMyColorDataManager()
+    lazy var resetColorDataManager: ResetMyColorDataManager = ResetMyColorDataManager()
+    
     
     @IBAction func confirmBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        homeColorDelegate?.reloadHomeColorCollectionView()
     }
     
     @IBAction func resetBtnTapped(_ sender: Any) {
-        
+        resetColorDataManager.checkMyColor(delegate: self)
     }
     
     override func viewDidLoad() {
@@ -93,9 +102,11 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return UICollectionViewCell()}
             cell.setUI()
+            cell.setGesture()
             cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item-1].color ?? "#000000")")
+            cell.deleteButton.isHidden = false
             cell.colorNameLabel.text = colors?[indexPath.item-1].colorName
-            cell.index = indexPath.row
+            cell.index = indexPath.item - 1
             cell.colorDelegate = self
             return cell
         }
@@ -112,14 +123,13 @@ extension EditColorViewController: UICollectionViewDelegate, UICollectionViewDat
 extension EditColorViewController: ClickEditBtn {
     func presentColorPicker() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ColorPickerMainViewController") as? ColorPickerMainViewController else {return}
+        vc.colorCollectionviewDelegate = self
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.view.alpha = 0.3
         vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension EditColorViewController {
@@ -127,8 +137,6 @@ extension EditColorViewController {
         print("------>\(result)")
         colors = result.result
         collectionview.reloadData()
-       
-        
     }
     
     func failedToGetColors(message: String) {
@@ -138,23 +146,108 @@ extension EditColorViewController {
     
 }
 
+@available(iOS 14.0, *)
 extension EditColorViewController: ColorCollectionViewCellDelegate{
+    func selectedColorDelete(index: Int) {
+        let currentColorId = colors?[index].myColorId
+        let request = PostMyColorRequest(myColorId: currentColorId, status: "N")
+        print(request)
+        self.editColorDataManager.deleteMyColor(request, delegate: self)
+    }
+    
     func selectedColorName(index: Int) {
+        print(index)
+        let currentColorId = colors?[index].myColorId
+        presentAlert(colorId: currentColorId!)
+    }
+    
+    func selectedColorCircle(index: Int) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "OriginalColorPickerMainViewController") as? OriginalColorPickerMainViewController else {return}
+        vc.colorCollectionviewDelegate = self
+        vc.currentColorId = (colors?[index].myColorId)!
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.view.alpha = 0.3
         vc.view.backgroundColor = .black.withAlphaComponent(0.3)
         self.present(vc, animated: true, completion: nil)
-//        이거 한다음에
-//        데이터매니져에 연결후에 델리겟으로
-//        reloadData 하기
+    }
 
+    
+    @available(iOS 14.0, *)
+    private func presentAlert(colorId: Int) {
+        let alert = UIAlertController(title: "감정 이름 설정", message: nil, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        let ok = UIAlertAction(title: "저장", style: .default) { action in
+            let colorName = alert.textFields?[0].text
+            let colorInfo = ColorPickerInfo.shared.color
+            
+            if colorName?.count == 0 {
+                self.presentBottomAlert(message: "감정 이름을 입력해 주세요!")
+                self.presentAlert(colorId: colorId)
+            } else if colorName?.count ?? 6 > 5 {
+                self.presentBottomAlert(message: "5자 이하로 입력해 주세요!")
+                self.presentAlert(colorId: colorId)
+    
+            }
+            else {
+                let request = PostMyColorRequest(colorName: "\(colorName ?? "")", myColorId: colorId)
+                print(request)
+                self.editColorDataManager.editMyColorName(request, delegate: self)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+//        let confirm = UIAlertAction(
+        self.present(alert, animated: true, completion: nil)
     }
     
-    func selectedColorCircle(index: Int) {
-        //        데이터매니져에 연결한 다음에
-        //        reloadData
-    }
+}
 
+extension EditColorViewController {
+    func didSuccessEditColorName(_ result: PostMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        getColor()
+    }
+    
+    func failedToEditColorName(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func didSuccessDeleteMyColor(_ result: PostMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        getColor()
+    }
+    
+    func failedToDeleteMyColor(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func didSuccessResetMyColor(_ result: ResetMyColorResponse) {
+        print("------>\(result)")
+        presentBottomAlert(message: result.message ?? "")
+        getColor()
+    }
+    
+    func failedToResetMyColor(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+}
+
+extension EditColorViewController: ColorReloadDelegate {
+    func reloadColorCollectionView() {
+        getColor()
+    }
 }

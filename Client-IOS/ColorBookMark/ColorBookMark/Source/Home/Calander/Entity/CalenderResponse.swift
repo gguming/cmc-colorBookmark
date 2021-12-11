@@ -7,14 +7,13 @@
 
 import Foundation
 
-struct CalendarResponse: Decodable{
+struct CalendarResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
     let result: [CalendarResult]
 }
 
-// MARK: - Result
 struct CalendarResult: Decodable {
     let date: String
     let color: String?
