@@ -39,10 +39,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JER-IU-PQz">
-                                <rect key="frame" x="0.0" y="27" width="320" height="109"/>
+                                <rect key="frame" x="10" y="37" width="300" height="89"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lya-xs-L3o">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3YD-GT-YFY">
                                             <size key="itemSize" width="128" height="128"/>
@@ -63,12 +63,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JER-IU-PQz" firstAttribute="top" secondItem="TwM-5y-0ez" secondAttribute="bottom" id="0GO-NX-Tba"/>
+                            <constraint firstItem="JER-IU-PQz" firstAttribute="top" secondItem="TwM-5y-0ez" secondAttribute="bottom" constant="10" id="0GO-NX-Tba"/>
                             <constraint firstItem="TwM-5y-0ez" firstAttribute="leading" secondItem="EC3-I8-4tf" secondAttribute="leading" id="H6K-3W-Ilz"/>
-                            <constraint firstAttribute="trailing" secondItem="JER-IU-PQz" secondAttribute="trailing" id="IKX-mj-UrW"/>
+                            <constraint firstAttribute="trailing" secondItem="JER-IU-PQz" secondAttribute="trailing" constant="10" id="IKX-mj-UrW"/>
                             <constraint firstAttribute="trailing" secondItem="TwM-5y-0ez" secondAttribute="trailing" id="Knu-u7-gGU"/>
-                            <constraint firstItem="JER-IU-PQz" firstAttribute="leading" secondItem="EC3-I8-4tf" secondAttribute="leading" id="NFe-5m-5Ax"/>
-                            <constraint firstAttribute="bottom" secondItem="JER-IU-PQz" secondAttribute="bottom" id="WLN-QX-5u8"/>
+                            <constraint firstItem="JER-IU-PQz" firstAttribute="leading" secondItem="EC3-I8-4tf" secondAttribute="leading" constant="10" id="NFe-5m-5Ax"/>
+                            <constraint firstAttribute="bottom" secondItem="JER-IU-PQz" secondAttribute="bottom" constant="10" id="WLN-QX-5u8"/>
                             <constraint firstItem="TwM-5y-0ez" firstAttribute="top" secondItem="EC3-I8-4tf" secondAttribute="top" id="tAQ-0x-Mjb"/>
                         </constraints>
                     </view>

@@ -11,6 +11,7 @@ class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
     
     @IBOutlet weak var dateLabel: UILabel!
+    var date: String?
     var diaryId: Int?
     var modifyMode: Bool?
     var bookmarkDetail: Diary?
@@ -55,7 +56,7 @@ class BookmarkDetailViewController: UIViewController {
 
 extension BookmarkDetailViewController: ModifyModeDelegate{
     func deleteDiary() {
-        deleteDiaryDataManager.diaryDelete(diaryId: diaryId ?? 0, delegate: self)
+        deleteDiaryDataManager.diaryDelete(date: date ?? "", delegate: self)
     }
     
     func doneModifytMode() {

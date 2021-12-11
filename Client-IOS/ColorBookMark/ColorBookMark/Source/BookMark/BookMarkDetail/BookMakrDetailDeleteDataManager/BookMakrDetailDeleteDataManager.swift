@@ -9,7 +9,7 @@ import Alamofire
 
 
 class BookMakrDetailDeleteDataManager{
-    func diaryDelete(diaryId: Int, delegate: BookmarkDetailViewController) {
+    func diaryDelete(date: String, delegate: BookmarkDetailViewController) {
         let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
         AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/withdrawal/\(diaryId)", method: .patch, parameters: nil, encoding: JSONEncoding(), headers: header)
             .validate()

@@ -156,6 +156,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.section == 1{
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
             vc.modalPresentationStyle = .fullScreen
+            vc.date = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.date
             vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
             vc.index = indexPath.row - 1
             self.present(vc, animated: false, completion: nil)
