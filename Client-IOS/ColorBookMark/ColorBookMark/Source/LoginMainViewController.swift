@@ -12,6 +12,7 @@ class LoginMainViewController: UIViewController {
     
     lazy var dataManager: EmailCheckDataManager = EmailCheckDataManager()
     
+    @IBOutlet weak var CheckEmailInputLabel: UILabel!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var UnderLineView: UIView!
     @IBOutlet weak var ContinueLabel: UILabel!
@@ -62,5 +63,10 @@ extension LoginMainViewController {
         vc.emailValue = EmailTextField.text!
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
+    }
+    
+    func failedToCheckEmail(result: EmailCheckResponse) {
+        CheckEmailInputLabel.text = result.message
+        self.CheckEmailInputLabel.reloadInputViews()
     }
 }

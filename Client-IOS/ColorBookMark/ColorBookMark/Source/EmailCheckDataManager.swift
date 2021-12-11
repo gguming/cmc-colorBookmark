@@ -32,7 +32,11 @@ class EmailCheckDataManager {
                     if (!response.isSuccess) {
                         switch response.code {
                         case 2003: print("이메일 형식이 올바르지 않습니다")
+                            print(123123)
+                            delegate.failedToCheckEmail(result: response)
                         case 2001: print("이메일을 입력해주세요")
+                            print(567567)
+                            delegate.failedToCheckEmail(result: response)
                         default: break
                         }
                     }

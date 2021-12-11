@@ -176,6 +176,8 @@
 		E9B76DE12762561A00BC990F /* CalenderLimitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE02762561A00BC990F /* CalenderLimitResponse.swift */; };
 		E9B76DE327636B4A00BC990F /* ResetMyColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE227636B4A00BC990F /* ResetMyColorDataManager.swift */; };
 		E9B76DE527636B6100BC990F /* ResetMyColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE427636B6100BC990F /* ResetMyColorResponse.swift */; };
+		E9B76DE927647A8B00BC990F /* TermsofServiceLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE827647A8B00BC990F /* TermsofServiceLoginViewController.swift */; };
+		E9B76DEB27647A9D00BC990F /* TermsOfUseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DEA27647A9D00BC990F /* TermsOfUseLoginViewController.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */; };
 		E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */; };
@@ -189,7 +191,6 @@
 		E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */; };
 		E9E4A94C272FD0A90037A815 /* SigninNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */; };
 		E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94D272FD42F0037A815 /* UILabel.swift */; };
-		E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */; };
 		E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A955273012940037A815 /* SigninPasswordViewController.swift */; };
 		E9E4A958273012C20037A815 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4A957273012C20037A815 /* FindPasswordViewController.swift */; };
 		E9E4A9872734EE090037A815 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E4A9862734EE090037A815 /* Home.storyboard */; };
@@ -384,6 +385,8 @@
 		E9B76DE02762561A00BC990F /* CalenderLimitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderLimitResponse.swift; sourceTree = "<group>"; };
 		E9B76DE227636B4A00BC990F /* ResetMyColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetMyColorDataManager.swift; sourceTree = "<group>"; };
 		E9B76DE427636B6100BC990F /* ResetMyColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetMyColorResponse.swift; sourceTree = "<group>"; };
+		E9B76DE827647A8B00BC990F /* TermsofServiceLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceLoginViewController.swift; sourceTree = "<group>"; };
+		E9B76DEA27647A9D00BC990F /* TermsOfUseLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseLoginViewController.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -397,7 +400,6 @@
 		E9E4A949272FCFEE0037A815 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
 		E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNickNameViewController.swift; sourceTree = "<group>"; };
 		E9E4A94D272FD42F0037A815 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		E9E4A955273012940037A815 /* SigninPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A957273012C20037A815 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 		E9E4A9862734EE090037A815 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -682,8 +684,9 @@
 				E9E4A94B272FD0A90037A815 /* SigninNickNameViewController.swift */,
 				E9E4A927272EFA410037A815 /* MemberLoginViewController.swift */,
 				E9E4A957273012C20037A815 /* FindPasswordViewController.swift */,
-				E9E4A94F272FDBE70037A815 /* PrivacyPolicyViewController.swift */,
 				E9A237022750BDAC0043836A /* KakaoNicknameViewController.swift */,
+				E9B76DE827647A8B00BC990F /* TermsofServiceLoginViewController.swift */,
+				E9B76DEA27647A9D00BC990F /* TermsOfUseLoginViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1375,7 +1378,6 @@
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
 				A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
-				E9E4A950272FDBE70037A815 /* PrivacyPolicyViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
 				A4152251275B22650090655D /* GetBackgroundColorRequest.swift in Sources */,
 				E9A236F927507E950043836A /* ChangeNicknameViewController.swift in Sources */,
@@ -1484,6 +1486,7 @@
 				E9A236FB275085240043836A /* ChangeNicknameResponse.swift in Sources */,
 				E9E4A993273A2EA90037A815 /* SigninDataManager.swift in Sources */,
 				E95683D52760116400F075CF /* GetMyColorDataManager.swift in Sources */,
+				E9B76DEB27647A9D00BC990F /* TermsOfUseLoginViewController.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
@@ -1491,6 +1494,7 @@
 				A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */,
 				A4551BEB275DC98800F77EFD /* ModifyImgCollectionViewCell.swift in Sources */,
 				A4551BEF275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift in Sources */,
+				E9B76DE927647A8B00BC990F /* TermsofServiceLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

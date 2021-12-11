@@ -58,13 +58,13 @@ class SigninNickNameViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
 
         if let privacyPolicyRect = AgreementLabel.boundingRectForCharacterRange(subText: "개인정보처리방침"), privacyPolicyRect.contains(point) {
-            let privacyPolicyVC = storyBoard.instantiateViewController(withIdentifier: "PrivacyPolicyViewController")
+            let privacyPolicyVC = storyBoard.instantiateViewController(withIdentifier: "TermsOfUseLoginViewController")
             self.present(privacyPolicyVC, animated: true)
         }
-        
-        if let termsOfUseRect = AgreementLabel.boundingRectForCharacterRange(subText: "TermsOfUseViewController"),
+
+        if let termsOfUseRect = AgreementLabel.boundingRectForCharacterRange(subText: "서비스이용약관"),
            termsOfUseRect.contains(point) {
-            let termsOfUseVC = storyBoard.instantiateViewController(withIdentifier: "TermsOfUseViewController")
+            let termsOfUseVC = storyBoard.instantiateViewController(withIdentifier: "TermsofServiceLoginViewController")
             self.present(termsOfUseVC, animated: true)
         }
         
