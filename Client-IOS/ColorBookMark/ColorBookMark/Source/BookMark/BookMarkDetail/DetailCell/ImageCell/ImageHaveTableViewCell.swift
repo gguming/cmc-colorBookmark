@@ -9,9 +9,11 @@ import UIKit
 
 class ImageHaveTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var imgHaveCollectionview: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        backView.layer.cornerRadius = 8
         // Initialization code
 //        imgHaveCollectionview.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellWithReuseIdentifier: <#T##String#>)
 //        imgHaveCollectionview.dataSource = self

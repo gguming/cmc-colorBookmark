@@ -74,19 +74,19 @@ extension BookmarkDetailViewController: ModifyModeDelegate{
 
 extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 1
+//    }
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        
 //        return UIView()
 //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderInfoTableViewCell", for: indexPath) as? HeaderInfoTableViewCell else {return UITableViewCell()}
             cell.nickNameLabel.text = "오늘 \(Constant.nickname ?? "")님의 색갈피는"
@@ -100,12 +100,12 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 if bookmarkDetail?.diary?.diaryContents?.content == nil {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
                     cell.layer.cornerRadius = 8
-                    cell.clipsToBounds = true
+                    
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
                     cell.layer.cornerRadius = 8
-                    cell.clipsToBounds = true
+                    
                     cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
                     return cell
                 }
@@ -174,12 +174,12 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 5
+//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
             return 100
         case 1:

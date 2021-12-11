@@ -9,9 +9,13 @@ import UIKit
 
 class StoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backView.layer.cornerRadius = 8
+        backView.clipsToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
