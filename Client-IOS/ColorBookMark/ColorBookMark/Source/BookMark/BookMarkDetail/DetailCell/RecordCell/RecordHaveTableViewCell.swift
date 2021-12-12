@@ -10,6 +10,7 @@ import UIKit
 class RecordHaveTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backView: UIView!
+    var record: String?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

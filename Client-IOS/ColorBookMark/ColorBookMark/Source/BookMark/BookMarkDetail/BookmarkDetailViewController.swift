@@ -86,6 +86,8 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let modifyDetailInfo = ModifyDetailInfo.shared
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderInfoTableViewCell", for: indexPath) as? HeaderInfoTableViewCell else {return UITableViewCell()}
@@ -97,7 +99,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             return cell
         case 1:
             if !(modifyMode ?? false) {
-                if bookmarkDetail?.diary?.diaryContents?.content == nil {
+                if modifyDetailInfo.text == nil {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
                     cell.layer.cornerRadius = 8
                     
@@ -106,7 +108,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
                     
                     
-                    cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
+                    cell.textView.text = modifyDetailInfo.text
                     return cell
                 }
                 
@@ -115,25 +117,29 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 cell.textView.isEditable = true
                 
                 
-                cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
+                cell.textView.text = modifyDetailInfo.text
                 return cell
             }
             
             
         case 2:
             if !(modifyMode ?? false){
-                if (bookmarkDetail?.diary?.diaryImage == nil) {
+                if (modifyDetailInfo.addImg == nil) {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
                    
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
+                    cell.addImg = modifyDetailInfo.addImg
+                    cell.pickedImg = self.pickedImg
                     
                     
                     return cell
                 }
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
+                cell.addImg = modifyDetailInfo.addImg
+                cell.pickedImg = self.pickedImg
                 
                 return cell
             }
@@ -141,9 +147,17 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             
         case 3:
             if !(modifyMode ?? false){
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
                 
-                return cell
+                if modifyDetailInfo.record == nil {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
+                    
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordHaveTableViewCell", for: indexPath) as? RecordHaveTableViewCell else {return UITableViewCell()}
+                    cell.record = modifyDetailInfo.record
+                    return cell
+
+                }
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyRecordTableViewCell", for: indexPath) as? ModifyRecordTableViewCell else {return UITableViewCell()}
                 
@@ -198,8 +212,11 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
 extension BookmarkDetailViewController {
     func didSuccessGetBookMarkDetail(_ result: GetBookMarkDetailResponse) {
         print("------>\(result)")
-        let 
+        let modifyDetailInfo = ModifyDetailInfo.shared
         bookmarkDetail = result.result
+        modifyDetailInfo.text = result.result?.diary?.diaryContents?.content
+        modifyDetailInfo.addImg = result.result?.diary?.diaryImage
+        modifyDetailInfo.record = result.result?.diary?.diaryContents?.recordContent
         setDetailBackgroundColors()
         tableview.reloadData()
         
