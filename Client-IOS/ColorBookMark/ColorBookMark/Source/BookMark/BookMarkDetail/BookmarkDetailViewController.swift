@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class BookmarkDetailViewController: UIViewController {
     @IBOutlet weak var dayView: UIView!
@@ -14,7 +15,10 @@ class BookmarkDetailViewController: UIViewController {
     var date: String?
     var diaryId: Int?
     var modifyMode: Bool?
+    
     var bookmarkDetail: Diary?
+    var pickedImg: [UIImage]?
+    var addedImg: [String]?
     var index: Int?
     lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
     lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
@@ -56,7 +60,9 @@ class BookmarkDetailViewController: UIViewController {
 
 extension BookmarkDetailViewController: ModifyModeDelegate{
     func deleteDiary() {
-        deleteDiaryDataManager.diaryDelete(date: date ?? "", delegate: self)
+        let request = DeleteDiaryRequest()
+        request.date = self.date
+        deleteDiaryDataManager.diaryDelete(request: request , delegate: self)
     }
     
     func doneModifytMode() {
@@ -78,13 +84,6 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         return 5
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 1
-//    }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//        return UIView()
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
@@ -105,16 +104,18 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
-                    cell.layer.cornerRadius = 8
+                    
                     
                     cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
                     return cell
                 }
                 
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyStoryTableViewCell", for: indexPath) as? ModifyStoryTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
+                cell.textView.isEditable = true
+                
+                
+                cell.textView.text = bookmarkDetail?.diary?.diaryContents?.content
                 return cell
             }
             
@@ -123,19 +124,17 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             if !(modifyMode ?? false){
                 if (bookmarkDetail?.diary?.diaryImage == nil) {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
-                    cell.layer.cornerRadius = 8
-                    cell.clipsToBounds = true
+                   
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
-                    cell.layer.cornerRadius = 8
-                    cell.clipsToBounds = true
+                    
+                    
                     return cell
                 }
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyImageCellTableViewCell", for: indexPath) as? ModifyImageCellTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
+                
                 return cell
             }
             
@@ -143,13 +142,11 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         case 3:
             if !(modifyMode ?? false){
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyRecordTableViewCell", for: indexPath) as? ModifyRecordTableViewCell else {return UITableViewCell()}
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                
                 return cell
             }
             
@@ -159,14 +156,12 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             if !(modifyMode ?? false){
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonsTableViewCell", for: indexPath) as? ButtonsTableViewCell else {return UITableViewCell()}
                 cell.modifyDelegate = self
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyButtonsTableViewCell", for: indexPath) as? ModifyButtonsTableViewCell else {return UITableViewCell()}
                 cell.doneDelegate = self
-                cell.layer.cornerRadius = 8
-                cell.clipsToBounds = true
+                
                 return cell
             }
             
@@ -203,6 +198,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
 extension BookmarkDetailViewController {
     func didSuccessGetBookMarkDetail(_ result: GetBookMarkDetailResponse) {
         print("------>\(result)")
+        let 
         bookmarkDetail = result.result
         setDetailBackgroundColors()
         tableview.reloadData()

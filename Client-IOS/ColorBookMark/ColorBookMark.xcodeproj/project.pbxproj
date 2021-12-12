@@ -42,6 +42,7 @@
 		A4551BF0275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */; };
 		A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */; };
 		A4551BF4275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */; };
+		A45732182765146200D393C0 /* DeleteDiaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45732172765146200D393C0 /* DeleteDiaryRequest.swift */; };
 		A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */; };
 		A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */; };
 		A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */; };
@@ -243,6 +244,7 @@
 		A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookMarkContentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A45732172765146200D393C0 /* DeleteDiaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDiaryRequest.swift; sourceTree = "<group>"; };
 		A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDataManager.swift; sourceTree = "<group>"; };
@@ -1019,6 +1021,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D730D6275F9A600068F1A2 /* DeleteDiaryResponse.swift */,
+				A45732172765146200D393C0 /* DeleteDiaryRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1366,6 +1369,7 @@
 				A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
 				A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */,
+				A45732182765146200D393C0 /* DeleteDiaryRequest.swift in Sources */,
 				E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */,
 				E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */,
 				E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */,

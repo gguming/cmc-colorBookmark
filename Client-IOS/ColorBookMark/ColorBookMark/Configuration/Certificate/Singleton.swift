@@ -51,7 +51,7 @@ class RecordInfo {
 
 class ModifyDetailInfo {
     static let shared = ModifyDetailInfo()
-    var diary: Diary?
+    var text: String?
     var addImg: [UIImage]?
     private init() {}
 }

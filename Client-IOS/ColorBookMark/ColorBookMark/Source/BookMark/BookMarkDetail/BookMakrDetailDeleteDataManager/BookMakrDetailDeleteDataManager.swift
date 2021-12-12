@@ -9,9 +9,9 @@ import Alamofire
 
 
 class BookMakrDetailDeleteDataManager{
-    func diaryDelete(date: String, delegate: BookmarkDetailViewController) {
+    func diaryDelete(request: DeleteDiaryRequest, delegate: BookmarkDetailViewController) {
         let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
-        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/withdrawal/\(diaryId)", method: .patch, parameters: nil, encoding: JSONEncoding(), headers: header)
+        AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/withdrawal/", method: .patch, parameters: request, encoder: JSONParameterEncoder(), headers: header)
             .validate()
             .responseDecodable(of: DeleteDiaryResponse.self) { response in
                 switch response.result {
