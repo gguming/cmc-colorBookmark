@@ -36,6 +36,8 @@
 		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
+		A44520732765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */; };
+		A44520742765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */; };
 		A4551BEB275DC98800F77EFD /* ModifyImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */; };
 		A4551BEC275DC98800F77EFD /* ModifyImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */; };
 		A4551BEF275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */; };
@@ -238,6 +240,8 @@
 		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyAddedImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyAddedImgCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgBtnCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 				A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */,
 				A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */,
 				A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */,
+				A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */,
+				A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */,
 			);
 			path = collectionCell;
 			sourceTree = "<group>";
@@ -1261,6 +1267,7 @@
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */,
+				A44520742765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
 				A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */,
@@ -1399,6 +1406,7 @@
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				E95683D3275E42DC00F075CF /* CheckMyColorResponse.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
+				A44520732765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift in Sources */,
 				A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */,
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
