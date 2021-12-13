@@ -199,9 +199,12 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
+            if calendarData?[indexPath.item - startDate].color != nil {
+                print("To Next Page")
+            }
+        }
     }
-    
 }
 
 extension CalenderViewController: UICollectionViewDelegateFlowLayout {
