@@ -128,7 +128,11 @@ class CalenderViewController: UIViewController {
         let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
         let currentYear = currentDate[..<firstIndex]
         let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
-        let currentMonth = String(currentDate[secondIndex...])
+        var currentMonth = String(currentDate[secondIndex...])
+        
+        if currentMonth.count == 1 {
+            currentMonth = "0\(currentMonth)"
+        }
        
         print("YEAR")
         print(currentYear)
