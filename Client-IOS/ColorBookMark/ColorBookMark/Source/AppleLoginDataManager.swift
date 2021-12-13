@@ -1,32 +1,31 @@
 //
-//  KakaoLoginDataManager.swift
-//  ColorBookmark
+//  AppleLoginDataManager.swift
+//  ColorBookMark
 //
-//  Created by 김지훈 on 2021/11/20.
+//  Created by 김지훈 on 2021/12/14.
 //
 
 import Foundation
 import Alamofire
 
-class KakaoLoginDataManager {
-    func getKakaoLoginJwt(_ parameters: KakaoLoginRequest, delegate: LoginPageViewController) {
-        AF.request( "\(Constant.SERVER_BASE_URL)/users/kakao-login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+class AppleLoginDataManager {
+    func getAppleLoginJwt(_ parameters: AppleLoginRequest, delegate: LoginPageViewController) {
+        AF.request( "\(Constant.SERVER_BASE_URL)/users/apple-login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
-            .responseDecodable(of: KakaoLoginResponse.self) { response in
+            .responseDecodable(of: AppleLoginResponse.self) { response in
      
                 switch response.result {
                 case .success(let response):
 
                     // 성공했을 때
                     if response.isSuccess {
-                        print("카카오 로그인 성공")
-                        print("kako jwt 토큰값")
+                        print("애플 로그인 성공")
+                        print("apple jwt 토큰값")
                         Constant.jwt = response.result?.jwt
                         Constant.userId = response.result?.userId
-                        Constant.email = "Kakao"
+                        Constant.email = "Apple"
                         Constant.didLogin = true
-                        Constant.account = "Kakao"
-                    
+                        Constant.account = "Apple"
                     }
                     
                     // 실패했을 때
@@ -42,7 +41,7 @@ class KakaoLoginDataManager {
                         case 3006: print("탈퇴한 계정입니다.")
                         case 3023: print("이미 로그인된 상태입니다.")
                         case 4000: print("로그인 실패")
-                        default: print("?????")
+                        default: break
                         }
                     }
 
