@@ -36,12 +36,15 @@
 		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
+		A44520732765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */; };
+		A44520742765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */; };
 		A4551BEB275DC98800F77EFD /* ModifyImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */; };
 		A4551BEC275DC98800F77EFD /* ModifyImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */; };
 		A4551BEF275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */; };
 		A4551BF0275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */; };
 		A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */; };
 		A4551BF4275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */; };
+		A45732182765146200D393C0 /* DeleteDiaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45732172765146200D393C0 /* DeleteDiaryRequest.swift */; };
 		A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */; };
 		A45A9B9E275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */; };
 		A45A9BA2275D708A00D312D5 /* BookMarkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */; };
@@ -114,6 +117,7 @@
 		A4D28923275F71FA001E7194 /* GetBookMarkDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D28922275F71FA001E7194 /* GetBookMarkDetailResponse.swift */; };
 		A4D730D4275F990D0068F1A2 /* BookMakrDetailDeleteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D730D3275F990D0068F1A2 /* BookMakrDetailDeleteDataManager.swift */; };
 		A4D730D7275F9A600068F1A2 /* DeleteDiaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D730D6275F9A600068F1A2 /* DeleteDiaryResponse.swift */; };
+		A4DD23242764D49300FAC030 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD23232764D49300FAC030 /* UIView.swift */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		A4EA33412757908500121E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4EA33402757908500121E5A /* GoogleService-Info.plist */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
@@ -237,12 +241,15 @@
 		A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyAddedImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyAddedImgCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BE9275DC98800F77EFD /* ModifyImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImgBtnCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyImgBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4551BF2275DD46900F77EFD /* BookMarkContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookMarkContentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A45732172765146200D393C0 /* DeleteDiaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDiaryRequest.swift; sourceTree = "<group>"; };
 		A45A9B9B275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		A45A9B9C275D69DA00D312D5 /* ModifyButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		A45A9BA1275D708A00D312D5 /* BookMarkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDataManager.swift; sourceTree = "<group>"; };
@@ -317,6 +324,7 @@
 		A4D28922275F71FA001E7194 /* GetBookMarkDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookMarkDetailResponse.swift; sourceTree = "<group>"; };
 		A4D730D3275F990D0068F1A2 /* BookMakrDetailDeleteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMakrDetailDeleteDataManager.swift; sourceTree = "<group>"; };
 		A4D730D6275F9A600068F1A2 /* DeleteDiaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDiaryResponse.swift; sourceTree = "<group>"; };
+		A4DD23232764D49300FAC030 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		A4EA33402757908500121E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
@@ -565,6 +573,8 @@
 				A4551BEA275DC98800F77EFD /* ModifyImgCollectionViewCell.xib */,
 				A4551BED275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.swift */,
 				A4551BEE275DC99700F77EFD /* ModifyImgBtnCollectionViewCell.xib */,
+				A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */,
+				A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */,
 			);
 			path = collectionCell;
 			sourceTree = "<group>";
@@ -659,6 +669,7 @@
 				A46839EB272E75E3005BA79E /* UIButton.swift */,
 				A46839EE272E7E63005BA79E /* UIViewController.swift */,
 				E9E4A94D272FD42F0037A815 /* UILabel.swift */,
+				A4DD23232764D49300FAC030 /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1019,6 +1030,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D730D6275F9A600068F1A2 /* DeleteDiaryResponse.swift */,
+				A45732172765146200D393C0 /* DeleteDiaryRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1258,6 +1270,7 @@
 				A475558527476D7C00593C70 /* StoryTableViewCell.xib in Resources */,
 				A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */,
 				A4CBCECD274B734D0092131B /* EditColorBtnCollectionViewCell.xib in Resources */,
+				A44520742765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib in Resources */,
 				A45AE895272D094F009ABED6 /* LaunchScreen.storyboard in Resources */,
 				A475557927474F7300593C70 /* BookmarkTableViewCell.xib in Resources */,
 				A49DB72E2747757F00AF315F /* ImagesTableViewCell.xib in Resources */,
@@ -1366,6 +1379,7 @@
 				A45AE88D272D094D009ABED6 /* BaseViewController.swift in Sources */,
 				E9445B9A273B8FE400B4EC82 /* SettingViewController.swift in Sources */,
 				A475557827474F7300593C70 /* BookmarkTableViewCell.swift in Sources */,
+				A45732182765146200D393C0 /* DeleteDiaryRequest.swift in Sources */,
 				E9445BBB273F614300B4EC82 /* SettingTableViewCell.swift in Sources */,
 				E9A236E9274E327E0043836A /* ChangePasswordViewController.swift in Sources */,
 				E9445BB4273E59CC00B4EC82 /* LoginResponse.swift in Sources */,
@@ -1394,6 +1408,7 @@
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
 				E95683D3275E42DC00F075CF /* CheckMyColorResponse.swift in Sources */,
 				A45C040C273E2FD900D4C26F /* AudioTableViewCell.swift in Sources */,
+				A44520732765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift in Sources */,
 				A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */,
 				E9A236FF2750853F0043836A /* ChangeNicknameRequest.swift in Sources */,
 				E9336CC0274CDA9400686AF1 /* MiniCodeCheckViewController.swift in Sources */,
@@ -1450,6 +1465,7 @@
 				E95683D1275E428100F075CF /* CheckMyColorDataManger.swift in Sources */,
 				E95683CF275E410500F075CF /* PostMyColorResponse.swift in Sources */,
 				A4BAF465274DC09A00187878 /* PhotoCollectionViewCell.swift in Sources */,
+				A4DD23242764D49300FAC030 /* UIView.swift in Sources */,
 				A46839EA272E759C005BA79E /* UIColor.swift in Sources */,
 				E9336CD0274D143700686AF1 /* SettingResonse.swift in Sources */,
 				E9336CBE274C700C00686AF1 /* LoginAfterSigininDataManager.swift in Sources */,

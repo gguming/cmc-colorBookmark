@@ -10,43 +10,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CG3-Go-8hH" customClass="ModifyImgCollectionViewCell" customModule="ColorBookMark" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BIn-b9-eWc" customClass="ModifyAddedImgCollectionViewCell" customModule="ColorBookMark" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="88" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="88" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zZ4-gG-Txe">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Yk-Gd-HzV">
                         <rect key="frame" x="0.0" y="0.0" width="88" height="100"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UN-Hn-reP">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-dG-zyc">
                         <rect key="frame" x="63" y="5" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="Q4K-3u-Rji"/>
-                            <constraint firstAttribute="height" constant="20" id="rrF-eh-Ule"/>
+                            <constraint firstAttribute="height" constant="20" id="inJ-bf-xAA"/>
+                            <constraint firstAttribute="width" constant="20" id="kXH-bd-vfT"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="yp_remove"/>
                         <connections>
-                            <action selector="deleteBtnTapped:" destination="CG3-Go-8hH" eventType="touchUpInside" id="2IT-mi-M7V"/>
+                            <action selector="deleteBtnTapped:" destination="BIn-b9-eWc" eventType="touchUpInside" id="Dsk-lD-yQ0"/>
                         </connections>
                     </button>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="8AF-ml-NQJ"/>
+            <viewLayoutGuide key="safeArea" id="Z8q-A2-Eth"/>
             <constraints>
-                <constraint firstItem="zZ4-gG-Txe" firstAttribute="leading" secondItem="CG3-Go-8hH" secondAttribute="leading" id="5nl-x1-arB"/>
-                <constraint firstItem="7UN-Hn-reP" firstAttribute="top" secondItem="zZ4-gG-Txe" secondAttribute="top" constant="5" id="I8l-pr-H1X"/>
-                <constraint firstAttribute="bottom" secondItem="zZ4-gG-Txe" secondAttribute="bottom" id="MMB-0N-fbI"/>
-                <constraint firstItem="7UN-Hn-reP" firstAttribute="trailing" secondItem="zZ4-gG-Txe" secondAttribute="trailing" constant="-5" id="TgB-qd-A9J"/>
-                <constraint firstAttribute="trailing" secondItem="zZ4-gG-Txe" secondAttribute="trailing" id="xQF-3y-bAK"/>
-                <constraint firstItem="zZ4-gG-Txe" firstAttribute="top" secondItem="CG3-Go-8hH" secondAttribute="top" id="zCn-a5-5dV"/>
+                <constraint firstAttribute="bottom" secondItem="6Yk-Gd-HzV" secondAttribute="bottom" id="7t3-Aa-15l"/>
+                <constraint firstAttribute="trailing" secondItem="6Yk-Gd-HzV" secondAttribute="trailing" id="HDd-68-77W"/>
+                <constraint firstItem="6Yk-Gd-HzV" firstAttribute="leading" secondItem="BIn-b9-eWc" secondAttribute="leading" id="N1H-fP-d37"/>
+                <constraint firstItem="6Yk-Gd-HzV" firstAttribute="top" secondItem="BIn-b9-eWc" secondAttribute="top" id="T6T-Rd-djw"/>
+                <constraint firstItem="FDc-dG-zyc" firstAttribute="trailing" secondItem="6Yk-Gd-HzV" secondAttribute="trailing" constant="-5" id="tey-2Z-dsN"/>
+                <constraint firstItem="FDc-dG-zyc" firstAttribute="top" secondItem="6Yk-Gd-HzV" secondAttribute="top" constant="5" id="vnE-G2-KHg"/>
             </constraints>
             <size key="customSize" width="88" height="100"/>
             <connections>
-                <outlet property="deleteBtn" destination="7UN-Hn-reP" id="Gai-6x-c5a"/>
-                <outlet property="imgView" destination="zZ4-gG-Txe" id="oPc-2m-4WY"/>
+                <outlet property="deleteBtn" destination="FDc-dG-zyc" id="70a-iS-2SP"/>
+                <outlet property="imgView" destination="6Yk-Gd-HzV" id="jdp-e6-hbw"/>
             </connections>
             <point key="canvasLocation" x="165.21739130434784" y="85.714285714285708"/>
         </collectionViewCell>

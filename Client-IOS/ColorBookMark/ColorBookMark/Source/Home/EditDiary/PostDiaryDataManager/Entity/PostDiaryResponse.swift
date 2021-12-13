@@ -11,5 +11,5 @@ struct PostDiaryResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: String?
+//    var result: String?
 }
