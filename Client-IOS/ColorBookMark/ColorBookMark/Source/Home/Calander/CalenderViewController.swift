@@ -11,15 +11,21 @@ import Alamofire
 
 class CalenderViewController: UIViewController {
     var calendarData: [CalendarResult]?
+    var bookmarks: [BookMarks]?
     
     lazy var calendarDataManager: CalenderDataManager = CalenderDataManager()
     lazy var calendarLimitDataManager: CalenderLimitDataManager = CalenderLimitDataManager()
+    lazy var bookmarkDataManager: BookMarkDataManager = BookMarkDataManager()
     
     var constantMonth = 0
     var CalendarViewMonth = 0
     var startDate = 0
     var min = 0
     var max = 0
+    var filledIndex = 0
+    var filled = [Int]()
+    var testArray = [Int](repeating: 0, count: 31)
+    var date: String?
     
     @IBOutlet weak var PrevButtonImage: UIImageView!
     @IBOutlet weak var PrevButton: UIButton!
@@ -42,9 +48,10 @@ class CalenderViewController: UIViewController {
             PrevButton.isEnabled = false
             PrevButtonImage.tintColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
         }
+        testArray = [Int](repeating: 0, count: 31)
+        filledIndex = 0
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
-       
- 
+        bookmarkDataManager.getBookMarkInCalendar(date: date ?? "2021-12", delegate: self)
     }
     
     @IBAction func NextButtonTapped(_ sender: Any) {
@@ -61,8 +68,10 @@ class CalenderViewController: UIViewController {
             NextButton.isEnabled = false
             NextButtonImage.tintColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.7803921569, alpha: 1)
         }
-
+        testArray = [Int](repeating: 0, count: 31)
+        filledIndex = 0
         calendarDataManager.getCalenderMonth(calenderInput, delegate: self)
+        bookmarkDataManager.getBookMarkInCalendar(date: date ?? "2021-12", delegate: self)
     }
     
     @IBOutlet weak var NextButtonImage: UIImageView!
@@ -114,6 +123,21 @@ class CalenderViewController: UIViewController {
                 self.days.append(String(day))
             }
         }
+        
+        let currentDate = dateFormatter.string(from: firstDayOfMonth!)
+        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
+        let currentYear = currentDate[..<firstIndex]
+        let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
+        let currentMonth = String(currentDate[secondIndex...])
+       
+        print("YEAR")
+        print(currentYear)
+        print("MONTH")
+        print(currentMonth)
+        date = "\(currentYear)-\(currentMonth)"
+        print("푸푸푸푸ㅜ푸풒")
+        print(date)
+      
     }
     
     private func initCollection() {
@@ -132,7 +156,7 @@ class CalenderViewController: UIViewController {
         TopView.layer.cornerRadius = 30
         super.viewDidLoad()
         self.initView()
-        
+        bookmarkDataManager.getBookMarkInCalendar(date: date ?? "2021-12", delegate: self)
     }
 }
 
@@ -173,10 +197,24 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 if calendarData?[indexPath.item - startDate].color == nil {
                     cell.CircleImage.tintColor = .clear
                     cell.DateLabel.textColor = #colorLiteral(red: 0.4235294118, green: 0.4235294118, blue: 0.4235294118, alpha: 1)
+                    filled.append(filledIndex)
                 }
                 else {
                     let CircleColor = calendarData?[indexPath.item - startDate].color! ?? "#000000"
                     print(CircleColor)
+                    filled.append(filledIndex)
+                    testArray[indexPath.item - startDate] = filledIndex
+                    print("테스트 어레이")
+                    print(testArray)
+//                    print(indexPath.item - startDate)
+//                    print("cell.filledDate")
+//                    print(filled)
+//
+//                    print(cell.filledDate)
+                    filledIndex += 1
+                   
+                    print("filledIndex")
+                    print(filledIndex)
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                     cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
                 }
@@ -200,8 +238,29 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
+      
+            
             if calendarData?[indexPath.item - startDate].color != nil {
-                print("To Next Page")
+                let testIndex = testArray[indexPath.item - startDate]
+                print("테스트 인덱스")
+                print(testIndex)
+//                print(bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId)
+                
+                let storyboard = UIStoryboard(name: "BookMark", bundle: nil)
+                guard let vc = storyboard.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
+                
+                vc.modalPresentationStyle = .fullScreen
+                //HERE
+                print("설마 이거??")
+                print(testIndex)
+                vc.diaryId = bookmarks?[testIndex].selectMonthDiary?.diaryView?.diaryId
+                vc.index = testIndex - 1
+                vc.view.backgroundColor = UIColor.white
+
+                guard let pvc = self.presentingViewController else { return }
+                self.dismiss(animated: true) {
+                    pvc.present(vc, animated: false, completion: nil)
+                }
             }
         }
     }
@@ -241,5 +300,16 @@ extension CalenderViewController {
     func getCalenderSuccess(data: [CalendarResult]) {
         calendarData = data
         CalenderCollectionview.reloadData()
+    }
+    
+    func didSuccessGetBookMarkInCalendar(_ result: GetBookMarkResponse) {
+        print("------>\(result)")
+        bookmarks = result.result
+//        tableview.reloadData()   
+    }
+    
+    func failedToGetBookMarkInCalendar(message: String) {
+        print("------>>>>\(message)")
+        
     }
 }

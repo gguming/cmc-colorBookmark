@@ -8,9 +8,12 @@
 import UIKit
 
 class CalenderCollectionViewCell: UICollectionViewCell {
-
+    
+    var filledDate = -1
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var CircleImage: UIImageView!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

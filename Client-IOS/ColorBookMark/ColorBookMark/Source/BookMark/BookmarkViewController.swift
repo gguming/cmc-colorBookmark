@@ -31,6 +31,7 @@ class BookmarkViewController: BaseViewController {
         tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
         tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
         dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
+
         
         setUI()
         
@@ -127,6 +128,9 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.section == 1{
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
             vc.modalPresentationStyle = .fullScreen
+            print("인덱스패쓰ㅡㅡㅡ")// 0123
+            print(indexPath.row)
+            print(bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId)
             vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
             vc.index = indexPath.row - 1
             self.present(vc, animated: false, completion: nil)
