@@ -11,6 +11,9 @@
 		A415224F275B22330090655D /* BackgroundColorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415224E275B22330090655D /* BackgroundColorDataManager.swift */; };
 		A4152251275B22650090655D /* GetBackgroundColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4152250275B22650090655D /* GetBackgroundColorRequest.swift */; };
 		A4152253275B227E0090655D /* GetBackgroundColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4152252275B227E0090655D /* GetBackgroundColorResponse.swift */; };
+		A428B6622767AA080002C776 /* ModifyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B6612767AA080002C776 /* ModifyRequest.swift */; };
+		A428B6642767AAA10002C776 /* ModifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B6632767AAA10002C776 /* ModifyResponse.swift */; };
+		A428B6662767AB280002C776 /* BookMarkModifyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B6652767AB280002C776 /* BookMarkModifyDataManager.swift */; };
 		A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D4B81275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift */; };
 		A42D4B84275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42D4B82275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib */; };
 		A42D4B8A275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D4B88275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift */; };
@@ -216,6 +219,9 @@
 		A415224E275B22330090655D /* BackgroundColorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorDataManager.swift; sourceTree = "<group>"; };
 		A4152250275B22650090655D /* GetBackgroundColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBackgroundColorRequest.swift; sourceTree = "<group>"; };
 		A4152252275B227E0090655D /* GetBackgroundColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBackgroundColorResponse.swift; sourceTree = "<group>"; };
+		A428B6612767AA080002C776 /* ModifyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRequest.swift; sourceTree = "<group>"; };
+		A428B6632767AAA10002C776 /* ModifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyResponse.swift; sourceTree = "<group>"; };
+		A428B6652767AB280002C776 /* BookMarkModifyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkModifyDataManager.swift; sourceTree = "<group>"; };
 		A42D4B81275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHaveTableViewCell.swift; sourceTree = "<group>"; };
 		A42D4B82275A0EA400D5B9B3 /* StoryHaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryHaveTableViewCell.xib; sourceTree = "<group>"; };
 		A42D4B88275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyStoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -486,6 +492,24 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		A428B65F2767A9950002C776 /* BookMarkDetailModifyManager */ = {
+			isa = PBXGroup;
+			children = (
+				A428B6602767A9B60002C776 /* Entity */,
+				A428B6652767AB280002C776 /* BookMarkModifyDataManager.swift */,
+			);
+			path = BookMarkDetailModifyManager;
+			sourceTree = "<group>";
+		};
+		A428B6602767A9B60002C776 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A428B6612767AA080002C776 /* ModifyRequest.swift */,
+				A428B6632767AAA10002C776 /* ModifyResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A42D4B85275A0EAC00D5B9B3 /* ModifyStorycell */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,6 +749,7 @@
 		A475557A2747653000593C70 /* BookMarkDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A428B65F2767A9950002C776 /* BookMarkDetailModifyManager */,
 				A4D730D2275F98D30068F1A2 /* BookMakrDetailDeleteDataManager */,
 				A45A9B9F275D704500D312D5 /* BookMarkDetailDataManager */,
 				A475557D27476B3A00593C70 /* DetailCell */,
@@ -1433,6 +1458,7 @@
 				A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */,
 				E9336CBA274B45FE00686AF1 /* MiniCodeViewController.swift in Sources */,
 				E9A237052750CC790043836A /* ChangeSettingDataManager.swift in Sources */,
+				A428B6642767AAA10002C776 /* ModifyResponse.swift in Sources */,
 				E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */,
 				E95683CD275E40B900F075CF /* PostMyColorRequest.swift in Sources */,
 				E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */,
@@ -1453,6 +1479,7 @@
 				E95683B8275BB2FE00F075CF /* TermsOfUseViewController.swift in Sources */,
 				A45A9B9D275D69DA00D312D5 /* ModifyButtonsTableViewCell.swift in Sources */,
 				E9445BCA274644E000B4EC82 /* MypageTableViewCell.swift in Sources */,
+				A428B6622767AA080002C776 /* ModifyRequest.swift in Sources */,
 				A475557C2747655300593C70 /* BookmarkDetailViewController.swift in Sources */,
 				A45AE88B272D094D009ABED6 /* SceneDelegate.swift in Sources */,
 				A46839E8272E7574005BA79E /* Constant.swift in Sources */,
@@ -1478,6 +1505,7 @@
 				A47555742747480200593C70 /* BookmarkViewController.swift in Sources */,
 				E9E4A94E272FD42F0037A815 /* UILabel.swift in Sources */,
 				A42D4B8A275A0F4000D5B9B3 /* ModifyStoryTableViewCell.swift in Sources */,
+				A428B6662767AB280002C776 /* BookMarkModifyDataManager.swift in Sources */,
 				A4BAF46D274DDDF500187878 /* PhotoBtnCollectionViewCell.swift in Sources */,
 				A439A07627483E18000DCA61 /* ColorPickerMainViewController.swift in Sources */,
 				A43BF39A273BEA27008DF16A /* ColorTableViewCell.swift in Sources */,

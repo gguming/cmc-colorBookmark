@@ -42,9 +42,9 @@
                                 <rect key="frame" x="0.0" y="27" width="320" height="109"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mZt-Xd-Oc6">
-                                        <rect key="frame" x="76" y="30.5" width="168" height="48"/>
+                                        <rect key="frame" x="76" y="34.5" width="168" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="ewE-Gv-4NL"/>
+                                            <constraint firstAttribute="height" constant="40" id="ewE-Gv-4NL"/>
                                             <constraint firstAttribute="width" constant="168" id="zIG-2O-XKr"/>
                                         </constraints>
                                         <color key="progressTintColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,14 +64,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-rM-3ei">
+                                        <rect key="frame" x="249" y="7.5" width="22" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="354">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteBtnTapped:" destination="FXI-ms-HyZ" eventType="touchUpInside" id="UuM-vt-7tx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Ah1-Cc-EgI" firstAttribute="centerY" secondItem="mZt-Xd-Oc6" secondAttribute="centerY" id="3oK-nP-cAb"/>
                                     <constraint firstItem="mZt-Xd-Oc6" firstAttribute="centerX" secondItem="6B2-GW-pVU" secondAttribute="centerX" id="AAY-Vq-bdL"/>
                                     <constraint firstItem="8vh-O3-rUI" firstAttribute="trailing" secondItem="mZt-Xd-Oc6" secondAttribute="trailing" constant="-10" id="AnM-Oa-gWs"/>
+                                    <constraint firstItem="mZt-Xd-Oc6" firstAttribute="top" secondItem="Msg-rM-3ei" secondAttribute="bottom" constant="5" id="FNC-3o-b39"/>
                                     <constraint firstItem="Ah1-Cc-EgI" firstAttribute="leading" secondItem="mZt-Xd-Oc6" secondAttribute="leading" constant="10" id="kTU-v0-uZz"/>
                                     <constraint firstItem="8vh-O3-rUI" firstAttribute="centerY" secondItem="mZt-Xd-Oc6" secondAttribute="centerY" id="rKA-Pp-4F7"/>
+                                    <constraint firstItem="Msg-rM-3ei" firstAttribute="leading" secondItem="mZt-Xd-Oc6" secondAttribute="trailing" constant="5" id="s9c-QP-LRM"/>
                                     <constraint firstItem="mZt-Xd-Oc6" firstAttribute="centerY" secondItem="6B2-GW-pVU" secondAttribute="centerY" id="sgG-d9-SxK"/>
                                 </constraints>
                             </view>
@@ -99,6 +111,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backView" destination="Q0M-9i-7im" id="qhC-7v-zKu"/>
+                <outlet property="deleteBtn" destination="Msg-rM-3ei" id="cdg-ov-Sch"/>
                 <outlet property="playBtn" destination="Ah1-Cc-EgI" id="r5h-Ze-Lrs"/>
                 <outlet property="progressVIew" destination="mZt-Xd-Oc6" id="Dx4-5A-4sy"/>
                 <outlet property="recordLabel" destination="8vh-O3-rUI" id="YNm-Ji-mTy"/>
@@ -107,6 +120,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="354" width="22" height="22"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

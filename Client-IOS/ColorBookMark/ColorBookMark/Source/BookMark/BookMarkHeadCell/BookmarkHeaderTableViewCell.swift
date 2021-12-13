@@ -25,13 +25,13 @@ class BookmarkHeaderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func buttonUI() {
-        archiveBtn.setTitle("감정 아카이브", for: .normal)
-        archiveBtn.titleLabel?.font = .systemFont(ofSize: 11)
-        archiveBtn.setImage(UIImage(named: "iconMaterialPanoramaHorizontal.png"), for: .normal)
-        
-        archiveBtn.alignTextBelow(spacing: 6)
-    }
+//    func buttonUI() {
+//        archiveBtn.setTitle("감정 아카이브", for: .normal)
+//        archiveBtn.titleLabel?.font = .systemFont(ofSize: 11)
+//        archiveBtn.setImage(UIImage(named: "iconMaterialPanoramaHorizontal.png"), for: .normal)
+//        
+//        archiveBtn.alignTextBelow(spacing: 6)
+//    }
     
     
     

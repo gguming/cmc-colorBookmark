@@ -54,11 +54,30 @@ class BookmarkDetailViewController: UIViewController {
         
     }
     
+    private func modifyDiary() {
+        let modifyDetailInfo = ModifyDetailInfo.shared
+        var request = ModifyRequest()
+        request.diaryId = diaryId
+        if modifyDetailInfo.text == nil {
+            request.content = modifyDetailInfo.text
+        } else {
+            
+        }
+        
+        
+    }
+    
     
 }
 
 
-extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg{
+extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg, DeleteRecordDelegate{
+    func deleteRecord() {
+        let modifyInfo = ModifyDetailInfo.shared
+        modifyInfo.record = nil
+        tableview.reloadData()
+    }
+    
     
     func deleteModifyImg(index: Int) {
         let modifyInfo = ModifyDetailInfo.shared
@@ -75,6 +94,7 @@ extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg{
     func doneModifytMode() {
         modifyMode = false
         tableview.reloadData()
+        
     }
     
     func changeModifyMode() {
@@ -123,7 +143,6 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
                 cell.textView.isEditable = true
                 
-                
                 cell.textView.text = modifyDetailInfo.text
                 return cell
             }
@@ -146,12 +165,20 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                     return cell
                 }
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
-                cell.addImg = modifyDetailInfo.addImg
-                cell.delegateForDelete = self
-                cell.modifyMode = true
-                cell.imgHaveCollectionview.reloadData()
-                return cell
+                if (modifyDetailInfo.addImg?.count == 0) {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
+                   
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
+                    cell.addImg = modifyDetailInfo.addImg
+                    cell.delegateForDelete = self
+                    cell.modifyMode = true
+                    cell.imgHaveCollectionview.reloadData()
+                    
+                    
+                    return cell
+                }
             }
             
             
@@ -165,13 +192,24 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordHaveTableViewCell", for: indexPath) as? RecordHaveTableViewCell else {return UITableViewCell()}
                     cell.record = modifyDetailInfo.record
+                    cell.deleteBtn.isHidden = true
+                    cell.deleteDelegate = self
                     return cell
 
                 }
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyRecordTableViewCell", for: indexPath) as? ModifyRecordTableViewCell else {return UITableViewCell()}
-                
-                return cell
+                if modifyDetailInfo.record == nil {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as? RecordTableViewCell else {return UITableViewCell()}
+                    
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordHaveTableViewCell", for: indexPath) as? RecordHaveTableViewCell else {return UITableViewCell()}
+                    cell.record = modifyDetailInfo.record
+                    cell.deleteDelegate = self
+                    cell.deleteBtn.isHidden = false
+                    return cell
+
+                }
             }
             
             
@@ -235,6 +273,19 @@ extension BookmarkDetailViewController {
     }
     
     func failedToGetBookMarkDetail(message: String) {
+        print("------>>>>\(message)")
+        
+    }
+    
+    func didSuccessModifyDetail(_ result: ModifyResponse) {
+        print("------>\(result)")
+        
+        
+        
+        
+    }
+    
+    func failedToModifyDetail(message: String) {
         print("------>>>>\(message)")
         
     }
