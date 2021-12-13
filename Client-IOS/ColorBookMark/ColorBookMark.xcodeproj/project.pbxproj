@@ -182,6 +182,9 @@
 		E9B76DE527636B6100BC990F /* ResetMyColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE427636B6100BC990F /* ResetMyColorResponse.swift */; };
 		E9B76DE927647A8B00BC990F /* TermsofServiceLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DE827647A8B00BC990F /* TermsofServiceLoginViewController.swift */; };
 		E9B76DEB27647A9D00BC990F /* TermsOfUseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DEA27647A9D00BC990F /* TermsOfUseLoginViewController.swift */; };
+		E9B76DED2767AA2800BC990F /* AppleLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DEC2767AA2800BC990F /* AppleLoginRequest.swift */; };
+		E9B76DEF2767AA3800BC990F /* AppleLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DEE2767AA3800BC990F /* AppleLoginResponse.swift */; };
+		E9B76DF12767AA8E00BC990F /* AppleLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76DF02767AA8E00BC990F /* AppleLoginDataManager.swift */; };
 		E9BC9C7B273A4005003FF3E7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */; };
 		E9DBB6062753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */; };
 		E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */; };
@@ -395,6 +398,9 @@
 		E9B76DE427636B6100BC990F /* ResetMyColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetMyColorResponse.swift; sourceTree = "<group>"; };
 		E9B76DE827647A8B00BC990F /* TermsofServiceLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofServiceLoginViewController.swift; sourceTree = "<group>"; };
 		E9B76DEA27647A9D00BC990F /* TermsOfUseLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseLoginViewController.swift; sourceTree = "<group>"; };
+		E9B76DEC2767AA2800BC990F /* AppleLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginRequest.swift; sourceTree = "<group>"; };
+		E9B76DEE2767AA3800BC990F /* AppleLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginResponse.swift; sourceTree = "<group>"; };
+		E9B76DF02767AA8E00BC990F /* AppleLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginDataManager.swift; sourceTree = "<group>"; };
 		E9BC9C7A273A4005003FF3E7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		E9DBB6052753BDD300F2A32D /* MypageMiniCodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMiniCodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DBB6072753E05A00F2A32D /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -1183,6 +1189,7 @@
 				E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */,
 				E9336CBD274C700C00686AF1 /* LoginAfterSigininDataManager.swift */,
 				E9A236EA274F270F0043836A /* FindPasswordDataManager.swift */,
+				E9B76DF02767AA8E00BC990F /* AppleLoginDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -1199,6 +1206,8 @@
 				E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */,
 				E9A236EC274F27750043836A /* FindPasswordRequest.swift */,
 				E9A236EE274F27820043836A /* FindPasswordResponse.swift */,
+				E9B76DEC2767AA2800BC990F /* AppleLoginRequest.swift */,
+				E9B76DEE2767AA3800BC990F /* AppleLoginResponse.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1390,6 +1399,7 @@
 				A4D2891E275F70CA001E7194 /* BookMarkDetailDataManager.swift in Sources */,
 				A45DF805275383110067021C /* AudioViewController.swift in Sources */,
 				A43BF3A3273BF91A008DF16A /* TextTableViewCell.swift in Sources */,
+				E9B76DEF2767AA3800BC990F /* AppleLoginResponse.swift in Sources */,
 				A4A59D2E2751128C0018A7F3 /* PostColorDataManager.swift in Sources */,
 				E9E4A94A272FCFEE0037A815 /* LoginMainViewController.swift in Sources */,
 				A43BF39F273BEA65008DF16A /* ColorCollectionViewCell.swift in Sources */,
@@ -1403,6 +1413,7 @@
 				E9B76DE327636B4A00BC990F /* ResetMyColorDataManager.swift in Sources */,
 				A4BAF469274DC0B600187878 /* PhotoHaveTableViewCell.swift in Sources */,
 				A45DF80027537D080067021C /* AudioHaveTableViewCell.swift in Sources */,
+				E9B76DF12767AA8E00BC990F /* AppleLoginDataManager.swift in Sources */,
 				E95683BD275C2BC800F075CF /* OriginalColorPickerMainViewController.swift in Sources */,
 				E95683B6275BB0CC00F075CF /* TermsofServiceViewController.swift in Sources */,
 				E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */,
@@ -1422,6 +1433,7 @@
 				E9DBB60C2753E62600F2A32D /* DeleteAccountDataManager.swift in Sources */,
 				E9445BBE2741035F00B4EC82 /* Singleton.swift in Sources */,
 				E95683BF275C2BD600F075CF /* OriginalColorPickerViewController.swift in Sources */,
+				E9B76DED2767AA2800BC990F /* AppleLoginRequest.swift in Sources */,
 				E95683CB275E404700F075CF /* PostMyColorDataManager.swift in Sources */,
 				E9E4A928272EFA410037A815 /* MemberLoginViewController.swift in Sources */,
 				E9336CCE274D142E00686AF1 /* SettingDataManager.swift in Sources */,

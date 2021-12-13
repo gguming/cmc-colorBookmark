@@ -8,10 +8,16 @@
 import UIKit
 import MaterialComponents.MaterialBottomSheet
 import Alamofire
+import FloatingPanel
+
+protocol SelectedCalendarDelegate: AnyObject {
+    func makeNewDiary(date: String)
+}
 
 class CalenderViewController: UIViewController {
     var calendarData: [CalendarResult]?
     var bookmarks: [BookMarks]?
+    weak var selectedDelegate: SelectedCalendarDelegate?
     
     lazy var calendarDataManager: CalenderDataManager = CalenderDataManager()
     lazy var calendarLimitDataManager: CalenderLimitDataManager = CalenderLimitDataManager()
@@ -201,8 +207,6 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     print(CircleColor)
                     filled.append(filledIndex)
                     testArray[indexPath.item - startDate] = filledIndex
-                    print("테스트 어레이")
-                    print(testArray)
                     filledIndex += 1
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                     cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
@@ -227,8 +231,6 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
-      
-            
             if calendarData?[indexPath.item - startDate].color != nil {
                 let testIndex = testArray[indexPath.item - startDate]
                 print("테스트 인덱스")
@@ -246,6 +248,15 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 self.dismiss(animated: true) {
                     pvc.present(vc, animated: false, completion: nil)
                 }
+            }
+            else {
+                let selectedDate = calendarData?[indexPath.item - startDate].date
+                let dateResult = selectedDate!.replacingOccurrences(of: "-", with: ".")
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                guard let HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
+//                HomeVC.selectedDelegate = self
+                selectedDelegate?.makeNewDiary(date: dateResult)
+                dismiss(animated: false, completion: nil)
             }
         }
     }
@@ -290,7 +301,6 @@ extension CalenderViewController {
     func didSuccessGetBookMarkInCalendar(_ result: GetBookMarkResponse) {
         print("------>\(result)")
         bookmarks = result.result
-//        tableview.reloadData()   
     }
     
     func failedToGetBookMarkInCalendar(message: String) {

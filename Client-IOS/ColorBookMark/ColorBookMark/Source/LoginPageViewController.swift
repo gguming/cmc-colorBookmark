@@ -17,6 +17,7 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
     }
     
     lazy var dataManager: KakaoLoginDataManager = KakaoLoginDataManager()
+    lazy var appleDataManager: AppleLoginDataManager = AppleLoginDataManager()
     
     @IBAction func KakaoLogin(_ sender: Any) {
         UserApi.shared.loginWithKakaoAccount { [self](oauthToken, error) in
@@ -110,12 +111,11 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
                 print("identityToken: \(identityToken)")
                 print("authString: \(authString)")
                 print("tokenString: \(tokenString)")
+                let request = AppleLoginRequest(authorizationCode: authString, identityToken: tokenString)
+                appleDataManager.getAppleLoginJwt(request, delegate: self)
             }
-
         }
-        
-       
-        Constant.didLogin = true
+
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
         changeRootViewController(vc)

@@ -43,15 +43,6 @@ class ColorCollectionViewCell: UICollectionViewCell {
                 view_2.layer.cornerRadius = view_2.frame.width/2
                 view_3.layer.cornerRadius = view_3.frame.width/2
 
-
-                
-//                selectedView.isHidden = false
-//                backView.isHidden = false
-//                backView.layer.cornerRadius = 50
-//                backView.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
-//                selectedView.layer.cornerRadius = 50
-//                selectedView.backgroundColor = UIColor.white
-
             }
             else {
                 colorView.isHidden = false

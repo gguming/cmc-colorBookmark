@@ -14,6 +14,7 @@ protocol ColorHomeCollectionDelegate: AnyObject {
 }
 
 class HomeViewController: BaseViewController {
+    weak var selectedDelegate: SelectedCalendarDelegate?
     
     @IBAction func BookmarkButtonTapped(_ sender: Any) {
         let SB = UIStoryboard(name: "BookMark", bundle: nil)
@@ -69,8 +70,11 @@ class HomeViewController: BaseViewController {
         print("시작화면 닉네임 값")
         print(Constant.nickname as Any)
         print(Constant.jwt as Any)
-        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "CalenderViewController") as? CalenderViewController else {return}
+//        vc.selectedDelegate = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let changeColors: [CGColor] = [
@@ -136,6 +140,7 @@ class HomeViewController: BaseViewController {
 
     
     private func calendarSetUI(){
+        print("bbbbbbbbb")
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy . MM . dd  "
@@ -144,6 +149,17 @@ class HomeViewController: BaseViewController {
         let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
         let calenderText = NSMutableAttributedString()
         calenderText.append(NSAttributedString(string: currentDate, attributes: generalAttributes))
+        CalenderButton.setAttributedTitle(calenderText, for: .normal)
+        
+        CalenderView.layer.cornerRadius = 25
+    }
+    
+    func selectedCalendarSetUI(date: String){
+        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
+        let calenderText = NSMutableAttributedString()
+        calenderText.append(NSAttributedString(string: date, attributes: generalAttributes))
         CalenderButton.setAttributedTitle(calenderText, for: .normal)
         
         CalenderView.layer.cornerRadius = 25
@@ -243,7 +259,19 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: ColorHomeCollectionDelegate {
+extension HomeViewController: ColorHomeCollectionDelegate, SelectedCalendarDelegate {
+    func makeNewDiary(date: String) {
+        print("aaaaaaaaaa")
+        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
+        let calenderText = NSMutableAttributedString()
+        calenderText.append(NSAttributedString(string: date, attributes: generalAttributes))
+        CalenderButton.setAttributedTitle(calenderText, for: .normal)
+        CalenderView.layer.cornerRadius = 25
+        CalenderButton.reloadInputViews()
+    }
+    
     func reloadHomeColorCollectionView() {
         getColors()
     }
