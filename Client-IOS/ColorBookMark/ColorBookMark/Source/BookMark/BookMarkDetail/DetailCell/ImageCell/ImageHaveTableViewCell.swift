@@ -17,6 +17,7 @@ class ImageHaveTableViewCell: UITableViewCell {
     var modifyMode: Bool?
     var addImg: [DiaryImgUrl]?
     var pickedImg: [UIImage]?
+    var delegateForDelete: DeleteModifyImg?
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.layer.cornerRadius = 8
@@ -37,9 +38,17 @@ class ImageHaveTableViewCell: UITableViewCell {
     
 }
 
+extension ImageHaveTableViewCell: DeleteModifyImg{
+    func deleteModifyImg(index: Int) {
+        delegateForDelete?.deleteModifyImg(index: index)
+    }
+    
+    
+}
+
 extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 + (addImg?.count ?? 0) + (pickedImg?.count ?? 0)
+        return 1 + (addImg?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,7 +59,13 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
            //
             cell.deleteBtn.isHidden = false
             let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
-            cell.imgView.kf.setImage(with: url)
+            cell.imgView.kf.indicatorType = .activity
+            cell.imgView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+            cell.index = indexPath.item
+            cell.delegate = self
+            
+
+
             return cell
             
         } else {
@@ -58,7 +73,10 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
            //
             cell.deleteBtn.isHidden = true
             let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
-            cell.imgView.kf.setImage(with: url)
+            cell.imgView.kf.indicatorType = .activity
+            cell.imgView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+            cell.index = indexPath.item
+            cell.delegate = self
             return cell
         }
     }

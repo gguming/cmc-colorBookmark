@@ -58,7 +58,12 @@ class BookmarkDetailViewController: UIViewController {
 }
 
 
-extension BookmarkDetailViewController: ModifyModeDelegate{
+extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg{
+    func deleteModifyImg(index: Int) {
+        addedImg?.remove(at: index)
+        tableview.reloadData()
+    }
+    
     func deleteDiary() {
         let request = DeleteDiaryRequest()
         request.date = self.date
@@ -131,7 +136,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                     cell.addImg = modifyDetailInfo.addImg
-                    cell.pickedImg = self.pickedImg
+                    cell.imgHaveCollectionview.reloadData()
                     
                     
                     return cell
@@ -139,7 +144,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                 cell.addImg = modifyDetailInfo.addImg
-                cell.pickedImg = self.pickedImg
+                cell.delegateForDelete = self
                 
                 return cell
             }
