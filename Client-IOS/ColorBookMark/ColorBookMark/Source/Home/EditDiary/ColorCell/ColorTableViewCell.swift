@@ -71,7 +71,7 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         cell.setUI()
         
         cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
-        cell.selectedView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
+        cell.view_3.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }
