@@ -13,34 +13,51 @@ class ColorCollectionViewCell: UICollectionViewCell {
     var index: Int = 0
     var myColorId = 0
     
-    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var view_1: UIView!
+    @IBOutlet weak var view_2: UIView!
+    @IBOutlet weak var view_3: UIView!
     @IBOutlet weak var deleteButton: UIImageView!
-    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        backView.isHidden = true
+        view_1.isHidden = true
+        view_2.isHidden = true
+        view_3.isHidden = true
         deleteButton.isHidden = true
-        selectedView.isHidden = true
+       
     }
     
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                selectedView.isHidden = false
-                backView.isHidden = false
+                colorView.isHidden = true
+                view_1.isHidden = false
+                view_2.isHidden = false
+                view_3.isHidden = false
+                view_1.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
+                view_2.backgroundColor = UIColor.white
+                view_3.backgroundColor = colorView.backgroundColor
+                view_1.layer.cornerRadius = view_1.frame.width/2
+                view_2.layer.cornerRadius = view_2.frame.width/2
+                view_3.layer.cornerRadius = view_3.frame.width/2
+
+
                 
-                colorView.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
-                backView.layer.cornerRadius = 50
-                backView.backgroundColor = UIColor.white
-                selectedView.layer.cornerRadius = 50
+//                selectedView.isHidden = false
+//                backView.isHidden = false
+//                backView.layer.cornerRadius = 50
+//                backView.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
+//                selectedView.layer.cornerRadius = 50
+//                selectedView.backgroundColor = UIColor.white
 
             }
             else {
-                backView.isHidden = true
-                selectedView.isHidden = true
+                colorView.isHidden = false
+                view_1.isHidden = true
+                view_2.isHidden = true
+                view_3.isHidden = true
             }
         }
     }
@@ -65,7 +82,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
     
     func selectAni() {
 //        colorView.layer.masksToBounds = true
-        backView.isHidden = true
+//        backView.isHidden = true
         self.isSelected = true
     }
     
