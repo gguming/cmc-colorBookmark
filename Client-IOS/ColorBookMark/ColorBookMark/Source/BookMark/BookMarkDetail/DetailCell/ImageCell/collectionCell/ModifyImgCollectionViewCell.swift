@@ -9,9 +9,13 @@ import UIKit
 
 class ModifyImgCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var deleteBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBAction func deleteBtnTapped(_ sender: Any) {
+    }
 }

@@ -10,9 +10,11 @@ import Alamofire
 class BookMarkDataManager {
     func getBookMark(date: String, delegate: BookmarkViewController) {
         let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
-
-
+        
+        print(3333333333333)
+        print(date)
         AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/targeted-month?date=\(date)", method: .get, parameters: nil, encoding: JSONEncoding(), headers: header)
+            
             .validate()
             .responseDecodable(of: GetBookMarkResponse.self) { response in
                 switch response.result {

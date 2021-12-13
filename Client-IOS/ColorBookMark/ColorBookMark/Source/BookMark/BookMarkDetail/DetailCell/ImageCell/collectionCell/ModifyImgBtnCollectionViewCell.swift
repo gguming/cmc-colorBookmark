@@ -13,5 +13,7 @@ class ModifyImgBtnCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBAction func addBtnTapped(_ sender: Any) {
+    }
+    
 }

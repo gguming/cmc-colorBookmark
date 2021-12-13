@@ -48,3 +48,12 @@ class RecordInfo {
     private init() {}
     
 }
+
+class ModifyDetailInfo {
+    static let shared = ModifyDetailInfo()
+    var text: String?
+    var addImg: [DiaryImgUrl]?
+    var record: String?
+    
+    private init() {}
+}
