@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftUI
 
 class ImageHaveTableViewCell: UITableViewCell {
 
@@ -44,92 +45,22 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if modifyMode == true {
-            if indexPath.item == 0 {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyImgBtnCollectionViewCell", for: indexPath) as? ModifyImgBtnCollectionViewCell else {return UICollectionViewCell()}
-                return cell
-            }
             
-            if addImg != nil {
-                
-                if 1 <= indexPath.item && indexPath.item <= (addImg?.count ?? 0) {
-                    
-                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                    
-                    cell.deleteBtn.isHidden = false
-                    let url = addImg?[indexPath.item-1].diaryImgUrl
-                    cell.imgView.kf.indicatorType = .activity
-                    cell.imgView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
-                    
-                    return cell
-                    
-                    if self.pickedImg != nil {
-                        
-                        if (addImg?.count ?? 0) <= indexPath.item && indexPath.item <= (pickedImg?.count ?? 0) {
-                            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                            
-                            cell.imgView.image = pickedImg?[indexPath.item - 1 - (addImg?.count ?? 0)]
-                            return cell
-                        }
-                    }
-        
-                } else {
-                    
-                    if self.pickedImg != nil {
-                        
-                        if 1 <= indexPath.item && indexPath.item <= (pickedImg?.count ?? 0) {
-                            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                            
-                            cell.imgView.image = pickedImg?[indexPath.item - 1]
-                            return cell
-                        }
-                    }
-                }
-                
-            }
-            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
+           //
+            cell.deleteBtn.isHidden = false
+            let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
+            cell.imgView.kf.setImage(with: url)
+            return cell
             
         } else {
-            if addImg != nil {
-                
-                if 0 <= indexPath.item && indexPath.item <= (addImg?.count ?? 0) {
-                    
-                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                    
-                    cell.deleteBtn.isHidden = true
-                    let url = addImg?[indexPath.item].diaryImgUrl
-                    cell.imgView.kf.indicatorType = .activity
-                    cell.imgView.kf.setImage(with: url)
-                    
-                    return cell
-                    
-                    if self.pickedImg != nil {
-                        
-                        if (addImg?.count ?? 0) <= indexPath.item && indexPath.item <= (pickedImg?.count ?? 0) {
-                            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                            
-                            cell.imgView.image = pickedImg?[indexPath.item - (addImg?.count ?? 0)]
-                            return cell
-                        }
-                    }
-        
-                } else {
-                    
-                    if self.pickedImg != nil {
-                        
-                        if 0 <= indexPath.item && indexPath.item <= (pickedImg?.count ?? 0) {
-                            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
-                            
-                            cell.imgView.image = pickedImg?[indexPath.item]
-                            return cell
-                        }
-                    }
-                }
-                
-            }
-            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
+           //
+            cell.deleteBtn.isHidden = true
+            let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
+            cell.imgView.kf.setImage(with: url)
+            return cell
         }
-    
-        
     }
     
     
