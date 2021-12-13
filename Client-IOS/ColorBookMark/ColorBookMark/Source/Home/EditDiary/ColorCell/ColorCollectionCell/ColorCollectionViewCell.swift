@@ -13,6 +13,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
     var index: Int = 0
     var myColorId = 0
     
+    @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var deleteButton: UIImageView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var colorView: UIView!
@@ -20,10 +21,28 @@ class ColorCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        backView.backgroundColor = .red
-        backView.layer.cornerRadius = 45
         backView.isHidden = true
         deleteButton.isHidden = true
+        selectedView.isHidden = true
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                selectedView.isHidden = false
+                backView.isHidden = false
+                
+                colorView.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
+                backView.layer.cornerRadius = 50
+                backView.backgroundColor = UIColor.white
+                selectedView.layer.cornerRadius = 50
+
+            }
+            else {
+                backView.isHidden = true
+                selectedView.isHidden = true
+            }
+        }
     }
     
     @objc func EditColorCircle() {

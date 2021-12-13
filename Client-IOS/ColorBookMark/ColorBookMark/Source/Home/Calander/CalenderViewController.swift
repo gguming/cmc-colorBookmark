@@ -133,15 +133,8 @@ class CalenderViewController: UIViewController {
         if currentMonth.count == 1 {
             currentMonth = "0\(currentMonth)"
         }
-       
-        print("YEAR")
-        print(currentYear)
-        print("MONTH")
-        print(currentMonth)
         date = "\(currentYear)-\(currentMonth)"
-        print("푸푸푸푸ㅜ푸풒")
-        print(date)
-      
+    
     }
     
     private func initCollection() {
@@ -210,15 +203,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     testArray[indexPath.item - startDate] = filledIndex
                     print("테스트 어레이")
                     print(testArray)
-//                    print(indexPath.item - startDate)
-//                    print("cell.filledDate")
-//                    print(filled)
-//
-//                    print(cell.filledDate)
                     filledIndex += 1
-                   
-                    print("filledIndex")
-                    print(filledIndex)
                     cell.CircleImage.tintColor = UIColor(hex: CircleColor)
                     cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
                 }
@@ -248,15 +233,11 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 let testIndex = testArray[indexPath.item - startDate]
                 print("테스트 인덱스")
                 print(testIndex)
-//                print(bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId)
                 
                 let storyboard = UIStoryboard(name: "BookMark", bundle: nil)
                 guard let vc = storyboard.instantiateViewController(withIdentifier: "BookmarkDetailViewController") as? BookmarkDetailViewController else {return}
                 
                 vc.modalPresentationStyle = .fullScreen
-                //HERE
-                print("설마 이거??")
-                print(testIndex)
                 vc.diaryId = bookmarks?[testIndex].selectMonthDiary?.diaryView?.diaryId
                 vc.index = testIndex - 1
                 vc.view.backgroundColor = UIColor.white

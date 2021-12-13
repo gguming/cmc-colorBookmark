@@ -80,6 +80,4 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
             return cell
         }
     }
-    
-    
 }
