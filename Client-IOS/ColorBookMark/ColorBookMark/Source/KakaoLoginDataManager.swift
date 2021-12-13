@@ -10,6 +10,7 @@ import Alamofire
 
 class KakaoLoginDataManager {
     func getKakaoLoginJwt(_ parameters: KakaoLoginRequest, delegate: LoginPageViewController) {
+        print("카카카카카ㅏ카카")
         AF.request( "\(Constant.SERVER_BASE_URL)/users/kakao-login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: KakaoLoginResponse.self) { response in
@@ -42,7 +43,7 @@ class KakaoLoginDataManager {
                         case 3006: print("탈퇴한 계정입니다.")
                         case 3023: print("이미 로그인된 상태입니다.")
                         case 4000: print("로그인 실패")
-                        default: break
+                        default: print("?????")
                         }
                     }
 
