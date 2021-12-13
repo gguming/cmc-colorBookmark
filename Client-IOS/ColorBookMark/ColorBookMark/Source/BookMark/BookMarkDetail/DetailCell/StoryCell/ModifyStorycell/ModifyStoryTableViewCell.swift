@@ -26,3 +26,10 @@ class ModifyStoryTableViewCell: UITableViewCell {
     }
     
 }
+
+extension ModifyStoryTableViewCell: UITextViewDelegate{
+    func textViewDidEndEditing(_ textView: UITextView) {
+        let modifyInfo = ModifyDetailInfo.shared
+        modifyInfo.text = textView.text
+    }
+}

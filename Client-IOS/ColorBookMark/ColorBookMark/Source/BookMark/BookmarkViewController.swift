@@ -130,7 +130,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkHeaderTableViewCell", for: indexPath) as? BookmarkHeaderTableViewCell else {return UITableViewCell()}
-            cell.buttonUI()
+//            cell.buttonUI()
             cell.bookmarkCountInfoLabel.text = "이번달은 총 \(bookmarks?.count ?? 0)번 감정을 끼웠습니다."
             return cell
             
