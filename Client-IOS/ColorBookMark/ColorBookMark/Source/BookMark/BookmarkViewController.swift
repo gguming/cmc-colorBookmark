@@ -138,10 +138,10 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
             cell.backView.layer.cornerRadius = 8
             cell.clipsToBounds = true
-            cell.contents = bookmarks?[indexPath.row].selectMonthDiary?.diaryContents
-            cell.colorView.backgroundColor = hexStringToUIColor22(hex: bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.color ?? "#000000")
-            cell.colorLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.colorName
-            cell.dayLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.date
+            cell.contents = bookmarks?[indexPath.item].selectMonthDiary?.diaryContents
+            cell.colorView.backgroundColor = hexStringToUIColor22(hex: bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.color ?? "#000000")
+            cell.colorLabel.text = bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.colorName
+            cell.dayLabel.text = bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.date
             
             return cell
         }

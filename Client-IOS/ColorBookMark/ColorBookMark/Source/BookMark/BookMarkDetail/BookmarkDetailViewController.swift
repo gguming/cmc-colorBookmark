@@ -59,8 +59,10 @@ class BookmarkDetailViewController: UIViewController {
 
 
 extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg{
+    
     func deleteModifyImg(index: Int) {
-        addedImg?.remove(at: index)
+        let modifyInfo = ModifyDetailInfo.shared
+        modifyInfo.addImg?.remove(at: index)
         tableview.reloadData()
     }
     
@@ -129,13 +131,15 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
             
         case 2:
             if !(modifyMode ?? false){
-                if (modifyDetailInfo.addImg == nil) {
+                if (modifyDetailInfo.addImg?.count == 0) {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell else {return UITableViewCell()}
                    
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                     cell.addImg = modifyDetailInfo.addImg
+                    cell.delegateForDelete = self
+                    cell.modifyMode = false
                     cell.imgHaveCollectionview.reloadData()
                     
                     
@@ -145,7 +149,8 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                 cell.addImg = modifyDetailInfo.addImg
                 cell.delegateForDelete = self
-                
+                cell.modifyMode = true
+                cell.imgHaveCollectionview.reloadData()
                 return cell
             }
             

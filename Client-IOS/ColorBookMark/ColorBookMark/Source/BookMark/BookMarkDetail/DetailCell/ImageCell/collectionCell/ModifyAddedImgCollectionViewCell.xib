@@ -21,13 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="88" height="100"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-dG-zyc">
-                        <rect key="frame" x="63" y="5" width="20" height="20"/>
+                        <rect key="frame" x="63" y="15" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="inJ-bf-xAA"/>
                             <constraint firstAttribute="width" constant="20" id="kXH-bd-vfT"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="yp_remove"/>
+                        <state key="normal" image="removeBtn"/>
                         <connections>
                             <action selector="deleteBtnTapped:" destination="BIn-b9-eWc" eventType="touchUpInside" id="Dsk-lD-yQ0"/>
                         </connections>
@@ -41,7 +41,7 @@
                 <constraint firstItem="6Yk-Gd-HzV" firstAttribute="leading" secondItem="BIn-b9-eWc" secondAttribute="leading" id="N1H-fP-d37"/>
                 <constraint firstItem="6Yk-Gd-HzV" firstAttribute="top" secondItem="BIn-b9-eWc" secondAttribute="top" id="T6T-Rd-djw"/>
                 <constraint firstItem="FDc-dG-zyc" firstAttribute="trailing" secondItem="6Yk-Gd-HzV" secondAttribute="trailing" constant="-5" id="tey-2Z-dsN"/>
-                <constraint firstItem="FDc-dG-zyc" firstAttribute="top" secondItem="6Yk-Gd-HzV" secondAttribute="top" constant="5" id="vnE-G2-KHg"/>
+                <constraint firstItem="FDc-dG-zyc" firstAttribute="top" secondItem="6Yk-Gd-HzV" secondAttribute="top" constant="15" id="vnE-G2-KHg"/>
             </constraints>
             <size key="customSize" width="88" height="100"/>
             <connections>
@@ -52,6 +52,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="yp_remove" width="32" height="32"/>
+        <image name="removeBtn" width="33" height="33"/>
     </resources>
 </document>

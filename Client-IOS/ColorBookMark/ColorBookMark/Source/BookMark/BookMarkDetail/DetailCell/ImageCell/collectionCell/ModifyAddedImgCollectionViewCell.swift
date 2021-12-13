@@ -16,6 +16,7 @@ class ModifyAddedImgCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgView.layer.cornerRadius = 8
     }
 
     @IBAction func deleteBtnTapped(_ sender: Any) {
