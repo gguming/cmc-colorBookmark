@@ -71,6 +71,7 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         cell.setUI()
         
         cell.colorView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
+        cell.selectedView.backgroundColor = hexStringToUIColor(hex: "\(colors?[indexPath.item].color ?? "#000000")")
         cell.colorNameLabel.text = colors?[indexPath.item].colorName
         return cell
     }
@@ -82,8 +83,8 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         let colorInfo = ColorPickerInfo.shared
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
-//        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
+        cell.isSelected = true
         colorInfo.color = colors?[indexPath.item].color
         colorInfo.colorName = colors?[indexPath.item].colorName
         
