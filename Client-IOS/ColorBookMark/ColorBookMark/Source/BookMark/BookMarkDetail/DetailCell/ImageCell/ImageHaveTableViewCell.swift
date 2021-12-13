@@ -48,7 +48,7 @@ extension ImageHaveTableViewCell: DeleteModifyImg{
 
 extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 + (addImg?.count ?? 0)
+        return addImg?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,4 +80,12 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = imgHaveCollectionview.bounds.height - 3
+        let width = height*3/4
+        return CGSize(width: width, height: height)
+    }
+    
+    
 }

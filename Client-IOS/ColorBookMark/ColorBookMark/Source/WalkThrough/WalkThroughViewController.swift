@@ -30,6 +30,7 @@ class WalkThroughViewController: UIViewController {
         collectionview.delegate = self
         startBtn.backgroundColor = UIColor.mainPink
         startBtn.isHidden = true
+        startBtn.layer.cornerRadius = 8
         pageControl.numberOfPages = walkthroughList.count
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = .gray
