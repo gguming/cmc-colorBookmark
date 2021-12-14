@@ -48,14 +48,21 @@ class EditDiaryViewController: UIViewController  {
         let uuid = UUID().uuidString
         let recordInfo = RecordInfo.shared
         let colorInfo = ColorPickerInfo.shared
+        let dateInfo = DatelInfo.shared
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let currentDate = formatter.string(from: Date())
         var count = 0
         var request = PostDiaryRequest()
-        request.date = currentDate
+        if dateInfo.date == nil {
+            request.date = currentDate
+        } else {
+            request.date = dateInfo.date
+        }
+         
         request.content = recordInfo.text
         if colorInfo.color == nil {
+            dismissIndicator()
             presentBottomAlert(message: "색깔을 골라주세요!")
             return
         }
@@ -90,7 +97,7 @@ class EditDiaryViewController: UIViewController  {
                                         print(error ?? "error")
                                     }
 
-                                    self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { url, error in
+                                    self.storage.child("record/\(uuid)/\(record).m4a").downloadURL(completion: { [self] url, error in
                                         guard let url = url, error == nil else {
                                             return
                                         }
@@ -102,6 +109,9 @@ class EditDiaryViewController: UIViewController  {
                                         
                                         self.postDataManager.diaryPost(request, delegate: self)
                                         self.dismissIndicator()
+                                        self.imgUrls = []
+                                        self.recordUrl = ""
+                                        
                                         
                                     })
                                 }
@@ -109,6 +119,7 @@ class EditDiaryViewController: UIViewController  {
                                 request.diaryImgUrl = self.imgUrls
                                 self.postDataManager.diaryPost(request, delegate: self)
                                 self.dismissIndicator()
+                                self.imgUrls = []
                             }
                         }
                     }
@@ -133,13 +144,17 @@ class EditDiaryViewController: UIViewController  {
                         print("------->record URL : \(urlString)")
                         request.recordContent = urlString
                         self.postDataManager.diaryPost(request, delegate: self)
+                        
                         self.dismissIndicator()
+                        self.imgUrls = []
+                        self.recordUrl = ""
                         
                     })
                 }
             } else {
                 self.postDataManager.diaryPost(request, delegate: self)
                 self.dismissIndicator()
+                imgUrls = []
             }
         }
         
