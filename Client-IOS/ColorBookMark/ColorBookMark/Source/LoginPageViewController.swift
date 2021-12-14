@@ -10,6 +10,7 @@ import AuthenticationServices
 import KakaoSDKAuth
 import KakaoSDKUser
 import KakaoSDKCommon
+import AuthenticationServices
 
 class LoginPageViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -59,7 +60,7 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
     }
     
     @IBOutlet weak var iconImage: UIImageView!
-    
+
     @IBOutlet weak var PageLabel: UILabel!
     @IBOutlet weak var kakaoButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
@@ -73,7 +74,8 @@ class LoginPageViewController: UIViewController, ASAuthorizationControllerPresen
         appleButton.layer.cornerRadius = 20
         emailButton.layer.cornerRadius = 20
         appleButton.layer.borderWidth = 1
-        appleButton.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
+        appleButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
         
         let attributedString = NSMutableAttributedString(string: PageLabel.text!)
         attributedString.addAttribute(.foregroundColor, value: pinkColor, range: (PageLabel.text! as NSString).range(of:"색갈피"))

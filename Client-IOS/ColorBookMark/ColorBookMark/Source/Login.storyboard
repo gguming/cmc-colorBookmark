@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVy-kr-ov3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVy-kr-ov3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saK-tO-M7L">
                                 <rect key="frame" x="30" y="738" width="354" height="54"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="이메일로 로그인">
                                     <color key="titleColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,24 +35,36 @@
                                     <action selector="EmailLogin:" destination="fVy-kr-ov3" eventType="touchUpInside" id="tc6-T7-Bki"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="361" translatesAutoresizingMaskIntoConstraints="NO" id="8Sj-9q-QKn">
+                                <rect key="frame" x="40" y="744" width="42.5" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Sj-9q-QKn" secondAttribute="height" id="0fk-81-wcd"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-bD-SpD">
                                 <rect key="frame" x="30" y="669.5" width="354" height="53.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Apple로 로그인">
-                                    <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="AppleLogin:" destination="fVy-kr-ov3" eventType="touchUpInside" id="3wE-kr-BXC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="360" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-R5-rM7">
+                                <rect key="frame" x="40" y="675" width="42.5" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uBf-R5-rM7" secondAttribute="height" id="oBh-84-vOh"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-PV-Oht">
                                 <rect key="frame" x="30" y="600.5" width="354" height="54"/>
-                                <color key="backgroundColor" red="1" green="0.90588235294117647" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="backgroundColor" red="1" green="0.89803921568627454" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="카카오로 로그인">
-                                    <color key="titleColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="KakaoLogin:" destination="fVy-kr-ov3" eventType="touchUpInside" id="M5Q-lO-WX1"/>
@@ -64,26 +76,41 @@
                                 <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="359" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-GQ-WDF">
+                                <rect key="frame" x="40" y="606.5" width="42.5" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8P7-GQ-WDF" secondAttribute="height" id="6bp-cK-u6P"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yA3-f9-XWT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bKE-bD-SpD" firstAttribute="top" secondItem="3Zx-PV-Oht" secondAttribute="bottom" constant="15" id="0el-9s-UPz"/>
+                            <constraint firstItem="8Sj-9q-QKn" firstAttribute="centerY" secondItem="saK-tO-M7L" secondAttribute="centerY" id="1Lf-3A-Jtc"/>
+                            <constraint firstItem="uBf-R5-rM7" firstAttribute="leading" secondItem="bKE-bD-SpD" secondAttribute="leading" constant="10" id="66g-oI-UJF"/>
+                            <constraint firstItem="8P7-GQ-WDF" firstAttribute="leading" secondItem="3Zx-PV-Oht" secondAttribute="leading" constant="10" id="67n-2E-3Td"/>
                             <constraint firstItem="saK-tO-M7L" firstAttribute="height" secondItem="3mS-d4-Scr" secondAttribute="height" multiplier="0.06" id="6KH-x7-VZT"/>
                             <constraint firstItem="bKE-bD-SpD" firstAttribute="height" secondItem="saK-tO-M7L" secondAttribute="height" id="AXQ-La-tca"/>
                             <constraint firstItem="3Zx-PV-Oht" firstAttribute="height" secondItem="saK-tO-M7L" secondAttribute="height" id="Aim-ZD-M2C"/>
+                            <constraint firstItem="8P7-GQ-WDF" firstAttribute="width" secondItem="3Zx-PV-Oht" secondAttribute="width" multiplier="0.12" id="Fy8-LA-ltM"/>
                             <constraint firstItem="bKE-bD-SpD" firstAttribute="centerX" secondItem="yA3-f9-XWT" secondAttribute="centerX" id="HpE-RF-HVT"/>
+                            <constraint firstItem="uBf-R5-rM7" firstAttribute="width" secondItem="bKE-bD-SpD" secondAttribute="width" multiplier="0.12" id="Jaa-s8-2Ry"/>
                             <constraint firstItem="mlj-Ry-RTa" firstAttribute="centerX" secondItem="yA3-f9-XWT" secondAttribute="centerX" id="MQ5-7H-Ypp"/>
                             <constraint firstItem="HeT-QD-4jD" firstAttribute="centerX" secondItem="yA3-f9-XWT" secondAttribute="centerX" id="NDy-Ik-Xzq"/>
                             <constraint firstItem="saK-tO-M7L" firstAttribute="centerX" secondItem="yA3-f9-XWT" secondAttribute="centerX" id="T7X-Zl-kvi"/>
                             <constraint firstItem="yA3-f9-XWT" firstAttribute="trailing" secondItem="saK-tO-M7L" secondAttribute="trailing" constant="30" id="Ugt-bg-jCz"/>
                             <constraint firstItem="yA3-f9-XWT" firstAttribute="trailing" secondItem="bKE-bD-SpD" secondAttribute="trailing" constant="30" id="Us1-X0-Ttg"/>
                             <constraint firstItem="yA3-f9-XWT" firstAttribute="trailing" secondItem="3Zx-PV-Oht" secondAttribute="trailing" constant="30" id="WxO-v6-cCL"/>
+                            <constraint firstItem="8P7-GQ-WDF" firstAttribute="centerY" secondItem="3Zx-PV-Oht" secondAttribute="centerY" id="aSy-lT-w97"/>
+                            <constraint firstItem="8Sj-9q-QKn" firstAttribute="width" secondItem="saK-tO-M7L" secondAttribute="width" multiplier="0.12" id="bpV-et-GXe"/>
                             <constraint firstItem="saK-tO-M7L" firstAttribute="top" secondItem="bKE-bD-SpD" secondAttribute="bottom" constant="15" id="dt5-ar-BOl"/>
+                            <constraint firstItem="uBf-R5-rM7" firstAttribute="centerY" secondItem="bKE-bD-SpD" secondAttribute="centerY" id="g4g-ep-htF"/>
                             <constraint firstItem="3Zx-PV-Oht" firstAttribute="centerX" secondItem="yA3-f9-XWT" secondAttribute="centerX" id="gjR-if-4Ye"/>
                             <constraint firstItem="yA3-f9-XWT" firstAttribute="bottom" secondItem="saK-tO-M7L" secondAttribute="bottom" constant="70" id="hyV-8M-KhS"/>
                             <constraint firstItem="mlj-Ry-RTa" firstAttribute="top" secondItem="yA3-f9-XWT" secondAttribute="top" constant="260" id="oTO-7A-7Cq"/>
                             <constraint firstItem="HeT-QD-4jD" firstAttribute="top" secondItem="mlj-Ry-RTa" secondAttribute="bottom" constant="25" id="wgc-5V-Rck"/>
+                            <constraint firstItem="8Sj-9q-QKn" firstAttribute="leading" secondItem="saK-tO-M7L" secondAttribute="leading" constant="10" id="zq2-ss-j9h"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1363,6 +1390,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="359" width="44" height="44"/>
+        <image name="360" width="44" height="44"/>
+        <image name="361" width="44" height="44"/>
         <image name="97" width="150" height="150"/>
         <image name="login_back" width="44" height="44"/>
         <image name="login_cancel" width="44" height="44"/>
