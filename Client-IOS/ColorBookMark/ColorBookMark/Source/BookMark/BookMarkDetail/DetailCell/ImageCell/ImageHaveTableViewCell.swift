@@ -21,6 +21,7 @@ class ImageHaveTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.layer.cornerRadius = 8
+        backView.clipsToBounds = true
         // Initialization code
         imgHaveCollectionview.register(UINib(nibName: "ModifyImgBtnCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ModifyImgBtnCollectionViewCell")
         

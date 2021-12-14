@@ -65,7 +65,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-rM-3ei">
-                                        <rect key="frame" x="249" y="7.5" width="22" height="22"/>
+                                        <rect key="frame" x="244" y="12.5" width="22" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="354">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
@@ -80,10 +80,10 @@
                                     <constraint firstItem="Ah1-Cc-EgI" firstAttribute="centerY" secondItem="mZt-Xd-Oc6" secondAttribute="centerY" id="3oK-nP-cAb"/>
                                     <constraint firstItem="mZt-Xd-Oc6" firstAttribute="centerX" secondItem="6B2-GW-pVU" secondAttribute="centerX" id="AAY-Vq-bdL"/>
                                     <constraint firstItem="8vh-O3-rUI" firstAttribute="trailing" secondItem="mZt-Xd-Oc6" secondAttribute="trailing" constant="-10" id="AnM-Oa-gWs"/>
-                                    <constraint firstItem="mZt-Xd-Oc6" firstAttribute="top" secondItem="Msg-rM-3ei" secondAttribute="bottom" constant="5" id="FNC-3o-b39"/>
+                                    <constraint firstItem="mZt-Xd-Oc6" firstAttribute="top" secondItem="Msg-rM-3ei" secondAttribute="bottom" id="FNC-3o-b39"/>
                                     <constraint firstItem="Ah1-Cc-EgI" firstAttribute="leading" secondItem="mZt-Xd-Oc6" secondAttribute="leading" constant="10" id="kTU-v0-uZz"/>
                                     <constraint firstItem="8vh-O3-rUI" firstAttribute="centerY" secondItem="mZt-Xd-Oc6" secondAttribute="centerY" id="rKA-Pp-4F7"/>
-                                    <constraint firstItem="Msg-rM-3ei" firstAttribute="leading" secondItem="mZt-Xd-Oc6" secondAttribute="trailing" constant="5" id="s9c-QP-LRM"/>
+                                    <constraint firstItem="Msg-rM-3ei" firstAttribute="leading" secondItem="mZt-Xd-Oc6" secondAttribute="trailing" id="s9c-QP-LRM"/>
                                     <constraint firstItem="mZt-Xd-Oc6" firstAttribute="centerY" secondItem="6B2-GW-pVU" secondAttribute="centerY" id="sgG-d9-SxK"/>
                                 </constraints>
                             </view>
