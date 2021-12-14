@@ -29,27 +29,41 @@ class LoginDataManager {
                         delegate.loginSuccess()
                     }
                     
-                    // 실패했을 때
-                    if (!response.isSuccess) {
+                    else {
                         switch response.code {
-                        case 2001: print("이메일 값 누락")
-                        case 2004: print("비밀번호 값 누락")
-                        case 2002: print("비밀번호는 6~20자리를 입력해주세요.")
-                        case 2003: print("이메일 형식 에러")
-                        case 2019: print("비밀번호 형식 에러")
-                        case 3003: print("회원가입된 이메일이 아님")
-                        case 3004: print("비밀번호가 다릅니다.")
-                        case 3006: print("탈퇴한 계정입니다.")
-                        case 3023: print("이미 로그인된 상태입니다.")
-                        case 4000: print("로그인 실패")
-                        default: break
+                        case 2000..<3000: delegate.failedLogin(message: response.message)
+                            print(response.message as Any)
+                        case 3000..<4000: delegate.failedLogin(message: response.message)
+                            print(response.message as Any)
+                        case 4000: delegate.failedLogin(message: response.message)
+                        default: delegate.failedLogin(message: response.message)
+                            print(response.message as Any)
                         }
                     }
-
                 case .failure(let error):
                     print(error.localizedDescription)
-                    print("서버와의 연결이 원활하지 않습니다")
+                    delegate.failedLogin(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
     }
 }
+
+//if (!response.isSuccess) {
+//switch response.code {
+//case 2001: print("이메일 값 누락")
+//case 2004: print("비밀번호 값 누락")
+//case 2002: print("비밀번호는 6~20자리를 입력해주세요.")
+//case 2003: print("이메일 형식 에러")
+//case 2019: print("비밀번호 형식 에러")
+//case 3003: print("회원가입된 이메일이 아님")
+//case 3004: print("비밀번호가 다릅니다.")
+//case 3006: print("탈퇴한 계정입니다.")
+//case 3023: print("이미 로그인된 상태입니다.")
+//case 4000: print("로그인 실패")
+//default: break
+//}
+//}
+//
+//case .failure(let error):
+//print(error.localizedDescription)
+//print("서버와의 연결이 원활하지 않습니다")
