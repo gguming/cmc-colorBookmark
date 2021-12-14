@@ -71,9 +71,7 @@ class MemberLoginViewController: UIViewController {
     }
     
     func PasswordEditing() {
-        print("하하")
         if PasswordTextField.isEditing {
-            print("카캌")
             PasswordTextField.isSecureTextEntry = true
         }
     }
@@ -88,5 +86,11 @@ extension MemberLoginViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         changeRootViewController(vc)
+    }
+    
+    func failedLogin(message: String) {
+        print("------>>>>\(message)")
+        presentBottomAlert(message: message)
+        
     }
 }
