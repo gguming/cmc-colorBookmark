@@ -36,7 +36,7 @@
                             <constraint firstAttribute="width" constant="90" id="eZa-nL-6qe"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="imageSample"/>
+                        <state key="normal" image="309"/>
                         <connections>
                             <action selector="addPhotoTapped:" destination="PaB-gf-toj" eventType="touchUpInside" id="Dug-ox-458"/>
                         </connections>
@@ -59,6 +59,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="imageSample" width="118" height="118"/>
+        <image name="309" width="118" height="118"/>
     </resources>
 </document>

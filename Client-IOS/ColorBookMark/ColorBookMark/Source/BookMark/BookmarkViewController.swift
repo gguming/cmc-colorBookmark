@@ -95,6 +95,8 @@ extension BookmarkViewController{
         
         print("------>>>>\(message)")
         presentBottomAlert(message: message)
+        bookmarks = []
+        tableview.reloadData()
         
     }
     

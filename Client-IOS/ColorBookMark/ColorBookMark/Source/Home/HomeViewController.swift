@@ -30,6 +30,7 @@ class HomeViewController: BaseViewController {
     }
     @IBAction func CalenderButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CalenderViewController") as! CalenderViewController
+        vc.nonColorDelegate = self
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.frame.height * 0.6
         present(bottomSheet, animated: true, completion: nil)
@@ -70,9 +71,7 @@ class HomeViewController: BaseViewController {
         print("시작화면 닉네임 값")
         print(Constant.nickname as Any)
         print(Constant.jwt as Any)
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "CalenderViewController") as? CalenderViewController else {return}
-//        vc.selectedDelegate = self
+        CalenderButton.reloadInputViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,7 +140,7 @@ class HomeViewController: BaseViewController {
 
     
     private func calendarSetUI(){
-        print("bbbbbbbbb")
+        print("@@@@")
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy . MM . dd  "
@@ -279,7 +278,19 @@ extension HomeViewController: ColorHomeCollectionDelegate, SelectedCalendarDeleg
     }
 }
 
-extension HomeViewController: EmployeePickerDelegate {
+extension HomeViewController: EmployeePickerDelegate, NonColorDelegate {
+    func selectNonColorDate(dateWithDot: String) {
+        print("LLLLLLLL")
+        let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+        let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
+        let calenderText = NSMutableAttributedString()
+        calenderText.append(NSAttributedString(string: dateWithDot, attributes: generalAttributes))
+        CalenderButton.setAttributedTitle(calenderText, for: .normal)
+        CalenderView.layer.cornerRadius = 25
+        CalenderButton.reloadInputViews()
+    }
+    
     func employeeAssigned() {
         self.dismiss(animated: true, completion: {
            print("GGGGGG")

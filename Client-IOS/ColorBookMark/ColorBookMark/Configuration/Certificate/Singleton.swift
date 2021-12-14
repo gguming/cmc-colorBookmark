@@ -57,3 +57,10 @@ class ModifyDetailInfo {
     
     private init() {}
 }
+
+class DatelInfo {
+    static let shared = DatelInfo()
+    var date: String?
+    
+    private init() {}
+}

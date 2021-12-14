@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "filename" : "362.png",
       "idiom" : "universal",
-      "filename" : "iconCircleStory.png",
       "scale" : "1x"
     },
     {
-      "scale" : "2x",
-      "filename" : "iconCircleStory@2x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "362@2x.png",
+      "scale" : "2x"
     },
     {
       "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "iconCircleStory@3x.png"
+      "filename" : "362@3x.png"
     }
   ],
   "info" : {
