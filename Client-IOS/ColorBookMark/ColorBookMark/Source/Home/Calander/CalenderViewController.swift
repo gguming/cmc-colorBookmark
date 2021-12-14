@@ -14,10 +14,15 @@ protocol SelectedCalendarDelegate: AnyObject {
     func makeNewDiary(date: String)
 }
 
+protocol NonColorDelegate {
+    func selectNonColorDate(dateWithDot: String)
+}
+
 class CalenderViewController: UIViewController {
     var calendarData: [CalendarResult]?
     var bookmarks: [BookMarks]?
     weak var selectedDelegate: SelectedCalendarDelegate?
+    var nonColorDelegate: NonColorDelegate?
     
     lazy var calendarDataManager: CalenderDataManager = CalenderDataManager()
     lazy var calendarLimitDataManager: CalenderLimitDataManager = CalenderLimitDataManager()
@@ -273,15 +278,19 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     pvc.present(vc, animated: false, completion: nil)
                 }
             }
-//            else {
-//                let selectedDate = calendarData?[indexPath.item - startDate].date
-//                let dateResult = selectedDate!.replacingOccurrences(of: "-", with: ".")
-//                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-//                guard let HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-////                HomeVC.selectedDelegate = self
-//                selectedDelegate?.makeNewDiary(date: dateResult)
-//                dismiss(animated: false, completion: nil)
-//            }
+            else {
+                let selectedDate = calendarData?[indexPath.item - startDate].date
+                var dateResult = selectedDate!.replacingOccurrences(of: "-", with: ".")
+                dateResult += "  "
+                dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 8))
+                dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 7))
+                dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 5))
+                dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 4))
+                DatelInfo.shared.date = selectedDate
+
+                nonColorDelegate?.selectNonColorDate(dateWithDot: dateResult)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
 }
