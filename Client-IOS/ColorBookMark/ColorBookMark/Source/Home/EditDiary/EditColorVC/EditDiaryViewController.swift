@@ -9,12 +9,18 @@ import UIKit
 import YPImagePicker
 import FirebaseStorage
 
+protocol EmployeePickerDelegate {
+    func employeeAssigned()
+}
+
 class EditDiaryViewController: UIViewController  {
     var recordUrl: String?
     var pickedImg: [UIImage] = []
     var imgUrls: [String] = []
     var colors: [Colors]?
     let storage = Storage.storage().reference()
+    
+     var emdelegate: EmployeePickerDelegate?
     
     lazy var postDataManager: PostDiaryDataManager = PostDiaryDataManager()
     @IBOutlet var tableview: UITableView!
@@ -55,7 +61,6 @@ class EditDiaryViewController: UIViewController  {
         }
         request.color = colorInfo.color
         request.colorName = colorInfo.colorName
-        print("시작시작시작시작시작")
         if !pickedImg.isEmpty {
                 
             for img in 0..<pickedImg.count{
@@ -148,7 +153,8 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate {
+    
     func deletePhoto(index: Int) {
         pickedImg.remove(at: index)
         tableview.reloadData()
@@ -205,7 +211,12 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     func dismissEditDiary() {
         let recordInfo = RecordInfo.shared
         recordInfo.recordURL = nil
-        self.dismiss(animated: true, completion: nil)
+        emdelegate?.employeeAssigned()
+        dismiss(animated: false, completion: nil)
+//        self.dismiss(animated: true, completion: {
+//            self.
+//
+//        })
     }
     
    

@@ -17,19 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen" translatesAutoresizingMaskIntoConstraints="NO" id="6dh-ZB-7eH">
-                                <rect key="frame" x="132" y="347.5" width="150" height="211"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="362" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-Gd-EYf">
+                                <rect key="frame" x="169.5" y="400.5" width="75" height="105.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210.59999999999999" id="Ldq-oE-Ora"/>
-                                    <constraint firstAttribute="width" constant="150" id="eWw-2J-PXS"/>
+                                    <constraint firstAttribute="width" secondItem="Lyf-Gd-EYf" secondAttribute="height" multiplier="150:210.6" id="lje-MV-9sL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6dh-ZB-7eH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6he-Ip-nmT"/>
-                            <constraint firstItem="6dh-ZB-7eH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MOI-V8-N9J"/>
+                            <constraint firstItem="Lyf-Gd-EYf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5OE-7V-XXq"/>
+                            <constraint firstItem="Lyf-Gd-EYf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eLk-Wr-THg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash-screen" width="150" height="211"/>
+        <image name="362" width="75" height="105.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

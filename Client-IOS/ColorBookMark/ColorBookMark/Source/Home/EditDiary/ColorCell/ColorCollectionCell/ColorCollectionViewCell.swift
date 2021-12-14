@@ -31,30 +31,51 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
 
     override var isSelected: Bool {
-        
-        
-            didSet {
-                if isSelected {
-                    colorView.isHidden = true
-                    view_1.isHidden = false
-                    view_2.isHidden = false
-                    view_3.isHidden = false
-                    view_1.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
-                    view_2.backgroundColor = UIColor.white
-                    view_3.backgroundColor = colorView.backgroundColor
-                    view_1.layer.cornerRadius = view_1.frame.width/2
-                    view_2.layer.cornerRadius = view_2.frame.width/2
-                    view_3.layer.cornerRadius = view_3.frame.width/2
-                    
-                }
-                else {
-                    colorView.isHidden = false
-                    view_1.isHidden = true
-                    view_2.isHidden = true
-                    view_3.isHidden = true
-                }
+
+        didSet {
+            if isSelected {
+                colorView.isHidden = true
+                view_1.isHidden = false
+                view_2.isHidden = false
+                view_3.isHidden = false
+                view_1.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
+                view_2.backgroundColor = UIColor.white
+                view_3.backgroundColor = colorView.backgroundColor
+                view_1.layer.cornerRadius = view_1.frame.width/2
+                view_2.layer.cornerRadius = view_2.frame.width/2
+                view_3.layer.cornerRadius = view_3.frame.width/2
+            }
             
+            else {
+                colorView.isHidden = false
+                view_1.isHidden = true
+                view_2.isHidden = true
+                view_3.isHidden = true
+            }
+
         }
+    }
+    
+    
+    func selectedColor() {
+        colorView.isHidden = true
+        view_1.isHidden = false
+        view_2.isHidden = false
+        view_3.isHidden = false
+        view_1.backgroundColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0.4352941176, alpha: 1)
+        view_2.backgroundColor = UIColor.white
+        view_3.backgroundColor = colorView.backgroundColor
+        view_1.layer.cornerRadius = view_1.frame.width/2
+        view_2.layer.cornerRadius = view_2.frame.width/2
+        view_3.layer.cornerRadius = view_3.frame.width/2
+    }
+    
+    func deSelectedColor() {
+        print("FDF")
+        colorView.isHidden = false
+        view_1.isHidden = true
+        view_2.isHidden = true
+        view_3.isHidden = true
     }
     
     @objc func EditColorCircle() {
@@ -95,4 +116,14 @@ class ColorCollectionViewCell: UICollectionViewCell {
         deleteButton.isUserInteractionEnabled = true
     }
 
+}
+
+extension ColorCollectionViewCell: EditBtnColorDelegate {
+    func dismissColorCell() {
+        print("셀델리겟")
+        colorView.isHidden = false
+        view_1.isHidden = true
+        view_2.isHidden = true
+        view_3.isHidden = true
+    }
 }

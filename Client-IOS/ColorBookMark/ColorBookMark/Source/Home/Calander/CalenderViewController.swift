@@ -33,6 +33,28 @@ class CalenderViewController: UIViewController {
     var testArray = [Int](repeating: 0, count: 31)
     var date: String?
     
+    func hexStringToUIColor (hex:String) -> UIColor {
+            var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+            if (cString.hasPrefix("#")) {
+                cString.remove(at: cString.startIndex)
+            }
+
+            if ((cString.count) != 6) {
+                return UIColor.gray
+            }
+
+            var rgbValue:UInt64 = 0
+            Scanner(string: cString).scanHexInt64(&rgbValue)
+
+            return UIColor(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: CGFloat(1.0)
+            )
+        }
+    
     @IBOutlet weak var PrevButtonImage: UIImageView!
     @IBOutlet weak var PrevButton: UIButton!
     @IBAction func CancelButtonTapped(_ sender: Any) {
@@ -205,10 +227,11 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 else {
                     let CircleColor = calendarData?[indexPath.item - startDate].color! ?? "#000000"
                     print(CircleColor)
+                    let CircleUIColor = hexStringToUIColor(hex: CircleColor)
                     filled.append(filledIndex)
                     testArray[indexPath.item - startDate] = filledIndex
                     filledIndex += 1
-                    cell.CircleImage.tintColor = UIColor(hex: CircleColor)
+                    cell.CircleImage.tintColor = CircleUIColor
                     cell.DateLabel.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
                 }
             }
@@ -241,6 +264,7 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 
                 vc.modalPresentationStyle = .fullScreen
                 vc.diaryId = bookmarks?[testIndex].selectMonthDiary?.diaryView?.diaryId
+                vc.date = bookmarks?[testIndex].selectMonthDiary?.diaryView?.date
                 vc.index = testIndex - 1
                 vc.view.backgroundColor = UIColor.white
 
@@ -249,15 +273,15 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                     pvc.present(vc, animated: false, completion: nil)
                 }
             }
-            else {
-                let selectedDate = calendarData?[indexPath.item - startDate].date
-                let dateResult = selectedDate!.replacingOccurrences(of: "-", with: ".")
-                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                guard let HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-//                HomeVC.selectedDelegate = self
-                selectedDelegate?.makeNewDiary(date: dateResult)
-                dismiss(animated: false, completion: nil)
-            }
+//            else {
+//                let selectedDate = calendarData?[indexPath.item - startDate].date
+//                let dateResult = selectedDate!.replacingOccurrences(of: "-", with: ".")
+//                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//                guard let HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
+////                HomeVC.selectedDelegate = self
+//                selectedDelegate?.makeNewDiary(date: dateResult)
+//                dismiss(animated: false, completion: nil)
+//            }
         }
     }
 }
