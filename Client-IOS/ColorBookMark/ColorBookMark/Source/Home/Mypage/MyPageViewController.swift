@@ -81,7 +81,7 @@ class MyPageViewController: BaseViewController, UITableViewDelegate, UITableView
         case 0:
             if Constant.setting_1 == "Y" {
                 let mypageStoryboard = UIStoryboard(name: "Mypage", bundle: nil)
-                let vc = mypageStoryboard.instantiateViewController(withIdentifier: "MyPageMiniCodeViewController")
+                let vc = mypageStoryboard.instantiateViewController(withIdentifier: "NickNameMiniCodeViewController")
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             }

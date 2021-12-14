@@ -50,6 +50,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
                 view_2.isHidden = true
                 view_3.isHidden = true
             }
+
         }
     }
     
@@ -91,4 +92,14 @@ class ColorCollectionViewCell: UICollectionViewCell {
         deleteButton.isUserInteractionEnabled = true
     }
 
+}
+
+extension ColorCollectionViewCell: EditBtnColorDelegate {
+    func dismissColorCell() {
+        print("셀델리겟")
+        colorView.isHidden = false
+        view_1.isHidden = true
+        view_2.isHidden = true
+        view_3.isHidden = true
+    }
 }

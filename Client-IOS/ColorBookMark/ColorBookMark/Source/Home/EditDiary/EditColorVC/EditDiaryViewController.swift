@@ -55,7 +55,6 @@ class EditDiaryViewController: UIViewController  {
         }
         request.color = colorInfo.color
         request.colorName = colorInfo.colorName
-        print("시작시작시작시작시작")
         if !pickedImg.isEmpty {
                 
             for img in 0..<pickedImg.count{
@@ -148,7 +147,8 @@ class EditDiaryViewController: UIViewController  {
 
 }
 
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate{
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate {
+    
     func deletePhoto(index: Int) {
         pickedImg.remove(at: index)
         tableview.reloadData()
