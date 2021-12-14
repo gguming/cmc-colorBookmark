@@ -493,10 +493,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gUt-Ml-Lsv">
-                                <rect key="frame" x="32" y="562" width="350" height="200"/>
+                                <rect key="frame" x="32" y="552" width="350" height="210"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="diI-ag-eIL"/>
+                                    <constraint firstAttribute="height" constant="210" id="diI-ag-eIL"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="brv-08-qXl">
                                     <size key="itemSize" width="90" height="77"/>
@@ -769,10 +769,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a0K-c0-Axr">
-                                <rect key="frame" x="32" y="562" width="350" height="200"/>
+                                <rect key="frame" x="32" y="552" width="350" height="210"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="kbt-zT-LEP"/>
+                                    <constraint firstAttribute="height" constant="210" id="kbt-zT-LEP"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oXN-97-fuR">
                                     <size key="itemSize" width="128" height="128"/>
