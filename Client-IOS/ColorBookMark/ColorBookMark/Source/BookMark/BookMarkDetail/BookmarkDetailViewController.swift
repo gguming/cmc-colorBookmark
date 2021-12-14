@@ -57,6 +57,8 @@ class BookmarkDetailViewController: UIViewController {
     private func modifyDiary() {
         let modifyDetailInfo = ModifyDetailInfo.shared
         var request = ModifyRequest()
+        request.colorName = bookmarkDetail?.diary?.diaryContents?.colorName
+        request.color = bookmarkDetail?.diary?.diaryContents?.color
         request.diaryId = diaryId
         if modifyDetailInfo.text == nil {
             request.content = modifyDetailInfo.text
