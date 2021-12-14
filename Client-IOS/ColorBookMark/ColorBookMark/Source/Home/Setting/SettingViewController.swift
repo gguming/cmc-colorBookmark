@@ -40,6 +40,11 @@ class SettingViewController: BaseViewController, UITableViewDelegate, UITableVie
         SettingTableview.separatorStyle = .none
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SettingTableview.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }

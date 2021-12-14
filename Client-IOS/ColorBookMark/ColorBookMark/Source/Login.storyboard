@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVy-kr-ov3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVy-kr-ov3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -911,14 +911,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-7F-AwB">
+                                <rect key="frame" x="376.5" y="44" width="17.5" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="xBtnTapped:" destination="bAs-Ak-C9S" eventType="touchUpInside" id="7Ir-Qd-5K0"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-5f-KC4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="776"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho5-t8-xkZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="4802"/>
+                                        <rect key="frame" x="0.0" y="91" width="414" height="4822"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUN-ml-gUN">
-                                                <rect key="frame" x="10" y="20" width="394" height="4762"/>
+                                                <rect key="frame" x="10" y="40" width="394" height="4762"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">색갈피 서비스 이용 약관
 
@@ -1085,7 +1094,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="RUN-ml-gUN" firstAttribute="top" secondItem="Ho5-t8-xkZ" secondAttribute="top" constant="20" id="Exe-lp-RFE"/>
+                                            <constraint firstItem="RUN-ml-gUN" firstAttribute="top" secondItem="Ho5-t8-xkZ" secondAttribute="top" constant="40" id="Exe-lp-RFE"/>
                                             <constraint firstAttribute="bottom" secondItem="RUN-ml-gUN" secondAttribute="bottom" constant="20" id="cOd-S1-CsT"/>
                                             <constraint firstAttribute="trailing" secondItem="RUN-ml-gUN" secondAttribute="trailing" constant="10" id="dJc-hl-Edg"/>
                                             <constraint firstItem="RUN-ml-gUN" firstAttribute="leading" secondItem="Ho5-t8-xkZ" secondAttribute="leading" constant="10" id="kWr-Oe-VFc"/>
@@ -1105,12 +1114,15 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7BW-VS-qgb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YY7-7F-AwB" firstAttribute="top" secondItem="7BW-VS-qgb" secondAttribute="top" id="8PA-Xg-4qo"/>
+                            <constraint firstItem="7BW-VS-qgb" firstAttribute="trailing" secondItem="YY7-7F-AwB" secondAttribute="trailing" constant="20" id="EDl-iL-cwd"/>
                             <constraint firstItem="7BW-VS-qgb" firstAttribute="bottom" secondItem="SLa-5f-KC4" secondAttribute="bottom" id="FMF-p2-Gn2"/>
                             <constraint firstItem="7BW-VS-qgb" firstAttribute="trailing" secondItem="SLa-5f-KC4" secondAttribute="trailing" id="I4R-3b-6Xr"/>
-                            <constraint firstItem="SLa-5f-KC4" firstAttribute="top" secondItem="7BW-VS-qgb" secondAttribute="top" id="esY-8a-hSH"/>
                             <constraint firstItem="SLa-5f-KC4" firstAttribute="leading" secondItem="7BW-VS-qgb" secondAttribute="leading" id="itT-HB-34e"/>
+                            <constraint firstItem="SLa-5f-KC4" firstAttribute="top" secondItem="YY7-7F-AwB" secondAttribute="bottom" constant="20" id="ivh-92-SIQ"/>
+                            <constraint firstItem="Ho5-t8-xkZ" firstAttribute="top" secondItem="YY7-7F-AwB" secondAttribute="bottom" id="wiG-Zz-OcU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1129,8 +1141,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZA-zq-99e">
+                                <rect key="frame" x="378" y="44" width="16" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="iconIonicIosClose"/>
+                                <connections>
+                                    <action selector="xBtnTapped:" destination="KwX-wV-cec" eventType="touchUpInside" id="RtN-RX-5Vz"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-6O-OBO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="66" width="414" height="796"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-sC-DPX">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="5142"/>
@@ -1375,9 +1395,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mSJ-GI-mCf" firstAttribute="trailing" secondItem="QIe-6O-OBO" secondAttribute="trailing" id="19B-e0-VcU"/>
+                            <constraint firstItem="mSJ-GI-mCf" firstAttribute="top" secondItem="eZA-zq-99e" secondAttribute="top" id="9GT-KP-vZ5"/>
                             <constraint firstItem="mSJ-GI-mCf" firstAttribute="bottom" secondItem="QIe-6O-OBO" secondAttribute="bottom" id="E9s-fI-m0L"/>
-                            <constraint firstItem="QIe-6O-OBO" firstAttribute="top" secondItem="mSJ-GI-mCf" secondAttribute="top" id="WoJ-wS-HD9"/>
+                            <constraint firstItem="mSJ-GI-mCf" firstAttribute="trailing" secondItem="eZA-zq-99e" secondAttribute="trailing" constant="20" id="WIk-ce-Gme"/>
                             <constraint firstItem="QIe-6O-OBO" firstAttribute="leading" secondItem="mSJ-GI-mCf" secondAttribute="leading" id="g9p-3X-pz0"/>
+                            <constraint firstItem="QIe-6O-OBO" firstAttribute="top" secondItem="eZA-zq-99e" secondAttribute="bottom" id="vU2-Xd-sjO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1386,7 +1408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wH-Eg-oJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841" y="2131"/>
+            <point key="canvasLocation" x="2840.579710144928" y="2130.8035714285716"/>
         </scene>
     </scenes>
     <resources>
@@ -1394,9 +1416,11 @@
         <image name="360" width="44" height="44"/>
         <image name="361" width="44" height="44"/>
         <image name="97" width="150" height="150"/>
+        <image name="iconIonicIosClose" width="16" height="16"/>
         <image name="login_back" width="44" height="44"/>
         <image name="login_cancel" width="44" height="44"/>
         <image name="login_icon" width="40" height="52"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -60,25 +60,25 @@ class SettingTableViewCell: UITableViewCell {
         TitleLabel.adjustsFontSizeToFitWidth = true
         TitleLabel.minimumScaleFactor = 0.5
         
-        if SettingSwitch.isOn {
-            print("켜져있음")
-            onOff = "ON"
-            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
-            let onOffString = NSMutableAttributedString()
-            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
-            OnoffLabel.attributedText = onOffString
-            saveYesInUserdefaults()
-        }
-        
-        else {
-            print("꺼져있음")
-            onOff = "OFF"
-            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
-            let onOffString = NSMutableAttributedString()
-            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
-            OnoffLabel.attributedText = onOffString
-            saveNoInUserdefaults()
-        }
+//        if SettingSwitch.isOn {
+//            print("켜져있음")
+//            onOff = "ON"
+//            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: pinkColor, .font: boldFont]
+//            let onOffString = NSMutableAttributedString()
+//            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+//            OnoffLabel.attributedText = onOffString
+//            saveYesInUserdefaults()
+//        }
+//        
+//        else {
+//            print("꺼져있음")
+//            onOff = "OFF"
+//            let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: grayColor, .font: boldFont]
+//            let onOffString = NSMutableAttributedString()
+//            onOffString.append(NSAttributedString(string: onOff, attributes: generalAttributes))
+//            OnoffLabel.attributedText = onOffString
+//            saveNoInUserdefaults()
+//        }
     }
     
     func saveYesInUserdefaults() {
