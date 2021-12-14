@@ -32,14 +32,15 @@ class LoginMainViewController: UIViewController {
     let changedTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+ 
         UnderLineView.isHidden = true
         ContinueButton.isEnabled = false
         ContinueButton.layer.cornerRadius = 22
         EmailTextField.layer.cornerRadius = 5
         self.EmailTextField.addTarget(self, action: #selector(self.UnderlineTextField(_:)), for: .editingChanged)
         
-        super.viewDidLoad()
- 
+        
     }
     
     @objc func UnderlineTextField(_ sender: Any?) {
