@@ -26,8 +26,9 @@ class MiniCodeViewController: BaseViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var MiniCodeCollectionview: UICollectionView!
     
     @IBAction func BackToSettingVC(_ sender: Any) {
+        Constant.setting_1 = "N"
         dismiss(animated: true, completion: { [self] in
-            Constant.setting_1 = "N"
+            
             let settingInput = SettingRequest(miniCodeStatus:  Constant.setting_1)
             dataManager.changeSettingValue(settingInput)
         })

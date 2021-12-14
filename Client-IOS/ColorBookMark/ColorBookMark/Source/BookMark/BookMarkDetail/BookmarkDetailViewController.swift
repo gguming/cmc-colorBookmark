@@ -50,9 +50,6 @@ class BookmarkDetailViewController: UIViewController {
         tableview.register(UINib(nibName: "RecordHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "RecordHaveTableViewCell")
         
         
-        tableview.register(UINib(nibName: "ModifyImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyImageCellTableViewCell")
-        tableview.register(UINib(nibName: "ModifyRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyRecordTableViewCell")
-        
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
         tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
         
@@ -192,18 +189,14 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 
             } else {
                 
-                if modifyDetailInfo.text == nil {
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
-                    cell.layer.cornerRadius = 8
-                    
-                    return cell
-                } else {
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
-                    cell.textView.isEditable = true
-                    
-                    cell.textView.text = modifyDetailInfo.text
-                    return cell
-                }
+                
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
+                cell.textView.isEditable = true
+                
+                cell.textView.text = modifyDetailInfo.text
+                return cell
+                
+                
                 
             }
             

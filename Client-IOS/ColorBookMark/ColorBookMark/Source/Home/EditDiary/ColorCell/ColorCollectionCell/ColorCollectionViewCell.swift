@@ -12,6 +12,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
     weak var colorDelegate: ColorCollectionViewCellDelegate?
     var index: Int = 0
     var myColorId = 0
+    var clickMode: Bool = false
     
     @IBOutlet weak var view_1: UIView!
     @IBOutlet weak var view_2: UIView!
@@ -30,6 +31,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
 
     override var isSelected: Bool {
+
         didSet {
             if isSelected {
                 colorView.isHidden = true
