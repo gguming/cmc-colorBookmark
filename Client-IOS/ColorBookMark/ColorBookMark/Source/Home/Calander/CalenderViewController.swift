@@ -287,7 +287,6 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 5))
                 dateResult.insert(" ", at: dateResult.index(dateResult.startIndex, offsetBy: 4))
                 DatelInfo.shared.date = selectedDate
-
                 nonColorDelegate?.selectNonColorDate(dateWithDot: dateResult)
                 self.dismiss(animated: true, completion: nil)
             }
