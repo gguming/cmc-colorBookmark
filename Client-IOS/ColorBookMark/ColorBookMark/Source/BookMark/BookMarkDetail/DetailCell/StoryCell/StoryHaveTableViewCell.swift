@@ -14,6 +14,7 @@ class StoryHaveTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textView.delegate = self
         textView.isEditable = false
         backView.layer.cornerRadius = 8
         backView.clipsToBounds = true
@@ -26,4 +27,15 @@ class StoryHaveTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension StoryHaveTableViewCell: UITextViewDelegate {
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//
+//    }
+    func textViewDidChange(_ textView: UITextView) {
+        let modifyInfo = ModifyDetailInfo.shared
+        modifyInfo.text = textView.text
+        print(modifyInfo.text)
+    }
 }

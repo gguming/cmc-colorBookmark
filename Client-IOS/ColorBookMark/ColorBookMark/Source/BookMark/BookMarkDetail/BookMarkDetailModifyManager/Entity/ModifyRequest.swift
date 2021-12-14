@@ -12,6 +12,6 @@ struct ModifyRequest: Encodable {
     var recordContent: String?
     var color: String?
     var colorName: String?
-    var diaryId: Int?
+    var date: String?
     var diaryImgUrl: [String]?
 }

@@ -18,11 +18,18 @@ class BookmarkDetailViewController: UIViewController {
     
     var bookmarkDetail: Diary?
     var pickedImg: [UIImage]?
-    var addedImg: [String]?
+    var addedImg: [String] = []
     var index: Int?
+    
+    var delegateDeleteDiaryinList: DelegateDeleteDiary?
+    lazy var bookmarkModifyDataManager: BookMarkModifyDataManager = BookMarkModifyDataManager()
     lazy var bookmarkDetilDataManager: BookMarkDetailDataManager = BookMarkDetailDataManager()
     lazy var deleteDiaryDataManager: BookMakrDetailDeleteDataManager = BookMakrDetailDeleteDataManager()
     @IBAction func backBtnTapped(_ sender: Any) {
+        let modifyDetailInfo = ModifyDetailInfo.shared
+        modifyDetailInfo.text = ""
+        modifyDetailInfo.addImg = []
+        modifyDetailInfo.record = ""
         self.dismiss(animated: false, completion: nil)
     }
     @IBOutlet weak var tableview: UITableView!
@@ -42,16 +49,19 @@ class BookmarkDetailViewController: UIViewController {
         tableview.register(UINib(nibName: "ImageHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageHaveTableViewCell")
         tableview.register(UINib(nibName: "RecordHaveTableViewCell", bundle: nil), forCellReuseIdentifier: "RecordHaveTableViewCell")
         
-        tableview.register(UINib(nibName: "ModifyStoryTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyStoryTableViewCell")
+        
         tableview.register(UINib(nibName: "ModifyImageCellTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyImageCellTableViewCell")
         tableview.register(UINib(nibName: "ModifyRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyRecordTableViewCell")
         
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
         tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
-        bookmarkDetilDataManager.getBookMarkDetail(diaryId: diaryId ?? 0, delegate: self)
+        
         dayView.layer.cornerRadius = 8
         
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        bookmarkDetilDataManager.getBookMarkDetail(diaryId: diaryId ?? 0, delegate: self)
     }
     
     private func modifyDiary() {
@@ -59,12 +69,34 @@ class BookmarkDetailViewController: UIViewController {
         var request = ModifyRequest()
         request.colorName = bookmarkDetail?.diary?.diaryContents?.colorName
         request.color = bookmarkDetail?.diary?.diaryContents?.color
-        request.diaryId = diaryId
+        request.date = date
         if modifyDetailInfo.text == nil {
+            request.content = "iplagkeas"
+        } else {
             request.content = modifyDetailInfo.text
+        }
+        //
+        let count = modifyDetailInfo.addImg?.count ?? 0
+        if count == 0 {
+            request.diaryImgUrl = []
         } else {
             
+            for i in 0..<count {
+                let url = modifyDetailInfo.addImg?[i].diaryImgUrl ?? ""
+                print(url)
+                self.addedImg.append(url)
+                print(i)
+            }
+            request.diaryImgUrl = addedImg
         }
+        
+        if modifyDetailInfo.record == nil {
+            request.recordContent = "iplagkeas"
+        }
+        
+        bookmarkModifyDataManager.diaryModify(request, delegate: self)
+        
+        
         
         
     }
@@ -88,14 +120,31 @@ extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg, Del
     }
     
     func deleteDiary() {
-        let request = DeleteDiaryRequest()
-        request.date = self.date
-        deleteDiaryDataManager.diaryDelete(request: request , delegate: self)
+        let alert = UIAlertController(title: "다이어리를 삭제하시겠습니까?", message: "삭제하게 되면 복구할 수 없습니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "승인", style: .default) { _ in
+            let request = DeleteDiaryRequest()
+            request.date = self.date
+            self.deleteDiaryDataManager.diaryDelete(request: request , delegate: self)
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func doneModifytMode() {
-        modifyMode = false
-        tableview.reloadData()
+        
+        let alert = UIAlertController(title: "다이어리를 수정하시겠습니까?", message: "수정하게 되면 복구할 수 없습니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "승인", style: .default) { _ in
+            self.modifyMode = false
+            self.modifyDiary()
+            self.tableview.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -136,17 +185,26 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
                     
-                    
+                    cell.textView.isEditable = false
                     cell.textView.text = modifyDetailInfo.text
                     return cell
                 }
                 
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
-                cell.textView.isEditable = true
                 
-                cell.textView.text = modifyDetailInfo.text
-                return cell
+                if modifyDetailInfo.text == nil {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell()}
+                    cell.layer.cornerRadius = 8
+                    
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryHaveTableViewCell", for: indexPath) as? StoryHaveTableViewCell else {return UITableViewCell()}
+                    cell.textView.isEditable = true
+                    
+                    cell.textView.text = modifyDetailInfo.text
+                    return cell
+                }
+                
             }
             
             
@@ -276,12 +334,14 @@ extension BookmarkDetailViewController {
     
     func failedToGetBookMarkDetail(message: String) {
         print("------>>>>\(message)")
+        presentBottomAlert(message: message)
         
     }
     
     func didSuccessModifyDetail(_ result: ModifyResponse) {
         print("------>\(result)")
-        
+        addedImg = []
+        presentBottomAlert(message: result.message)
         
         
         
@@ -289,22 +349,20 @@ extension BookmarkDetailViewController {
     
     func failedToModifyDetail(message: String) {
         print("------>>>>\(message)")
+        presentBottomAlert(message: message)
         
     }
     
     func didSuccessDelete(_ result: DeleteDiaryResponse) {
         print("------>\(result)")
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
-        vc.presentBottomAlert(message: result.message ?? "")
-        vc.bookmarks?.remove(at: index!)
-        vc.tableview.reloadData()
-        self.dismiss(animated: true) {
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
-            vc.presentBottomAlert(message: result.message ?? "")
-            
+        
+        
+        let alert = UIAlertController(title: "다이어리가 삭제되었습니다.", message: "", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+            self.dismiss(animated: false, completion: nil)
         }
-        
-        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)  
         
     }
     
@@ -356,4 +414,8 @@ extension BookmarkDetailViewController {
             alpha: CGFloat(1.0)
         )
     }
+}
+
+protocol DelegateDeleteDiary {
+    func deleteDiaryinList(index: Int, message: String)
 }

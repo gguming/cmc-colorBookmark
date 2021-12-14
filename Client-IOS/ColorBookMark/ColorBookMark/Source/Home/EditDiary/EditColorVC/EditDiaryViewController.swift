@@ -9,12 +9,6 @@ import UIKit
 import YPImagePicker
 import FirebaseStorage
 
-protocol ColorCellDeSelectDelegate: AnyObject {
-    
-    // 2 원하는 메소드를 만든다.
-    func deSelectColorCell(index: IndexPath)
-}
-
 class EditDiaryViewController: UIViewController  {
     var recordUrl: String?
     var pickedImg: [UIImage] = []
@@ -43,17 +37,7 @@ class EditDiaryViewController: UIViewController  {
         
     }
     
-//    private func currentMonth()
-
-}
-
-extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate{
-    func deletePhoto(index: Int) {
-        pickedImg.remove(at: index)
-        tableview.reloadData()
-    }
-    
-    func addDiary() {
+    func uploadDiary() {
         showIndicator()
         let uuid = UUID().uuidString
         let recordInfo = RecordInfo.shared
@@ -154,6 +138,33 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
             }
         }
         
+        
+        
+        print("끝끝끝끝끝")
+        
+    }
+    
+//    private func currentMonth()
+
+}
+
+extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoInEmptyDelegate, RecordDelegate, recordSaveDelegate, DeleteRecordDelegate, AddDiaryDelegate, DeletePhotoDelegate{
+    func deletePhoto(index: Int) {
+        pickedImg.remove(at: index)
+        tableview.reloadData()
+    }
+    
+    func addDiary() {
+        
+        let alert = UIAlertController(title: "색갈피를 등록하시겠습니까?", message: "승인을 누르시면 등록됩니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "승인", style: .default) { _ in
+            self.uploadDiary()
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func deleteRecord() {
@@ -194,7 +205,6 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     func dismissEditDiary() {
         let recordInfo = RecordInfo.shared
         recordInfo.recordURL = nil
-        //? 
         self.dismiss(animated: true, completion: nil)
     }
     

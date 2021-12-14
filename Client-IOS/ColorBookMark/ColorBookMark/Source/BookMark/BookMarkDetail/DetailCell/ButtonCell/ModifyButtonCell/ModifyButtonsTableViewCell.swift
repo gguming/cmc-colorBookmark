@@ -18,6 +18,7 @@ class ModifyButtonsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.layer.cornerRadius = 8
+        self.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

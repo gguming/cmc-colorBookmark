@@ -26,6 +26,7 @@ class RecordHaveTableViewCell: UITableViewCell, AVAudioPlayerDelegate{
         super.awakeFromNib()
         // Initialization code
         backView.layer.cornerRadius = 8
+        backView.clipsToBounds = true
         progressVIew.layer.cornerRadius = 20
         progressVIew.clipsToBounds = true
         
@@ -38,6 +39,8 @@ class RecordHaveTableViewCell: UITableViewCell, AVAudioPlayerDelegate{
         // Configure the view for the selected state
     }
     @IBAction func deleteBtnTapped(_ sender: Any) {
+        deleteDelegate?.deleteRecord()
+        
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
