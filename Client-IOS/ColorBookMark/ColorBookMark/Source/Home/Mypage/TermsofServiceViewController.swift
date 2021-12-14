@@ -21,4 +21,7 @@ class TermsofServiceViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func xBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -55,8 +55,9 @@ class SigninPasswordViewController: UIViewController {
         PasswordCheckTextField.isEnabled = false
         self.PasswordTextField.addTarget(self, action: #selector(self.UnderlinePasswordTextField(_:)), for: .editingChanged)
         self.PasswordCheckTextField.addTarget(self, action: #selector(self.UnderlinePasswordCheckTextField(_:)), for: .editingChanged)
-        
-        PasswordEditing()
+        PasswordTextField.isSecureTextEntry = true
+        PasswordCheckTextField.isSecureTextEntry = true
+
         super.viewDidLoad()
 
  
@@ -79,6 +80,10 @@ class SigninPasswordViewController: UIViewController {
         if PossiblePassword(password: PasswordTextField.text) {
             PasswordGuideLabel.isHidden = false
             PasswordCheckTextField.isEnabled = true
+        }
+        else {
+            PasswordGuideLabel.isHidden = true
+            PasswordCheckTextField.isEnabled = false
         }
         passwordCheck = PasswordTextField.text
     }
