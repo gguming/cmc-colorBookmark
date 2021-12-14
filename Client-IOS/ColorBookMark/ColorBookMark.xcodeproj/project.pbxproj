@@ -59,7 +59,6 @@
 		A45DF805275383110067021C /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DF804275383110067021C /* AudioViewController.swift */; };
 		A45F0A01274C6B7A00349022 /* EditColorPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */; };
 		A45F0A03274C6BD300349022 /* EditDiaryPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */; };
-		A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */; };
 		A461AD412736D64A0067C6D1 /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */; };
 		A46839E8272E7574005BA79E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E7272E7574005BA79E /* Constant.swift */; };
 		A46839EA272E759C005BA79E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46839E9272E759B005BA79E /* UIColor.swift */; };
@@ -262,7 +261,6 @@
 		A45DF804275383110067021C /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		A45F0A00274C6B7A00349022 /* EditColorPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorPanelLayout.swift; sourceTree = "<group>"; };
 		A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryPanelLayout.swift; sourceTree = "<group>"; };
-		A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A46839E7272E7574005BA79E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A46839E9272E759B005BA79E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -790,7 +788,6 @@
 			isa = PBXGroup;
 			children = (
 				A4D874B1274C822700079B7F /* ColorData */,
-				A461AD3E2736D5B30067C6D1 /* TestHomeViewController.swift */,
 				A461AD402736D64A0067C6D1 /* EditDiaryViewController.swift */,
 				A45F0A02274C6BD300349022 /* EditDiaryPanelLayout.swift */,
 			);
@@ -1484,7 +1481,6 @@
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
-				A461AD3F2736D5B30067C6D1 /* TestHomeViewController.swift in Sources */,
 				A42D4B83275A0EA400D5B9B3 /* StoryHaveTableViewCell.swift in Sources */,
 				E9B76DE927647A8B00BC990F /* TermsofServiceLoginViewController.swift in Sources */,
 			);
