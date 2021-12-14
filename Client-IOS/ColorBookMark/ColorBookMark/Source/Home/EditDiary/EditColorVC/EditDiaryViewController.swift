@@ -9,12 +9,18 @@ import UIKit
 import YPImagePicker
 import FirebaseStorage
 
+protocol EmployeePickerDelegate {
+    func employeeAssigned()
+}
+
 class EditDiaryViewController: UIViewController  {
     var recordUrl: String?
     var pickedImg: [UIImage] = []
     var imgUrls: [String] = []
     var colors: [Colors]?
     let storage = Storage.storage().reference()
+    
+     var emdelegate: EmployeePickerDelegate?
     
     lazy var postDataManager: PostDiaryDataManager = PostDiaryDataManager()
     @IBOutlet var tableview: UITableView!
@@ -205,7 +211,12 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     func dismissEditDiary() {
         let recordInfo = RecordInfo.shared
         recordInfo.recordURL = nil
-        self.dismiss(animated: true, completion: nil)
+        emdelegate?.employeeAssigned()
+        dismiss(animated: false, completion: nil)
+//        self.dismiss(animated: true, completion: {
+//            self.
+//
+//        })
     }
     
    
