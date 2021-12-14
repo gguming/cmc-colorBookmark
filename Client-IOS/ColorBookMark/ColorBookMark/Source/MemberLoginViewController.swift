@@ -49,7 +49,7 @@ class MemberLoginViewController: UIViewController {
         self.PasswordTextField.addTarget(self, action: #selector(self.UnderlineTextField(_:)), for: .editingChanged)
         UnderLineFindPasswordButton()
         super.viewDidLoad()
-        
+        PasswordTextField.isSecureTextEntry = true
         PasswordEditing()
     }
     
