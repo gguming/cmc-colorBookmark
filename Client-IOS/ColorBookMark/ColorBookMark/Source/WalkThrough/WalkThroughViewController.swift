@@ -21,7 +21,7 @@ class WalkThroughViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!
-    var walkthroughList = [UIImage(named: "walkthrough1.png"), UIImage(named: "walkthrough2.png"), UIImage(named: "walkthrough3.png")]
+    var walkthroughList = [UIImage(named: "워크스루1.png"), UIImage(named: "워크스루2.png"), UIImage(named: "워크스루3.png")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

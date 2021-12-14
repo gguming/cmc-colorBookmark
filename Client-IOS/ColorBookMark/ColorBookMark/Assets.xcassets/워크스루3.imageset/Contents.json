@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "walkthrough4.png",
+      "filename" : "워크스루3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "walkthrough4-1.png",
+      "filename" : "워크스루3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "walkthrough4-2.png",
+      "filename" : "워크스루3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
