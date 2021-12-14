@@ -71,7 +71,7 @@ class HomeViewController: BaseViewController {
         print("시작화면 닉네임 값")
         print(Constant.nickname as Any)
         print(Constant.jwt as Any)
-        CalenderButton.reloadInputViews()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
