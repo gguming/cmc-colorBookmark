@@ -20,7 +20,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-jY-nEi">
                         <rect key="frame" x="2" y="2" width="83" height="96"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="imageSample"/>
+                        <state key="normal" image="309"/>
                         <connections>
                             <action selector="addPhotoTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AmH-J9-WiP"/>
                         </connections>
@@ -39,6 +39,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="imageSample" width="118" height="118"/>
+        <image name="309" width="118" height="118"/>
     </resources>
 </document>

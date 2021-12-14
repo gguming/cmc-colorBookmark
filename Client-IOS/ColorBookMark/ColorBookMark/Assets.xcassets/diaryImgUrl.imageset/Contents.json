@@ -1,23 +1,23 @@
 {
   "images" : [
     {
-      "filename" : "diaryImgUrl.png",
-      "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "iconCirclePicture.png",
+      "scale" : "1x",
+      "idiom" : "universal"
     },
     {
-      "filename" : "diaryImgUrl-1.png",
       "idiom" : "universal",
+      "filename" : "iconCirclePicture@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "diaryImgUrl-2.png",
+      "scale" : "3x",
       "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "iconCirclePicture@3x.png"
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
