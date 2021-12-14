@@ -42,14 +42,15 @@ class ColorCollectionViewCell: UICollectionViewCell {
                 view_1.layer.cornerRadius = view_1.frame.width/2
                 view_2.layer.cornerRadius = view_2.frame.width/2
                 view_3.layer.cornerRadius = view_3.frame.width/2
-
             }
+            
             else {
                 colorView.isHidden = false
                 view_1.isHidden = true
                 view_2.isHidden = true
                 view_3.isHidden = true
             }
+
         }
     }
     
@@ -91,4 +92,14 @@ class ColorCollectionViewCell: UICollectionViewCell {
         deleteButton.isUserInteractionEnabled = true
     }
 
+}
+
+extension ColorCollectionViewCell: EditBtnColorDelegate {
+    func dismissColorCell() {
+        print("셀델리겟")
+        colorView.isHidden = false
+        view_1.isHidden = true
+        view_2.isHidden = true
+        view_3.isHidden = true
+    }
 }

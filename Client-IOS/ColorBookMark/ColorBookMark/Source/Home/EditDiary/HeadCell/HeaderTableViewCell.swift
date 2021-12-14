@@ -9,6 +9,7 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
     var delegate: EditBtnDelegate?
+    var colorDelegate: EditBtnColorDelegate?
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var xBtn: UIButton!
@@ -17,6 +18,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     @IBAction func dismissBtnTapped(_ sender: Any) {
         delegate?.dismissEditDiary()
+        colorDelegate?.dismissColorCell()
     }
     
     override func awakeFromNib() {
@@ -42,10 +44,6 @@ protocol EditBtnDelegate {
     func dismissEditDiary()
 }
 
-//extension HeaderTableViewCell: ChangeStateDelegate{
-//    func changeState() {
-//        self.checkState()
-//    }
-//    
-//    
-//}
+protocol EditBtnColorDelegate {
+    func dismissColorCell()
+}
