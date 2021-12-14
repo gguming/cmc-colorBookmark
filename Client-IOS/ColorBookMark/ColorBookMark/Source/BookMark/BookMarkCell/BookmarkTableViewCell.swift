@@ -20,7 +20,7 @@ class BookmarkTableViewCell: UITableViewCell {
     
     @IBOutlet weak var contentCollectionview: UICollectionView!
     
-    var contents: [String]?
+    var contents: [String] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,13 +47,13 @@ class BookmarkTableViewCell: UITableViewCell {
 
 extension BookmarkTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        contents?.count ?? 0
+        contents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkContentsCollectionViewCell", for: indexPath) as? BookMarkContentsCollectionViewCell else {return UICollectionViewCell()}
     
-        cell.contentImg.image = UIImage(named: "\(contents?[indexPath.item] ?? "").png")
+        cell.contentImg.image = UIImage(named: "\(contents[indexPath.item]).png")
         return cell
     }
     

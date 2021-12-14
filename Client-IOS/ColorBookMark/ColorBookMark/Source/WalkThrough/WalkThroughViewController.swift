@@ -21,7 +21,7 @@ class WalkThroughViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!
-    var walkthroughList = [UIImage(named: "walkthrough1.png"), UIImage(named: "walkthrough2.png"), UIImage(named: "walkthrough3.png"), UIImage(named: "walkthrough4.png")]
+    var walkthroughList = [UIImage(named: "walkthrough1.png"), UIImage(named: "walkthrough2.png"), UIImage(named: "walkthrough3.png")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +74,7 @@ extension WalkThroughViewController: UICollectionViewDataSource, UICollectionVie
 extension WalkThroughViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-        if pageControl.currentPage == 3 {
+        if pageControl.currentPage == 2 {
             startBtn.isHidden = false
         } else {
             startBtn.isHidden = true
