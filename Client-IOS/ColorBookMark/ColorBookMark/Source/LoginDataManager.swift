@@ -33,11 +33,15 @@ class LoginDataManager {
                         switch response.code {
                         case 2000..<3000: delegate.failedLogin(message: response.message)
                             print(response.message as Any)
+                            print(response.code)
                         case 3000..<4000: delegate.failedLogin(message: response.message)
                             print(response.message as Any)
-                        case 4000: delegate.failedLogin(message: response.message)
+                            print(response.code)
+                        case 4000: delegate.failedLogin(message: "비밀번호가 일치하지 않습니다")
+                            print(response.code)
                         default: delegate.failedLogin(message: response.message)
                             print(response.message as Any)
+                            print(response.code)
                         }
                     }
                 case .failure(let error):
