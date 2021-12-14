@@ -83,9 +83,17 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         print(indexPath.item)
         let colorInfo = ColorPickerInfo.shared
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
-        cell.isSelected = true
+        
+        cell.selectedColor()
+        
         colorInfo.color = colors?[indexPath.item].color
         colorInfo.colorName = colors?[indexPath.item].colorName
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCollectionViewCell", for: indexPath) as? ColorCollectionViewCell else {return}
+        
+        cell.deSelectedColor()
     }
 }
