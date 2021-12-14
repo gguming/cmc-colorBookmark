@@ -262,7 +262,7 @@ extension HomeViewController {
 
 extension HomeViewController: ColorHomeCollectionDelegate, SelectedCalendarDelegate {
     func makeNewDiary(date: String) {
-        print("aaaaaaaaaa")
+        
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
         let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
