@@ -9,6 +9,12 @@ import UIKit
 import YPImagePicker
 import FirebaseStorage
 
+protocol ColorCellDeSelectDelegate: AnyObject {
+    
+    // 2 원하는 메소드를 만든다.
+    func deSelectColorCell(index: IndexPath)
+}
+
 class EditDiaryViewController: UIViewController  {
     var recordUrl: String?
     var pickedImg: [UIImage] = []
@@ -148,12 +154,6 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
             }
         }
         
-        
-        
-        print("끝끝끝끝끝")
-        
-        
-        
     }
     
     func deleteRecord() {
@@ -194,6 +194,7 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     func dismissEditDiary() {
         let recordInfo = RecordInfo.shared
         recordInfo.recordURL = nil
+        //? 
         self.dismiss(animated: true, completion: nil)
     }
     

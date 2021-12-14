@@ -89,6 +89,10 @@ extension ColorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         colorInfo.colorName = colors?[indexPath.item].colorName
         
     }
-    
-    
+}
+
+extension ColorTableViewCell: ColorCellDeSelectDelegate {
+    func deSelectColorCell(index: IndexPath) {
+        
+    }
 }
