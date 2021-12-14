@@ -120,15 +120,31 @@ extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg, Del
     }
     
     func deleteDiary() {
-        let request = DeleteDiaryRequest()
-        request.date = self.date
-        deleteDiaryDataManager.diaryDelete(request: request , delegate: self)
+        let alert = UIAlertController(title: "다이어리를 삭제하시겠습니까?", message: "삭제하게 되면 복구할 수 없습니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "승인", style: .default) { _ in
+            let request = DeleteDiaryRequest()
+            request.date = self.date
+            self.deleteDiaryDataManager.diaryDelete(request: request , delegate: self)
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func doneModifytMode() {
-        modifyMode = false
-        modifyDiary()
-        tableview.reloadData()
+        
+        let alert = UIAlertController(title: "다이어리를 수정하시겠습니까?", message: "수정하게 되면 복구할 수 없습니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "승인", style: .default) { _ in
+            self.modifyMode = false
+            self.modifyDiary()
+            self.tableview.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -339,17 +355,14 @@ extension BookmarkDetailViewController {
     
     func didSuccessDelete(_ result: DeleteDiaryResponse) {
         print("------>\(result)")
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
         
-        delegateDeleteDiaryinList?.deleteDiaryinList(index: index ?? 0,message: result.message ?? "")
-        self.dismiss(animated: true) {
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookmarkViewController") as? BookmarkViewController else {return}
-            
-            vc.presentBottomAlert(message: result.message  ?? "")
-            print("ㅇㄹㄴ애래너래너애러ㅐㄴ어래언")
+        
+        let alert = UIAlertController(title: "다이어리가 삭제되었습니다.", message: "", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+            self.dismiss(animated: false, completion: nil)
         }
-        
-        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)  
         
     }
     
