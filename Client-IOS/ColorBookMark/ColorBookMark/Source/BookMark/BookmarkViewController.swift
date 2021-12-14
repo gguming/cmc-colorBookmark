@@ -12,6 +12,7 @@ class BookmarkViewController: BaseViewController {
     @IBOutlet weak var monthBtn: UIButton!
     
     var date: String?
+    
     var dateForBtn: String?
     var bookmarks: [BookMarks]?
     lazy var dataManager: BookMarkDataManager = BookMarkDataManager()
@@ -37,13 +38,14 @@ class BookmarkViewController: BaseViewController {
         tableview.delegate = self
         tableview.register(UINib(nibName: "BookmarkTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkTableViewCell")
         tableview.register(UINib(nibName: "BookmarkHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookmarkHeaderTableViewCell")
-        dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
+        
         
         setUI()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dataManager.getBookMark(date: date ?? "2021-12", delegate: self)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy.MM"
         let currentDate = formatter.string(from: Date())
@@ -90,8 +92,7 @@ extension BookmarkViewController{
     }
     
     func failedToGetBookMakrs(message: String) {
-        bookmarks = []
-        tableview.reloadData()
+        
         print("------>>>>\(message)")
         presentBottomAlert(message: message)
         
@@ -99,7 +100,17 @@ extension BookmarkViewController{
     
 }
 
-extension BookmarkViewController: ChangeMonthDelegate{
+extension BookmarkViewController: ChangeMonthDelegate, DelegateDeleteDiary{
+    func deleteDiaryinList(index: Int, message: String) {
+        bookmarks?.remove(at: index)
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM"
+//        let currentDate = formatter.string(from: Date())
+//        
+//        dataManager.getBookMark(date: date ?? currentDate, delegate: self)
+        presentBottomAlert(message: message)
+    }
+    
     func changeMonth(month: String, monthForBtn: String) {
 //        let formatter = DateFormatter()
 //        formatter.dateFormat = "yyyy.MM"
@@ -138,10 +149,10 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as? BookmarkTableViewCell else {return UITableViewCell()}
             cell.backView.layer.cornerRadius = 8
             cell.clipsToBounds = true
-            cell.contents = bookmarks?[indexPath.item].selectMonthDiary?.diaryContents
-            cell.colorView.backgroundColor = hexStringToUIColor22(hex: bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.color ?? "#000000")
-            cell.colorLabel.text = bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.colorName
-            cell.dayLabel.text = bookmarks?[indexPath.item].selectMonthDiary?.diaryView?.date
+            cell.contents = bookmarks?[indexPath.row].selectMonthDiary?.diaryContents
+            cell.colorView.backgroundColor = hexStringToUIColor22(hex: bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.color ?? "#000000")
+            cell.colorLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.colorName
+            cell.dayLabel.text = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.date
             
             return cell
         }
@@ -158,7 +169,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource{
             vc.modalPresentationStyle = .fullScreen
             vc.date = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.date
             vc.diaryId = bookmarks?[indexPath.row].selectMonthDiary?.diaryView?.diaryId
-            vc.index = indexPath.row - 1
+            vc.index = indexPath.row
             self.present(vc, animated: false, completion: nil)
         }
        
