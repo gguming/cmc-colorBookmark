@@ -28,7 +28,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
         deleteButton.isHidden = true
        
     }
-    
+
     override var isSelected: Bool {
         didSet {
             if isSelected {
