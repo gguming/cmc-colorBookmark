@@ -8,6 +8,7 @@
 import UIKit
 import YPImagePicker
 import FirebaseStorage
+import AVFoundation
 
 protocol EmployeePickerDelegate {
     func employeeAssigned()
@@ -220,6 +221,7 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func addPhotoInEmpty() {
+       
         addPost()
     }
     

@@ -1645,9 +1645,9 @@
 				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookMark/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용 권한이 필요합니다.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 사용 권한이 필요합니다.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 저장소 권한이 필요합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"색갈피\"가 감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 카메라에 접근하도록 허용해주세요!";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"색갈피\"가 감정기록에 음성 녹음을 첨부하여 기록하는 기능을 사용하기 위해 마이크에 접근하도록 허용해주세요!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"색갈피\"가 감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 사진 저장소에 접근하도록 허용해주세요!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
@@ -1681,9 +1681,9 @@
 				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorBookMark/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용 권한이 필요합니다.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 사용 권한이 필요합니다.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 저장소 권한이 필요합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"색갈피\"가 감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 카메라에 접근하도록 허용해주세요!";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"색갈피\"가 감정기록에 음성 녹음을 첨부하여 기록하는 기능을 사용하기 위해 마이크에 접근하도록 허용해주세요!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"색갈피\"가 감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 사진 저장소에 접근하도록 허용해주세요!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
