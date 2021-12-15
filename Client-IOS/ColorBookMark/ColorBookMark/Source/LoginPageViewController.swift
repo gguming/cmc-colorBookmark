@@ -118,10 +118,14 @@ extension LoginPageViewController : ASAuthorizationControllerDelegate  {
             }
         }
 
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
-        changeRootViewController(vc)
+        
     }
+    
+    func appleLoginSuccess() {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "KakaoNicknameViewController") as! KakaoNicknameViewController
+            changeRootViewController(vc)
+        }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("애플로그인3")
