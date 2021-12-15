@@ -26,6 +26,7 @@ class AppleLoginDataManager {
                         Constant.email = "Apple"
                         Constant.didLogin = true
                         Constant.account = "Apple"
+                        delegate.appleLoginSuccess()
                     }
                     
                     // 실패했을 때
