@@ -9,6 +9,7 @@ import UIKit
 import YPImagePicker
 import FirebaseStorage
 import AVFoundation
+import Photos
 
 protocol EmployeePickerDelegate {
     func employeeAssigned()
@@ -202,13 +203,26 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
    
     
     func presentRecordVC() {
-        let sb = UIStoryboard(name: "Audio", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.modalTransitionStyle = .crossDissolve
-        vc.view.backgroundColor = .black.withAlphaComponent(0.4)
-        vc.recordSaveDelegate = self
-        self.present(vc, animated: true, completion: nil)
+        
+        AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            if granted {
+                let sb = UIStoryboard(name: "Audio", bundle: nil)
+                guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
+                vc.modalPresentationStyle = .overCurrentContext
+                vc.modalTransitionStyle = .crossDissolve
+                vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+                vc.recordSaveDelegate = self
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "색갈피", message: "감정기록에 음성녹음을 첨부하여 기록하는 기능을 사용하기 위해 마이크에 접근할 수 있도록 설정에서 마이크 권한을 허용해 주세요!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alert.addAction(okAction)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        
     }
     
     func addPhoto() {
@@ -221,8 +235,38 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
     }
     
     func addPhotoInEmpty() {
-       
-        addPost()
+        AVCaptureDevice.requestAccess(for: .video) { (grandted: Bool) in
+            if grandted {
+                PHPhotoLibrary.requestAuthorization { status in
+                    switch status {
+                    case .authorized:
+                        DispatchQueue.main.async {
+                            self.addPost()
+                        }
+                        
+                    case .denied:
+                        let alert = UIAlertController(title: "색갈피", message: "감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 사진 저장소에 접근할 수 있도록 설정에서 사진 저장소 접근 권한을 허용해 주세요!", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    default:
+                        break
+                    }
+                
+                }
+            } else {
+                let alert = UIAlertController(title: "색갈피", message: "감정기록에 사진을 첨부하여 기록하는 기능을 사용하기 위해 카메라에 접근할 수 있도록 설정에서 카메라 권한을 허용해 주세요!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alert.addAction(okAction)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+               
+            }
+        }
+//        addPost()
     }
     
     func dismissEditDiary() {
@@ -363,6 +407,7 @@ extension EditDiaryViewController {
 
         let picker = YPImagePicker(configuration: config)
         picker.navigationBar.backgroundColor = .white
+        
         picker.didFinishPicking { [unowned picker] items, cancelled in
             
 
