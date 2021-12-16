@@ -21,7 +21,7 @@ class EditDiaryViewController: UIViewController  {
     var imgUrls: [String] = []
     var colors: [Colors]?
     let storage = Storage.storage().reference()
-    
+    // gg
      var emdelegate: EmployeePickerDelegate?
     
     lazy var postDataManager: PostDiaryDataManager = PostDiaryDataManager()
@@ -205,18 +205,22 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
         
         AVAudioSession.sharedInstance().requestRecordPermission { granted in
             if granted {
-                let sb = UIStoryboard(name: "Audio", bundle: nil)
-                guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
-                vc.modalPresentationStyle = .overCurrentContext
-                vc.modalTransitionStyle = .crossDissolve
-                vc.view.backgroundColor = .black.withAlphaComponent(0.4)
-                vc.recordSaveDelegate = self
-                self.present(vc, animated: true, completion: nil)
-            } else {
-                let alert = UIAlertController(title: "색갈피", message: "감정기록에 음성녹음을 첨부하여 기록하는 기능을 사용하기 위해 마이크에 접근할 수 있도록 설정에서 마이크 권한을 허용해 주세요!", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alert.addAction(okAction)
                 DispatchQueue.main.async {
+                    let sb = UIStoryboard(name: "Audio", bundle: nil)
+                    guard let vc = sb.instantiateViewController(withIdentifier: "AudioBackgroundViewController") as? AudioBackgroundViewController else {return}
+                    vc.modalPresentationStyle = .overCurrentContext
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.view.backgroundColor = .black.withAlphaComponent(0.4)
+                    vc.recordSaveDelegate = self
+                    self.present(vc, animated: true, completion: nil)
+                }
+               
+            } else {
+               
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "색갈피", message: "감정기록에 음성녹음을 첨부하여 기록하는 기능을 사용하기 위해 마이크에 접근할 수 있도록 설정에서 마이크 권한을 허용해 주세요!", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                    alert.addAction(okAction)
                     self.present(alert, animated: true, completion: nil)
                 }
             }
@@ -321,7 +325,6 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.photoCollectionview.reloadData()
                 return cell
             }
-            
             
         case 4:
             let recordInfo = RecordInfo.shared

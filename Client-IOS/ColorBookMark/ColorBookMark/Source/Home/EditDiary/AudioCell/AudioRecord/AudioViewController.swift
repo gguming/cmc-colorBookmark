@@ -157,7 +157,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
 //        progress.progress = Float(soundPlayer.currentTime/soundPlayer.duration) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
     @objc func updateRecordTime(){
-        infoLabel.text = convertNSTimeInterval12String(soundRecorder?.currentTime)
+        infoLabel.text = convertNSTimeInterval12String(soundRecorder?.currentTime ?? 0)
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
