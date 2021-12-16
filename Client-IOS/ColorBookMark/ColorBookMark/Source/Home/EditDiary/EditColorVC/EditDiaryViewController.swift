@@ -200,7 +200,6 @@ extension EditDiaryViewController: EditBtnDelegate, AddPhotoDelegate, AddPhotoIn
         self.tableview.reloadData()
     }
     
-   
     
     func presentRecordVC() {
         

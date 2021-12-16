@@ -13,8 +13,8 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
     var deleteRecordDelegate: DeleteRecordDelegate?
 
     
-    var soundPlayer : AVAudioPlayer!
-    var progressTimer : Timer!
+    var soundPlayer : AVAudioPlayer?
+    var progressTimer : Timer?
     
     @IBOutlet weak var durationTime: UILabel!
     @IBOutlet weak var playBtn: UIButton!
@@ -48,11 +48,11 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
             print(1)
             playBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             setupPlayer()
-            soundPlayer.play()
+            soundPlayer?.play()
             progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
         } else {
             print(122)
-            soundPlayer.stop()
+            soundPlayer?.stop()
             playBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
     }
@@ -62,16 +62,16 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
         do {
             
             soundPlayer = try AVAudioPlayer(contentsOf: audioFilename!)
-            soundPlayer.delegate = self
-            soundPlayer.stop()
-            soundPlayer.currentTime = 0
+            soundPlayer?.delegate = self
+            soundPlayer?.stop()
+            soundPlayer?.currentTime = 0
             progressBar.progress = 0
-            durationTime.text = convertNSTimeInterval12String(soundPlayer.duration)
+            durationTime.text = convertNSTimeInterval12String(soundPlayer?.duration ?? 0)
 //            endTime.text = convertNSTimeInterval12String(soundPlayer.duration)
 //            infoLabel.text = convertNSTimeInterval12String(0)
             
-            soundPlayer.prepareToPlay()
-            soundPlayer.volume = 1.0
+            soundPlayer?.prepareToPlay()
+            soundPlayer?.volume = 1.0
         } catch {
             print(error)
         }
@@ -89,7 +89,8 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
     
     @objc func updatePlayTime(){
 //        infoLabel.text = convertNSTimeInterval12String(soundPlayer.currentTime) // 재생 시간인 audioPlayer.currentTime을 lblCurrentTime에 나타냄
-        progressBar.progress = Float(soundPlayer.currentTime/soundPlayer.duration) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
+        
+        progressBar.progress = Float(Int(soundPlayer?.currentTime ?? 0)/Int(soundPlayer?.duration ?? 0)) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
 }
 
