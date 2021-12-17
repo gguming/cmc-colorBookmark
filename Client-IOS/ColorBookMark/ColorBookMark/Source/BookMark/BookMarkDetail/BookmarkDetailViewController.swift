@@ -52,7 +52,7 @@ class BookmarkDetailViewController: UIViewController {
         
         tableview.register(UINib(nibName: "ButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ButtonsTableViewCell")
         tableview.register(UINib(nibName: "ModifyButtonsTableViewCell", bundle: nil), forCellReuseIdentifier: "ModifyButtonsTableViewCell")
-        
+        hideKeyboard()
         dayView.layer.cornerRadius = 8
         
         
@@ -60,6 +60,19 @@ class BookmarkDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         bookmarkDetilDataManager.getBookMarkDetail(diaryId: diaryId ?? 0, delegate: self)
     }
+    
+    func hideKeyboard()
+        {
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+                target: self,
+                action: #selector(BookmarkDetailViewController.dismissKeyboard))
+            view.addGestureRecognizer(tap)
+        }
+        @objc func dismissKeyboard()
+        {
+            view.endEditing(true)
+        }
+    
     
     private func modifyDiary() {
         let modifyDetailInfo = ModifyDetailInfo.shared

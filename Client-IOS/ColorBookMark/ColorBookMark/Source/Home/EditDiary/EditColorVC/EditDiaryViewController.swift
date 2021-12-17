@@ -28,7 +28,7 @@ class EditDiaryViewController: UIViewController  {
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboard()
         // 셀 등록
         tableview.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
@@ -44,6 +44,17 @@ class EditDiaryViewController: UIViewController  {
         
         
     }
+    func hideKeyboard()
+        {
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+                target: self,
+                action: #selector(EditDiaryViewController.dismissKeyboard))
+            view.addGestureRecognizer(tap)
+        }
+        @objc func dismissKeyboard()
+        {
+            view.endEditing(true)
+        }
     
     func uploadDiary() {
         showIndicator()
