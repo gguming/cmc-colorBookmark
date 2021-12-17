@@ -9,7 +9,7 @@ import Alamofire
 
 class BackgroundColorDataManager{
     func getBackgroundColors(delegate: BaseViewController) {
-        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
+        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt ?? "")"]
 
         AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/user/mostColor", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header)
             .validate()

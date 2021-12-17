@@ -27,6 +27,8 @@ extension UIViewController{
         let alertSuperview = UIView()
         alertSuperview.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         alertSuperview.layer.cornerRadius = 10
+        alertSuperview.layer.borderColor = UIColor.black.cgColor
+        alertSuperview.layer.borderWidth = 2
         alertSuperview.isHidden = true
     
         let alertLabel = UILabel()
