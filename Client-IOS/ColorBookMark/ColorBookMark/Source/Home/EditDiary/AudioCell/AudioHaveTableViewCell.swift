@@ -90,7 +90,7 @@ class AudioHaveTableViewCell: UITableViewCell,  AVAudioPlayerDelegate {
     @objc func updatePlayTime(){
 //        infoLabel.text = convertNSTimeInterval12String(soundPlayer.currentTime) // 재생 시간인 audioPlayer.currentTime을 lblCurrentTime에 나타냄
         
-        progressBar.progress = Float(Int(soundPlayer?.currentTime ?? 0)/Int(soundPlayer?.duration ?? 0)) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
+        progressBar.progress = Float((soundPlayer?.currentTime ?? 0)/(soundPlayer?.duration ?? 0)) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
 }
 
