@@ -46,6 +46,8 @@ class KakaoLoginDataManager {
                         default: print("?????")
                         }
                     }
+                    
+                    
 
                 case .failure(let error):
                     print(error.localizedDescription)
