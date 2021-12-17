@@ -52,6 +52,8 @@ extension PhotoHaveTableViewCell: UICollectionViewDelegate, UICollectionViewData
             cell.deleteBtnDelegate = self
             cell.img.image = photos?[indexPath.item-1]
             cell.index = indexPath.item-1
+            cell.contentView.layer.cornerRadius = 15
+            cell.contentView.clipsToBounds = true
            
             
             return cell
