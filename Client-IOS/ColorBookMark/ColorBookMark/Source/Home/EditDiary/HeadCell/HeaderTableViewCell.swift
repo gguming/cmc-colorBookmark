@@ -23,6 +23,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        helloLabel.text = Constant.nickname ?? ""
         
         
     }
