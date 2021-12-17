@@ -23,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Setting category to AVAudioSessionCategoryPlayback failed.")
             }
         
+        let recordSession = AVAudioSession.sharedInstance()
+            do {
+                try recordSession.setCategory(AVAudioSession.Category.playAndRecord)
+            } catch {
+                print("Setting category to AVAudioSessionCategoryPlayAndRecord failed.")
+            }
+        
         KakaoSDK.initSDK(appKey: "e2a97fb8904d79724a04615b8f993706")
         FirebaseApp.configure()
         UNUserNotificationCenter.current().delegate = self
