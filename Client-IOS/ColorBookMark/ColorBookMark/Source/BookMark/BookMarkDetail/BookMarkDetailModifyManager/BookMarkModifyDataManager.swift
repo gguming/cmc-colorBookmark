@@ -9,7 +9,7 @@ import Alamofire
 
 class BookMarkModifyDataManager {
     func diaryModify(_ parameters: ModifyRequest, delegate: BookmarkDetailViewController) {
-        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
+        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt ?? "")"]
         AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/final-editing", method: .patch, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
             .validate()
             .responseDecodable(of: ModifyResponse.self) { response in

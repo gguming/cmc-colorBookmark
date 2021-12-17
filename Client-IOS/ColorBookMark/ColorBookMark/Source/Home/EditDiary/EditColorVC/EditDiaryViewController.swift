@@ -28,7 +28,7 @@ class EditDiaryViewController: UIViewController  {
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboard()
+//        hideKeyboard()
         // 셀 등록
         tableview.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell")
         tableview.register(UINib(nibName: "ColorTableViewCell", bundle: nil), forCellReuseIdentifier: "ColorTableViewCell")
@@ -44,17 +44,19 @@ class EditDiaryViewController: UIViewController  {
         
         
     }
-    func hideKeyboard()
-        {
-            let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-                target: self,
-                action: #selector(EditDiaryViewController.dismissKeyboard))
-            view.addGestureRecognizer(tap)
-        }
-        @objc func dismissKeyboard()
-        {
-            view.endEditing(true)
-        }
+    
+    
+//    func hideKeyboard()
+//        {
+//            let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+//                target: self,
+//                action: #selector(EditDiaryViewController.dismissKeyboard))
+//            view.addGestureRecognizer(tap)
+//        }
+//        @objc func dismissKeyboard()
+//        {
+//            view.endEditing(true)
+//        }
     
     func uploadDiary() {
         showIndicator()
@@ -315,6 +317,7 @@ extension EditDiaryViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ColorTableViewCell", for: indexPath) as? ColorTableViewCell else {return UITableViewCell()}
             cell.colors = self.colors
+            
             return cell
             
         case 2:

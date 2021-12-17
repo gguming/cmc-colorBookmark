@@ -34,7 +34,9 @@ extension TextTableViewCell: UITextViewDelegate{
 //            textView.text = nil
 //        }
 //    }
+
 //
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         recordInfo.text = textView.text
     }

@@ -9,7 +9,7 @@ import Alamofire
 
 class GetColorListDataManager{
     func getColors(delegate: HomeViewController) {
-        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
+        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt ?? "")"]
 
         AF.request("\(Constant.SERVER_BASE_URL)/app/diarys/basicColor", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header)
             .validate()

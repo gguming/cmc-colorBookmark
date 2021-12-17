@@ -9,7 +9,7 @@ import Alamofire
 
 class BookMarkDataManager {
     func getBookMark(date: String, delegate: BookmarkViewController) {
-        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt!)"]
+        let header: HTTPHeaders = ["x-access-token" : "\(Constant.jwt ?? "")"]
         
         print(3333333333333)
         print(date)
