@@ -30,7 +30,7 @@
                         <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XL-3Xa">
+                    <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-XL-3Xa">
                         <rect key="frame" x="188.5" y="54.5" width="168" height="48"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="168" id="fKB-nJ-yn1"/>

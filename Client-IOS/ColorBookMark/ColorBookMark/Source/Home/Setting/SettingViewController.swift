@@ -179,7 +179,7 @@ extension SettingViewController: PresentVCDelegate {
     
     @objc func ToNotionSafari() {
         let notionUrl = NSURL(string: "https://mixolydian-gerbil-052.notion.site/2a306dbd3c104c4e8066d7695a647db2")
-        let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl as! URL)
+        let notionSafariView: SFSafariViewController = SFSafariViewController(url: notionUrl! as URL)
         present(notionSafariView, animated: true, completion: nil)
     }
 }

@@ -15,8 +15,6 @@ struct ColorResponse: Decodable {
     var result: [Colors]?
     
 }
-
-
 struct Colors: Decodable {
     var myColorId: Int
     var color: String?

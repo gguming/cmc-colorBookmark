@@ -29,13 +29,14 @@ class KakaoNicknameViewController: UIViewController {
     let unabledBackgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         print("카카오 닉네임")
         JoinButton.layer.cornerRadius = 22
         JoinButton.isEnabled = false
         NicknameTextField.layer.cornerRadius = 5
         self.NicknameTextField.addTarget(self, action: #selector(self.UnderlineNickNameTextField(_:)), for: .editingChanged)
         
-        super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }

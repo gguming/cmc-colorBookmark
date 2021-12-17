@@ -17,9 +17,9 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var recordBtn: UIButton!
     
-    var soundRecorder : AVAudioRecorder!
-    var soundPlayer : AVAudioPlayer!
-    var progressTimer : Timer!
+    var soundRecorder : AVAudioRecorder?
+    var soundPlayer : AVAudioPlayer?
+    var progressTimer : Timer?
     var fileName: String = "audioFile.m4a"
     
     
@@ -53,11 +53,11 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
             playBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             recordBtn.isEnabled = false
             setupPlayer()
-            soundPlayer.play()
+            soundPlayer?.play()
 //            progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
         } else {
             print(122)
-            soundPlayer.stop()
+            soundPlayer?.stop()
             
             playBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
             recordBtn.isEnabled = false
@@ -67,7 +67,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
     @IBAction func recordBtnTapped(_ sender: Any) {
         if recordBtn.imageView?.image == UIImage(systemName: "circle.fill") {
             print(1)
-            soundRecorder.record()
+            soundRecorder?.record()
             recordBtn.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             playBtn.isEnabled = false
             saveBtn.isEnabled = false
@@ -75,7 +75,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
             progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
         } else {
             print(122)
-            soundRecorder.stop()
+            soundRecorder?.stop()
             recordBtn.setImage(UIImage(systemName: "circle.fill"), for: .normal)
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor.red
@@ -108,8 +108,8 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
         
         do {
             soundRecorder = try AVAudioRecorder(url: audioFilename, settings: recordSetting )
-            soundRecorder.delegate = self
-            soundRecorder.prepareToRecord()
+            soundRecorder?.delegate = self
+            soundRecorder?.prepareToRecord()
         } catch {
             print(error)
         }
@@ -119,15 +119,15 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
         let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
         do {
             soundPlayer = try AVAudioPlayer(contentsOf: audioFilename)
-            soundPlayer.delegate = self
-            soundPlayer.stop()
-            soundPlayer.currentTime = 0
+            soundPlayer?.delegate = self
+            soundPlayer?.stop()
+            soundPlayer?.currentTime = 0
 //            progress.progress = 0
 //            endTime.text = convertNSTimeInterval12String(soundPlayer.duration)
 //            infoLabel.text = convertNSTimeInterval12String(0)
             
-            soundPlayer.prepareToPlay()
-            soundPlayer.volume = 1.0
+            soundPlayer?.prepareToPlay()
+            soundPlayer?.volume = 1.0
         } catch {
             print(error)
         }
@@ -157,7 +157,7 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate , AVAudioReco
 //        progress.progress = Float(soundPlayer.currentTime/soundPlayer.duration) // 프로그레스(Progress View)인 pvProgressPlay의 진행 상황에 audioPlayer.currentTime을 audioPlayer.duration으로 나눈 값으로 표시
     }
     @objc func updateRecordTime(){
-        infoLabel.text = convertNSTimeInterval12String(soundRecorder.currentTime)
+        infoLabel.text = convertNSTimeInterval12String(soundRecorder?.currentTime ?? 0)
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
