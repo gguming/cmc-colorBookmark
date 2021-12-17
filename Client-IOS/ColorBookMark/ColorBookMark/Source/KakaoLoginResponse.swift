@@ -15,7 +15,7 @@ struct KakaoLoginResponse: Decodable {
 }
 
 struct KakaoLoginResult: Decodable {
-    var message: String
-    var jwt: String
-    var userId: Int
+    var message: String?
+    var jwt: String?
+    var userId: Int?
 }
