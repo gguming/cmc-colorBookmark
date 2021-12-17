@@ -30,6 +30,10 @@ class LogoutViewController: UIViewController {
         
         Constant.jwt = nil
         Constant.didLogin = false
+        Constant.nickname = nil
+        Constant.userId = nil
+        Constant.account = nil
+        Constant.email = nil
 
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")

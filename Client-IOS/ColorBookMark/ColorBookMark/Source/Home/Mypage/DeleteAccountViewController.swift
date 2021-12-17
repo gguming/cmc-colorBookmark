@@ -25,18 +25,11 @@ class DeleteAccountViewController: UIViewController {
             }
             else {
                 print("delete account success.")
-                Constant.jwt = nil
-                Constant.nickname = nil
-                Constant.setting_0 = "N"
-                Constant.setting_1 = "N"
-                Constant.setting_2 = "N"
-                Constant.miniCode = nil
-                Constant.userId = nil
-                Constant.email = nil
             }
             self.deleteAccountSuccess()
         }
         Constant.didLogin = false
+        
         dataManager.deleteAccount(delegate: self)
     }
     
@@ -57,6 +50,16 @@ class DeleteAccountViewController: UIViewController {
 
 extension DeleteAccountViewController {
     func deleteAccountSuccess() {
+        Constant.jwt = nil
+        Constant.nickname = nil
+        Constant.setting_0 = "N"
+        Constant.setting_1 = "N"
+        Constant.setting_2 = "N"
+        Constant.miniCode = nil
+        Constant.userId = nil
+        Constant.email = nil
+        Constant.didLogin = false
+        
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController")
         changeRootViewController(vc)
