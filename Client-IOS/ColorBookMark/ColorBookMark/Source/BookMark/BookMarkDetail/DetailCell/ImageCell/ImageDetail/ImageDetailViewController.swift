@@ -18,7 +18,7 @@ class ImageDetailViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ModifyAddedImgCollectionViewCell.self, forCellWithReuseIdentifier: "ModifyAddedImgCollectionViewCell")
+        collectionView.register(UINib(nibName: "ModifyAddedImgCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ModifyAddedImgCollectionViewCell")
         collectionView.backgroundColor = .clear
         collectionView.isPagingEnabled = true
         return collectionView
