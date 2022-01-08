@@ -21,7 +21,7 @@
                                 <rect key="frame" x="28" y="48" width="358" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-bD-tof">
-                                        <rect key="frame" x="16" y="12" width="12" height="20"/>
+                                        <rect key="frame" x="16" y="10" width="12" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="iconIonicIosArrowBack"/>
                                         <connections>
@@ -41,8 +41,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="oyd-bD-tof" firstAttribute="leading" secondItem="7TA-7n-rXI" secondAttribute="leading" constant="16" id="8ID-42-Qjd"/>
-                                    <constraint firstAttribute="bottom" secondItem="oyd-bD-tof" secondAttribute="bottom" constant="12" id="U8Q-1p-gdT"/>
-                                    <constraint firstItem="oyd-bD-tof" firstAttribute="top" secondItem="7TA-7n-rXI" secondAttribute="top" constant="12" id="Va0-hN-tZn"/>
+                                    <constraint firstAttribute="bottom" secondItem="oyd-bD-tof" secondAttribute="bottom" constant="10" id="U8Q-1p-gdT"/>
+                                    <constraint firstItem="oyd-bD-tof" firstAttribute="top" secondItem="7TA-7n-rXI" secondAttribute="top" constant="10" id="Va0-hN-tZn"/>
                                     <constraint firstItem="OGF-FY-6FD" firstAttribute="centerX" secondItem="7TA-7n-rXI" secondAttribute="centerX" id="XSR-bE-gXg"/>
                                     <constraint firstAttribute="height" constant="44" id="fIE-Me-Ell"/>
                                     <constraint firstItem="OGF-FY-6FD" firstAttribute="centerY" secondItem="7TA-7n-rXI" secondAttribute="centerY" id="nUu-Q1-R3n"/>
@@ -54,7 +54,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NCx-Od-hpC" secondAttribute="trailing" constant="28" id="LtC-Mt-7IL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NCx-Od-hpC" secondAttribute="bottom" id="WQP-6v-eId"/>
@@ -88,7 +88,7 @@
                                 <rect key="frame" x="28" y="48" width="358" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-ge-OUF">
-                                        <rect key="frame" x="16" y="12" width="12" height="20"/>
+                                        <rect key="frame" x="16" y="10" width="12" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="iconIonicIosArrowBack"/>
                                         <connections>
@@ -104,9 +104,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="PIq-ge-OUF" firstAttribute="leading" secondItem="COt-Wb-Nqt" secondAttribute="leading" constant="16" id="6zf-rq-gmf"/>
-                                    <constraint firstAttribute="bottom" secondItem="PIq-ge-OUF" secondAttribute="bottom" constant="12" id="7Nl-QJ-coF"/>
+                                    <constraint firstAttribute="bottom" secondItem="PIq-ge-OUF" secondAttribute="bottom" constant="10" id="7Nl-QJ-coF"/>
                                     <constraint firstAttribute="height" constant="44" id="Jl7-Vi-vaF"/>
-                                    <constraint firstItem="PIq-ge-OUF" firstAttribute="top" secondItem="COt-Wb-Nqt" secondAttribute="top" constant="12" id="aEV-0L-nYH"/>
+                                    <constraint firstItem="PIq-ge-OUF" firstAttribute="top" secondItem="COt-Wb-Nqt" secondAttribute="top" constant="10" id="aEV-0L-nYH"/>
                                     <constraint firstItem="nR6-9E-hd2" firstAttribute="centerY" secondItem="COt-Wb-Nqt" secondAttribute="centerY" id="gz5-dc-5wW"/>
                                     <constraint firstItem="nR6-9E-hd2" firstAttribute="centerX" secondItem="COt-Wb-Nqt" secondAttribute="centerX" id="sCq-2e-mnx"/>
                                 </constraints>
@@ -226,9 +226,6 @@
         <image name="iconIonicIosArrowBack" width="12" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

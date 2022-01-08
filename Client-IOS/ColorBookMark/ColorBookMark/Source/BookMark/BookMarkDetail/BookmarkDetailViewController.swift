@@ -16,6 +16,7 @@ class BookmarkDetailViewController: UIViewController {
     var diaryId: Int?
     var modifyMode: Bool?
     
+    let modifyDetailInfo = ModifyDetailInfo.shared
     var bookmarkDetail: Diary?
     var pickedImg: [UIImage]?
     var addedImg: [String] = []
@@ -115,7 +116,15 @@ class BookmarkDetailViewController: UIViewController {
 }
 
 
-extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg, DeleteRecordDelegate{
+extension BookmarkDetailViewController: ModifyModeDelegate, DeleteModifyImg, DeleteRecordDelegate, PresentImgDetailVC{
+    func presentImgDetailVC() {
+        
+        print(11111111)
+        let vc = ImageDetailViewController()
+        vc.addImg = modifyDetailInfo.addImg
+        present(vc, animated: true)
+    }
+    
     func deleteRecord() {
         let modifyInfo = ModifyDetailInfo.shared
         modifyInfo.record = nil
@@ -223,6 +232,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                     cell.addImg = modifyDetailInfo.addImg
+                    cell.presentDelegate = self
                     cell.delegateForDelete = self
                     cell.modifyMode = false
                     cell.imgHaveCollectionview.reloadData()
@@ -238,6 +248,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageHaveTableViewCell", for: indexPath) as? ImageHaveTableViewCell else {return UITableViewCell()}
                     cell.addImg = modifyDetailInfo.addImg
+                    cell.presentDelegate = self
                     cell.delegateForDelete = self
                     cell.modifyMode = true
                     cell.imgHaveCollectionview.reloadData()
@@ -309,7 +320,7 @@ extension BookmarkDetailViewController: UITableViewDelegate, UITableViewDataSour
         case 1:
             return 163
         case 2:
-            return 144
+            return 180
         case 3:
             return 127
         case 4:

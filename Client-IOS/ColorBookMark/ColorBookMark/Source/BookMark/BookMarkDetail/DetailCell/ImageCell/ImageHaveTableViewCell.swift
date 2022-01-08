@@ -13,7 +13,7 @@ class ImageHaveTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var imgHaveCollectionview: UICollectionView!
-    
+    var presentDelegate: PresentImgDetailVC?
     var modifyMode: Bool?
     var addImg: [DiaryImgUrl]?
     var pickedImg: [UIImage]?
@@ -56,11 +56,14 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
            //
+            cell.layer.cornerRadius = 20
+            cell.clipsToBounds = true
             cell.deleteBtn.isHidden = false
             let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
             cell.imgView.kf.indicatorType = .activity
             cell.imgView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
             cell.index = indexPath.item
+            
             cell.delegate = self
             
 
@@ -70,11 +73,14 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModifyAddedImgCollectionViewCell", for: indexPath) as? ModifyAddedImgCollectionViewCell else {return UICollectionViewCell()}
            //
+            cell.layer.cornerRadius = 20
+            cell.clipsToBounds = true
             cell.deleteBtn.isHidden = true
             let url = URL(string: addImg?[indexPath.item].diaryImgUrl ?? "")
             cell.imgView.kf.indicatorType = .activity
             cell.imgView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
             cell.index = indexPath.item
+           
             cell.delegate = self
             return cell
         }
@@ -86,5 +92,12 @@ extension ImageHaveTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         return CGSize(width: width, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presentDelegate?.presentImgDetailVC()
+    }
     
+}
+
+protocol PresentImgDetailVC {
+    func presentImgDetailVC()
 }

@@ -112,6 +112,7 @@
 		A4DD23242764D49300FAC030 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD23232764D49300FAC030 /* UIView.swift */; };
 		A4E126702745F03A009BCF74 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */; };
 		A4EA33412757908500121E5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4EA33402757908500121E5A /* GoogleService-Info.plist */; };
+		A4F25C462789565400BF1372 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F25C452789565400BF1372 /* ImageDetailViewController.swift */; };
 		E9336CAD27492D4F00686AF1 /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAC27492D4F00686AF1 /* KakaoLoginDataManager.swift */; };
 		E9336CAF27492DBF00686AF1 /* KakaoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CAE27492DBF00686AF1 /* KakaoLoginResponse.swift */; };
 		E9336CB82749EC0300686AF1 /* KakaoLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9336CB72749EC0300686AF1 /* KakaoLoginRequest.swift */; };
@@ -316,6 +317,7 @@
 		A4DD23232764D49300FAC030 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A4E1266E2745F03A009BCF74 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		A4EA33402757908500121E5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4F25C452789565400BF1372 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		BCECE619D7BB555E769D03A6 /* Pods-CMC-IOS-ColorBookmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; path = "Target Support Files/Pods-CMC-IOS-ColorBookmark/Pods-CMC-IOS-ColorBookmark.debug.xcconfig"; sourceTree = "<group>"; };
 		C768A5674B77CC77F011BA7D /* Pods-ColorBookmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorBookmark.release.xcconfig"; path = "Target Support Files/Pods-ColorBookmark/Pods-ColorBookmark.release.xcconfig"; sourceTree = "<group>"; };
 		E2DED30C01556F8D2DCF6E25 /* Pods-ColorsBookMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorsBookMark.debug.xcconfig"; path = "Target Support Files/Pods-ColorsBookMark/Pods-ColorsBookMark.debug.xcconfig"; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 		A475557F27476B6500593C70 /* ImageCell */ = {
 			isa = PBXGroup;
 			children = (
+				A4F25C442789563000BF1372 /* ImageDetail */,
 				A45A9BAA275DB0D200D312D5 /* collectionCell */,
 				A42D4B98275A0FFE00D5B9B3 /* ImageHaveTableViewCell.swift */,
 				A42D4B99275A0FFE00D5B9B3 /* ImageHaveTableViewCell.xib */,
@@ -1032,6 +1035,14 @@
 				E95683BC275C2BC800F075CF /* OriginalColorPickerMainViewController.swift */,
 			);
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		A4F25C442789563000BF1372 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A4F25C452789565400BF1372 /* ImageDetailViewController.swift */,
+			);
+			path = ImageDetail;
 			sourceTree = "<group>";
 		};
 		E9336CB427493A3700686AF1 /* Mypage */ = {
@@ -1486,6 +1497,7 @@
 				E97ABC572769122D00514F50 /* NickNameMiniCodeCollectionViewCell.swift in Sources */,
 				E95683D52760116400F075CF /* GetMyColorDataManager.swift in Sources */,
 				E9B76DEB27647A9D00BC990F /* TermsOfUseLoginViewController.swift in Sources */,
+				A4F25C462789565400BF1372 /* ImageDetailViewController.swift in Sources */,
 				E9E4A956273012940037A815 /* SigninPasswordViewController.swift in Sources */,
 				A46839EC272E75E3005BA79E /* UIButton.swift in Sources */,
 				E9DBB6082753E05A00F2A32D /* DeleteAccountViewController.swift in Sources */,
