@@ -24,6 +24,10 @@ class CalenderViewController: UIViewController {
     weak var selectedDelegate: SelectedCalendarDelegate?
     var nonColorDelegate: NonColorDelegate?
     
+    var MonthClickable = true
+    var currentMonthClickable = true
+    var DayClickable = true
+    
     lazy var calendarDataManager: CalenderDataManager = CalenderDataManager()
     lazy var calendarLimitDataManager: CalenderLimitDataManager = CalenderLimitDataManager()
     lazy var bookmarkDataManager: BookMarkDataManager = BookMarkDataManager()
@@ -90,6 +94,7 @@ class CalenderViewController: UIViewController {
     @IBAction func NextButtonTapped(_ sender: Any) {
         constantMonth += 1
         print(constantMonth)
+        
         let calenderInput: Parameters = ["page" : constantMonth]
         components.month = components.month! + 1
         self.calculation()
@@ -162,6 +167,12 @@ class CalenderViewController: UIViewController {
         let currentYear = currentDate[..<firstIndex]
         let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
         var currentMonth = String(currentDate[secondIndex...])
+        
+        print("FFFFFF")
+        print(currentDate)
+        print(currentYear)
+        print(currentMonth)
+        
         
         if currentMonth.count == 1 {
             currentMonth = "0\(currentMonth)"
@@ -258,10 +269,39 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var clickable = false
+        
+        if constantMonth < 0 {
+            MonthClickable = true
+        }
+        else if constantMonth == 0 {
+            MonthClickable = false
+            currentMonthClickable = true
+        }
+        else {
+            MonthClickable = false
+            currentMonthClickable = false
+        }
+        
+        let dateOnlyFormatter = DateFormatter()
+        dateOnlyFormatter.dateFormat = "d"
+        let currentDateOnly = dateOnlyFormatter.string(from: Date())
+        
+        if MonthClickable {
+            clickable = true
+        }
+        else {
+            if currentMonthClickable {
+                if Int(days[indexPath.item])! <= Int(currentDateOnly)! {
+                    clickable = true
+                }
+            }
+        }
+        
         if indexPath.item >= startDate && indexPath.item < CalendarViewMonth + startDate {
+            if clickable == true {
             if calendarData?[indexPath.item - startDate].color != nil {
                 let testIndex = testArray[indexPath.item - startDate]
-                print("테스트 인덱스")
                 print(testIndex)
                 
                 let storyboard = UIStoryboard(name: "BookMark", bundle: nil)
@@ -289,6 +329,8 @@ extension CalenderViewController: UICollectionViewDelegate, UICollectionViewData
                 DatelInfo.shared.date = selectedDate
                 nonColorDelegate?.selectNonColorDate(dateWithDot: dateResult)
                 self.dismiss(animated: true, completion: nil)
+                
+            }
             }
         }
     }
