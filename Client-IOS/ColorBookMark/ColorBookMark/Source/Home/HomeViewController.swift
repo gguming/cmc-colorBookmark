@@ -143,6 +143,11 @@ class HomeViewController: BaseViewController {
         print("@@@@")
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         let formatter = DateFormatter()
+        let dateOnlyFormatter = DateFormatter()
+        dateOnlyFormatter.dateFormat = "dd"
+        let currentDateOnly = dateOnlyFormatter.string(from: Date())
+        print(currentDateOnly)
+        
         formatter.dateFormat = "yyyy . MM . dd  "
         let currentDate = formatter.string(from: Date())
         let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -280,7 +285,6 @@ extension HomeViewController: ColorHomeCollectionDelegate, SelectedCalendarDeleg
 
 extension HomeViewController: EmployeePickerDelegate, NonColorDelegate {
     func selectNonColorDate(dateWithDot: String) {
-        print("LLLLLLLL")
         let textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         let boldFont = UIFont.systemFont(ofSize: 20, weight: .bold)
         let generalAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: boldFont]
@@ -293,7 +297,6 @@ extension HomeViewController: EmployeePickerDelegate, NonColorDelegate {
     
     func employeeAssigned() {
         self.dismiss(animated: true, completion: {
-           print("GGGGGG")
            self.collectionview.reloadData()
        })
    }
