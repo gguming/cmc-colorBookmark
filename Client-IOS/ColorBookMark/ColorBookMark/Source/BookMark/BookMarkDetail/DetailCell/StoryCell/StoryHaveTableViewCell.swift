@@ -36,6 +36,5 @@ extension StoryHaveTableViewCell: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let modifyInfo = ModifyDetailInfo.shared
         modifyInfo.text = textView.text
-        print(modifyInfo.text)
     }
 }

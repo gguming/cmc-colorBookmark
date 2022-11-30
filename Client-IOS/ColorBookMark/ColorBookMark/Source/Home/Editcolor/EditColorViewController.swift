@@ -179,7 +179,6 @@ extension EditColorViewController: ColorCollectionViewCellDelegate{
         alert.addTextField(configurationHandler: nil)
         let ok = UIAlertAction(title: "저장", style: .default) { action in
             let colorName = alert.textFields?[0].text
-            let colorInfo = ColorPickerInfo.shared.color
             
             if colorName?.count == 0 {
                 self.presentBottomAlert(message: "감정 이름을 입력해 주세요!")

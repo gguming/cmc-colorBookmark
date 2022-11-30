@@ -158,7 +158,7 @@ class CalenderViewController: UIViewController {
         }
         
         let currentDate = dateFormatter.string(from: firstDayOfMonth!)
-        let firstIndex = currentDate.index(of:".") ?? currentDate.endIndex
+        let firstIndex = currentDate.firstIndex(of:".") ?? currentDate.endIndex
         let currentYear = currentDate[..<firstIndex]
         let secondIndex: String.Index = currentDate.index(firstIndex, offsetBy: 1)
         var currentMonth = String(currentDate[secondIndex...])

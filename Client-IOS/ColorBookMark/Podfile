@@ -8,8 +8,7 @@ target 'ColorBookMark' do
   # Pods for ColorBookMark
   pod 'MaterialComponents/BottomSheet'
   pod 'FloatingPanel'
-  pod 'Alamofire', '~> 5.4'
-  pod 'KakaoSDK'
+  pod 'Alamofire'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Kingfisher'

@@ -19,7 +19,6 @@ class OriginalColorPickerMainViewController: UIViewController {
     @available(iOS 14.0, *)
     @IBAction func saveBtnTapped(_ sender: Any) {
         let colorInfo = ColorPickerInfo.shared.color
-        print(colorInfo)
         print(currentColorId)
         let request = PostMyColorRequest(color: colorInfo ?? "#000000", myColorId: currentColorId)
         editColorDataManager.editMyColor(request, delegate: self)

@@ -33,6 +33,9 @@
 		A43BF3A8273C01DD008DF16A /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3A6273C01DD008DF16A /* PhotoTableViewCell.xib */; };
 		A43D9304273BB44300E985CF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D9302273BB44300E985CF /* HeaderTableViewCell.swift */; };
 		A43D9305273BB44300E985CF /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43D9303273BB44300E985CF /* HeaderTableViewCell.xib */; };
+		A43DC1D22937944E00DE756A /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A43DC1D12937944E00DE756A /* KakaoSDKAuth */; };
+		A43DC1D42937944E00DE756A /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A43DC1D32937944E00DE756A /* KakaoSDKCommon */; };
+		A43DC1D62937944E00DE756A /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = A43DC1D52937944E00DE756A /* KakaoSDKUser */; };
 		A44520732765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44520712765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.swift */; };
 		A44520742765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44520722765BFA1006F60F9 /* ModifyAddedImgCollectionViewCell.xib */; };
 		A4551BF3275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4551BF1275DD46900F77EFD /* BookMarkContentsCollectionViewCell.swift */; };
@@ -422,8 +425,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43DC1D42937944E00DE756A /* KakaoSDKCommon in Frameworks */,
 				E9336CC4274CFF9800686AF1 /* AudioToolbox.framework in Frameworks */,
 				521F991BDB31C54538C3FF84 /* Pods_ColorBookMark.framework in Frameworks */,
+				A43DC1D62937944E00DE756A /* KakaoSDKUser in Frameworks */,
+				A43DC1D22937944E00DE756A /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1208,13 +1214,18 @@
 				A45AE881272D094D009ABED6 /* Sources */,
 				A45AE882272D094D009ABED6 /* Frameworks */,
 				A45AE883272D094D009ABED6 /* Resources */,
-				E7B96292352D249A1F11BA42 /* [CP] Embed Pods Frameworks */,
+				0351ECFB937E11D0B0A08EA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ColorBookMark;
+			packageProductDependencies = (
+				A43DC1D12937944E00DE756A /* KakaoSDKAuth */,
+				A43DC1D32937944E00DE756A /* KakaoSDKCommon */,
+				A43DC1D52937944E00DE756A /* KakaoSDKUser */,
+			);
 			productName = "CMC-IOS-ColorBookmark";
 			productReference = A45AE885272D094D009ABED6 /* ColorBookMark.app */;
 			productType = "com.apple.product-type.application";
@@ -1243,6 +1254,9 @@
 				Base,
 			);
 			mainGroup = A45AE87C272D094D009ABED6;
+			packageReferences = (
+				A43DC1D02937944E00DE756A /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = A45AE886272D094D009ABED6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1302,6 +1316,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0351ECFB937E11D0B0A08EA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A20045F07F1969800514FF41 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1322,23 +1353,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7B96292352D249A1F11BA42 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorBookMark/Pods-ColorBookMark-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1738,6 +1752,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A43DC1D02937944E00DE756A /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A43DC1D12937944E00DE756A /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A43DC1D02937944E00DE756A /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		A43DC1D32937944E00DE756A /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A43DC1D02937944E00DE756A /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		A43DC1D52937944E00DE756A /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A43DC1D02937944E00DE756A /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A45AE87D272D094D009ABED6 /* Project object */;
 }

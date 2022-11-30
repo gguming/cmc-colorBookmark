@@ -26,7 +26,6 @@ class LoginAfterSigninDataManager {
                         Constant.jwt = response.result!.jwt
                         Constant.userId = response.result!.userId
                         print("USERID")
-                        print(Constant.userId)
                         delegate.LoginSuccess()
                     }
                     
